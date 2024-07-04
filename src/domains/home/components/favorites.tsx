@@ -1,3 +1,3 @@
 export function Favorites() {
-  return <div>Favorites</div>
+  return <div className="size-10">Favorites</div>
 }
