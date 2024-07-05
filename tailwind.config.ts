@@ -1,13 +1,8 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
 
 const config = {
   darkMode: ["class"],
-  content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
-  ],
+  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
   prefix: "",
   theme: {
     container: {
@@ -22,9 +17,35 @@ const config = {
         content: {
           primary: "#000000",
           tertiary: "#636366",
-          secondary: "#2C2C2E",
+          secondary: "#EAEDED",
+          disabled: "#B1B2B2",
+          accent: "#276EF1",
+          negative: "#E11900",
+          positive: "#048848",
+          warning: "#E49E15",
         },
-        border: "hsl(var(--border))",
+        surface: {
+          primary: "#fff",
+          secondary: "#F5F7F7",
+          tertiary: "#636366",
+          disabled: "#F5F7F7",
+          inverse: { primary: "#000", secondary: "# 323333" },
+          accent: "#276EF1",
+          negative: "#E11900",
+          positive: "#048848",
+          warning: "#FFC043",
+        },
+        border: {
+          default: "hsl(var(--border))",
+          primary: "#E1E3E3",
+          inversePrimary: "#323333",
+          selected: "#323333",
+          focus: "#323333",
+          accent: "#A0BFF8",
+          negative: "#E11900",
+          positive: "#66D19E",
+          warning: "#FFE3AC",
+        },
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
@@ -170,6 +191,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+} satisfies Config
 
-export default config;
+export default config

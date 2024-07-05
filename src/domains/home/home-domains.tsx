@@ -19,9 +19,9 @@ export function HomeDomains() {
       <ResentViews />
       <Comparetaion />
       {/* base of resent view */}
-      <Favorites />
+      <Favorites title="محبوبترین تبلت‌ها" />
       {/* base of last visit */}
-      <Favorites />
+      <Favorites title="محبوبترین ساعت‌های هوشمند" mode="light" />
       <TopSellers />
       <Categories />
       <BottomNavigation />
