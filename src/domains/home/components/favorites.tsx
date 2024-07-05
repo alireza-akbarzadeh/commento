@@ -13,7 +13,7 @@ export function Favorites(props: FavoritesPropsType) {
   return (
     <section className="my-4">
       <div className="mb-5 mt-8">
-        <p className="text-xl font-semibold leading-[30px] text-content-primary">
+        <p className="h-[60px] w-[309px] text-xl font-semibold leading-[30px] text-content-primary">
           {title}
           <span className="text-content-tertiary"> بر اساس آخرین بازدیدها</span>
         </p>
@@ -24,7 +24,7 @@ export function Favorites(props: FavoritesPropsType) {
             <CarouselItem key={index} className="basis-[89%] pl-2">
               <Card>
                 <div
-                  className={cn("box-shadow-compare rounded-3xl", {
+                  className={cn("box-shadow-compare h-[450px] w-[309px] rounded-3xl", {
                     "bg-black": mode === "dark",
                     "bg-white": mode === "light",
                   })}
@@ -52,7 +52,7 @@ export function Favorites(props: FavoritesPropsType) {
                         </li>
                         <li>
                           <p
-                            className={cn("text-base font-normal text-content-secondary", {
+                            className={cn("w-[225px] text-base font-normal leading-7 text-content-secondary", {
                               "text-content-primary": mode === "light",
                             })}
                           >
@@ -60,14 +60,13 @@ export function Favorites(props: FavoritesPropsType) {
                           </p>
                         </li>
                       </ul>
-                      <div className="relative">
+                      <div className="relative h-[300px] w-full">
                         <Image
                           src={`/images/${mode === "dark" ? "ipad" : "watch"}.png`}
                           alt="phone"
-                          layout="responsive"
-                          width={309}
-                          height={450}
-                          className="size-full object-contain"
+                          layout="fill"
+                          className="aspect-video object-contain"
+                          // objectFit="cover"
                         />
                       </div>
                     </div>

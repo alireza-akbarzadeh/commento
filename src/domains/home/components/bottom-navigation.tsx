@@ -10,7 +10,7 @@ export function BottomNavigation() {
   ]
 
   return (
-    <div className="h-[93px] w-full border-t border-t-border-primary">
+    <div className="border- t h-[93px] w-full border-t-border-primary">
       <div className="flex items-center justify-between pb-[34px] pt-[17.5px]">
         {navigation.map((nav) => (
           <Button key={nav.lable} variant="ghost" className="flex flex-col items-center gap-[3px]">
@@ -19,7 +19,7 @@ export function BottomNavigation() {
           </Button>
         ))}
       </div>
-      <span className="mx-auto my-3 block h-[5px] w-[139px] bg-content-primary" />
+      {/* <span className="mx-auto my-3 block h-[5px] w-[139px] bg-content-primary" /> */}
     </div>
   )
 }

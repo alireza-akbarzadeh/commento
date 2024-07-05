@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export function Category() {
   return (
-    <section className="pt-3">
+    <section className="px-4 py-3">
       <div className="flex items-center justify-between">
         {Array.from({ length: 4 }).map((_, index) => (
           <div className="flex flex-col items-center gap-x-4 gap-y-[6px]" key={index}>
