@@ -25,35 +25,43 @@ export function Banners() {
     setScrollSnaps(embla.scrollSnapList())
     embla.on("select", onSelect)
   }, [embla, setScrollSnaps, onSelect])
+
   return (
     <section className="my-3">
-      <Carousel plugins={[Autoplay({ delay: 500 })]} setApi={setApi} opts={{ direction: "ltr" }} className="w-full">
-        <CarouselContent className="relative">
+      <Carousel
+        opts={{ direction: "rtl" }}
+        plugins={[Autoplay({ delay: 2500 })]}
+        setApi={setApi}
+        className="relative mt-9"
+      >
+        <CarouselContent className="gap-2.5">
           {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem key={index + 1}>
-              <div className="">
-                <Image src="/images/banner.png" alt="banner" width={328} height={207} />
+            <CarouselItem key={index} className="basis-[95%] pl-2">
+              <div className="box-shadow-compare rounded-3xl">
+                <div>
+                  <Image src="/images/banner.png" width={328} height={207} alt="store" />
+                </div>
               </div>
             </CarouselItem>
           ))}
-          <div className="absolute bottom-0 left-1/2 z-20">
-            <div className="flex flex-row items-center gap-2">
-              {scrollSnaps?.map((snap, index) => (
-                <span
-                  key={index}
-                  onClick={(event) => {
-                    scrollTo(index)
-                    event.stopPropagation()
-                  }}
-                  className={cn("h-2 w-2 rounded-full bg-green-400 transition-all duration-300 ease-in-out", {
-                    "h-2 w-5": index === selectedIndex,
-                    "bg-red-400": index === selectedIndex,
-                  })}
-                />
-              ))}
-            </div>
-          </div>
         </CarouselContent>
+        <div className="absolute bottom-4 right-1/2 translate-x-16">
+          <div className="flex flex-row items-center gap-2">
+            {scrollSnaps?.map((_, index) => (
+              <span
+                key={index}
+                onClick={(event) => {
+                  scrollTo(index)
+                  event.stopPropagation()
+                }}
+                className={cn("h-2 w-2 rounded-full bg-black/30 transition-all duration-300 ease-in-out", {
+                  "h-2 w-5": index === selectedIndex,
+                  "bg-white": index === selectedIndex,
+                })}
+              />
+            ))}
+          </div>
+        </div>
       </Carousel>
     </section>
   )
