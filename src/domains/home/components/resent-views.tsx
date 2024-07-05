@@ -1,7 +1,5 @@
-import { ChevronLeft } from "lucide-react"
 import Image from "next/image"
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components"
-import { Card, CardContent } from "@/components/ui/card"
+import { Carousel, CarouselContent, CarouselItem } from "@/components"
 import { SectionTitle } from "./section-title"
 
 export function ResentViews() {

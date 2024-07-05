@@ -2,8 +2,7 @@
 import Autoplay from "embla-carousel-autoplay"
 import Image from "next/image"
 import { useCallback, useEffect, useState } from "react"
-import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components"
-import { Card, CardContent } from "@/components/ui/card"
+import { Carousel, CarouselApi, CarouselContent, CarouselItem } from "@/components"
 import { cn } from "@/lib/utils"
 
 export function Banners() {
