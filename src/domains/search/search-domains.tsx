@@ -9,6 +9,7 @@ import { Input } from '@/components/ui/input';
 
 export function SearchDomian() {
   const [searchTerm, setSearchTerm] = useState<string>('');
+  // use it for showing pending loading
   const [pending, startTransation] = useTransition();
   const handleClearSearch = () => setSearchTerm('');
   const isFelidEmpty = searchTerm.length !== 0;
