@@ -1,13 +1,13 @@
-import type { Metadata } from "next"
-import localFont from "next/font/local"
-import "./globals.css"
-import { cn } from "@/lib/utils"
+import type { Metadata } from 'next';
+import localFont from 'next/font/local';
+import './globals.css';
+import { cn } from '@/lib/utils';
 
 const vazirmatn = localFont({
   src: [
     {
-      path: "../assets/fonts/webfonts/Vazirmatn-SemiBold.woff2",
-      weight: "500",
+      path: '../assets/fonts/webfonts/Vazirmatn-SemiBold.woff2',
+      weight: '500',
     },
     // {
     //   path: "../assets/fonts/webfonts/Vazirmatn-Black.woff2",
@@ -26,23 +26,25 @@ const vazirmatn = localFont({
     //   weight: "100",
     // },
   ],
-})
+});
 
 export const metadata: Metadata = {
-  title: "آیتی بازار",
-  description: "market place",
-}
+  title: 'آیتی بازار',
+  description: 'market place',
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en" dir="rtl">
-      <body className={cn("font h-screen bg-background", vazirmatn.className)}>
-        <main className="mx-auto h-dvh min-h-dvh w-full max-w-[360px]">{children}</main>
+      <body className={cn('font h-screen bg-background', vazirmatn.className)}>
+        <main className="mx-auto h-dvh min-h-dvh w-full max-w-[360px]">
+          {children}
+        </main>
       </body>
     </html>
-  )
+  );
 }

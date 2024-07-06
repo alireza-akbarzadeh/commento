@@ -1,8 +1,8 @@
-import React from "react"
-import { SearchDomian } from "@/domains/search"
+import React from 'react';
+import { SearchDomian } from '@/domains/search';
 
 function Search() {
-  return <SearchDomian />
+  return <SearchDomian />;
 }
 
-export default Search
+export default Search;
