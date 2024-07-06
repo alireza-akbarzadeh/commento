@@ -43,3 +43,6 @@ export {
   CardHeader,
   CardTitle,
 } from './ui/card';
+
+export { Spin } from './common/spin';
+export { Separator } from './ui/separator';

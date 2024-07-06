@@ -4,8 +4,9 @@ import { Search } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useTransition } from 'react';
-import { Button } from '@/components';
+import { Button, Spin } from '@/components';
 import { Input } from '@/components/ui/input';
+import { ResentSearch } from './container/recent-search';
 
 export function SearchDomian() {
   const [searchTerm, setSearchTerm] = useState<string>('');
@@ -20,7 +21,7 @@ export function SearchDomian() {
   };
 
   return (
-    <div>
+    <section id="search" data-testid="search">
       <div className="my-2 flex items-center gap-4 p-2.5">
         <Link href="/">
           <Image
@@ -36,27 +37,32 @@ export function SearchDomian() {
             value={searchTerm}
             onChange={({ target }) => handleSearch({ value: target.value })}
             placeholder="جستوجوی محصول..."
-            className="border-none text-[16px] text-content-primary placeholder:text-[16px] placeholder:font-medium placeholder:text-content-tertiary focus-visible:border-none focus-visible:outline-none focus-visible:ring-0"
+            className="border-none text-[16px] text-content-primary placeholder:text-md placeholder:font-medium placeholder:text-content-tertiary focus-visible:border-none focus-visible:outline-none focus-visible:ring-0"
           />
-          {isFelidEmpty && (
-            <Button
-              className="cursor-pointer"
-              onClick={handleClearSearch}
-              asChild
-              variant="ghost"
-            >
-              <div>
-                <Image
-                  src="/svg/close-fill.svg"
-                  width={16}
-                  height={16}
-                  alt="move-right"
-                />
-              </div>
-            </Button>
+          {pending ? (
+            <Spin />
+          ) : (
+            isFelidEmpty && (
+              <Button
+                className="cursor-pointer"
+                onClick={handleClearSearch}
+                asChild
+                variant="ghost"
+              >
+                <div>
+                  <Image
+                    src="/svg/close-fill.svg"
+                    width={16}
+                    height={16}
+                    alt="move-right"
+                  />
+                </div>
+              </Button>
+            )
           )}
         </div>
       </div>
-    </div>
+      <ResentSearch />
+    </section>
   );
 }
