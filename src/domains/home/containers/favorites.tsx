@@ -24,7 +24,7 @@ export function Favorites(props: FavoritesPropsType) {
             <CarouselItem key={index} className="basis-[89%] pl-2">
               <Card>
                 <div
-                  className={cn("box-shadow-compare h-[450px] w-[309px] rounded-3xl", {
+                  className={cn("h-[450px] w-[309px] rounded-3xl", {
                     "bg-black": mode === "dark",
                     "bg-white": mode === "light",
                   })}
@@ -60,7 +60,7 @@ export function Favorites(props: FavoritesPropsType) {
                           </p>
                         </li>
                       </ul>
-                      <div className="relative h-[300px] w-full">
+                      <div className="relative mt-2 h-[250px] w-full">
                         <Image
                           src={`/images/${mode === "dark" ? "ipad" : "watch"}.png`}
                           alt="phone"

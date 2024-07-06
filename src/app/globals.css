@@ -77,8 +77,7 @@
 }
 
 .box-shadow-compare {
-  -webkit-box-shadow: -8px 24px 15px -18px rgba(230, 225, 230, 1);
-  -moz-box-shadow: -8px 24px 15px -18px rgba(230, 225, 230, 1);
-  box-shadow: -8px 24px 15px -18px rgba(230, 225, 230, 1);
-
+  -webkit-box-shadow: 0px 4px 16px 0px #0000001A;
+  -moz-box-shadow: 0px 4px 16px 0px #0000001A;
+  box-shadow: 0px 4px 16px 0px #0000001A;
 }

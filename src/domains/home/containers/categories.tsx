@@ -12,14 +12,14 @@ export function Categories() {
             <Button variant="ghost" className="flex w-full justify-between p-0">
               <div className="flex items-center gap-[5.6px]">
                 <Image src="/svg/circle.svg" alt="circle" width={16} height={16} />
-                <p className="text-xs font-medium text-primary">گوشی تلفن</p>
+                <p className="text-xs font-medium text-content-primary">گوشی تلفن</p>
               </div>
               <ChevronLeft />
             </Button>
             <Button variant="ghost" className="flex w-full justify-between p-0">
               <div className="flex items-center gap-[5.6px]">
                 <Image src="/svg/circle.svg" alt="circle" width={16} height={16} />
-                <p className="text-xs font-medium text-primary">گوشی تلفن</p>
+                <p className="text-xs font-medium text-content-primary">گوشی تلفن</p>
               </div>
               <ChevronLeft />
             </Button>

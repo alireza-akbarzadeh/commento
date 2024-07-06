@@ -13,6 +13,9 @@ const config = {
       },
     },
     extend: {
+      fontSize: {
+        xss: " 0.688rem",
+      },
       colors: {
         content: {
           primary: "#000000",

@@ -8,7 +8,7 @@ import {
   ResentViews,
   SearchAction,
   TopSellers,
-} from "./components"
+} from "./containers"
 
 export function HomeDomains() {
   return (

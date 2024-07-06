@@ -1,29 +1,12 @@
 "use client"
 import Autoplay from "embla-carousel-autoplay"
 import Image from "next/image"
-import { useCallback, useEffect, useState } from "react"
-import { Carousel, CarouselApi, CarouselContent, CarouselItem } from "@/components"
+import { Carousel, CarouselContent, CarouselItem } from "@/components"
 import { cn } from "@/lib/utils"
+import { useBanners } from "../hooks"
 
 export function Banners() {
-  const [embla, setApi] = useState<CarouselApi>()
-
-  const [selectedIndex, setSelectedIndex] = useState(0)
-  const [scrollSnaps, setScrollSnaps] = useState<number[]>([])
-
-  const scrollTo = useCallback((index: number) => embla && embla.scrollTo(index), [embla])
-
-  const onSelect = useCallback(() => {
-    if (!embla) return
-    setSelectedIndex(embla.selectedScrollSnap())
-  }, [embla, setSelectedIndex])
-
-  useEffect(() => {
-    if (!embla) return
-    onSelect()
-    setScrollSnaps(embla.scrollSnapList())
-    embla.on("select", onSelect)
-  }, [embla, setScrollSnaps, onSelect])
+  const { scrollSnaps, scrollTo, selectedIndex, setApi } = useBanners()
 
   return (
     <section className="my-3">
@@ -36,7 +19,7 @@ export function Banners() {
         <CarouselContent className="gap-2.5">
           {Array.from({ length: 5 }).map((_, index) => (
             <CarouselItem key={index} className="basis-[95%] pl-2">
-              <div className="box-shadow-compare rounded-3xl">
+              <div className="rounded-3xl">
                 <div>
                   <Image src="/images/banner.png" width={328} height={207} alt="store" />
                 </div>
@@ -44,7 +27,7 @@ export function Banners() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <div className="absolute bottom-4 right-1/2 translate-x-16">
+        <div className="absolute bottom-4 right-1/2 translate-x-16 cursor-pointer">
           <div className="flex flex-row items-center gap-2">
             {scrollSnaps?.map((_, index) => (
               <span
