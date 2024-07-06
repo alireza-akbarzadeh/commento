@@ -1,11 +1,16 @@
-import { Carousel, CarouselContent, CarouselItem, ProductItem } from "@/components"
-import { SectionTitle } from "../components/section-title"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  ProductItem,
+} from '@/components';
+import { SectionTitle } from '../components/section-title';
 
 export function ResentViews() {
   return (
     <section id="recent-view" data-testid="resent-view">
       <SectionTitle title="بازدید‌های اخیر" />
-      <Carousel opts={{ direction: "rtl" }} className="mt-9 w-full max-w-sm">
+      <Carousel opts={{ direction: 'rtl' }} className="mt-9 w-full max-w-sm">
         <CarouselContent className="gap-2.5">
           {Array.from({ length: 5 }).map((_, index) => (
             <CarouselItem key={index} className="basis-[37%] pl-2">
@@ -21,5 +26,5 @@ export function ResentViews() {
         </CarouselContent>
       </Carousel>
     </section>
-  )
+  );
 }

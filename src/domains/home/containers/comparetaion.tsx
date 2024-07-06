@@ -1,13 +1,18 @@
-import { ChevronLeft } from "lucide-react"
-import { Carousel, CarouselContent, CarouselItem, ProductItem } from "@/components"
-import { Card, CardContent, CardFooter } from "@/components/ui/card"
-import { SectionTitle } from "../components/section-title"
+import { ChevronLeft } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  ProductItem,
+} from '@/components';
+import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import { SectionTitle } from '../components/section-title';
 
 export function Comparetaion() {
   return (
     <section className="my-4">
       <SectionTitle title="مقایسه‌های من" />
-      <Carousel opts={{ direction: "rtl" }} className="mt-9 w-full max-w-sm">
+      <Carousel opts={{ direction: 'rtl' }} className="mt-9 w-full max-w-sm">
         <CarouselContent className="gap-2.5">
           {Array.from({ length: 5 }).map((_, index) => (
             <CarouselItem key={index} className="basis-[89%] pl-2">
@@ -19,13 +24,20 @@ export function Comparetaion() {
                     title="گوشی موبایل اپل مدل iPhone 13 CH دو سیم‌ کارت"
                     imageUrl="/images/phone.png"
                   />
-                  <ProductItem title="گوشی موبایل اپل مدل iPhone 13 CH دو سیم‌ کارت" imageUrl="/images/phone.png" />
+                  <ProductItem
+                    title="گوشی موبایل اپل مدل iPhone 13 CH دو سیم‌ کارت"
+                    imageUrl="/images/phone.png"
+                  />
                 </CardContent>
                 <CardFooter>
                   <div className="flex w-full items-center justify-between">
-                    <p className="text-base font-medium text-content-primary">مشاهده مقایسه</p>
+                    <p className="text-base font-medium text-content-primary">
+                      مشاهده مقایسه
+                    </p>
                     <div className="flex items-center gap-[7.5px]">
-                      <span className="mt-1 text-base font-semibold text-content-tertiary">۲</span>
+                      <span className="mt-1 text-base font-semibold text-content-tertiary">
+                        ۲
+                      </span>
                       <ChevronLeft className="size-4" />
                     </div>
                   </div>
@@ -36,5 +48,5 @@ export function Comparetaion() {
         </CarouselContent>
       </Carousel>
     </section>
-  )
+  );
 }

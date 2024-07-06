@@ -8,7 +8,7 @@ import {
   ResentViews,
   SearchAction,
   TopSellers,
-} from "./containers"
+} from './containers';
 
 export function HomeDomains() {
   return (
@@ -26,5 +26,5 @@ export function HomeDomains() {
       <Categories />
       <BottomNavigation />
     </>
-  )
+  );
 }
