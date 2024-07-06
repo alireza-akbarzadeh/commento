@@ -28,7 +28,7 @@ export function ResentSearchItem(props: ResentSearchItemProps) {
         </div>
       </div>
       {activeBorder && (
-        <Separator className="text-displaySmall my-4 border-b border-border-primary" />
+        <Separator className="my-4 border-b border-border-primary text-displaySmall" />
       )}
       s
     </>
