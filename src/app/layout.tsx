@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils';
 const vazirmatn = localFont({
   src: [
     {
-      path: '../assets/fonts/webfonts/Vazirmatn-medium.woff2',
+      path: '../assets/fonts/webfonts/Vazirmatn-Medium.woff2',
       weight: '500',
     },
     {
