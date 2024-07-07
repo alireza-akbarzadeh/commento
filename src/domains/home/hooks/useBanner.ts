@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { CarouselApi } from '@/components';
+import { CarouselApi } from '@/shared/components';
 
 export function useBanners() {
   const [embla, setApi] = useState<CarouselApi>();

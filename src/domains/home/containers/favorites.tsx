@@ -1,7 +1,12 @@
 import Image from 'next/image';
-import { Carousel, CarouselContent, CarouselItem } from '@/components';
-import { Card, CardContent } from '@/components/ui/card';
-import { cn } from '@/lib/utils';
+import {
+  Card,
+  CardContent,
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from '@/shared/ui/';
+import { cn } from '@/shared/utils';
 
 type FavoritesPropsType = {
   title: string;
@@ -13,7 +18,7 @@ export function Favorites(props: FavoritesPropsType) {
   return (
     <section className="my-4">
       <div className="mb-5 mt-8">
-        <p className="h-[60px] w-[309px] text-xl font-semibold leading-[30px] text-content-primary">
+        <p className="h-[60px] w-[309px] text-headlineSmall text-content-primary">
           {title}
           <span className="text-content-tertiary"> بر اساس آخرین بازدیدها</span>
         </p>
@@ -24,8 +29,7 @@ export function Favorites(props: FavoritesPropsType) {
             <CarouselItem key={index} className="basis-[89%] pl-2">
               <Card>
                 <div
-                  className={cn('h-[450px] w-[309px] rounded-3xl', {
-                    'bg-black': mode === 'dark',
+                  className={cn('h-[450px] w-[309px] rounded-3xl bg-black', {
                     'bg-white': mode === 'light',
                   })}
                 >
@@ -34,24 +38,18 @@ export function Favorites(props: FavoritesPropsType) {
                       <ul className="flex flex-col items-start gap-y-3">
                         <li>
                           <p
-                            className={cn(
-                              'text-base font-normal text-content-secondary',
-                              {
-                                'text-content-tertiary': mode === 'light',
-                              },
-                            )}
+                            className={cn('text-bodySmall text-white', {
+                              'text-content-tertiary': mode === 'light',
+                            })}
                           >
                             در ۱۷ فروشگاه
                           </p>
                         </li>
                         <li>
                           <p
-                            className={cn(
-                              'text-xl font-semibold text-content-secondary',
-                              {
-                                'text-content-primary': mode === 'light',
-                              },
-                            )}
+                            className={cn('text-headlineSmall text-white', {
+                              'text-content-secondary': mode === 'light',
+                            })}
                           >
                             آیپد پرو مکس
                           </p>
@@ -59,7 +57,7 @@ export function Favorites(props: FavoritesPropsType) {
                         <li>
                           <p
                             className={cn(
-                              'w-[225px] text-base font-normal leading-7 text-content-secondary',
+                              'w-[225px] text-bodyMedium text-white',
                               {
                                 'text-content-primary': mode === 'light',
                               },
@@ -73,8 +71,9 @@ export function Favorites(props: FavoritesPropsType) {
                         <Image
                           src={`/images/${mode === 'dark' ? 'ipad' : 'watch'}.png`}
                           alt="phone"
-                          layout="fill"
-                          className="aspect-video object-contain"
+                          width={50}
+                          height={50}
+                          className="aspect-video size-full object-contain"
                           // objectFit="cover"
                         />
                       </div>

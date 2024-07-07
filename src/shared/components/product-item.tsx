@@ -1,12 +1,11 @@
 import Image from 'next/image';
 import { DiscountBadge } from '@/domains/home/components';
-import { CURRENCY } from '@/lib/constant';
+import { CURRENCY } from '@/shared/constant';
 
-type ProductItemProps = {
+export type ProductItemProps = {
   hasDiscountBadge?: boolean;
   discountLabel?: string;
   title: string;
-  subtitle?: string;
   imageUrl: string;
   storeName?: string;
   priceRange?: string;
@@ -21,6 +20,7 @@ export function ProductItem(props: ProductItemProps) {
     storeName,
     priceRange,
   } = props;
+  // TODO: remove product-item class
   return (
     <div className="product-item">
       <div className="relative flex flex-col items-center justify-center pb-3">

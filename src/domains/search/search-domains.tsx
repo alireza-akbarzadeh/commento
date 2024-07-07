@@ -4,9 +4,11 @@ import { Search } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useTransition } from 'react';
-import { Button, Spin } from '@/components';
-import { Input } from '@/components/ui/input';
+import { Spin } from '@/shared/components';
+import { Button, Input } from '@/shared/ui';
+import { SearchCategory } from './components/search-category';
 import { ResentSearch } from './container/recent-search';
+import { SearchProduct } from './container/search-product';
 
 export function SearchDomian() {
   const [searchTerm, setSearchTerm] = useState<string>('');
@@ -19,7 +21,7 @@ export function SearchDomian() {
       setSearchTerm(value);
     });
   };
-
+  const items = [1, 2, 3, 4];
   return (
     <section id="search" data-testid="search">
       <div className="my-2 flex items-center gap-4 p-2.5">
@@ -61,6 +63,25 @@ export function SearchDomian() {
             )
           )}
         </div>
+      </div>
+      <SearchCategory />
+      <div className="mt-5">
+        {items.map((_, index) => (
+          <SearchProduct
+            hasDiscountBadge={index === 0 || index === 3}
+            activeBorder={index !== items.length - 1}
+            key={index}
+            loved={index === 0 || index === 2}
+            discountLabel="43%"
+            priceRange="159,000"
+            storeName="در ۲۴ فروشگاه"
+            title="گوشی موبایل اپل مدل iPhone 13 CH دو سیم‌ کارت"
+            imageUrl="/images/phone.png"
+            info={
+              index === 0 ? [{ title: 'تهران' }, { title: 'اوپن باکس' }] : []
+            }
+          />
+        ))}
       </div>
       <ResentSearch />
     </section>

@@ -1,6 +1,13 @@
 import Image from 'next/image';
-import { Button, Carousel, CarouselContent, CarouselItem } from '@/components';
-import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import {
+  Button,
+  Card,
+  CardContent,
+  CardFooter,
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from '@/shared/ui';
 import { SectionTitle } from '../components/section-title';
 
 export function TopSellers() {

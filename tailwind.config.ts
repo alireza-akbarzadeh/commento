@@ -142,7 +142,7 @@ const config = {
         content: {
           primary: '#000000',
           tertiary: '#636366',
-          secondary: '#EAEDED',
+          secondary: '#2C2C2E',
           disabled: '#B1B2B2',
           accent: '#276EF1',
           negative: '#E11900',
@@ -151,11 +151,12 @@ const config = {
         },
         brand: {
           it: '#EC4C60',
+          main: '#EC4C60',
         },
         surface: {
           primary: '#fff',
           secondary: '#F5F7F7',
-          tertiary: '#636366',
+          tertiary: '#F0F0F0',
           disabled: '#F5F7F7',
           inverse: { primary: '#000', secondary: '# 323333' },
           accent: '#276EF1',

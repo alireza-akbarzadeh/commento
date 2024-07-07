@@ -1,11 +1,13 @@
 import { ChevronLeft } from 'lucide-react';
+import { ProductItem } from '@/shared/components';
 import {
+  Card,
+  CardContent,
+  CardFooter,
   Carousel,
   CarouselContent,
   CarouselItem,
-  ProductItem,
-} from '@/components';
-import { Card, CardContent, CardFooter } from '@/components/ui/card';
+} from '@/shared/ui';
 import { SectionTitle } from '../components/section-title';
 
 export function Comparetaion() {

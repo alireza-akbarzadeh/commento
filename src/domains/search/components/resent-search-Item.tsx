@@ -1,6 +1,6 @@
-import { Separator } from '@/components';
 import Image from 'next/image';
 import React from 'react';
+import { Separator } from '@/shared/ui';
 
 type ResentSearchItemProps = {
   iconUrl: string;
@@ -19,12 +19,8 @@ export function ResentSearchItem(props: ResentSearchItemProps) {
           <Image src={iconUrl} width={20} height={20} alt={title} />
         </div>
         <div className="space-y-[2px]">
-          <h4 className="text-md font-medium leading-7 text-content-primary">
-            {title}
-          </h4>
-          <p className="text-base font-normal text-content-tertiary">
-            {subtitle}
-          </p>
+          <h4 className="text-labelMedium text-content-primary">{title}</h4>
+          <p className="text-bodySmall text-content-tertiary">{subtitle}</p>
         </div>
       </div>
       {activeBorder && (
