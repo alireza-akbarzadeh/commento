@@ -4,7 +4,7 @@
 ![Liberapay Goal](https://img.shields.io/liberapay/goal/alireza-akbarzdeh.svg?logo=liberapay)
 
 <p align="center">
-  <h1>React Launchpad open-source codebase</h1>
+  <h1>It Bazar</h1>
 </p>
 
 ## Table of Contents
