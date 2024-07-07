@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { DiscountBadge } from '@/domains/home/components';
 import { CURRENCY } from '@/shared/constant';
 
@@ -23,7 +24,10 @@ export function ProductItem(props: ProductItemProps) {
   // TODO: remove product-item class
   return (
     <div className="product-item">
-      <div className="relative flex flex-col items-center justify-center pb-3">
+      <Link
+        href={`/product/${title}`}
+        className="relative flex flex-col items-center justify-center pb-3"
+      >
         <Image
           src={imageUrl}
           className="rounded-md"
@@ -34,7 +38,7 @@ export function ProductItem(props: ProductItemProps) {
         {hasDiscountBadge && discountLabel && (
           <DiscountBadge price={discountLabel} />
         )}
-      </div>
+      </Link>
       <div className="details space-y-3">
         <p className="text-labelXSmall text-content-primary">{title}</p>
         {/*TODO:  if store was only one render the name of store */}
