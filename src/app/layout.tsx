@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import './globals.css';
+import '@/shared/globals.css';
 import { cn } from '@/lib/utils';
 
 const vazirmatn = localFont({

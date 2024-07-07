@@ -1,2 +1,4 @@
 .next
 node_modules
+#TODO: on lint stories for later
+stories

@@ -3,17 +3,7 @@ const fs = require('fs');
 
 module.exports = {
   parser: '@typescript-eslint/parser',
-  extends: [
-    'next',
-    'next/core-web-vitals',
-    'prettier',
-    'react-app',
-    'eslint:recommended',
-    // 'plugin:storybook/recommended',
-    'plugin:tailwindcss/recommended',
-    'plugin:prettier/recommended',
-    'plugin:react-hooks/recommended',
-  ],
+  extends: ['next', 'next/core-web-vitals', 'prettier', 'react-app', 'eslint:recommended', 'plugin:tailwindcss/recommended', 'plugin:prettier/recommended', 'plugin:react-hooks/recommended', 'plugin:storybook/recommended'],
   parserOptions: {
     babelOptions: {
       presets: [require.resolve('next/babel')],
