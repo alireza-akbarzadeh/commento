@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { DiscountBadge } from '@/domains/home/components';
-import { CURRENCY } from '@/lib/constant';
+import { CURRENCY } from '@/shared/constant';
 
 type ProductItemProps = {
   hasDiscountBadge?: boolean;
@@ -22,6 +22,8 @@ export function ProductItem(props: ProductItemProps) {
     priceRange,
   } = props;
   return (
+    // TODO: remove product-item class
+
     <div className="product-item">
       <div className="relative flex flex-col items-center justify-center pb-3">
         <Image

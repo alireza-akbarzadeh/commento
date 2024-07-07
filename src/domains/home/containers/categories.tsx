@@ -1,6 +1,6 @@
 import { ChevronLeft } from 'lucide-react';
 import Image from 'next/image';
-import { Button } from '@/components';
+import { Button } from '@/shared/ui';
 
 export function Categories() {
   return (

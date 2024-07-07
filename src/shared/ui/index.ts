@@ -5,13 +5,12 @@ export {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from './ui/carousel';
+} from './carousel';
 
-export { Button } from './ui/button';
-export { Input, type InputProps } from './ui/input';
-export { ProductItem } from './common/product-item';
-export { Toaster } from './ui/toaster';
-export { reducer, toast, useToast } from './ui/use-toast';
+export { Button } from './button';
+export { Input, type InputProps } from './input';
+export { Toaster } from './toaster';
+export { reducer, toast, useToast } from './use-toast';
 export {
   Toast,
   ToastAction,
@@ -22,7 +21,7 @@ export {
   ToastProvider,
   ToastTitle,
   ToastViewport,
-} from './ui/toast';
+} from './toast';
 export {
   Drawer,
   DrawerClose,
@@ -34,7 +33,8 @@ export {
   DrawerPortal,
   DrawerTitle,
   DrawerTrigger,
-} from './ui/drawer';
+} from './drawer';
+export { Label } from './label';
 export {
   Card,
   CardContent,
@@ -42,7 +42,9 @@ export {
   CardFooter,
   CardHeader,
   CardTitle,
-} from './ui/card';
+} from './card';
+export { Separator } from './separator';
 
-export { Spin } from './common/spin';
-export { Separator } from './ui/separator';
+export { Badge, type BadgeProps, badgeVariants } from './badge';
+
+export { Switch } from './switch';

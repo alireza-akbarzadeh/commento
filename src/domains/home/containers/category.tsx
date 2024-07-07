@@ -15,7 +15,7 @@ export function Category() {
               height={63}
               alt="category"
             />
-            <p className="text-xs font-medium text-content-primary">آکبند</p>
+            <p className="labelXSmall text-content-primary">آکبند</p>
           </div>
         ))}
       </div>

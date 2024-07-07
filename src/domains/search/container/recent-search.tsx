@@ -1,5 +1,3 @@
-import Image from 'next/image';
-import React from 'react';
 import { ResentSearchItem } from '../components/ResentSearchItem';
 
 type ResentSearchProps = {};

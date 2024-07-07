@@ -142,7 +142,7 @@ const config = {
         content: {
           primary: '#000000',
           tertiary: '#636366',
-          secondary: '#EAEDED',
+          secondary: '#2C2C2E',
           disabled: '#B1B2B2',
           accent: '#276EF1',
           negative: '#E11900',

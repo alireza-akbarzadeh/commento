@@ -1,9 +1,5 @@
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  ProductItem,
-} from '@/components';
+import { ProductItem } from '@/shared/components';
+import { Carousel, CarouselContent, CarouselItem } from '@/shared/ui';
 import { SectionTitle } from '../components/section-title';
 
 export function ResentViews() {

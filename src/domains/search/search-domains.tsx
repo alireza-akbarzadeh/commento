@@ -4,9 +4,9 @@ import { Search } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useTransition } from 'react';
-import { Button, Spin } from '@/components';
-import { Input } from '@/components/ui/input';
+import { Button, Spin } from '@/shared/components';
 import { ResentSearch } from './container/recent-search';
+import { Input } from '@/components/ui/input';
 
 export function SearchDomian() {
   const [searchTerm, setSearchTerm] = useState<string>('');
