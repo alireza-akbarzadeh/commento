@@ -12,6 +12,7 @@ export function ResentSearch(props: ResentSearchProps) {
         <p className="text-base text-content-disabled">جستجو‌های اخیر</p>
         {Array.from({ length: 3 }).map((_, index) => (
           <ResentSearchItem
+            key={index}
             activeBorder={index !== items.length - 1}
             iconUrl="/svg/history.svg"
             subtitle="گوشی موبایل اپل"
@@ -23,15 +24,16 @@ export function ResentSearch(props: ResentSearchProps) {
         <p className="text-base text-content-disabled">جستجو‌های پرتکرار</p>
         {items.map((_, index) => (
           <ResentSearchItem
+            key={index}
             activeBorder={index !== items.length - 1}
             iconUrl="/svg/fire.svg"
             subtitle="گوشی موبایل اپل"
             title="در دسته گوشی‌ها"
           />
         ))}
-
         {items.map((_, index) => (
           <ResentSearchItem
+            key={index}
             activeBorder={index !== items.length - 1}
             iconUrl="/svg/search.svg"
             subtitle="گوشی موبایل اپل"
