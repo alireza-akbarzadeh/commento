@@ -1,0 +1,11 @@
+<svg width="52" height="54" viewBox="0 0 52 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="24.5002" cy="24.5" r="24.5" fill="#FAFAFA"/>
+<circle cx="24.5002" cy="24.5" r="23.1" stroke="#EDEDED" stroke-width="2.8"/>
+<mask id="mask0_324_1659" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="50" height="49">
+<circle cx="24.5002" cy="24.5" r="23.1" fill="white" stroke="white" stroke-width="2.8"/>
+</mask>
+<g mask="url(#mask0_324_1659)">
+</g>
+<ellipse cx="27.146" cy="9.61942" rx="7.17389" ry="1.61943" stroke="#EDEDED" stroke-width="2.8" stroke-linecap="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M41.5211 45.6008C41.5211 45.6008 42.242 45.3317 42.737 44.8367C43.2319 44.3418 43.501 43.6209 43.501 43.6209L50.2893 50.4092C50.836 50.9559 50.836 51.8423 50.2893 52.3891C49.7425 52.9358 48.8561 52.9358 48.3094 52.3891L41.5211 45.6008Z" fill="#EDEDED"/>
+</svg>

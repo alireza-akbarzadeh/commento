@@ -151,11 +151,12 @@ const config = {
         },
         brand: {
           it: '#EC4C60',
+          main: '#EC4C60',
         },
         surface: {
           primary: '#fff',
           secondary: '#F5F7F7',
-          tertiary: '#636366',
+          tertiary: '#F0F0F0',
           disabled: '#F5F7F7',
           inverse: { primary: '#000', secondary: '# 323333' },
           accent: '#276EF1',

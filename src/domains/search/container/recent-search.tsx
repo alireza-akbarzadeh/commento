@@ -1,9 +1,12 @@
-import { ResentSearchItem } from '../components/ResentSearchItem';
+import { SearchProduct } from './search-product';
+import { NoResult } from '../components/no-result';
+import { ResentSearchItem } from '../components/resent-search-Item';
+import { SearchCategory } from '../components/search-category';
 
 type ResentSearchProps = {};
 
 export function ResentSearch(props: ResentSearchProps) {
-  const items = [1, 2, 3];
+  const items = [1, 2, 3, 4];
   return (
     <section id="recent-view" data-testid="recent-view">
       <div className='className="px-4 py-2.5"'>
@@ -39,6 +42,7 @@ export function ResentSearch(props: ResentSearchProps) {
           />
         ))}
       </div>
+      <NoResult />
     </section>
   );
 }
