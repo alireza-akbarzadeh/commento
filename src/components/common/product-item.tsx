@@ -36,20 +36,16 @@ export function ProductItem(props: ProductItemProps) {
         )}
       </div>
       <div className="details space-y-3">
-        <p className="text-xs font-medium leading-6 text-content-primary">
-          {title}
-        </p>
+        <p className="text-labelXSmall text-content-primary">{title}</p>
         {/*TODO:  if store was only one render the name of store */}
         {priceRange && (
-          <p className="text-base font-medium text-content-primary">
-            <span className="text-xss">از</span> {priceRange}{' '}
-            <span className="text-xss">{CURRENCY.IR}</span>
+          <p className="text-labelMedium text-content-primary">
+            <span className="text-bodyXXSmall">از</span> {priceRange}{' '}
+            <span className="text-bodyXXSmall">{CURRENCY.IR}</span>
           </p>
         )}
         {storeName && (
-          <p className="text-xs font-normal text-content-tertiary">
-            {storeName}
-          </p>
+          <p className="text-bodyXSmall text-content-tertiary">{storeName}</p>
         )}
       </div>
     </div>
