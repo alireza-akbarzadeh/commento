@@ -71,8 +71,9 @@ export function Favorites(props: FavoritesPropsType) {
                         <Image
                           src={`/images/${mode === 'dark' ? 'ipad' : 'watch'}.png`}
                           alt="phone"
-                          layout="fill"
-                          className="aspect-video object-contain"
+                          width={50}
+                          height={50}
+                          className="aspect-video size-full object-contain"
                           // objectFit="cover"
                         />
                       </div>

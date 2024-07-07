@@ -20,12 +20,12 @@ export function Banners() {
           {Array.from({ length: 5 }).map((_, index) => (
             <CarouselItem key={index} className="basis-[95%] pl-2">
               <div className="rounded-3xl">
-                <div>
+                <div className="relative h-[207px] w-[328px]">
                   <Image
                     src="/images/banner.png"
-                    width={328}
-                    height={207}
+                    layout="fill"
                     alt="store"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
               </div>
