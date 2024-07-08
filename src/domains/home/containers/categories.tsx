@@ -1,5 +1,4 @@
-import { ChevronLeft } from 'lucide-react';
-import Image from 'next/image';
+import { Icon } from '@/shared/components';
 import { Button } from '@/shared/ui';
 
 export function Categories() {
@@ -11,31 +10,21 @@ export function Categories() {
           <div className="mt-5 flex gap-[22px] px-4" key={index}>
             <Button variant="ghost" className="flex w-full justify-between p-0">
               <div className="flex items-center gap-[5.6px]">
-                <Image
-                  src="/svg/circle.svg"
-                  alt="circle"
-                  width={16}
-                  height={16}
-                />
+                <Icon name="default" size="xxSmall" />
                 <p className="text-xs font-medium text-content-primary">
                   گوشی تلفن
                 </p>
               </div>
-              <ChevronLeft />
+              <Icon name="chevron-left" size="xSmall" />
             </Button>
             <Button variant="ghost" className="flex w-full justify-between p-0">
               <div className="flex items-center gap-[5.6px]">
-                <Image
-                  src="/svg/circle.svg"
-                  alt="circle"
-                  width={16}
-                  height={16}
-                />
+                <Icon name="default" size="xxSmall" />
                 <p className="text-xs font-medium text-content-primary">
                   گوشی تلفن
                 </p>
               </div>
-              <ChevronLeft />
+              <Icon name="chevron-left" size="xSmall" />
             </Button>
           </div>
         ))}

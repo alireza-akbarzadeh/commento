@@ -1,6 +1,12 @@
-import { Loader2 } from 'lucide-react';
 import React from 'react';
+import { Icon } from './icons';
 
 export function Spin() {
-  return <Loader2 className="mr-2 size-4 animate-spin" />;
+  return (
+    <Icon
+      iconClassName="mr-2 size-4 animate-spin"
+      name="loading-spinner"
+      size="medium"
+    />
+  );
 }

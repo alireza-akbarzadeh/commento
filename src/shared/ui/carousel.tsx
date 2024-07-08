@@ -3,11 +3,12 @@
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from 'embla-carousel-react';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+
 import * as React from 'react';
 
 import { Button } from '@/shared/ui/';
 import { cn } from '@/shared/utils';
+import { Icon } from '../components';
 
 type CarouselApi = UseEmblaCarouselType[1];
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
@@ -216,7 +217,11 @@ const CarouselPrevious = React.forwardRef<
       onClick={scrollPrev}
       {...props}
     >
-      <ArrowLeft className="size-4" />
+      <Icon
+        iconClassName="text-content-tertiary"
+        name="arrow-left"
+        size="xxSmall"
+      />
       <span className="sr-only">Previous slide</span>
     </Button>
   );
@@ -245,7 +250,11 @@ const CarouselNext = React.forwardRef<
       onClick={scrollNext}
       {...props}
     >
-      <ArrowRight className="size-4" />
+      <Icon
+        iconClassName="text-content-tertiary"
+        name="arrow-right"
+        size="xxSmall"
+      />
       <span className="sr-only">Next slide</span>
     </Button>
   );

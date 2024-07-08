@@ -1,5 +1,4 @@
-import { ChevronLeft } from 'lucide-react';
-import { ProductItem } from '@/shared/components';
+import { Icon, ProductItem } from '@/shared/components';
 import {
   Card,
   CardContent,
@@ -7,6 +6,7 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  Separator,
 } from '@/shared/ui';
 import { SectionTitle } from '../components/section-title';
 
@@ -31,6 +31,7 @@ export function Comparetaion() {
                     imageUrl="/images/phone.png"
                   />
                 </CardContent>
+                <Separator className="border-1 border-t border-border-primary px-4 pb-3" />
                 <CardFooter>
                   <div className="flex w-full items-center justify-between">
                     <p className="text-base font-medium text-content-primary">
@@ -40,7 +41,11 @@ export function Comparetaion() {
                       <span className="mt-1 text-base font-semibold text-content-tertiary">
                         ۲
                       </span>
-                      <ChevronLeft className="size-4" />
+                      <Icon
+                        iconClassName="text-content-tertiary"
+                        name="chevron-left"
+                        size="medium"
+                      />
                     </div>
                   </div>
                 </CardFooter>

@@ -6,7 +6,7 @@ export function Category() {
       <div className="flex items-center justify-between">
         {Array.from({ length: 4 }).map((_, index) => (
           <div
-            className="flex flex-col items-center gap-x-4 gap-y-[6px]"
+            className="flex flex-col items-center gap-x-4 gap-y-[6px] bg-surface-primary"
             key={index}
           >
             <Image

@@ -1,19 +1,19 @@
-import { Mic, Search } from 'lucide-react';
 import Link from 'next/link';
+import { Icon } from '@/shared/components';
 import { Button } from '@/shared/ui';
 
 export function SearchAction() {
   return (
     <section>
-      <div className="my-2 flex items-center justify-between p-2.5">
+      <div className="my-2 flex items-center justify-between rounded-[12px] bg-surface-secondary p-2.5">
         <Link href="/search" className="flex gap-2.5">
-          <Search className="size-[19px] text-content-secondary" />
+          <Icon name="magnifier" iconClassName="text-content-secondary" />
           <p className="text-base font-medium text-content-tertiary">
             جستجوی محصول...
           </p>
         </Link>
         <Button variant="ghost">
-          <Mic className="size-[19px] text-content-primary" />
+          <Icon iconClassName="text-content-primary" name="microphone" />
         </Button>
       </div>
     </section>
