@@ -1,7 +1,4 @@
-<!-- ![Project Logo](https://github.com/alireza-akbarzadeh/react-launchpad/assets/82927248/1a5a95be-a826-4304-99ad-6ff9ec7a4de3) -->
-
-[![Discord](https://img.shields.io/discord/1232660478027759668)](https://discord.gg/zSQGy8Aq)
-![Liberapay Goal](https://img.shields.io/liberapay/goal/alireza-akbarzdeh.svg?logo=liberapay)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5f2f5a67-5ed3-4c1f-a60f-969373eaa7b9/deploy-status)](https://app.netlify.com/sites/it-bazar/deploys)
 
 <p align="center">
   <h1>It Bazar</h1>
