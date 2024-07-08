@@ -43,7 +43,7 @@ export const LazyImage = (
 
   useEffect(() => {
     setSrc(() => handleSrc(srcProps, isLocal));
-  }, [srcProps]);
+  }, [srcProps, handleSrc]);
 
   const getSrc = () => {
     const width = typeof props.width === 'number' ? `&w=${props.width}` : '';

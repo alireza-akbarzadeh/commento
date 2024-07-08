@@ -1,5 +1,4 @@
 import { Icon } from '@/shared/components';
-import Image from 'next/image';
 
 type DiscountBadgePropsType = {
   price: string;

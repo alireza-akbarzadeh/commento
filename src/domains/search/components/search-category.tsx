@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { Icon } from '@/shared/components';
 import {
   Button,

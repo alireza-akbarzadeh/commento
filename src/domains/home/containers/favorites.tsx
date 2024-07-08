@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import { LazyImage } from '@/shared/components';
 import {
   Card,
   CardContent,
@@ -7,7 +7,6 @@ import {
   CarouselItem,
 } from '@/shared/ui/';
 import { cn } from '@/shared/utils';
-import { LazyImage } from '@/shared/components';
 
 type FavoritesPropsType = {
   title: string;
