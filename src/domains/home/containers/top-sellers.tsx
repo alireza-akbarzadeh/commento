@@ -17,10 +17,7 @@ export function TopSellers() {
       <Carousel opts={{ direction: 'rtl' }}>
         <CarouselContent className="gap-2.5">
           {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem
-              key={index}
-              className="bg-compration basis-[89%] px-2"
-            >
+            <CarouselItem key={index} className="basis-[89%] px-2">
               <Card className="compration-shadow relative mb-2 rounded-[16px]">
                 <div className="rounded-3xl">
                   <CardContent className="flex gap-1 p-6">

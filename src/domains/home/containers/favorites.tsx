@@ -16,8 +16,8 @@ type FavoritesPropsType = {
 export function Favorites(props: FavoritesPropsType) {
   const { mode = 'dark', title } = props;
   return (
-    <section className="my-4 h-[584px]">
-      <div className="bg-compration mb-3 mt-8 h-[76px] max-w-[309px]">
+    <section className="bg-compration my-4 h-[584px]">
+      <div className="mb-3 mt-8 h-[76px] max-w-[309px]">
         <p className="text-headlineSmall text-content-primary">
           {title}
           <span className="text-content-tertiary"> بر اساس آخرین بازدیدها</span>
