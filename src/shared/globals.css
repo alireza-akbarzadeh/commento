@@ -83,5 +83,15 @@
 }
 
 .bg-surface-gradient-brand {
-  background: linear-gradient(91.39deg, #FF334B 0%, #FF223D 50%, #EC4C60 100%)
+  background: linear-gradient(91.39deg, #FF334B 0%, #FF223D 50%, #EC4C60 100%);
+}
+
+
+.compration-shadow {
+  box-shadow: 0px 4px 16px 0px #0000001A;
+}
+
+.bg-compration {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F5F7F7 100%);
+
 }

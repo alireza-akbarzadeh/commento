@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import Link from 'next/link';
 import { DiscountBadge } from '@/domains/home/components';
 import { CURRENCY } from '@/shared/constant';
+import Link from 'next/link';
+import { LazyImage } from './lazy-image';
 
 export type ProductItemProps = {
   hasDiscountBadge?: boolean;
@@ -22,25 +22,36 @@ export function ProductItem(props: ProductItemProps) {
     priceRange,
   } = props;
   // TODO: remove product-item class
+  const titleSize = title.length > 43;
   return (
-    <div className="product-item">
+    <div>
       <Link
         href={`/product/${title}`}
-        className="relative flex flex-col items-center justify-center pb-3"
+        className="relative m-2.5 flex flex-col items-center justify-center"
       >
-        <Image
-          src={imageUrl}
-          className="rounded-md"
-          alt={title}
-          width={101}
-          height={99}
-        />
+        <div className="flex size-[125px] items-center justify-center rounded-[8px] bg-surface-tertiary">
+          <div className="relative h-[101px] w-[99px]">
+            <LazyImage
+              src={imageUrl}
+              style={{
+                objectFit: 'cover',
+                position: 'absolute',
+              }}
+              isLocal
+              quality={100}
+              alt="banner"
+              fill
+            />
+          </div>
+        </div>
         {hasDiscountBadge && discountLabel && (
           <DiscountBadge price={discountLabel} />
         )}
       </Link>
-      <div className="details space-y-3">
-        <p className="text-labelXSmall text-content-primary">{title}</p>
+      <div className="details space-y-1 pt-3">
+        <p className="text-labelSmall text-content-primary">
+          {titleSize ? title.slice(0, 43).concat('...') : title}
+        </p>
         {/*TODO:  if store was only one render the name of store */}
         {priceRange && (
           <p className="text-labelMedium text-content-primary">

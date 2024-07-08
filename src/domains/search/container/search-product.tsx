@@ -1,4 +1,3 @@
-import { Heart } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
 import { DiscountBadge } from '@/domains/home/components';

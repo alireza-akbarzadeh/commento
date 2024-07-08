@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import { Icon } from '@/shared/components';
 import {
   Button,
   ScrollArea,
@@ -17,11 +17,10 @@ export function SearchCategory() {
       <ScrollArea dir="rtl" className="whitespace-nowrap border-b border-white">
         <div className="flex w-max gap-4">
           <div className="flex size-[40px] items-center justify-center rounded-full border border-border-primary bg-surface-tertiary">
-            <Image
-              src="/svg/slider-h.svg"
-              alt="slider-h"
-              width={17}
-              height={14}
+            <Icon
+              name="slider-horizontal"
+              noSize
+              iconClassName="w-[16px] h-[14px]"
             />
           </div>
           <Button

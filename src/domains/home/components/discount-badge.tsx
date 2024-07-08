@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import { Icon } from '@/shared/components';
 
 type DiscountBadgePropsType = {
   price: string;
@@ -7,15 +7,16 @@ type DiscountBadgePropsType = {
 export function DiscountBadge(props: DiscountBadgePropsType) {
   const { price } = props;
   return (
-    <div className="bg-surface-gradient-brand absolute top-0 flex h-5 w-10 -translate-x-9 items-center justify-between gap-[2px] rounded-sm px-1">
-      <span className="text-[11px] font-semibold text-white">{price}</span>
-      <div className="size-2.5">
-        <Image
-          className="size-full object-contain"
-          src="svg/discount-fill.svg"
-          width={10}
-          height={10}
-          alt="discount-fill"
+    <div className="bg-surface-gradient-brand absolute top-2 -translate-x-8 rounded-[6px]">
+      <div className="flex items-center justify-between">
+        <span className="text-content-inverse mx-1 text-[11px] font-semibold">
+          {price}
+        </span>
+        <Icon
+          noSize
+          iconClassName="w-3 h-3 text-content-inverse ml-1"
+          // TODO : change this with discount-fill icon
+          name="coupon-puched-fill"
         />
       </div>
     </div>

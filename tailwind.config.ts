@@ -141,6 +141,7 @@ const config = {
       colors: {
         content: {
           primary: '#000000',
+          inverse: '#ffffff',
           tertiary: '#636366',
           secondary: '#2C2C2E',
           disabled: '#B1B2B2',

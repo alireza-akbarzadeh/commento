@@ -1,7 +1,5 @@
-import { SearchProduct } from './search-product';
 import { NoResult } from '../components/no-result';
 import { ResentSearchItem } from '../components/resent-search-Item';
-import { SearchCategory } from '../components/search-category';
 
 type ResentSearchProps = {};
 

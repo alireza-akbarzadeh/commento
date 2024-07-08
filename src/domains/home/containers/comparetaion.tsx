@@ -1,5 +1,4 @@
-import { ChevronLeft } from 'lucide-react';
-import { ProductItem } from '@/shared/components';
+import { Icon, ProductItem } from '@/shared/components';
 import {
   Card,
   CardContent,
@@ -7,18 +6,22 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  Separator,
 } from '@/shared/ui';
 import { SectionTitle } from '../components/section-title';
 
 export function Comparetaion() {
   return (
-    <section className="my-4">
+    <section id="compration" data-testid="compration" className="my-2">
       <SectionTitle title="مقایسه‌های من" />
-      <Carousel opts={{ direction: 'rtl' }} className="mt-9 w-full max-w-sm">
-        <CarouselContent className="gap-2.5">
+      <Carousel
+        opts={{ direction: 'rtl', dragFree: true }}
+        className="w-full max-w-sm"
+      >
+        <CarouselContent className="">
           {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem key={index} className="basis-[89%] pl-2">
-              <Card className="box-shadow-compare relative rounded-md">
+            <CarouselItem key={index} className="bg-compration basis-[89%]">
+              <Card className="compration-shadow relative mb-3 rounded-[16px]">
                 <CardContent className="flex gap-2.5 px-4 py-2">
                   <ProductItem
                     hasDiscountBadge={index === 0}
@@ -31,16 +34,21 @@ export function Comparetaion() {
                     imageUrl="/images/phone.png"
                   />
                 </CardContent>
-                <CardFooter>
+                <Separator className="border-1 mx-auto my-4 mb-3 w-[86%] border-t border-border-primary" />
+                <CardFooter className="py-4">
                   <div className="flex w-full items-center justify-between">
                     <p className="text-base font-medium text-content-primary">
                       مشاهده مقایسه
                     </p>
                     <div className="flex items-center gap-[7.5px]">
-                      <span className="mt-1 text-base font-semibold text-content-tertiary">
+                      <span className="text-base font-semibold text-content-tertiary">
                         ۲
                       </span>
-                      <ChevronLeft className="size-4" />
+                      <Icon
+                        iconClassName="text-content-tertiary"
+                        name="chevron-left"
+                        size="medium"
+                      />
                     </div>
                   </div>
                 </CardFooter>

@@ -1,10 +1,8 @@
 'use client';
-
-import { Search } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useTransition } from 'react';
-import { Spin } from '@/shared/components';
+import { Icon, Spin } from '@/shared/components';
 import { Button, Input } from '@/shared/ui';
 import { SearchCategory } from './components/search-category';
 import { ResentSearch } from './container/recent-search';
@@ -26,15 +24,18 @@ export function SearchDomian() {
     <section id="search" data-testid="search">
       <div className="my-2 flex items-center gap-4 p-2.5">
         <Link href="/">
-          <Image
-            src="/svg/move-right.svg"
-            width={17}
-            height={14}
-            alt="move-right"
+          <Icon
+            iconClassName="text-content-tertiary"
+            name="arrow-right"
+            size="medium"
           />
         </Link>
         <div className="relative flex w-full items-center">
-          <Search className="size-[19px] text-[#2C2C2E]" />
+          <Icon
+            iconClassName="text-content-tertiary"
+            name="magnifier"
+            size="medium"
+          />
           <Input
             value={searchTerm}
             onChange={({ target }) => handleSearch({ value: target.value })}

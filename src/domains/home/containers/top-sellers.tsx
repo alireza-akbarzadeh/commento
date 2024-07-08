@@ -12,13 +12,16 @@ import { SectionTitle } from '../components/section-title';
 
 export function TopSellers() {
   return (
-    <section className="my-4" id="top-seller" data-testid="top-seller">
+    <section id="top-seller" data-testid="top-seller">
       <SectionTitle title="فروشندگان برتر" />
-      <Carousel opts={{ direction: 'rtl' }} className="mt-9">
+      <Carousel opts={{ direction: 'rtl' }}>
         <CarouselContent className="gap-2.5">
           {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem key={index} className="basis-[89%] pl-2">
-              <Card>
+            <CarouselItem
+              key={index}
+              className="bg-compration basis-[89%] px-2"
+            >
+              <Card className="compration-shadow relative mb-2 rounded-[16px]">
                 <div className="rounded-3xl">
                   <CardContent className="flex gap-1 p-6">
                     <div>

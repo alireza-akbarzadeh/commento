@@ -1,19 +1,34 @@
-import { ArrowUpDown, EllipsisVertical, Heart, X } from 'lucide-react';
-import React from 'react';
+import { Icon } from '@/shared/components';
 import { CURRENCY } from '@/shared/constant';
 import { Button } from '@/shared/ui';
 import { ProductCarousel } from './product-carousel';
-// need to install
-// bunx --bun shadcn-ui@latest add dropdown-menu
+
 export function ProductDomain() {
   return (
     <div>
       <div className="flex h-[56px] items-center justify-between">
-        <X />
+        {/* TODO: add Close icon */}
+        <Icon
+          iconClassName="text-content-tertiary"
+          name="timer"
+          size="medium"
+        />
         <div className="flex items-center gap-5">
-          <ArrowUpDown />
-          <Heart />
-          <EllipsisVertical />
+          <Icon
+            iconClassName="text-content-tertiary"
+            name="arrow-up-arrow-down"
+            size="medium"
+          />
+          <Icon
+            iconClassName="text-content-tertiary"
+            name="heart"
+            size="medium"
+          />
+          <Icon
+            iconClassName="text-content-tertiary"
+            name="more-vertical-fill"
+            size="medium"
+          />
         </div>
       </div>
       <ProductCarousel />
