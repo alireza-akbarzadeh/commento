@@ -1,9 +1,9 @@
 'use client';
+import Autoplay from 'embla-carousel-autoplay';
 import { useBanners } from '@/domains/home/hooks';
 import { LazyImage } from '@/shared/components';
 import { Carousel, CarouselContent, CarouselItem } from '@/shared/ui';
 import { cn } from '@/shared/utils';
-import Autoplay from 'embla-carousel-autoplay';
 
 export function Banners() {
   const { scrollSnaps, scrollTo, selectedIndex, setApi } = useBanners();

@@ -9,7 +9,7 @@ export function Category() {
             className="flex flex-col items-center gap-x-4 gap-y-[6px] bg-surface-primary"
             key={index}
           >
-            <div className="h-[63px] w-[63px] bg-surface-secondary px-1.5">
+            <div className="relative size-[63px] bg-surface-secondary px-1.5">
               <LazyImage
                 style={{ objectFit: 'cover', position: 'absolute' }}
                 isLocal
