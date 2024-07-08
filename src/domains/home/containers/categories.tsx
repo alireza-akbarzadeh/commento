@@ -3,8 +3,8 @@ import { Button } from '@/shared/ui';
 
 export function Categories() {
   return (
-    <section className="mt- mb-[64px]">
-      <h3 className="px-3 py-2 text-lg font-semibold">دسته‌بندی‌ها</h3>
+    <section className="h-[264px]">
+      <h3 className="px-4 pt-4 text-lg font-semibold">دسته‌بندی‌ها</h3>
       <div className="">
         {Array.from({ length: 3 }).map((_, index) => (
           <div className="mt-5 flex gap-[22px] px-4" key={index}>
