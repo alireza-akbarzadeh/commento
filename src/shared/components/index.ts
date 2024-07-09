@@ -1,6 +1,7 @@
 export { Spin } from './spin';
 export { ProductItem } from './product-item';
 export { LazyImage } from './lazy-image';
+
 export {
   Icon,
   type IconProps,

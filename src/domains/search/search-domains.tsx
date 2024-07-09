@@ -1,9 +1,8 @@
 'use client';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useTransition } from 'react';
 import { Icon, Spin } from '@/shared/components';
-import { Button, Input } from '@/shared/ui';
+import { Input } from '@/shared/ui';
 import { SearchCategory } from './components/search-category';
 import { ResentSearch } from './container/recent-search';
 import { SearchProduct } from './container/search-product';
@@ -46,21 +45,12 @@ export function SearchDomian() {
             <Spin />
           ) : (
             isFelidEmpty && (
-              <Button
-                className="cursor-pointer"
+              <Icon
+                iconClassName="text-content-tertiary "
                 onClick={handleClearSearch}
-                asChild
-                variant="ghost"
-              >
-                <div>
-                  <Image
-                    src="/svg/close-fill.svg"
-                    width={16}
-                    height={16}
-                    alt="move-right"
-                  />
-                </div>
-              </Button>
+                size="xxSmall"
+                name="circle-cross-fill"
+              />
             )
           )}
         </div>

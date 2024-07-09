@@ -43,6 +43,7 @@ export const LazyImage = (
 
   useEffect(() => {
     setSrc(() => handleSrc(srcProps, isLocal));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [srcProps, handleSrc]);
 
   const getSrc = () => {

@@ -13,7 +13,7 @@ export function ResentSearch(props: ResentSearchProps) {
           <ResentSearchItem
             key={index}
             activeBorder={index !== items.length - 1}
-            iconUrl="/svg/history.svg"
+            iconName={'magnifier'}
             subtitle="گوشی موبایل اپل"
             title="در دسته گوشی‌ها"
           />
@@ -25,7 +25,7 @@ export function ResentSearch(props: ResentSearchProps) {
           <ResentSearchItem
             key={index}
             activeBorder={index !== items.length - 1}
-            iconUrl="/svg/fire.svg"
+            iconName="clock-fill"
             subtitle="گوشی موبایل اپل"
             title="در دسته گوشی‌ها"
           />
@@ -34,7 +34,7 @@ export function ResentSearch(props: ResentSearchProps) {
           <ResentSearchItem
             key={index}
             activeBorder={index !== items.length - 1}
-            iconUrl="/svg/search.svg"
+            iconName="fire"
             subtitle="گوشی موبایل اپل"
             title="در دسته گوشی‌ها"
           />

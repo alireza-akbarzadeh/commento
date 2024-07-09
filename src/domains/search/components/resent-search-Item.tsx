@@ -1,22 +1,22 @@
-import Image from 'next/image';
 import React from 'react';
+import { Icon, IconType } from '@/shared/components';
 import { Separator } from '@/shared/ui';
 
 type ResentSearchItemProps = {
-  iconUrl: string;
+  iconName: IconType;
   title: string;
   subtitle: string;
   activeBorder: Boolean;
 };
 
 export function ResentSearchItem(props: ResentSearchItemProps) {
-  const { iconUrl, subtitle, title, activeBorder } = props;
+  const { iconName, subtitle, title, activeBorder } = props;
 
   return (
     <>
       <div className="flex items-center pl-4 pt-3">
         <div className="px-6">
-          <Image src={iconUrl} width={20} height={20} alt={title} />
+          <Icon name={iconName} />
         </div>
         <div className="space-y-[2px]">
           <h4 className="text-labelMedium text-content-primary">{title}</h4>

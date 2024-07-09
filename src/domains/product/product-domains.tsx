@@ -1,36 +1,12 @@
-import { Icon } from '@/shared/components';
 import { CURRENCY } from '@/shared/constant';
 import { Button } from '@/shared/ui';
 import { ProductCarousel } from './product-carousel';
+import { ProductNavigation } from './product-navigation';
 
 export function ProductDomain() {
   return (
-    <div>
-      <div className="flex h-[56px] items-center justify-between">
-        {/* TODO: add Close icon */}
-        <Icon
-          iconClassName="text-content-tertiary"
-          name="timer"
-          size="medium"
-        />
-        <div className="flex items-center gap-5">
-          <Icon
-            iconClassName="text-content-tertiary"
-            name="arrow-up-arrow-down"
-            size="medium"
-          />
-          <Icon
-            iconClassName="text-content-tertiary"
-            name="heart"
-            size="medium"
-          />
-          <Icon
-            iconClassName="text-content-tertiary"
-            name="more-vertical-fill"
-            size="medium"
-          />
-        </div>
-      </div>
+    <section id="product-details-page" data-testid="product-details-page">
+      <ProductNavigation />
       <ProductCarousel />
       <div className="mt-5">
         <div className="space-y-4">
@@ -44,6 +20,6 @@ export function ProductDomain() {
           </Button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

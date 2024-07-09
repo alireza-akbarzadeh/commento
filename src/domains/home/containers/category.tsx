@@ -11,7 +11,7 @@ export function Category() {
           >
             <div className="relative size-[63px] bg-surface-secondary p-1.5">
               <LazyImage
-                style={{ objectFit: 'cover', position: 'absolute' }}
+                style={{ objectFit: 'cover' }}
                 isLocal
                 quality={100}
                 alt=""

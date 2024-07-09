@@ -7,14 +7,13 @@ import iconSet from './selection.json';
 
 type IconSize = 'xxSmall' | 'xSmall' | 'small' | 'medium' | 'large' | 'xLarge';
 type IconProps = {
-  size?: IconSize;
+  size?: IconSize | number;
   name: IconType;
   style?: React.CSSProperties;
   iconClassName?: string;
   parentClassName?: string;
   disabled?: boolean;
   onClick?: (event: React.MouseEvent) => void;
-  noSize?: boolean;
 };
 
 const sizes: Record<IconSize, number> = {
@@ -34,7 +33,6 @@ const Icon = (props: IconProps): JSX.Element => {
     disabled = false,
     parentClassName,
     iconClassName,
-    noSize,
     style,
     ...rest
   } = props;
@@ -44,7 +42,7 @@ const Icon = (props: IconProps): JSX.Element => {
         className={cn(`text-content-primary ${iconClassName}`)}
         iconSet={iconSet}
         icon={name}
-        size={!noSize ? sizes[size] : undefined}
+        size={typeof size !== 'number' ? sizes[size] : size}
         style={{
           cursor: disabled ? 'not-allowed !important' : 'pointer',
           ...style,

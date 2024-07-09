@@ -19,8 +19,7 @@ export function SearchCategory() {
           <div className="flex size-[40px] items-center justify-center rounded-full border border-border-primary bg-surface-tertiary">
             <Icon
               name="slider-horizontal"
-              noSize
-              iconClassName="w-[16px] h-[14px]"
+              style={{ width: '16px', height: '14px' }}
             />
           </div>
           <Button

@@ -1,1 +1,5 @@
-bun run lint
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+bunx pretty-quick --staged
+bunx  lint-staged
