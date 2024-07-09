@@ -1,9 +1,3 @@
-
-
 export function AuthDomains() {
-    return (
-
-<div></div>
-        
-    )
-}  
+  return <div></div>;
+}
