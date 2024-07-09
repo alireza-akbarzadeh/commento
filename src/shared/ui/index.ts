@@ -7,7 +7,7 @@ export {
   CarouselPrevious,
 } from './carousel';
 
-export { Button } from './button';
+export { Button ,buttonVariants} from './button';
 export { Input, type InputProps } from './input';
 export { Toaster } from './toaster';
 export { reducer, toast, useToast } from './use-toast';
