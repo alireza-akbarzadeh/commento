@@ -162,7 +162,9 @@ const config = {
           inverse: { primary: '#000', secondary: '# 323333' },
           accent: '#276EF1',
           negative: '#E11900',
+          negativeLight: '#FFEFED',
           positive: '#048848',
+          positiveLight: '#E6F2ED',
           warning: '#FFC043',
         },
         border: {
