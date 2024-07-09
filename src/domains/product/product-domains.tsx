@@ -1,4 +1,3 @@
-import { Icon } from '@/shared/components';
 import { CURRENCY } from '@/shared/constant';
 import { Button } from '@/shared/ui';
 import { ProductCarousel } from './product-carousel';

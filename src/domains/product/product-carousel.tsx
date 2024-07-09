@@ -1,6 +1,5 @@
 'use client';
 import Autoplay from 'embla-carousel-autoplay';
-import Image from 'next/image';
 import { useBanners } from '@/domains/home/hooks';
 import { Icon, LazyImage } from '@/shared/components';
 import { Carousel, CarouselContent, CarouselItem } from '@/shared/ui';

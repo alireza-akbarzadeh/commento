@@ -1,5 +1,3 @@
-import Image from 'next/image';
-import React from 'react';
 import { DiscountBadge } from '@/domains/home/components';
 import { Icon, LazyImage } from '@/shared/components';
 import { ProductItemProps } from '@/shared/components/product-item';

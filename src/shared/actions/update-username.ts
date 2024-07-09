@@ -1,9 +1,8 @@
 'use server';
 
 import { revalidatePath } from 'next/cache';
-import { auth } from '@/auth';
-import { prisma } from '@/lib/db';
 import { userNameSchema } from '@/shared/validation/user';
+// import {auth} from '@/shared/config'
 
 export type FormData = {
   name: string;
@@ -11,11 +10,11 @@ export type FormData = {
 
 export async function updateUserName(userId: string, data: FormData) {
   try {
-    const session = await auth();
+    // const session = await auth();
 
-    if (!session?.user || session?.user.id !== userId) {
-      throw new Error('Unauthorized');
-    }
+    // if (!session?.user || session?.user.id !== userId) {
+    //   throw new Error('Unauthorized');
+    // }
 
     const { name } = userNameSchema.parse(data);
 
@@ -40,17 +39,16 @@ export async function updateUserName(userId: string, data: FormData) {
 
 export const getUserByEmail = async (email: string) => {
   try {
-    const user = await prisma.user.findUnique({
-      where: {
-        email: email,
-      },
-      select: {
-        name: true,
-        emailVerified: true,
-      },
-    });
-
-    return user;
+    // const user = await prisma.user.findUnique({
+    //   where: {
+    //     email,
+    //   },
+    //   select: {
+    //     name: true,
+    //     emailVerified: true,
+    //   },
+    // });
+    // return user;
   } catch {
     return null;
   }
@@ -58,9 +56,8 @@ export const getUserByEmail = async (email: string) => {
 
 export const getUserById = async (id: string) => {
   try {
-    const user = await prisma.user.findUnique({ where: { id } });
-
-    return user;
+    // const user = await prisma.user.findUnique({ where: { id } });
+    // return user;
   } catch {
     return null;
   }

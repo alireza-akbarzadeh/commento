@@ -1,9 +1,8 @@
 'use client';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useTransition } from 'react';
 import { Icon, Spin } from '@/shared/components';
-import { Button, Input } from '@/shared/ui';
+import { Input } from '@/shared/ui';
 import { SearchCategory } from './components/search-category';
 import { ResentSearch } from './container/recent-search';
 import { SearchProduct } from './container/search-product';
