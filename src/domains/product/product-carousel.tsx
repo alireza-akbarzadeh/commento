@@ -2,6 +2,7 @@
 import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
 import { useBanners } from '@/domains/home/hooks';
+import { Icon, LazyImage } from '@/shared/components';
 import { Carousel, CarouselContent, CarouselItem } from '@/shared/ui';
 import { cn } from '@/shared/utils';
 
@@ -23,27 +24,24 @@ export function ProductCarousel() {
               className="flex h-[271px] basis-full flex-col items-center justify-center"
             >
               <div className="relative m-auto h-[149px] w-[152px]">
-                <Image
-                  src="/images/phone.png"
-                  width={152}
-                  height={149}
-                  objectFit="contain"
-                  style={{ width: '100%', height: 'auto' }}
-                  alt="store"
-                />
+                <div className="relative m-auto h-[149px] w-[152px]">
+                  <LazyImage
+                    src="/images/phone.png"
+                    style={{
+                      objectFit: 'cover',
+                    }}
+                    isLocal
+                    quality={100}
+                    alt="store"
+                    fill
+                  />
+                </div>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
         <div className="flex justify-between">
-          <div>
-            <Image
-              src="/svg/play-video.svg"
-              width={20}
-              height={20}
-              alt="play-video"
-            />
-          </div>
+          <Icon name="video-two-fill" />
           <div className="cursor-pointer">
             <div className="flex flex-row items-center gap-2">
               {scrollSnaps?.map((_, index) => (

@@ -46,21 +46,12 @@ export function SearchDomian() {
             <Spin />
           ) : (
             isFelidEmpty && (
-              <Button
-                className="cursor-pointer"
+              <Icon
+                iconClassName="text-content-tertiary "
                 onClick={handleClearSearch}
-                asChild
-                variant="ghost"
-              >
-                <div>
-                  <Image
-                    src="/svg/close-fill.svg"
-                    width={16}
-                    height={16}
-                    alt="move-right"
-                  />
-                </div>
-              </Button>
+                size="xxSmall"
+                name="circle-cross-fill"
+              />
             )
           )}
         </div>

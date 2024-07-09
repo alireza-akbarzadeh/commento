@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import { DiscountBadge } from '@/domains/home/components';
+import { Icon, LazyImage } from '@/shared/components';
 import { ProductItemProps } from '@/shared/components/product-item';
 import { CURRENCY } from '@/shared/constant';
 import { Separator } from '@/shared/ui';
@@ -30,29 +31,33 @@ export function SearchProduct(props: SearchProductProps) {
     <div className="px-4">
       <div className="flex h-[147px] items-center gap-8">
         <div className="relative flex flex-col items-center justify-center">
-          <Image
-            src={imageUrl}
-            className="rounded-md"
-            alt={title}
-            width={101}
-            height={99}
-          />
+          <div className="h-[99px] w-[101px]">
+            <LazyImage
+              src={imageUrl}
+              style={{
+                objectFit: 'cover',
+              }}
+              isLocal
+              quality={100}
+              alt={title}
+              fill
+            />
+          </div>
           {hasDiscountBadge && discountLabel && (
             <DiscountBadge price={discountLabel} />
           )}
           <div
             className={cn(
-              'absolute bottom-0 right-0 flex size-6 translate-x-1 transform items-center justify-center rounded-full bg-gray-400',
+              'absolute bottom-0 right-0 flex size-6 translate-x-0 transform items-center justify-center rounded-full bg-gray-400',
               {
                 'bg-brand-main': loved,
               },
             )}
           >
-            <Image
-              src={`/svg/${loved ? 'fill-heart' : 'outlined-heart'}.svg`}
-              width={12}
-              alt="loved"
-              height={12}
+            <Icon
+              iconClassName="text-content-inverse"
+              name={loved ? 'heart-fill' : 'heart'}
+              style={{ width: 12, height: 12 }}
             />
           </div>
         </div>
