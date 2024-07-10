@@ -1,13 +1,13 @@
-import { ScrollArea } from '@radix-ui/react-scroll-area';
-import { Icon } from '@/shared/components';
 import { CURRENCY } from '@/shared/constant';
-import { Badge, Button, ScrollBar, Separator } from '@/shared/ui';
+import { Button } from '@/shared/ui';
 import {
   ProductActions,
   ProductAttribute,
   ProductCarousel,
   ProductNavigation,
 } from './components';
+import { ProductInfo } from './components/product-info';
+import { StoreInfo } from './components/store-info';
 
 // TODO
 // در صورتی که کانفیگی تنوع نداشته باشد قابل کلیک نمیباشد و اگر داشت کلیک مییشه و باتم شیت باز میشه- با کلیک رویی کانفیگ جدید صفحه PDP رفرش میشه
@@ -35,68 +35,14 @@ export function ProductDomain() {
             </Button>
           </div>
           {/* product benchmark */}
-          <div className="flex items-center justify-between py-2">
-            <div className="flex flex-col items-center">
-              <Icon name="sticky-note" size="small" />
-              <p className="text-labelXSmall text-content-primary">
-                مشخصات فنی
-              </p>
-            </div>
-            <Separator
-              orientation="vertical"
-              className="h-[40px] border-[0.6px] border-border-primary text-displaySmall"
-            />
-            <div className="flex flex-col items-center">
-              <Badge variant="positive">۴.۳</Badge>
-              <p className="text-labelXSmall text-content-primary">نمره تست</p>
-            </div>
-            <Separator
-              orientation="vertical"
-              className="h-[40px] border-[0.6px] border-border-primary text-displaySmall"
-            />
-            <div className="flex flex-col items-center">
-              <Icon name="slider-horizontal" size="small" />
-              <p className="text-labelXSmall text-content-primary">
-                نمودار قیمت
-              </p>
-            </div>
-          </div>
+          <ProductInfo />
           <div className="">
             <p className="text-labelMedium text-content-primary">
               ۱۱ فروشگاه اینترنتی
             </p>
           </div>
           <ProductActions />
-          <div>
-            <div className="flex items-center gap-1.5">
-              <p className="text-labelSmall text-content-primary">دیجیاتو</p>
-              <span className="text-bodySmall text-content-positive">۴.۵</span>
-              <Icon name="chevron-up" />
-            </div>
-            <p className="text-bodySmall text-content-tertiary">
-              تهران - اینترنتی
-            </p>
-            <div className="flex items-center gap-2">
-              <Badge
-                variant="negative"
-                className="text-bodyXSmall text-content-negative"
-              >
-                کمترین قیمت
-              </Badge>
-              <Badge
-                variant="warning"
-                className="text-bodyXSmall text-content-primary"
-              >
-                آگهی
-              </Badge>
-              <Badge
-                variant="positive"
-                className="text-bodyXSmall text-content-positive"
-              >
-                ضمانت آی‌تی بازار
-              </Badge>
-            </div>
-          </div>
+          <StoreInfo />
         </div>
       </div>
     </section>

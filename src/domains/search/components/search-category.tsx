@@ -4,9 +4,12 @@ import { Button, ScrollArea, ScrollBar } from '@/shared/ui';
 export function SearchCategory() {
   return (
     <div className="py-2">
-      <ScrollArea dir="rtl" className="whitespace-nowrap border-b border-white">
+      <ScrollArea
+        dir="rtl"
+        className="whitespace-nowrap border-b border-content-inverse"
+      >
         <div className="flex w-max gap-4">
-          <div className="flex size-[32px] items-center justify-center rounded-full border">
+          <div className="mt-1 flex size-[32px] items-center justify-center rounded-full border">
             <Icon name="slider-horizontal" size="small" />
           </div>
           <Button
