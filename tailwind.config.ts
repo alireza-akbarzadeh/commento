@@ -138,6 +138,9 @@ const config = {
           },
         ],
       },
+       fontFamily: {       
+        "vazirmatn": "var(--font-vazirmatn)",   	
+              },
       colors: {
         content: {
           primary: '#000000',
