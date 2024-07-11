@@ -13,54 +13,45 @@
 // security: Changes that address security vulnerabilities, implement security measures, or enhance the overall security of the codebase.
 // sample git commit -m "[cloud] - [chore] update commitlint, rm_id:#1234"
 // -----------------------------------------------------------------------------------------------------------------------------------------------------
+
 module.exports = {
   parserPreset: {
     parserOpts: {
-      headerPattern:
-        /^(feat|build|chore|ci|docs|feature|bugfix|perf|refactor|revert|style|test|translation|security)\[(.*?)\]:\s(.*?),\s*rm_id:\s*#(\d+)/,
-      headerCorrespondence: ['type', 'subtype', 'subject', 'rm_id'],
+      headerPattern: /^\[(.*?)\] - (.*?):(.*),\s*jira_id:\s*#(\d+)/,
+      headerCorrespondence: ['platform', 'type', 'subject', 'jira_id'],
     },
   },
   plugins: [
     {
       rules: {
         'header-match-team-pattern': (parsed) => {
-          const { type, subtype, subject, rm_id } = parsed;
+          const { platform, type, subject, jira_id } = parsed;
           if (
-            type === null ||
-            subtype === null ||
-            subject === null ||
-            rm_id === null
+            platform === null &&
+            type === null &&
+            subject === null &&
+            jira_id === null
           ) {
             return [
               false,
-              "\x1b[31mERROR\x1b[0m: Please follow the format 'feat[chore]: subject, rm_id:#RM_ID'",
+              "\x1b[31mERROR\x1b[0m: Please follow the format '[cloud] - [chore] subject, rm_id:#RM_ID'",
             ];
           }
           return [true, ''];
         },
         'gitmoji-type-enum': (parsed, _when, expectedValue) => {
-          const validTypes = [
-            'feat',
-            'build',
-            'chore',
-            'ci',
-            'docs',
-            'feature',
-            'bugfix',
-            'perf',
-            'refactor',
-            'revert',
-            'style',
-            'test',
-            'translation',
-            'security',
-          ];
-          const { type } = parsed;
-          if (type && !validTypes.includes(type)) {
+          const platformType = ['Cloud', 'Development', 'QA']; //change your platforms here
+          const { type, platform } = parsed;
+          if (type && !expectedValue.includes(type)) {
             return [
               false,
-              `\x1b[31mERROR\x1b[0m: [${type}] is not in the allowed types [${validTypes}]`,
+              `\x1b[31mERROR\x1b[0m: [${type}] doesn't include in [${expectedValue}]`,
+            ];
+          }
+          if (platform && !platformType.includes(platform)) {
+            return [
+              false,
+              `\x1b[31mERROR\x1b[0m: [${platform}] doesn't include in [${platformType}]`,
             ];
           }
           return [true, ''];
@@ -70,7 +61,25 @@ module.exports = {
   ],
   rules: {
     'header-match-team-pattern': [2, 'always'],
-    'gitmoji-type-enum': [2, 'always'],
+    'gitmoji-type-enum': [
+      2,
+      'always',
+      [
+        'build',
+        'chore',
+        'ci',
+        'docs',
+        'feature',
+        'bugfix',
+        'perf',
+        'refactor',
+        'revert',
+        'style',
+        'test',
+        'translation',
+        'security',
+      ],
+    ],
     'subject-empty': [2, 'never'],
     'body-leading-blank': [2, 'always'],
     'footer-leading-blank': [2, 'always'],
