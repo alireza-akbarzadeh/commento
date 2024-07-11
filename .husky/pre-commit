@@ -3,3 +3,4 @@
 
 bunx pretty-quick --staged
 bunx  lint-staged
+bun run ts-lint-commit-hook
