@@ -1,14 +1,19 @@
 import { DiscountBadge } from '@/domains/home/components';
 import { Icon, LazyImage } from '@/shared/components';
-import { ProductItemProps } from '@/shared/components/product-item';
 import { CURRENCY } from '@/shared/constant';
 import { Separator } from '@/shared/ui';
 import { cn } from '@/shared/utils';
 
-type SearchProductProps = ProductItemProps & {
+type SearchProductProps = {
   activeBorder?: boolean;
   info?: { title: string }[];
   loved: boolean;
+  hasDiscountBadge: boolean;
+  discountLabel: number;
+  title: string;
+  imageUrl: string;
+  priceRange: string;
+  storeName: string;
 };
 
 export function SearchProduct(props: SearchProductProps) {
@@ -42,7 +47,7 @@ export function SearchProduct(props: SearchProductProps) {
             />
           </div>
           {hasDiscountBadge && discountLabel && (
-            <DiscountBadge price={discountLabel} />
+            <DiscountBadge discount={discountLabel} />
           )}
           <div
             className={cn(

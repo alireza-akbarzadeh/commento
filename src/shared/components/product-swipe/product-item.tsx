@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { DiscountBadge } from '@/domains/home/components';
+import { LazyImage } from '@/shared/components';
 import { Products } from '@/shared/config/mock-data';
 import { CURRENCY } from '@/shared/constant';
-import { LazyImage } from '../lazy-image';
 
 export type ProductItemProps = {
   product: Products;

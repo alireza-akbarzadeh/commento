@@ -63,7 +63,7 @@ export function SearchDomian() {
             activeBorder={index !== items.length - 1}
             key={index}
             loved={index === 0 || index === 2}
-            discountLabel="43%"
+            discountLabel={43}
             priceRange="159,000"
             storeName="در ۲۴ فروشگاه"
             title="گوشی موبایل اپل مدل iPhone 13 CH دو سیم‌ کارت"
