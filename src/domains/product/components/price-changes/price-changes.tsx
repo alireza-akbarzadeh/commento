@@ -1,53 +1,66 @@
 'use client';
 
-import { Bar, BarChart, CartesianGrid, XAxis } from 'recharts';
+import { CartesianGrid, Line, LineChart, XAxis } from 'recharts';
 
 import {
   ChartConfig,
   ChartContainer,
-  ChartLegend,
-  ChartLegendContent,
   ChartTooltip,
   ChartTooltipContent,
 } from '@/shared/ui';
-
 const chartData = [
-  { month: 'January', desktop: 186, mobile: 80 },
-  { month: 'February', desktop: 305, mobile: 200 },
-  { month: 'March', desktop: 237, mobile: 120 },
-  { month: 'April', desktop: 73, mobile: 190 },
-  { month: 'May', desktop: 209, mobile: 130 },
-  { month: 'June', desktop: 214, mobile: 140 },
+  { month: 'فروردین', price: 100 },
+  { month: 'اردیبهشت', price: 450 },
+  { month: 'خرداد', price: 200 },
+  { month: 'تیر', price: 300 },
+  { month: 'مرداد', price: 150 },
+  { month: 'شهریور', price: 350 },
 ];
 
 const chartConfig = {
-  desktop: {
-    label: 'Desktop',
-    color: '#2563eb',
-  },
-  mobile: {
-    label: 'Mobile',
-    color: '#60a5fa',
+  price: {
+    label: '۱۲ اردیبهشت',
+    color: 'hsl(var(--chart-3))',
   },
 } satisfies ChartConfig;
 
 export function PriceChanges() {
   return (
-    <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
-      <BarChart accessibilityLayer data={chartData}>
+    <ChartContainer config={chartConfig}>
+      <LineChart
+        accessibilityLayer
+        data={chartData}
+        margin={{
+          left: 10,
+          right: 10,
+        }}
+      >
         <CartesianGrid vertical={false} />
         <XAxis
           dataKey="month"
           tickLine={false}
-          tickMargin={10}
           axisLine={false}
-          tickFormatter={(value) => value.slice(0, 3)}
+          tickMargin={8}
         />
-        <ChartTooltip content={<ChartTooltipContent />} />
-        <ChartLegend content={<ChartLegendContent />} />
-        <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4} />
-        <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
-      </BarChart>
+        <ChartTooltip
+          cursor={false}
+          content={
+            <ChartTooltipContent className="bg-black text-content-inverse shadow-elevation3" />
+          }
+        />
+        <Line
+          dataKey="price"
+          type="linear"
+          stroke="var(--color-price)"
+          strokeWidth={2}
+          dot={{
+            fill: 'var(--color-price)',
+          }}
+          activeDot={{
+            r: 6,
+          }}
+        />
+      </LineChart>
     </ChartContainer>
   );
 }
