@@ -5,13 +5,11 @@ import { ProductItem } from './product-item';
 
 export type ProductSwiperops = {
   data: Products[];
-  basis?: string;
   title?: string;
 };
 
 export function ProductSwipe(props: ProductSwiperops) {
-  const { data, title, basis = 39 } = props;
-  // TODO: remove product-item class
+  const { data, title } = props;
 
   return (
     <>
@@ -22,7 +20,7 @@ export function ProductSwipe(props: ProductSwiperops) {
       >
         <CarouselContent className="gap-2.5">
           {data.map((product, index) => (
-            <CarouselItem key={index} className={`basis-[${basis}%] pl-2`}>
+            <CarouselItem key={index} className={`basis-[39%] pl-2`}>
               <ProductItem key={index} product={product} />
             </CarouselItem>
           ))}

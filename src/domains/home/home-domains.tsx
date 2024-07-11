@@ -10,7 +10,7 @@ import {
   TopSellers,
 } from './containers';
 
-export function HomeDomains(props) {
+export function HomeDomains() {
   return (
     <>
       <SearchAction />
