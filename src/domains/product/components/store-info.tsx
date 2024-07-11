@@ -38,7 +38,7 @@ export function StoreInfo() {
       <div className="flex items-center gap-2">
         <Badge
           variant="negative"
-          className="space-x-[2px] text-bodyXSmall text-content-negative"
+          className="space-x-[2px] px-4 py-1.5 text-bodyXSmall text-content-negative"
         >
           <Icon
             size={12}
@@ -91,6 +91,13 @@ export function StoreInfo() {
           <Icon iconClassName="text-content-invers" name="chevron-left" />
         </Button>
       </div>
+      <div className="bg-surface-secondary p-4"></div>
+      <Button
+        className="rounded-xl text-labellarge text-content-inverse"
+        fullWidth
+      >
+        نمایش همه فروشگاه‌ها
+      </Button>
     </div>
   );
 }

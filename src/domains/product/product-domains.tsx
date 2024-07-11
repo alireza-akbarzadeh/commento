@@ -6,6 +6,7 @@ import {
   ProductCarousel,
   ProductNavigation,
 } from './components';
+import { FAQ } from './components/faq';
 import { ProductInfo } from './components/product-info';
 import { StoreInfo } from './components/store-info';
 
@@ -43,6 +44,7 @@ export function ProductDomain() {
           </div>
           <ProductActions />
           <StoreInfo />
+          <FAQ />
         </div>
       </div>
     </section>
