@@ -4,3 +4,5 @@ export {
   authRoutes,
   publicRoutes,
 } from './routes';
+
+export { products } from './mock-data';

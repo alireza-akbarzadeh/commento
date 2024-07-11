@@ -1,7 +1,7 @@
 export { Banners } from './banners';
 export { BottomNavigation } from './bottom-navigation';
 export { Categories } from './categories';
-export { Comparetaion } from './comparetaion';
+export { Comparetaion } from './comperation/comparetaion';
 export { Favorites } from './favorites';
 export { ResentViews } from './resent-views';
 export { SearchAction } from './search-action';

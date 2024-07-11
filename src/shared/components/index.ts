@@ -1,5 +1,6 @@
 export { Spin } from './spin';
-export { ProductItem } from './product-item';
+export { ProductSwipe } from './product-swipe/product-swipe';
+export { ProductItem } from './product-swipe/product-item';
 export { LazyImage } from './lazy-image';
 
 export {

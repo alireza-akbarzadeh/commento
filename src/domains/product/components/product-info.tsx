@@ -1,6 +1,6 @@
 import { Icon } from '@/shared/components';
 import { Badge, Separator } from '@/shared/ui';
-import { SpecificTech } from './specific-tech';
+import { SpecificTech } from './specific/specific-tech';
 
 export function ProductInfo() {
   return (
