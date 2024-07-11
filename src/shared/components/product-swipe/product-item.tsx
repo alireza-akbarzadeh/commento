@@ -41,10 +41,10 @@ export function ProductItem(props: ProductItemProps) {
             ? product.title.slice(0, 43).concat('...')
             : product.title}
         </p>
-        {/*TODO:  if store was only one render the name of store */}
+        {/*TODO:  if store was only one render te name of store */}
         {product.price && (
           <p className="text-labelMedium text-content-primary">
-            <span className="text-bodyXXSmall">از</span> {product.price}
+            <span className="text-bodyXXSmall">از</span> {product.price}{' '}
             <span className="text-bodyXXSmall">{CURRENCY.IR}</span>
           </p>
         )}

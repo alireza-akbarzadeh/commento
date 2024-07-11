@@ -2,7 +2,6 @@
 
 import { CartesianGrid, Line, LineChart, XAxis, YAxis } from 'recharts';
 
-import { Icon } from '@/shared/components';
 import {
   ChartConfig,
   ChartContainer,
@@ -10,7 +9,7 @@ import {
   ChartTooltipContent,
 } from '@/shared/ui';
 const chartData = [
-  { month: 'فروردین', price: 224 },
+  { month: 'فروردین', price: 100 },
   { month: 'اردیبهشت', price: 450 },
   { month: 'خرداد', price: 200 },
   { month: 'تیر', price: 300 },
@@ -28,7 +27,11 @@ const chartConfig = {
 export function PriceChanges() {
   return (
     <ChartContainer config={chartConfig}>
-      <LineChart accessibilityLayer data={chartData}>
+      <LineChart
+        margin={{ left: 12, right: 12 }}
+        accessibilityLayer
+        data={chartData}
+      >
         <CartesianGrid vertical={false} horizontal={false} />
         <XAxis
           dataKey="month"
@@ -36,12 +39,7 @@ export function PriceChanges() {
           axisLine={false}
           tickMargin={8}
         />
-        <YAxis
-          tickMargin={28}
-          yAxisId="left"
-          tickLine={false}
-          axisLine={false}
-        />
+        <YAxis yAxisId="left" tickLine={false} axisLine={false} />
         <YAxis
           yAxisId="right"
           orientation="right"
