@@ -35,7 +35,7 @@ export function TestScore() {
             </DrawerClose>
           </DrawerHeader>
           <div className="px-4">
-            <Alert className="py-4">
+            <Alert variant="positive" className="py-4">
               <AlertTitle>خوب ( ۸۵٪)</AlertTitle>
               <AlertDescription>
                 امتیاز میانگین از ۱۶ تست در سایت‌های زیر

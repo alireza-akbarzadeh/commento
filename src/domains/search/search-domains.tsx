@@ -39,7 +39,7 @@ export function SearchDomian() {
             value={searchTerm}
             onChange={({ target }) => handleSearch({ value: target.value })}
             placeholder="جستوجوی محصول..."
-            className="border-none text-[16px] text-content-primary placeholder:text-md placeholder:font-medium placeholder:text-content-tertiary focus-visible:border-none focus-visible:outline-none focus-visible:ring-0"
+            className="search-input-class"
           />
           {pending ? (
             <Spin />
