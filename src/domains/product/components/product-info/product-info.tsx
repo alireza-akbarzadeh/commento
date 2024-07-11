@@ -1,5 +1,5 @@
 import { Separator } from '@/shared/ui';
-import { PriceChart } from './price-chart/price-chart';
+import { PriceNotify } from './price-notify/price-notify';
 import { SpecificTech } from './specific/specific-tech';
 import { TestScore } from './test-score/test-score';
 
@@ -16,7 +16,7 @@ export function ProductInfo() {
         orientation="vertical"
         className="h-[40px] border-[0.6px] border-border-primary text-displaySmall"
       />
-      <PriceChart />
+      <PriceNotify />
     </div>
   );
 }

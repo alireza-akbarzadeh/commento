@@ -12,7 +12,7 @@ import {
   Separator,
 } from '@/shared/ui';
 
-export function PriceChart() {
+export function PriceNotify() {
   return (
     <>
       <Drawer>
