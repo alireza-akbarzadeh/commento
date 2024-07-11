@@ -13,7 +13,7 @@ import {
   DrawerTrigger,
   Separator,
 } from '@/shared/ui';
-import { ScoreItem, SpecificItem } from './score-item';
+import { ScoreItem } from './score-item';
 
 export function TestScore() {
   return (
@@ -35,27 +35,52 @@ export function TestScore() {
             </DrawerClose>
           </DrawerHeader>
           <div className="px-4">
-            <div className="pt-2.5">
-              <h5 className="text-headlineXSmall">نمره تست محصول</h5>
-            </div>
-            <Alert>
+            <Alert className="py-4">
               <AlertTitle>خوب ( ۸۵٪)</AlertTitle>
               <AlertDescription>
                 امتیاز میانگین از ۱۶ تست در سایت‌های زیر
               </AlertDescription>
             </Alert>
-            <Separator className="border-b border-border-primary pb-2 pt-4" />
+            <Separator className="border-b border-border-primary py-2" />
             <div className="space-y-3">
-              <ScoreItem title="ابعداد" subtitle="۸.۹×۷۶.۳×۱۶۴.۷۵ میلی‌متر" />
-              <ScoreItem title="وزن" subtitle="۲۰۴ گرم" />
-              <ScoreItem title="تعداد سیم کارت" subtitle="۲ عدد" />
               <ScoreItem
-                title="ساختار بدنه"
-                subtitle="جنس جلو و پشت از شیشه کار شده و پلاستیک فشرده وارداتی ویژه سامسونگ"
+                badge={{ variant: 'positive' }}
+                from="4.5"
+                to="5"
+                title="ترب"
+                subtitle="شهریور ۱۴۰۳"
               />
+              <Separator className="border-b border-border-primary py-2" />
               <ScoreItem
-                title="توضیحات سیم کارت"
-                subtitle="سایز نانو (۸.۸ × ۱۲.۳ میلی‌متر)"
+                badge={{ variant: 'positive' }}
+                from="90"
+                to="100"
+                title="دیجیکالا"
+                subtitle="شهریور ۱۴۰۳"
+              />
+              <Separator className="border-b border-border-primary py-2" />
+              <ScoreItem
+                badge={{ variant: 'positive' }}
+                from="8.5"
+                to="10"
+                title="دیجیکالا"
+                subtitle="شهریور ۱۴۰۳"
+              />
+              <Separator className="border-b border-border-primary py-2" />
+              <ScoreItem
+                badge={{ variant: 'warning' }}
+                from="3.4"
+                to="5"
+                title="دیجیکالا"
+                subtitle="شهریور ۱۴۰۳"
+              />
+              <Separator className="border-b border-border-primary py-2" />
+              <ScoreItem
+                badge={{ variant: 'negative' }}
+                from="4"
+                to="10"
+                title="دیجیکالا"
+                subtitle="شهریور ۱۴۰۳"
               />
             </div>
           </div>
