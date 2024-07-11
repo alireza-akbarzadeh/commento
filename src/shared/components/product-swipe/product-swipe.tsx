@@ -10,7 +10,7 @@ export type ProductSwiperops = {
 };
 
 export function ProductSwipe(props: ProductSwiperops) {
-  const { data, title, basis = '39' } = props;
+  const { data, title, basis = 39 } = props;
   // TODO: remove product-item class
 
   return (

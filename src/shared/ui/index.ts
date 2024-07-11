@@ -6,7 +6,15 @@ export {
   CarouselNext,
   CarouselPrevious,
 } from './carousel';
-
+export {
+  type ChartConfig,
+  ChartContainer,
+  ChartLegend,
+  ChartLegendContent,
+  ChartStyle,
+  ChartTooltip,
+  ChartTooltipContent,
+} from './chart';
 export { Button, buttonVariants } from './button';
 export { Input, type InputProps } from './input';
 export { Toaster } from './toaster';

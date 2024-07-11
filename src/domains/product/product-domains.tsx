@@ -7,7 +7,9 @@ import {
   ProductNavigation,
 } from './components';
 import { FAQ } from './components/faq';
+import { PriceChanges } from './components/price-changes/price-changes';
 import { ProductInfo } from './components/product-info';
+import { SimilarProduct } from './components/similar-product/simular-product';
 import { StoreInfo } from './components/store-info';
 
 // TODO
@@ -45,6 +47,9 @@ export function ProductDomain() {
           <ProductActions />
           <StoreInfo />
           <FAQ />
+          <SimilarProduct title="محصولات مشابه" />
+          <PriceChanges />
+          <SimilarProduct title="اپل" />
         </div>
       </div>
     </section>

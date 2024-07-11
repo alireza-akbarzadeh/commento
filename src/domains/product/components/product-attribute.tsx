@@ -27,7 +27,7 @@ export function ProductAttribute() {
               variant="secondary"
               onClick={() => setOpenSheet(index === 1)}
               key={index}
-              className="flex flex-col items-start rounded-md p-1"
+              className="flex flex-col items-start rounded-md p-1 ring-0 focus-visible:ring-0 focus-visible:ring-offset-0"
             >
               <h4 className="px-2 text-bodyXSmall text-content-tertiary">
                 {index % 2 ? 'فناوری صفحه نمایش' : 'رنگ'}
