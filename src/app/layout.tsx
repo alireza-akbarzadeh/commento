@@ -8,50 +8,50 @@ const vazirmatn = localFont({
     {
       path: '../assets/fonts/webfonts/Vazirmatn-Black.woff2',
       weight: '900',
-      style:"normal",
+      style: 'normal',
     },
-   {
+    {
       path: '../assets/fonts/webfonts/Vazirmatn-ExtraBold.woff2',
       weight: '800',
-      style:"normal",
+      style: 'normal',
     },
     {
       path: '../assets/fonts/webfonts/Vazirmatn-Bold.woff2',
       weight: '700',
-      style:"normal",
+      style: 'normal',
     },
     {
       path: '../assets/fonts/webfonts/Vazirmatn-SemiBold.woff2',
       weight: '600',
-      style:"normal"
+      style: 'normal',
     },
     {
       path: '../assets/fonts/webfonts/Vazirmatn-Medium.woff2',
       weight: '500',
-      style:"normal"
+      style: 'normal',
     },
     {
       path: '../assets/fonts/webfonts/Vazirmatn-normal.woff2',
       weight: '400',
-      style:"normal"
+      style: 'normal',
     },
     {
       path: '../assets/fonts/webfonts/Vazirmatn-Light.woff2',
       weight: '300',
-      style:"normal"
+      style: 'normal',
     },
     {
       path: '../assets/fonts/webfonts/Vazirmatn-ExtraLight.woff2',
       weight: '200',
-      style:"normal",
+      style: 'normal',
     },
     {
       path: '../assets/fonts/webfonts/Vazirmatn-Thin.woff2',
       weight: '100',
-      style:"normal"
+      style: 'normal',
     },
   ],
-  variable:"--font-vazirmatn"
+  variable: '--font-vazirmatn',
 });
 
 export const metadata: Metadata = {
@@ -66,7 +66,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="rtl">
-      <body className={cn('font-vazirmatn h-screen bg-background', vazirmatn.variable)}>
+      <body
+        className={cn(
+          'h-screen bg-background font-vazirmatn',
+          vazirmatn.variable,
+        )}
+      >
         <main className="mx-auto h-dvh min-h-dvh w-full max-w-[360px]">
           {children}
         </main>

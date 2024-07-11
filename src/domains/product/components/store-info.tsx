@@ -24,13 +24,13 @@ export function StoreInfo() {
       <div className="mb-3 mt-2 flex h-[56px] gap-3">
         <Button
           variant="ghost"
-          className="w-full text-labelSmall text-content-primary shadow-elevation1"
+          className="w-full text-labelSmall text-content-primary shadow-elevation2"
         >
           جزییات امتیاز
         </Button>
         <Button
           variant="ghost"
-          className="w-full text-labelSmall text-content-primary shadow-elevation1"
+          className="w-full text-labelSmall text-content-primary shadow-elevation2"
         >
           جزییات امتیاز
         </Button>

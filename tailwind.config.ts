@@ -138,9 +138,9 @@ const config = {
           },
         ],
       },
-       fontFamily: {       
-        "vazirmatn": "var(--font-vazirmatn)",   	
-              },
+      fontFamily: {
+        vazirmatn: 'var(--font-vazirmatn)',
+      },
       colors: {
         content: {
           primary: '#000000',
@@ -161,6 +161,7 @@ const config = {
           primary: '#fff',
           secondary: '#F5F7F7',
           tertiary: '#F0F0F0',
+          overlayDark: '#0000004D',
           disabled: '#F5F7F7',
           inverse: { primary: '#000', secondary: '# 323333' },
           accent: '#276EF1',
