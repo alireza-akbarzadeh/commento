@@ -37,7 +37,7 @@ export function ProductActions() {
           <ScrollBar orientation="horizontal" />
         </ScrollArea>
       </div>
-      <Separator className="border-b border-border-primary text-displaySmall" />
+      <Separator className="border-b border-border-primary" />
     </>
   );
 }

@@ -43,7 +43,7 @@ export function ProductAttribute() {
       <Drawer open={openSheet}>
         <DrawerContent onClickOverlay={toggleSheet}>
           <DrawerHeader className="flex items-center justify-between">
-            <DrawerTitle>فناوری صفحه نمایش</DrawerTitle>
+            <DrawerTitle>فناوری صفحه نمایش </DrawerTitle>
             <Button
               onClick={toggleSheet}
               className="size-8"

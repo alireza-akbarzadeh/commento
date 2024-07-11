@@ -1,6 +1,7 @@
 import { Icon } from '@/shared/components';
 import { Badge, Separator } from '@/shared/ui';
 import { SpecificTech } from './specific/specific-tech';
+import { TestScore } from './test-score/test-score';
 
 export function ProductInfo() {
   return (
@@ -10,10 +11,7 @@ export function ProductInfo() {
         orientation="vertical"
         className="h-[40px] border-[0.6px] border-border-primary text-displaySmall"
       />
-      <div className="flex flex-col items-center">
-        <Badge variant="positive">۴.۳</Badge>
-        <p className="text-labelXSmall text-content-primary">نمره تست</p>
-      </div>
+      <TestScore />
       <Separator
         orientation="vertical"
         className="h-[40px] border-[0.6px] border-border-primary text-displaySmall"

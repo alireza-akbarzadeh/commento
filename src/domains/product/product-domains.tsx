@@ -8,7 +8,7 @@ import {
 } from './components';
 import { FAQ } from './components/faq';
 import { PriceChanges } from './components/price-changes/price-changes';
-import { ProductInfo } from './components/product-info';
+import { ProductInfo } from './components/product-info/product-info';
 import { SimilarProduct } from './components/similar-product/simular-product';
 import { StoreInfo } from './components/store-info';
 

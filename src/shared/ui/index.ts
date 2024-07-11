@@ -69,3 +69,4 @@ export { Separator } from './separator';
 export { Badge, type BadgeProps, badgeVariants } from './badge';
 
 export { Switch } from './switch';
+export { Alert, AlertDescription, AlertTitle } from './alert';
