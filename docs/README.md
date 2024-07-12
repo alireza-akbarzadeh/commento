@@ -86,8 +86,6 @@ The following scripts are available in the `package.json`:
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5f2f5a67-5ed3-4c1f-a60f-969373eaa7b9/deploy-status)](https://app.netlify.com/sites/it-bazar/deploys)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/Blazity/next-enterprise)
-
 ### Contributing
 
 The devtools community is possible thanks to thousands of kind volunteers like you. We welcome all contributions to the community and are excited to welcome you aboard.
