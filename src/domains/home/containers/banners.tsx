@@ -27,9 +27,7 @@ export function Banners() {
                 <LazyImage
                   src="/images/banner.png"
                   style={{
-                    objectFit: 'cover',
                     borderRadius: 16,
-                    position: 'absolute',
                   }}
                   isLocal
                   quality={100}
@@ -50,7 +48,7 @@ export function Banners() {
                   event.stopPropagation();
                 }}
                 className={cn(
-                  'h-2 w-2 rounded-full bg-black/30 transition-all duration-300 ease-in-out',
+                  'h-2 w-2 rounded-full bg-content-primary/30 transition-all duration-300 ease-in-out',
                   {
                     'h-2 w-5': index === selectedIndex,
                     'bg-white': index === selectedIndex,

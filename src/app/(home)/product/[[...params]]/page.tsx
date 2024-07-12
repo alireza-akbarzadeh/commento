@@ -9,7 +9,7 @@ export default function ProductDetailsPage(props: { params: ProductPageType }) {
   const id = params[0];
 
   return (
-    <div>
+    <div id={id}>
       <ProductDomain />
     </div>
   );

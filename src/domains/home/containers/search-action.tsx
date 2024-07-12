@@ -7,7 +7,7 @@ export function SearchAction() {
     <section id="search-action" data-testid="search-action">
       <Link
         href="/search"
-        className="my-2 flex items-center justify-between rounded-[12px] bg-surface-tertiary p-2.5"
+        className="my-2 flex items-center justify-between rounded-xl bg-surface-tertiary p-2.5"
       >
         <div className="flex gap-2.5">
           <Icon name="magnifier" iconClassName="text-content-secondary" />

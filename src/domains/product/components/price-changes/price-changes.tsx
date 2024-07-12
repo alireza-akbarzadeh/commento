@@ -11,12 +11,7 @@ import {
 } from 'recharts';
 import { SectionTitle } from '@/domains/home/components';
 import { CURRENCY } from '@/shared/constant';
-import {
-  ChartConfig,
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-} from '@/shared/ui';
+import { ChartConfig, ChartContainer } from '@/shared/ui';
 import { SortChanges } from './sort-changes';
 
 // Define the chart data type

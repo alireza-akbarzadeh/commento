@@ -20,7 +20,7 @@ export function Categories() {
             <Button variant="ghost" className="flex w-full justify-between p-0">
               <div className="flex items-center gap-[5.6px]">
                 <Icon name="default" size="xxSmall" />
-                <p className="text-xs font-medium text-content-primary">
+                <p className="text-labelXSmall text-content-primary">
                   گوشی تلفن
                 </p>
               </div>

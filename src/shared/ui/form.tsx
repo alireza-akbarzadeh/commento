@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/consistent-type-assertions */
 'use client';
 
 import * as LabelPrimitive from '@radix-ui/react-label';

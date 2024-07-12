@@ -45,7 +45,9 @@ const AlertTitle = React.forwardRef<
       className,
     )}
     {...props}
-  />
+  >
+    {props.children}
+  </h5>
 ));
 AlertTitle.displayName = 'AlertTitle';
 
