@@ -16,8 +16,13 @@ type FavoritesPropsType = {
 export function Favorites(props: FavoritesPropsType) {
   const { mode = 'dark', title } = props;
   return (
-    <section className="bg-compration my-4">
-      <div className="mb-3 mt-8 h-[76px] max-w-[309px]">
+    <section className="bg-layout my-2">
+      <div
+        className={cn('max-w-[309px]', {
+          'mb-3 mt-6': mode === 'light',
+          'my-2 mt-3': mode === 'dark',
+        })}
+      >
         <p className="text-headlineSmall text-content-primary">
           {title}
           <span className="text-content-tertiary"> بر اساس آخرین بازدیدها</span>
@@ -26,19 +31,22 @@ export function Favorites(props: FavoritesPropsType) {
       <Carousel opts={{ direction: 'rtl', dragFree: true }}>
         <CarouselContent className="gap-2.5">
           {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem key={index} className={'bg-compration basis-[89%]'}>
+            <CarouselItem
+              key={index}
+              className={'mt-3 basis-[89%] shadow-elevation4'}
+            >
               <Card
                 className={cn(
-                  'compration-shadow relative mb-3 h-[450px] basis-[89%] rounded-2xl',
+                  'relative mb-6 basis-[89%] rounded-2xl shadow-elevation3',
                   {
                     'bg-surface-primary': mode === 'light',
                     'bg-content-primary': mode === 'dark',
                   },
                 )}
               >
-                <CardContent className="flex flex-col gap-2.5 px-4 py-2">
+                <CardContent className="flex flex-col gap-2.5">
                   <div className="flex flex-col items-center justify-between">
-                    <ul className="flex flex-col items-start gap-y-3">
+                    <ul className="flex flex-col items-start gap-y-3 p-[25px]">
                       <li>
                         <p
                           className={cn('text-bodySmall text-white', {
@@ -50,9 +58,7 @@ export function Favorites(props: FavoritesPropsType) {
                       </li>
                       <li>
                         <p
-                          className={cn('text-headlineSmall text-white', {
-                            'text-content-secondary': mode === 'light',
-                          })}
+                          className={`text-headlineSmall ${mode === 'dark' ? 'text-content-inverse' : 'text-content-primary'}`}
                         >
                           آیپد پرو مکس
                         </p>
@@ -70,17 +76,14 @@ export function Favorites(props: FavoritesPropsType) {
                         </p>
                       </li>
                     </ul>
-                    <div className="relative mt-2 h-[250px] w-full">
+                    <div className="relative w-full">
                       <LazyImage
                         src={`/images/${mode === 'dark' ? 'ipad' : 'watch'}.png`}
-                        style={{
-                          objectFit: 'cover',
-                          position: 'absolute',
-                        }}
                         isLocal
+                        style={{ objectFit: 'contain' }}
                         quality={100}
-                        alt="banner"
                         fill
+                        alt="banner"
                       />
                     </div>
                   </div>

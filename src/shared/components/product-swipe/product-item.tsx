@@ -16,9 +16,9 @@ export function ProductItem(props: ProductItemProps) {
     <>
       <Link
         href={`/product/${product.title}`}
-        className="relative m-2.5 flex flex-col items-center justify-center"
+        className="relative flex flex-col items-center justify-center"
       >
-        <div className="flex size-[125px] items-center justify-center rounded-[8px] bg-surface-tertiary">
+        <div className="m-2.5 flex size-[125px] items-center justify-center rounded-lg bg-surface-tertiary">
           <div className="relative h-[101px] w-[99px]">
             <LazyImage
               src={product.imageUrl}
@@ -35,7 +35,7 @@ export function ProductItem(props: ProductItemProps) {
         </div>
         {product.discount && <DiscountBadge discount={product.discount} />}
       </Link>
-      <div className="details space-y-1 pt-3">
+      <div className="details space-y-1 pt-2.5">
         <p className="text-labelSmall text-content-primary">
           {isTruncate
             ? product.title.slice(0, 43).concat('...')

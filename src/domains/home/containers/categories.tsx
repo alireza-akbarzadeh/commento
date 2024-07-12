@@ -3,12 +3,15 @@ import { Button } from '@/shared/ui';
 
 export function Categories() {
   return (
-    <section className="h-[264px]">
-      <h3 className="px-4 pt-4 text-lg font-semibold">دسته‌بندی‌ها</h3>
+    <section className="my-6" style={{ padding: '8px, 0px, 16px, 0px' }}>
+      <h3 className="px-4 pt-2 text-labellarge">دسته‌بندی‌ها</h3>
       <div className="">
         {Array.from({ length: 3 }).map((_, index) => (
-          <div className="mt-5 flex gap-[22px] px-4" key={index}>
-            <Button variant="ghost" className="flex w-full justify-between p-0">
+          <div className="my-2 flex gap-3" key={index}>
+            <Button
+              variant="ghost"
+              className="flex w-full justify-between rounded-lg bg-surface-secondary"
+            >
               <div className="flex items-center gap-[5.6px]">
                 <Icon name="default" size="xxSmall" />
                 <p className="text-xs font-medium text-content-primary">

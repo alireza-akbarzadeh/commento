@@ -16,7 +16,7 @@ export function ProductSwipe(props: ProductSwiperops) {
       {title && <SectionTitle title={title} />}
       <Carousel
         opts={{ direction: 'rtl', dragFree: true }}
-        className="mt-9 w-full max-w-sm"
+        className="w-full max-w-sm px-4"
       >
         <CarouselContent className="gap-2.5">
           {data.map((product, index) => (

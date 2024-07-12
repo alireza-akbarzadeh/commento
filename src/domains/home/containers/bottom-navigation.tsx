@@ -19,7 +19,7 @@ export function BottomNavigation() {
   const pathname = usePathname();
 
   return (
-    <div className="h-[93px] w-full border-t border-t-border-primary">
+    <div className="mb-2 mt-6 w-full border-t border-t-border-primary">
       <div className="flex items-center justify-between pb-[34px] pt-[17.5px]">
         <NavItem
           icon="magnifier"
