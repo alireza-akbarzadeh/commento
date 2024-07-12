@@ -1,4 +1,11 @@
 export const fontSize = {
+  tiny: [
+    '0.688rem',
+    {
+      lineHeight: '1.25rem',
+      fontWeight: '600',
+    },
+  ],
   xss: ' 0.688rem',
   md: '1rem',
   displayLarge: [

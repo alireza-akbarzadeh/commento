@@ -16,14 +16,14 @@ export function ComparetaionItem(props: ComparetaionItemProps) {
   const { product } = props;
   return (
     <CarouselItem className="bg-compration basis-[89%]">
-      <Card className="compration-shadow relative mb-3 rounded-[16px]">
+      <Card className="compration-shadow relative mb-3 rounded-2xl">
         <CardContent className="flex gap-1.5 px-4 py-2">
           <div className="flex flex-col">
             <Link
               href={`/product/${product.title}`}
-              className="relative m-2.5 flex flex-col items-center justify-center"
+              className="flex-center relative m-2.5 flex-col"
             >
-              <div className="flex size-[125px] items-center justify-center rounded-[8px] bg-surface-tertiary">
+              <div className="flex size-[125px] items-center justify-center rounded-lg bg-surface-tertiary">
                 <div className="relative h-[101px] w-[99px]">
                   <LazyImage
                     src={product.imageUrl}
@@ -53,16 +53,12 @@ export function ComparetaionItem(props: ComparetaionItemProps) {
           <div className="flex flex-col">
             <Link
               href={`/product/${product.title}`}
-              className="relative m-2.5 flex flex-col items-center justify-center"
+              className="flex-center relative m-2.5 flex-col"
             >
-              <div className="flex size-[125px] items-center justify-center rounded-[8px] bg-surface-tertiary">
+              <div className="flex-center size-[125px] rounded-[8px] bg-surface-tertiary">
                 <div className="relative h-[101px] w-[99px]">
                   <LazyImage
                     src={product.imageUrl}
-                    style={{
-                      objectFit: 'cover',
-                      position: 'absolute',
-                    }}
                     isLocal
                     quality={100}
                     alt="banner"
@@ -86,13 +82,11 @@ export function ComparetaionItem(props: ComparetaionItemProps) {
         <Separator className="border-1 mx-auto my-4 mb-3 w-[86%] border-t border-border-primary" />
         <CardFooter className="py-4">
           <div className="flex w-full items-center justify-between">
-            <p className="text-base font-medium text-content-primary">
+            <p className="text-labelMedium text-content-primary">
               مشاهده مقایسه
             </p>
             <div className="flex items-center gap-[7.5px]">
-              <span className="text-base font-semibold text-content-tertiary">
-                ۲
-              </span>
+              <span className="text-labelMedium text-content-tertiary">۲</span>
               <Icon
                 iconClassName="text-content-tertiary"
                 name="chevron-left"

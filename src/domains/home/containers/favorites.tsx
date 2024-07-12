@@ -16,7 +16,7 @@ type FavoritesPropsType = {
 export function Favorites(props: FavoritesPropsType) {
   const { mode = 'dark', title } = props;
   return (
-    <section className="bg-compration my-4 h-[584px]">
+    <section className="bg-compration my-4">
       <div className="mb-3 mt-8 h-[76px] max-w-[309px]">
         <p className="text-headlineSmall text-content-primary">
           {title}
@@ -26,14 +26,10 @@ export function Favorites(props: FavoritesPropsType) {
       <Carousel opts={{ direction: 'rtl', dragFree: true }}>
         <CarouselContent className="gap-2.5">
           {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem
-              key={index}
-              // rounded-3xl pl-2
-              className={'bg-compration basis-[89%]'}
-            >
+            <CarouselItem key={index} className={'bg-compration basis-[89%]'}>
               <Card
                 className={cn(
-                  'compration-shadow relative mb-3 h-[450px] basis-[89%] rounded-[16px]',
+                  'compration-shadow relative mb-3 h-[450px] basis-[89%] rounded-2xl',
                   {
                     'bg-surface-primary': mode === 'light',
                     'bg-content-primary': mode === 'dark',
