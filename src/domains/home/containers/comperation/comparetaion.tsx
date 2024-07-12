@@ -9,7 +9,7 @@ export function Comparetaion() {
       <SectionTitle title="مقایسه‌های من" />
       <Carousel
         opts={{ direction: 'rtl', dragFree: true }}
-        className="w-full max-w-sm pb-6"
+        className="w-full max-w-sm pb-3"
       >
         <CarouselContent>
           {products.map((product, index) => (
