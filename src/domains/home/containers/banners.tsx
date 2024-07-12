@@ -9,11 +9,7 @@ export function Banners() {
   const { scrollSnaps, scrollTo, selectedIndex, setApi } = useBanners();
 
   return (
-    <section
-      id="banner"
-      data-testid="banner"
-      className="my-2 bg-surface-primary"
-    >
+    <section id="banner" data-testid="banner" className="my-2">
       <Carousel
         opts={{ direction: 'rtl' }}
         plugins={[Autoplay({ delay: 2500 })]}
