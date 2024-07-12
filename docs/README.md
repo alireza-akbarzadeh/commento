@@ -92,4 +92,4 @@ The devtools community is possible thanks to thousands of kind volunteers like y
 
 Recent Contributions:
 
-![Alt](https://repobeats.axiom.co/api/embed/1aef2bf4570efff1b67e8cd368d640180b823713.svg 'Repobeats analytics image')
+![Alt](https://repobeats.axiom.co/api/embed/2e03ead0ac56cf78a6eb6852efa4e3c78e0cff11.svg 'Repobeats analytics image')
