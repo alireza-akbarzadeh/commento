@@ -4,10 +4,14 @@ import { Button } from '@/shared/ui';
 
 export function SearchAction() {
   return (
-    <section id="search-action" data-testid="search-action">
+    <section
+      id="search-action"
+      data-testid="search-action"
+      className="my-2 px-4 py-2"
+    >
       <Link
         href="/search"
-        className="my-2 flex items-center justify-between rounded-xl bg-surface-tertiary px-4 py-2"
+        className="flex items-center justify-between rounded-xl bg-[#F7F7F7] px-4 py-2"
       >
         <div className="flex gap-2.5">
           <Icon name="magnifier" iconClassName="text-content-secondary" />

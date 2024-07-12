@@ -2,7 +2,7 @@ import { LazyImage } from '@/shared/components';
 
 export function Category() {
   return (
-    <section className="bg-red h-[116px] bg-surface-primary px-4">
+    <section className="bg-red h-[116px] bg-surface-primary px-4 py-2">
       <div className="flex items-center justify-between">
         {Array.from({ length: 4 }).map((_, index) => (
           <div

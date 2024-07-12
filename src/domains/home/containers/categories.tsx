@@ -20,7 +20,10 @@ export function Categories() {
               </div>
               <Icon name="chevron-left" size="xSmall" />
             </Button>
-            <Button variant="ghost" className="flex w-full justify-between p-0">
+            <Button
+              variant="ghost"
+              className="flex w-full justify-between rounded-lg bg-surface-secondary"
+            >
               <div className="flex items-center gap-[5.6px]">
                 <Icon name="default" size="xxSmall" />
                 <p className="text-labelXSmall text-content-primary">

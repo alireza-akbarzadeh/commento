@@ -31,18 +31,12 @@ export function Favorites(props: FavoritesPropsType) {
       <Carousel opts={{ direction: 'rtl', dragFree: true }}>
         <CarouselContent className="gap-2.5">
           {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem
-              key={index}
-              className={'mt-3 basis-[89%] shadow-elevation4'}
-            >
+            <CarouselItem key={index} className={'mt-3 basis-[89%]'}>
               <Card
-                className={cn(
-                  'relative mb-6 basis-[89%] rounded-2xl shadow-elevation3',
-                  {
-                    'bg-surface-primary': mode === 'light',
-                    'bg-content-primary': mode === 'dark',
-                  },
-                )}
+                className={cn('relative mb-6 basis-[89%] rounded-2xl', {
+                  'bg-surface-primary shadow-elevation3': mode === 'light',
+                  'bg-content-primary': mode === 'dark',
+                })}
               >
                 <CardContent className="flex flex-col gap-2.5">
                   <div className="flex flex-col items-center justify-between">
