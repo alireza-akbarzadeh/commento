@@ -5,5 +5,5 @@ export default function HomeLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <div className="relative h-full">{children}</div>;
+  return <div className="bg-layout relative h-full">{children}</div>;
 }

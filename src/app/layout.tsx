@@ -66,12 +66,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="rtl">
-      <body
-        className={cn(
-          'bg-compration h-screen font-vazirmatn',
-          vazirmatn.variable,
-        )}
-      >
+      <body className={cn('h-screen font-vazirmatn', vazirmatn.variable)}>
         <main className="mx-auto h-dvh min-h-dvh w-full max-w-[360px]">
           {children}
         </main>
