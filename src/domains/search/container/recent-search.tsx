@@ -1,9 +1,7 @@
 import { NoResult } from '../components/no-result';
 import { ResentSearchItem } from '../components/resent-search-Item';
 
-type ResentSearchProps = {};
-
-export function ResentSearch(props: ResentSearchProps) {
+export function ResentSearch() {
   const items = [1, 2, 3, 4];
   return (
     <section id="recent-view" data-testid="recent-view">

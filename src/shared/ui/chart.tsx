@@ -9,6 +9,7 @@ import { cn } from '@/shared/utils';
 const THEMES = { light: '', dark: '.dark' } as const;
 
 export type ChartConfig = {
+  // eslint-disable-next-line no-unused-vars
   [k in string]: {
     label?: React.ReactNode;
     icon?: React.ComponentType;
@@ -216,6 +217,7 @@ const ChartTooltipContent = React.forwardRef<
                             },
                           )}
                           style={
+                            // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
                             {
                               '--color-bg': indicatorColor,
                               '--color-border': indicatorColor,

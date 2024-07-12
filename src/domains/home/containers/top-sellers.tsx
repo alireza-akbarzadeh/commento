@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { LazyImage } from '@/shared/components';
 import {
   Button,

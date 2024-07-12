@@ -17,7 +17,7 @@ export function PriceNotify() {
     <>
       <Drawer>
         <DrawerTrigger>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center bg-content-inverse">
             <Icon name="slider-horizontal" size="small" />
             <p className="text-labelXSmall text-content-primary">نمودار قیمت</p>
           </div>
@@ -49,7 +49,7 @@ export function PriceNotify() {
             </p>
           </div>
           <Separator className="border-b border-border-primary py-2 text-displaySmall" />
-          <div className="flex h-[52px] items-center justify-between">
+          <div className="flex h-[52px] items-center justify-between px-4">
             <div className="flex-center">
               <p>کمترین قیمت فعلی</p>
             </div>
