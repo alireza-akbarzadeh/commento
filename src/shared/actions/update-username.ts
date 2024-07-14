@@ -1,7 +1,7 @@
 'use server';
 
 import { revalidatePath } from 'next/cache';
-import { userNameSchema } from '@/shared/validation/user';
+import { userNameSchema } from '@/shared/schemas/user';
 // import {auth} from '@/shared/config'
 
 export type FormData = {

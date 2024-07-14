@@ -8,10 +8,10 @@ import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 
 import { Spin } from '@/shared/components';
+import { userAuthSchema } from '@/shared/schemas/auth';
 import { Button, buttonVariants, Input, Label, toast } from '@/shared/ui';
 
 import { cn } from '@/shared/utils';
-import { userAuthSchema } from '@/shared/validation/auth';
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {
   type?: string;

@@ -15,7 +15,7 @@ export {
   ChartTooltip,
   ChartTooltipContent,
 } from './chart';
-export { Button, buttonVariants } from './button';
+export { Button, buttonVariants } from './button/button';
 export { Input, type InputProps } from './input';
 export { Toaster } from './toaster';
 export { reducer, toast, useToast } from './use-toast';
@@ -63,10 +63,22 @@ export {
   CardFooter,
   CardHeader,
   CardTitle,
-} from './card';
+} from './card/card';
 export { Separator } from './separator';
 
 export { Badge, type BadgeProps, badgeVariants } from './badge';
 
 export { Switch } from './switch';
 export { Alert, AlertDescription, AlertTitle } from './alert';
+export {
+  Form,
+  FormField,
+  useFormField,
+  FormControl,
+  FormDescription,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from './form';
+
+export { Checkbox } from './checkbox';

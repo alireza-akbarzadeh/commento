@@ -3,3 +3,7 @@ export const CURRENCY = {
   IR: 'تومان',
   JPY: 'Japanese Yen',
 };
+
+export const RegexPatterns = {
+  Email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+};
