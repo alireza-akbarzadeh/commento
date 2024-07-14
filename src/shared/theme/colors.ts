@@ -16,7 +16,7 @@ export const colors = {
   },
   surface: {
     primary: '#fff',
-    secondary: '#F5F7F7',
+    secondary: '#F2F2F2',
     tertiary: '#F0F0F0',
     overlayDark: '#0000004D',
     disabled: '#F5F7F7',
