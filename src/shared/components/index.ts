@@ -1,4 +1,5 @@
-export { Spin } from './spin';
+export { Spin } from './loading/spin';
+export { LoadingDots } from './loading/dots';
 export { ProductSwipe } from './product-swipe/product-swipe';
 export { ProductItem } from './product-swipe/product-item';
 export { LazyImage } from './lazy-image';

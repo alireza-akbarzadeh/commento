@@ -1,6 +1,6 @@
 import React from 'react';
-import { Icon } from './icons';
-import { cn } from '../utils';
+import { cn } from '@/shared/utils';
+import { Icon } from '../icons';
 
 type SpinProps = {
   className?: string;
