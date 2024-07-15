@@ -16,10 +16,14 @@ export function Banners() {
         setApi={setApi}
         className="relative"
       >
-        <CarouselContent className="m-0 p-0">
+        <CarouselContent className="m-0 p-1">
           {Array.from({ length: 5 }).map((_, index) => (
-            // TODO same as figma
-            <CarouselItem key={index} className="">
+            <CarouselItem
+              key={index}
+              className={cn('ml-2 basis-[92.5%] p-0', {
+                'mr-2': index === 0,
+              })}
+            >
               <div className="relative">
                 <LazyImage
                   src="/images/banner.png"

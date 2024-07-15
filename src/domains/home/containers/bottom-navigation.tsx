@@ -20,7 +20,6 @@ export function BottomNavigation() {
   const pathname = usePathname();
   return (
     <div className="sticky bottom-0 left-0 z-50 h-[93px] w-full border-t-[0.5px] border-border-primary bg-content-inverse">
-      {/* <div className="flex items-center justify-between px-4 pb-3 pt-[17.5px]"> */}
       <div className="mx-auto grid h-full grid-cols-4 items-center">
         <NavItem
           icon="magnifier"
