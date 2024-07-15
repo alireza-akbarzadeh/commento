@@ -18,7 +18,7 @@ export function ProductSwipe(props: ProductSwiperops) {
         opts={{ direction: 'rtl', dragFree: true }}
         className="w-full max-w-sm"
       >
-        <CarouselContent>
+        <CarouselContent className="bg-content-inverse">
           {data.map((product, index) => (
             <CarouselItem key={index} className={`basis-[39%] p-2.5`}>
               <ProductItem key={index} product={product} />
