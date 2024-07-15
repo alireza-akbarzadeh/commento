@@ -12,33 +12,38 @@ type FavoritesPropsType = {
   title: string;
   mode?: 'dark' | 'light';
 };
-
+// bg-layout
 export function Favorites(props: FavoritesPropsType) {
   const { mode = 'dark', title } = props;
   return (
-    <section className="bg-layout my-2">
+    <section className="bb-layout my-2">
       <div
         className={cn('max-w-[309px]', {
           'mb-3 mt-6': mode === 'light',
           'my-2 mt-3': mode === 'dark',
         })}
       >
-        <p className="text-headlineSmall text-content-primary">
+        <p className="px-4 text-headlineSmall text-content-primary">
           {title}
           <span className="text-content-tertiary"> بر اساس آخرین بازدیدها</span>
         </p>
       </div>
       <Carousel opts={{ direction: 'rtl', dragFree: true }}>
-        <CarouselContent className="gap-2.5">
+        <CarouselContent className="m-0">
           {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem key={index} className={'mt-3 basis-[89%]'}>
+            <CarouselItem
+              key={index}
+              className={cn('mb-6 ml-5 mt-3 basis-[89%] p-0', {
+                'mr-5': index === 0,
+              })}
+            >
               <Card
                 className={cn('relative mb-6 basis-[89%] rounded-2xl', {
                   'bg-surface-primary shadow-elevation3': mode === 'light',
                   'bg-content-primary': mode === 'dark',
                 })}
               >
-                <CardContent className="flex flex-col gap-2.5">
+                <CardContent className="flex flex-col">
                   <div className="flex flex-col items-center justify-between">
                     <ul className="flex flex-col items-start gap-y-3 p-[25px]">
                       <li>

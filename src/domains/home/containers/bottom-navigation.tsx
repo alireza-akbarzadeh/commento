@@ -1,5 +1,6 @@
 'use client';
 import { usePathname } from 'next/navigation';
+import React, { useEffect, useState } from 'react';
 import { IconType } from '@/shared/components';
 import { NavItem } from '../components';
 
@@ -17,10 +18,10 @@ const navigation: Navigation[] = [
 
 export function BottomNavigation() {
   const pathname = usePathname();
-
   return (
-    <div className="mb-2 mt-6 w-full border-t border-t-border-primary">
-      <div className="flex items-center justify-between pb-[34px] pt-[17.5px]">
+    <div className="sticky bottom-0 left-0 z-50 h-[93px] w-full border-t-[0.5px] border-border-primary bg-content-inverse">
+      {/* <div className="flex items-center justify-between px-4 pb-3 pt-[17.5px]"> */}
+      <div className="mx-auto grid h-full grid-cols-4 items-center">
         <NavItem
           icon="magnifier"
           href="/search"

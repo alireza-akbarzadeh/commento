@@ -20,7 +20,7 @@ export function ProductSwipe(props: ProductSwiperops) {
       >
         <CarouselContent className="gap-2.5">
           {data.map((product, index) => (
-            <CarouselItem key={index} className={`basis-[39%] pl-2`}>
+            <CarouselItem key={index} className={`basis-[39%] px-2`}>
               <ProductItem key={index} product={product} />
             </CarouselItem>
           ))}

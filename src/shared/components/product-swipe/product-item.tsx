@@ -35,7 +35,7 @@ export function ProductItem(props: ProductItemProps) {
         </div>
         {product.discount && <DiscountBadge discount={product.discount} />}
       </Link>
-      <div className="details space-y-1 pt-2.5">
+      <div className="space-y-1 px-2.5 pt-2.5">
         <p className="text-labelSmall text-content-primary">
           {isTruncate
             ? product.title.slice(0, 43).concat('...')

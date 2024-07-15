@@ -11,7 +11,7 @@ export function SearchAction() {
     >
       <Link
         href="/search"
-        className="flex items-center justify-between rounded-xl bg-[#F7F7F7] px-4 py-2"
+        className="flex items-center justify-between rounded-xl bg-surface-secondary px-4 py-2"
       >
         <div className="flex gap-2.5">
           <Icon name="magnifier" iconClassName="text-content-secondary" />
