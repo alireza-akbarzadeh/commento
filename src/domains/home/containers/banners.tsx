@@ -11,24 +11,20 @@ export function Banners() {
   return (
     <section id="banner" data-testid="banner" className="my-2">
       <Carousel
-        opts={{ direction: 'rtl' }}
-        plugins={[Autoplay({ delay: 2500 })]}
+        opts={{ direction: 'rtl', loop: true }}
+        // plugins={[Autoplay({ delay: 2500 })]}
         setApi={setApi}
         className="relative"
       >
-        <CarouselContent className="m-0 p-1">
+        <CarouselContent className="m-0 p-0">
           {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem
-              key={index}
-              className={cn('ml-2 basis-[92.5%] p-0', {
-                'mr-2': index === 0,
-              })}
-            >
-              <div className="relative">
+            <CarouselItem key={index} className={'basis-[91%]'}>
+              <div className="relative mr-1 w-[339px]">
                 <LazyImage
                   src="/images/banner.png"
                   style={{
                     borderRadius: 16,
+                    objectFit: 'contain',
                   }}
                   isLocal
                   quality={100}
