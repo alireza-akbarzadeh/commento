@@ -21,8 +21,8 @@ export function TopSellers() {
             {Array.from({ length: 5 }).map((_, index) => (
               <CarouselItem
                 key={index}
-                className={cn('basis-[89%] pl-4', {
-                  'pr-4': index === 0,
+                className={cn('ml-2 basis-[89%]', {
+                  'mr-4': index === 0,
                 })}
               >
                 <Card className="relative mb-2 rounded-2xl border border-border-primary shadow-elevation4">

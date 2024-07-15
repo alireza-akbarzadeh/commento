@@ -3,7 +3,7 @@ import { Button } from '@/shared/ui';
 
 export function CategoryRow() {
   return (
-    <div className="flex py-2 pr-4">
+    <div className="flex gap-2.5 py-2 pr-4">
       <Button
         variant="ghost"
         className="flex w-full justify-between rounded-lg bg-surface-secondary"

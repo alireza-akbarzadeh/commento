@@ -16,7 +16,7 @@ export function ProductItem(props: ProductItemProps) {
     <>
       <Link
         href={`/product/${product.title}`}
-        className="relative flex flex-col items-center justify-center"
+        className="bg-red relative flex flex-col items-center justify-center"
       >
         <div className="m-2.5 flex size-[125px] items-center justify-center rounded-lg bg-surface-tertiary">
           <div className="relative h-[101px] w-[99px]">

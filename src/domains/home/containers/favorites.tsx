@@ -16,7 +16,7 @@ type FavoritesPropsType = {
 export function Favorites(props: FavoritesPropsType) {
   const { mode = 'dark', title } = props;
   return (
-    <section className="bb-layout my-2">
+    <section className="my-2">
       <div
         className={cn('max-w-[309px]', {
           'mb-3 mt-6': mode === 'light',
@@ -39,7 +39,7 @@ export function Favorites(props: FavoritesPropsType) {
             >
               <Card
                 className={cn('relative mb-6 basis-[89%] rounded-2xl', {
-                  'bg-surface-primary shadow-elevation3': mode === 'light',
+                  'bg-surface-primary': mode === 'light',
                   'bg-content-primary': mode === 'dark',
                 })}
               >
