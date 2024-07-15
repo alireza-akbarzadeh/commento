@@ -19,7 +19,7 @@ export function ProductAttribute() {
     <>
       <ScrollArea
         dir="rtl"
-        className="h-[64px] whitespace-nowrap border-b border-white bg-surface-primary"
+        className="whitespace-nowrap border-b border-white bg-surface-primary py-2"
       >
         <div className="flex w-max gap-2">
           {Array.from({ length: 6 }).map((_, index) => (

@@ -1,5 +1,4 @@
 'use client';
-import { Icon } from '@/shared/components';
 import { cn } from '@/shared/utils';
 
 type SliderProps = {
@@ -12,8 +11,7 @@ export function SliderActions(props: SliderProps) {
   const { scrollSnaps, scrollTo, selectedIndex } = props;
 
   return (
-    <div className="flex items-center justify-between">
-      <Icon name="video-two-fill" iconClassName="text-content-tertiary" />
+    <div className="mb-4 flex items-center justify-between pl-4">
       <div className="cursor-pointer">
         <div className="flex flex-row items-center gap-2">
           {scrollSnaps?.map((_, index) => (

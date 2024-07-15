@@ -1,41 +1,38 @@
+'use client';
+import { useState } from 'react';
 import { Icon } from '@/shared/components';
-import { Button, ScrollArea, ScrollBar, Separator } from '@/shared/ui';
+import { Button, Separator } from '@/shared/ui';
+import { cn } from '@/shared/utils';
 // check if we can create a components for both src/domains/search/components/search-category.tsx
 export function ProductActions() {
+  const [isOnline, setIsOnline] = useState<'offline' | 'online'>('online');
+
   return (
     <>
-      <div className="py-2">
-        <ScrollArea
-          dir="rtl"
-          className="whitespace-nowrap border-b border-content-inverse"
-        >
-          <div className="flex w-max gap-4">
-            <div className="mt-1 flex size-[32px] items-center justify-center rounded-full border">
-              <Icon name="slider-horizontal" size="small" />
-            </div>
-            <Button
-              variant="ghost"
-              className="w-[126px] border border-border-primary"
-            >
-              خرید حضوری
-            </Button>
-            <Button
-              className="flex gap-[6px] border border-border-primary px-4 py-2 text-bodySmall"
-              variant="ghost"
-            >
-              <span>دسته بندی</span>
-              <Icon name="chevron-down" size="small" />
-            </Button>
-
-            <Button
-              variant="ghost"
-              className="w-[126px] border border-border-primary"
-            >
-              وضعیت کارکرد
-            </Button>
-          </div>
-          <ScrollBar orientation="horizontal" />
-        </ScrollArea>
+      <div className="flex gap-3 py-2">
+        <div className="mt-1 flex size-[32px] items-center justify-center rounded-full border bg-surface-tertiary">
+          <Icon name="slider-horizontal" size="small" />
+        </div>
+        <div className="flex w-full rounded-2xl border-[0.5px] border-border-primary p-1">
+          <Button
+            onClick={() => setIsOnline('online')}
+            className={cn('w-full rounded-2xl', {
+              'bg-surface-tertiary': isOnline === 'online',
+            })}
+            variant="ghost"
+          >
+            ۱۱ اینترنتی
+          </Button>
+          <Button
+            onClick={() => setIsOnline('offline')}
+            className={cn('w-full rounded-2xl', {
+              'bg-surface-tertiary': isOnline === 'offline',
+            })}
+            variant="ghost"
+          >
+            ۱۲ حضوری
+          </Button>
+        </div>
       </div>
       <Separator className="border-b border-border-primary" />
     </>
