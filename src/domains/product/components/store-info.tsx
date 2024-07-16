@@ -1,41 +1,13 @@
 import { Icon } from '@/shared/components';
 import { CURRENCY } from '@/shared/constant';
-import { Badge, Button, Separator } from '@/shared/ui';
+import { Badge, Button } from '@/shared/ui';
+import { StoreRate } from './product-info/store-rate';
 
 export function StoreInfo() {
   return (
-    <div>
-      <div className="h-[78px] space-y-[2px]">
-        <div className="flex items-center gap-3">
-          <p className="text-labelSmall text-content-primary">دیجیاتو</p>
-          <span className="text-bodySmall text-content-positive">۴.۵</span>
-          <Icon name="chevron-up" />
-        </div>
-        <p className="text-bodySmall text-content-tertiary">تهران - اینترنتی</p>
-      </div>
-      <div className="h-[72px]">
-        <h4 className="text-headlineXSmall text-content-primary">
-          عضویت از ۴ ماه پیش
-        </h4>
-        <p className="pt-2 text-bodySmall text-content-secondary">
-          گوشی موبایل اپل مدل iPhone 13 H دو سیم‌ کارت
-        </p>
-      </div>
-      <div className="mb-3 mt-2 flex h-[56px] gap-3">
-        <Button
-          variant="ghost"
-          className="w-full text-labelSmall text-content-primary shadow-elevation2"
-        >
-          جزییات امتیاز
-        </Button>
-        <Button
-          variant="ghost"
-          className="w-full text-labelSmall text-content-primary shadow-elevation2"
-        >
-          جزییات امتیاز
-        </Button>
-      </div>
-      <div className="flex items-center gap-2">
+    <>
+      <StoreRate />
+      <div className="mt-4 flex items-center gap-2">
         <Badge
           variant="negative"
           className="space-x-[2px] px-4 py-1.5 text-bodyXSmall text-content-negative"
@@ -65,7 +37,7 @@ export function StoreInfo() {
           </span>
         </Badge>
       </div>
-      <div className="flex gap-2 pt-2">
+      <div className="flex gap-2 pb-[12px] pt-2.5">
         <div className="bg-surface-secondary p-1.5 px-2">
           <p className="text-bodyXSmall text-content-tertiary">اوپن‌باکس</p>
         </div>
@@ -81,8 +53,7 @@ export function StoreInfo() {
           </p>
         </div>
       </div>
-      <Separator className="mt-3 border-b border-border-primary text-displaySmall" />
-      <div className="flex h-[56px] items-center justify-between p-3 px-4">
+      <div className="mb-2 mt-[2px] flex items-center justify-between border-y border-border-primary py-3">
         <p className="text-labelMedium text-content-primary">
           <span className="text-bodyXXSmall">از</span> ۱‍۶۷,۰۰۰
           <span className="mr-1 text-bodyXXSmall">{CURRENCY.IR}</span>
@@ -91,13 +62,37 @@ export function StoreInfo() {
           <Icon iconClassName="text-content-invers" name="chevron-left" />
         </Button>
       </div>
-      <div className="bg-surface-secondary p-4"></div>
-      <Button
-        className="rounded-xl text-labellarge text-content-inverse"
-        fullWidth
-      >
-        نمایش همه فروشگاه‌ها
-      </Button>
-    </div>
+      <StoreRate />
+      <div className="mt-2">
+        <h4 className="text-headlineXSmall text-content-primary">
+          عضویت از ۴ ماه پیش
+        </h4>
+        <p className="py-2 text-bodySmall text-content-secondary">
+          گوشی موبایل اپل مدل iPhone 13 H دو سیم‌ کارت
+        </p>
+      </div>
+      <div className="bg-layout my-2 flex gap-3 px-4">
+        <Button
+          variant="ghost"
+          className="w-full text-labelSmall text-content-primary shadow-elevation2"
+        >
+          جزییات امتیاز
+        </Button>
+        <Button
+          variant="ghost"
+          className="w-full text-labelSmall text-content-primary shadow-elevation2"
+        >
+          جزییات امتیاز
+        </Button>
+      </div>
+      <div className="bg-surface-secondary p-4">
+        <Button
+          className="rounded-xl text-labellarge text-content-inverse"
+          fullWidth
+        >
+          نمایش همه فروشگاه‌ها
+        </Button>
+      </div>
+    </>
   );
 }

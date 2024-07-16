@@ -9,6 +9,7 @@ import {
 import { FAQ } from './components/faq';
 import { PriceChanges } from './components/price-changes/price-changes';
 import { ProductInfo } from './components/product-info/product-info';
+import { StoresMap } from './components/product-info/stores-map/stores-map';
 import { SimilarProduct } from './components/similar-product/simular-product';
 import { StoreInfo } from './components/store-info';
 
@@ -44,6 +45,7 @@ export function ProductDomain() {
         </div>
         <ProductActions />
         <StoreInfo />
+        <StoresMap />
         <FAQ />
         <SimilarProduct title="محصولات مشابه" />
         <PriceChanges />

@@ -7,7 +7,7 @@ type DiscountBadgePropsType = {
 export function DiscountBadge(props: DiscountBadgePropsType) {
   const { discount } = props;
   return (
-    <div className="bg-surface-gradient-brand absolute top-2 -translate-x-8 rounded-md">
+    <div className="bg-surface-gradient-brand absolute top-3 -translate-x-9 rounded-md">
       <div className="flex items-center justify-between">
         <span className="mx-1 text-tiny text-content-inverse">
           {`${discount}%`}
