@@ -57,7 +57,7 @@ export const LazyImage = (
       width={fill ? '100%' : width || ''}
       height={fill ? '100%' : height || ''}
       effect="blur"
-      placeholderSrc={isLocal ? '' : '/assets/svg/skeleton-image.svg'}
+      placeholderSrc={isLocal ? '' : '/svg/skeleton-image.svg'}
       src={getSrc()}
       decoding="async"
       onError={(event) => {
