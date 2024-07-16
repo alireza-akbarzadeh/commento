@@ -12,7 +12,7 @@ import {
 } from '@/shared/ui';
 import { Checkbox } from '@/shared/ui/checkbox';
 
-export function ProductAttribute() {
+export function Features() {
   const [openSheet, setOpenSheet] = useState<boolean>(false);
   const toggleSheet = () => setOpenSheet(!openSheet);
   return (

@@ -2,7 +2,7 @@
 import { useRouter } from 'next/navigation';
 import { Icon } from '@/shared/components';
 
-export function ProductNavigation() {
+export function Appbar() {
   const { back } = useRouter();
 
   return (
@@ -13,7 +13,6 @@ export function ProductNavigation() {
         name="cross"
         size="medium"
       />
-
       <div className="flex items-center gap-2">
         <div className="relative size-10">
           <Icon
@@ -21,7 +20,7 @@ export function ProductNavigation() {
             name="arrow-up-arrow-down"
             size="medium"
           />
-          <span className="absolute -left-2 top-0 inline-block size-2 -translate-y-1/2 translate-x-1/2 rounded-full bg-surface-negative" />
+          <span className="absolute left-3 top-0 inline-block size-[6px] -translate-y-1/2 translate-x-1/2 rounded-full bg-surface-negative" />
         </div>
         <div className="size-10">
           <Icon

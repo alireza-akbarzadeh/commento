@@ -10,6 +10,7 @@ import {
   YAxis,
 } from 'recharts';
 import { SectionTitle } from '@/domains/home/components';
+import { Icon } from '@/shared/components';
 import { CURRENCY } from '@/shared/constant';
 import { ChartConfig, ChartContainer } from '@/shared/ui';
 import { SortChanges } from './sort-changes';
@@ -97,7 +98,12 @@ export function PriceChanges() {
           />
         </LineChart>
       </ChartContainer>
-      <SectionTitle title="اطلاع رسانی قیمت" />
+      <div className="flex items-center gap-[14.4px] bg-content-inverse px-4 py-2">
+        <h3 className="text-labelSmall text-content-primary">
+          اطلاع رسانی قیمت
+        </h3>
+        <Icon name="chevron-left" size="small" />
+      </div>
     </div>
   );
 }

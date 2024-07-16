@@ -36,14 +36,14 @@ export function ProductItem(props: ProductItemProps) {
         {product.discount && <DiscountBadge discount={product.discount} />}
       </Link>
       <div className="space-y-1 px-2.5 pt-2.5">
-        <p className="text-labelSmall text-content-primary">
+        <p className="text-labelXSmall text-content-primary">
           {isTruncate
             ? product.title.slice(0, 43).concat('...')
             : product.title}
         </p>
         {/*TODO:  if store was only one render te name of store */}
         {product.price && (
-          <p className="text-labelMedium text-content-primary">
+          <p className="text-labelXSmall text-content-primary">
             <span className="text-bodyXXSmall">از</span> {product.price}{' '}
             <span className="text-bodyXXSmall">{CURRENCY.IR}</span>
           </p>

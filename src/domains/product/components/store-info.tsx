@@ -55,7 +55,7 @@ export function StoreInfo() {
       </div>
       <div className="mb-2 mt-[2px] flex items-center justify-between border-y border-border-primary py-3">
         <p className="text-labelMedium text-content-primary">
-          <span className="text-bodyXXSmall">از</span> ۱‍۶۷,۰۰۰
+          ۱‍۶۷,۰۰۰
           <span className="mr-1 text-bodyXXSmall">{CURRENCY.IR}</span>
         </p>
         <Button className="size-[32px] rounded-xl">
@@ -85,12 +85,42 @@ export function StoreInfo() {
           جزییات امتیاز
         </Button>
       </div>
-      <div className="bg-surface-secondary p-4">
-        <Button
-          className="rounded-xl text-labellarge text-content-inverse"
-          fullWidth
-        >
-          نمایش همه فروشگاه‌ها
+
+      {/* second part */}
+      <StoreRate />
+      <Badge variant="positive" className="px-2 py-[2px]">
+        <Icon
+          size={12}
+          name="spark-small-fill"
+          iconClassName="text-content-positive space-x-3"
+        />
+        <span className="text-bodyXSmall text-content-positive">
+          ضمانت آی‌تی بازار
+        </span>
+      </Badge>
+      <div className="flex gap-2 pb-[12px] pt-2.5">
+        <div className="bg-surface-secondary p-1.5 px-2">
+          <p className="text-bodyXSmall text-content-tertiary">اوپن‌باکس</p>
+        </div>
+        <div className="bg-surface-secondary p-1.5 px-2">
+          <p className="text-bodyXSmall text-content-tertiary">تحویل فوری</p>
+        </div>
+        <div className="bg-surface-secondary p-1.5 px-2">
+          <p className="text-bodyXSmall text-content-tertiary">ارسال رایگان</p>
+        </div>
+        <div className="bg-surface-secondary p-1.5 px-2">
+          <p className="text-bodyXSmall text-content-tertiary">
+            پرداخت در محل{' '}
+          </p>
+        </div>
+      </div>
+      <div className="mb-2 mt-[2px] flex items-center justify-between border-y border-border-primary py-3">
+        <p className="text-labelMedium text-content-primary">
+          ۱‍۶۷,۰۰۰
+          <span className="mr-1 text-bodyXXSmall">{CURRENCY.IR}</span>
+        </p>
+        <Button className="size-[32px] rounded-xl">
+          <Icon iconClassName="text-content-invers" name="chevron-left" />
         </Button>
       </div>
     </>

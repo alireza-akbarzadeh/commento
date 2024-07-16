@@ -1,5 +1,6 @@
 export { SliderActions } from './product-carousel/slider-actions';
 export { ProductActions } from './product-actions';
-export { ProductAttribute } from './product-attribute';
-export { ProductNavigation } from './product-navigation';
+export { Features } from './features';
+export { Appbar } from './appbar';
 export { ProductCarousel } from './product-carousel/product-carousel';
+export { RowInfo } from './row-info';
