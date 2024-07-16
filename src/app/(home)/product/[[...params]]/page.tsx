@@ -1,4 +1,4 @@
-import { ProductDomain } from '@/domains/product/product-domains';
+import { ProductDomainCopy } from '@/domains/product/product-domains copy';
 
 type ProductPageType = {
   params: string[];
@@ -10,7 +10,7 @@ export default function ProductDetailsPage(props: { params: ProductPageType }) {
 
   return (
     <div id={id}>
-      <ProductDomain />
+      <ProductDomainCopy />
     </div>
   );
 }

@@ -1,5 +1,4 @@
 'use client';
-import { calculateSizeAdjustValues } from 'next/dist/server/font-utils';
 import { useState } from 'react';
 import { Icon } from '@/shared/components';
 import { Button, Separator } from '@/shared/ui';

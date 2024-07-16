@@ -12,7 +12,7 @@ export function Banners() {
     <section id="banner" data-testid="banner" className="my-2">
       <Carousel
         opts={{ direction: 'rtl', loop: true }}
-        // plugins={[Autoplay({ delay: 2500 })]}
+        plugins={[Autoplay({ delay: 2500 })]}
         setApi={setApi}
         className="relative"
       >
