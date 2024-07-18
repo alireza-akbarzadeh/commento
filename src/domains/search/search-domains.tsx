@@ -20,7 +20,7 @@ export function SearchDomian() {
   };
   const items = [1, 2, 3, 4];
   return (
-    <section id="search" data-testid="search">
+    <section id="search" data-testid="search" className="bg-surface-primary">
       <div className="my-2 flex items-center gap-4 p-2.5">
         <Link href="/">
           <Icon

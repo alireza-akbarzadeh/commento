@@ -17,7 +17,7 @@ export function NavItem(props: NavItemProps) {
     <Link
       href={href}
       className={cn(
-        'block flex flex-col items-center space-y-[3px] text-content-tertiary',
+        'flex flex-col items-center space-y-[3px] text-content-tertiary',
         {
           'text-content-primary': active,
         },

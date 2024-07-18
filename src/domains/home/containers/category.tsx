@@ -1,25 +1,32 @@
 import { LazyImage } from '@/shared/components';
 
+const categoryImages = [
+  { url: '/images/box.png', name: 'آکبند' },
+  { url: '/images/open-box.png', name: 'اوپن باکس' },
+  { url: '/images/worked.png', name: 'کار‌کرده' },
+  { url: '/images/installment.png', name: 'قسطی' },
+];
+
 export function Category() {
   return (
-    <section className="bg-red h-[116px] bg-surface-primary px-4 py-2">
+    <section className="px-4 py-3">
       <div className="flex items-center justify-between">
-        {Array.from({ length: 4 }).map((_, index) => (
+        {categoryImages.map((image) => (
           <div
-            className="flex flex-col items-center gap-x-4 gap-y-[6px]"
-            key={index}
+            className="flex h-[68] w-[70px] flex-col items-center gap-y-1"
+            key={image.url}
           >
             <div className="relative size-[63px] rounded-full bg-surface-secondary p-1.5">
               <LazyImage
                 style={{ objectFit: 'cover' }}
                 isLocal
                 quality={100}
-                alt=""
-                src="/images/box.png"
+                src={image.url}
+                alt={image.name}
                 fill
               />
             </div>
-            <p className="labelXSmall text-content-primary">آکبند</p>
+            <p className="labelXSmall text-content-primary">{image.name}</p>
           </div>
         ))}
       </div>

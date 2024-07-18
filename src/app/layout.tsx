@@ -67,12 +67,15 @@ export default function RootLayout({
   return (
     <html lang="en" dir="rtl">
       <body
-        // className={cn('bg-layout h-screen font-vazirmatn', vazirmatn.variable)}
-        className={cn('h-screen font-vazirmatn', vazirmatn.variable)}
+        suppressHydrationWarning={true}
+        className={cn('bg-gray-100 font-vazirmatn', vazirmatn.variable)}
       >
-        <main className="relative mx-auto h-dvh min-h-dvh w-full max-w-sm bg-surface-primary">
+        <div
+          id="root"
+          className="relative mx-auto h-dvh min-h-dvh w-full max-w-sm"
+        >
           {children}
-        </main>
+        </div>
       </body>
     </html>
   );

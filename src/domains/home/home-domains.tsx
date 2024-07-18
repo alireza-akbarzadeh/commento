@@ -12,7 +12,7 @@ import {
 
 export function HomeDomains() {
   return (
-    <>
+    <div className="bg-surface-primary">
       <SearchAction />
       <Category />
       <Banners />
@@ -23,6 +23,6 @@ export function HomeDomains() {
       <TopSellers />
       <Categories />
       <BottomNavigation />
-    </>
+    </div>
   );
 }

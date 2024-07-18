@@ -18,7 +18,11 @@ import { StoreInfo } from './components/store-info';
 
 export function ProductDomain() {
   return (
-    <section id="product-details-page" data-testid="product-details-page">
+    <section
+      id="product-details-page"
+      data-testid="product-details-page"
+      className="bg-surface-primary"
+    >
       <Appbar />
       <ProductCarousel />
       <div className="px-4">
