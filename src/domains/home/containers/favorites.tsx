@@ -38,10 +38,13 @@ export function Favorites(props: FavoritesPropsType) {
               })}
             >
               <Card
-                className={cn('relative basis-[89%] rounded-3xl bg-none', {
-                  'bg-surface-primary': mode === 'light',
-                  'bg-content-primary': mode === 'dark',
-                })}
+                className={cn(
+                  'relative basis-[89%] rounded-3xl border-[0.5px] border-border-primary bg-none shadow-elevation4',
+                  {
+                    'bg-surface-primary': mode === 'light',
+                    'bg-content-primary': mode === 'dark',
+                  },
+                )}
               >
                 <CardContent className="flex flex-col p-0">
                   <div className="p-6">
