@@ -6,13 +6,15 @@ export function Appbar() {
   const { back } = useRouter();
 
   return (
-    <div className="flex h-[56px] items-center justify-between py-2">
-      <Icon
-        onClick={() => back()}
-        iconClassName="text-content-primary"
-        name="cross"
-        size="medium"
-      />
+    <div className="flex h-[56px] items-center justify-between pt-3">
+      <div className="size-10 pr-3">
+        <Icon
+          onClick={() => back()}
+          iconClassName="text-content-primary"
+          name="cross"
+          size="medium"
+        />
+      </div>
       <div className="flex items-center gap-2">
         <div className="relative size-10">
           <Icon
