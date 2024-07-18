@@ -9,7 +9,7 @@ const categoryImages = [
 
 export function Category() {
   return (
-    <section className="px-4 py-3">
+    <section className="bg-content-inverse px-4 py-3">
       <div className="flex items-center justify-between">
         {categoryImages.map((image) => (
           <div className="flex flex-col items-center gap-y-1" key={image.url}>

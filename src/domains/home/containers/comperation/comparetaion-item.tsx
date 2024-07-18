@@ -15,7 +15,7 @@ type ComparetaionItemProps = { product: Products };
 export function ComparetaionItem(props: ComparetaionItemProps) {
   const { product } = props;
   return (
-    <CarouselItem className="basis-[93%] pt-3">
+    <CarouselItem className="basis-[93%] bg-content-inverse pt-3 shadow-elevation4">
       <Card className="relative mb-3 rounded-2xl">
         <CardContent className="flex gap-1.5 px-4 py-2">
           <Item {...product} />

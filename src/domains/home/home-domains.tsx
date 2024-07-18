@@ -12,13 +12,13 @@ import {
 
 export function HomeDomains() {
   return (
-    <div className="bg-surface-primary">
+    <div className="bg-layout">
       <SearchAction />
       <Category />
       <Banners />
       <ResentViews />
       <Comparetaion />
-      <div className="bg-layout my-2">
+      <div className="my-2">
         <Favorites title="محبوبترین تبلت‌ها" />
         <Favorites title="محبوبترین ساعت‌های هوشمند" mode="light" />
       </div>

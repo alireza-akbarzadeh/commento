@@ -15,7 +15,7 @@ export function TopSellers() {
   return (
     <section id="top-seller" data-testid="top-seller">
       <SectionTitle title="فروشندگان برتر" />
-      <div className="bg-layout my-2 pb-6 pt-2">
+      <div className="my-2 pb-6 pt-2">
         <Carousel opts={{ direction: 'rtl' }}>
           <CarouselContent className="m-0">
             {Array.from({ length: 5 }).map((_, index) => (
