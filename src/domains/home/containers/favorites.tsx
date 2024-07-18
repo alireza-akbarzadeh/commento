@@ -33,19 +33,19 @@ export function Favorites(props: FavoritesPropsType) {
           {Array.from({ length: 5 }).map((_, index) => (
             <CarouselItem
               key={index}
-              className={cn('mb-6 ml-5 mt-3 basis-[89%] p-0', {
+              className={cn('mb-6 ml-4 mt-3 basis-[89%] p-0', {
                 'mr-5': index === 0,
               })}
             >
               <Card
-                className={cn('relative mb-6 basis-[89%] rounded-2xl', {
+                className={cn('relative mb-6 basis-[89%] rounded-3xl', {
                   'bg-surface-primary': mode === 'light',
                   'bg-content-primary': mode === 'dark',
                 })}
               >
-                <CardContent className="flex flex-col">
-                  <div className="flex flex-col items-center justify-between">
-                    <ul className="flex flex-col items-start gap-y-3 p-[25px]">
+                <CardContent className="flex flex-col p-0">
+                  <div className="p-6">
+                    <ul className="flex flex-col items-start gap-y-3 p-2.5">
                       <li>
                         <p
                           className={cn('text-bodySmall text-white', {
@@ -75,11 +75,10 @@ export function Favorites(props: FavoritesPropsType) {
                         </p>
                       </li>
                     </ul>
-                    <div className="relative w-full">
+                    <div className="relative">
                       <LazyImage
                         src={`/images/${mode === 'dark' ? 'ipad' : 'watch'}.png`}
                         isLocal
-                        style={{ objectFit: 'contain' }}
                         quality={100}
                         fill
                         alt="banner"
