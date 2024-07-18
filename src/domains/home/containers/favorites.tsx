@@ -38,7 +38,7 @@ export function Favorites(props: FavoritesPropsType) {
               })}
             >
               <Card
-                className={cn('relative mb-6 basis-[89%] rounded-3xl bg-none', {
+                className={cn('relative basis-[89%] rounded-3xl bg-none', {
                   'bg-surface-primary': mode === 'light',
                   'bg-content-primary': mode === 'dark',
                 })}

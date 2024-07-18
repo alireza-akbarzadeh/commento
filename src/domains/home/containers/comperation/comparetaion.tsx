@@ -5,7 +5,7 @@ import { SectionTitle } from '../../components/section-title';
 
 export function Comparetaion() {
   return (
-    <section id="compration" data-testid="compration" className="">
+    <section id="compration" data-testid="compration">
       <SectionTitle title="مقایسه‌های من" />
       <Carousel opts={{ direction: 'rtl', dragFree: true }} className="pb-3">
         <CarouselContent className="px-4">

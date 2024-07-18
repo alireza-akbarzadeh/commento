@@ -15,7 +15,7 @@ export function TopSellers() {
   return (
     <section id="top-seller" data-testid="top-seller">
       <SectionTitle title="فروشندگان برتر" />
-      <div className="my-2 pb-6 pt-2">
+      <div className="mt-2 pb-6">
         <Carousel opts={{ direction: 'rtl' }}>
           <CarouselContent className="m-0">
             {Array.from({ length: 5 }).map((_, index) => (
@@ -25,7 +25,7 @@ export function TopSellers() {
                   'mr-4': index === 0,
                 })}
               >
-                <Card className="relative mb-2 rounded-2xl border border-border-primary">
+                <Card className="relative mb-2 rounded-2xl border-[0.5px] border-border-primary shadow-elevation4">
                   <div className="rounded-3xl">
                     <CardContent className="flex gap-1 pt-4">
                       <div className="size-[137px]">
