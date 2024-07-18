@@ -12,11 +12,11 @@ type FavoritesPropsType = {
   title: string;
   mode?: 'dark' | 'light';
 };
-// bg-layout
+
 export function Favorites(props: FavoritesPropsType) {
   const { mode = 'dark', title } = props;
   return (
-    <section className="my-2">
+    <section className="bg-layout my-2">
       <div
         className={cn('max-w-[309px]', {
           'mb-3 mt-6': mode === 'light',
@@ -29,7 +29,7 @@ export function Favorites(props: FavoritesPropsType) {
         </p>
       </div>
       <Carousel opts={{ direction: 'rtl', dragFree: true }}>
-        <CarouselContent className="m-0">
+        <CarouselContent className="m-0 p-0">
           {Array.from({ length: 5 }).map((_, index) => (
             <CarouselItem
               key={index}
