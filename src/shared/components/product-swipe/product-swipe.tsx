@@ -14,14 +14,11 @@ export function ProductSwipe(props: ProductSwiperops) {
   return (
     <>
       {title && <SectionTitle title={title} />}
-      <Carousel
-        opts={{ direction: 'rtl', dragFree: true }}
-        className="w-full max-w-sm"
-      >
+      <Carousel opts={{ direction: 'rtl', dragFree: true }}>
         <CarouselContent className="bg-content-inverse">
           {data.map((product, index) => (
-            <CarouselItem key={index} className={`basis-[39%] p-2.5`}>
-              <ProductItem key={index} product={product} />
+            <CarouselItem key={index} className={`basis-[38%] p-2.5`}>
+              <ProductItem product={product} />
             </CarouselItem>
           ))}
         </CarouselContent>

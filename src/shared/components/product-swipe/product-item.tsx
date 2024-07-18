@@ -16,7 +16,7 @@ export function ProductItem(props: ProductItemProps) {
     <>
       <Link
         href={`/product/${product.title}`}
-        className="bg-red relative flex flex-col items-center justify-center"
+        className="flex-center relative w-[147px] flex-col"
       >
         <div className="m-2.5 flex size-[125px] items-center justify-center rounded-lg bg-surface-tertiary">
           <div className="relative h-[101px] w-[99px]">
@@ -35,10 +35,10 @@ export function ProductItem(props: ProductItemProps) {
         </div>
         {product.discount && <DiscountBadge discount={product.discount} />}
       </Link>
-      <div className="space-y-1 px-2.5 pt-2.5">
+      <div className="space-y-1 pr-3 pt-2.5">
         <p className="text-labelXSmall text-content-primary">
           {isTruncate
-            ? product.title.slice(0, 43).concat('...')
+            ? product.title.slice(0, 38).concat('...')
             : product.title}
         </p>
         {/*TODO:  if store was only one render te name of store */}
