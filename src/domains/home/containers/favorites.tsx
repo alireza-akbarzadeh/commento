@@ -16,7 +16,7 @@ type FavoritesPropsType = {
 export function Favorites(props: FavoritesPropsType) {
   const { mode = 'dark', title } = props;
   return (
-    <section className="bg-layout my-2">
+    <section>
       <div
         className={cn('max-w-[309px]', {
           'mb-3 mt-6': mode === 'light',
