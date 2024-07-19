@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import { Icon } from '@/shared/components';
 
 export function SearchAction() {
+  const t = useTranslations('HomePage');
   return (
     <section
       id="search-action"
@@ -15,7 +17,7 @@ export function SearchAction() {
         <div className="flex gap-2.5">
           <Icon name="magnifier" iconClassName="text-content-secondary" />
           <p className="text-labelMedium text-content-tertiary">
-            جستجوی محصول...
+            {t('searchForProdcut')}
           </p>
         </div>
         <div className="flex size-8 items-center justify-center">

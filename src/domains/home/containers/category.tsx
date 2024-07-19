@@ -1,13 +1,14 @@
+import { useTranslations } from 'next-intl';
 import { LazyImage } from '@/shared/components';
 
-const categoryImages = [
-  { url: '/images/box.png', name: 'آکبند' },
-  { url: '/images/open-box.png', name: 'اوپن باکس' },
-  { url: '/images/worked.png', name: 'کار‌کرده' },
-  { url: '/images/installment.png', name: 'قسطی' },
-];
-
 export function Category() {
+  const t = useTranslations('HomePage');
+  const categoryImages = [
+    { url: '/images/box.png', name: t('brandNew') },
+    { url: '/images/open-box.png', name: t('openBox') },
+    { url: '/images/worked.png', name: t('worked') },
+    { url: '/images/installment.png', name: t('installment') },
+  ];
   return (
     <section className="bg-content-inverse px-4 py-3">
       <div className="flex items-center justify-between">

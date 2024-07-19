@@ -1,5 +1,18 @@
 {
+  "Globals": {
+    "as": "از",
+    "search": "جستجو",
+    "discount": "تخفیف‌ها",
+    "profile": "پروفایل",
+    "categories": "دسته‌‌بندی‌ها",
+    "view": "مشاهده"
+  },
   "HomePage": {
-    "title": "سلام دنیا!"
+    "searchForProdcut": "جستجوی محصول...",
+    "viewCompration": "مشاهده مقایسه",
+    "brandNew": "آکبند",
+    "openBox": "اوپن باکس",
+    "worked": "کار‌کرده",
+    "installment": "قسطی"
   }
 }

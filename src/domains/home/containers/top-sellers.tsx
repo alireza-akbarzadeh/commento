@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 import { LazyImage } from '@/shared/components';
 import {
   Button,
@@ -12,6 +13,7 @@ import { cn } from '@/shared/utils';
 import { SectionTitle } from '../components/section-title';
 
 export function TopSellers() {
+  const t = useTranslations('Globals');
   return (
     <section id="top-seller" data-testid="top-seller">
       <SectionTitle title="فروشندگان برتر" />
@@ -84,7 +86,7 @@ export function TopSellers() {
                         variant="tertiary"
                         className="rounded-full px-3 py-1 text-labelSmall"
                       >
-                        مشاهده
+                        {t('view')}
                       </Button>
                     </CardFooter>
                   </div>

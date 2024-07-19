@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import { DiscountBadge } from '@/domains/home/components';
 import { Icon, LazyImage } from '@/shared/components';
 import { Products } from '@/shared/config/mock-data';
@@ -14,6 +15,7 @@ type ComparetaionItemProps = { product: Products };
 
 export function ComparetaionItem(props: ComparetaionItemProps) {
   const { product } = props;
+  const t = useTranslations('HomePage');
   return (
     <CarouselItem className="basis-[93%] pt-3">
       <Card className="relative mb-3 rounded-2xl border-[0.5px] border-border-primary bg-content-inverse shadow-elevation4">
@@ -23,7 +25,9 @@ export function ComparetaionItem(props: ComparetaionItemProps) {
         </CardContent>
         <Separator className="border-1 mx-auto mt-2 w-[90%] border-t border-border-primary" />
         <CardFooter className="flex w-full items-center justify-between py-3">
-          <p className="text-labelMedium text-content-primary">مشاهده مقایسه</p>
+          <p className="text-labelMedium text-content-primary">
+            {t('viewCompration')}
+          </p>
           <div className="flex items-center">
             <div className="flex-center size-6 rounded-full bg-surface-secondary">
               <span className="pl-[3px] pt-[3px] text-labelMedium text-content-tertiary">
