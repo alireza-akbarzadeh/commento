@@ -41,9 +41,11 @@ export function Features() {
         <ScrollBar orientation="horizontal" />
       </ScrollArea>
       <Drawer open={openSheet}>
-        <DrawerContent onClickOverlay={toggleSheet}>
+        <DrawerContent onClickOverlay={toggleSheet} className="h-[300px]">
           <DrawerHeader className="flex items-center justify-between">
-            <DrawerTitle>فناوری صفحه نمایش </DrawerTitle>
+            <DrawerTitle className="text-headlineSmall">
+              فناوری صفحه نمایش{' '}
+            </DrawerTitle>
             <Button
               onClick={toggleSheet}
               className="size-8"
@@ -53,7 +55,7 @@ export function Features() {
               <Icon size="small" name="cross" />
             </Button>
           </DrawerHeader>
-          <div className="mb-5 mt-3 flex flex-col gap-3 px-[25px]">
+          <div className="mt-3 flex flex-col gap-3 px-[25px]">
             <div className="flex items-center justify-between">
               <p className="text-labelMedium text-content-primary">AMOLED</p>
               <Checkbox className="rounded-full" />

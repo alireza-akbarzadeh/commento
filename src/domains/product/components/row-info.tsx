@@ -8,7 +8,7 @@ export function RowInfo() {
       </p>
       <p className="pb-[9px] pt-px text-labelMedium text-content-primary">
         <span className="text-bodyXXSmall">از</span> ۱‍۶۷,۰۰۰
-        <span className="mr-1 text-bodyXXSmall">{CURRENCY.IR}</span>
+        <span className="mr-1 text-labelXSmall">{CURRENCY.IR}</span>
       </p>
     </>
   );
