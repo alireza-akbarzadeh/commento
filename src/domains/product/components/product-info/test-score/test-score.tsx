@@ -20,7 +20,10 @@ export function TestScore() {
     <>
       <Drawer>
         <DrawerTrigger>
-          <Button variant="ghost" className="flex flex-col items-center">
+          <Button
+            variant="ghost"
+            className="flex flex-col items-center hover:bg-none"
+          >
             <Badge variant="positive">۴.۳</Badge>
             <p className="text-content-primary">نمره تست</p>
           </Button>

@@ -15,7 +15,10 @@ export function SpecificTech() {
     <>
       <Drawer>
         <DrawerTrigger>
-          <Button variant="ghost" className="flex flex-col items-center">
+          <Button
+            variant="ghost"
+            className="flex flex-col items-center hover:bg-none"
+          >
             <Icon name="sticky-note" size="small" />
             <p className="text-labelXSmall text-content-primary">مشخصات فنی</p>
           </Button>
