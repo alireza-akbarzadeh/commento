@@ -3,12 +3,15 @@ import { useState } from 'react';
 import { Icon } from '@/shared/components';
 import { Button, Separator } from '@/shared/ui';
 import { cn } from '@/shared/utils';
-// check if we can create a components for both src/domains/search/components/search-category.tsx
+
 export function ProductActions() {
   const [isOnline, setIsOnline] = useState<'offline' | 'online'>('online');
-  // bg-surface-tertiary
+
   return (
     <>
+      <div className="py-2">
+        <p className="text-labelMedium text-content-primary">فروشگاه</p>
+      </div>
       <div className="flex items-center gap-3 py-2">
         <div className="mt-1 flex size-[32px] items-center justify-center rounded-xl bg-surface-tertiary p-[6px]">
           <Icon name="slider-horizontal" size="small" />

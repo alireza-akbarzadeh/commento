@@ -41,7 +41,7 @@ export function Features() {
         <ScrollBar orientation="horizontal" />
       </ScrollArea>
       <Drawer open={openSheet}>
-        <DrawerContent onClickOverlay={toggleSheet} className="h-[300px]">
+        <DrawerContent onClickOverlay={toggleSheet} className="pb-6">
           <DrawerHeader className="flex items-center justify-between">
             <DrawerTitle className="text-headlineSmall">
               فناوری صفحه نمایش{' '}
@@ -73,6 +73,11 @@ export function Features() {
           </div>
         </DrawerContent>
       </Drawer>
+      <div className="py-4">
+        <Button className="h-[52px] w-full rounded-2xl text-labellarge text-content-inverse">
+          در ۱۱ فروشگاه
+        </Button>
+      </div>
     </>
   );
 }

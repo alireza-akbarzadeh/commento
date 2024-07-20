@@ -15,14 +15,14 @@ export function SpecificTech() {
     <>
       <Drawer>
         <DrawerTrigger>
-          <div className="flex flex-col items-center">
+          <Button variant="ghost" className="flex flex-col items-center">
             <Icon name="sticky-note" size="small" />
             <p className="text-labelXSmall text-content-primary">مشخصات فنی</p>
-          </div>
+          </Button>
         </DrawerTrigger>
-        <DrawerContent className="h-[98%]">
+        <DrawerContent>
           <DrawerHeader className="flex items-center justify-between">
-            <DrawerTitle>مشخصات فنی</DrawerTitle>
+            <DrawerTitle className="text-headlineSmall">مشخصات فنی</DrawerTitle>
             <DrawerClose>
               <Button className="size-8" variant="tertiary" roundedFull>
                 <Icon size="small" name="cross" />
@@ -45,6 +45,7 @@ export function SpecificTech() {
                 subtitle="جنس جلو و پشت از شیشه کار شده و پلاستیک فشرده وارداتی ویژه سامسونگ"
               />
               <SpecificItem
+                border={false}
                 title="توضیحات سیم کارت"
                 subtitle="سایز نانو (۸.۸ × ۱۲.۳ میلی‌متر)"
               />

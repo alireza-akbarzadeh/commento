@@ -1,11 +1,16 @@
-type SpecificItemProps = { title: string; subtitle: String };
+import { Separator } from '@/shared/ui';
+
+type SpecificItemProps = { title: string; subtitle: String; border?: false };
 
 export function SpecificItem(props: SpecificItemProps) {
-  const { subtitle, title } = props;
+  const { subtitle, title, border = true } = props;
   return (
-    <div>
-      <span className="text-bodySmall text-content-tertiary">{title}</span>
-      <p className="text-labelMedium">{subtitle}</p>
-    </div>
+    <>
+      <div className="py-3">
+        <span className="text-bodySmall text-content-tertiary">{title}</span>
+        <p className="text-labelMedium">{subtitle}</p>
+      </div>
+      {border && <Separator className="my-2 border-b border-border-primary" />}
+    </>
   );
 }

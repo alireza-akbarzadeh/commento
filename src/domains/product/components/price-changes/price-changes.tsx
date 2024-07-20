@@ -9,7 +9,6 @@ import {
   XAxis,
   YAxis,
 } from 'recharts';
-import { SectionTitle } from '@/domains/home/components';
 import { Icon } from '@/shared/components';
 import { CURRENCY } from '@/shared/constant';
 import { ChartConfig, ChartContainer } from '@/shared/ui';

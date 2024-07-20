@@ -17,10 +17,10 @@ export function PriceNotify() {
     <>
       <Drawer>
         <DrawerTrigger>
-          <div className="flex flex-col items-center bg-content-inverse">
+          <Button variant="ghost" className="flex flex-col items-center">
             <Icon name="slider-horizontal" size="small" />
             <p className="text-labelXSmall text-content-primary">نمودار قیمت</p>
-          </div>
+          </Button>
         </DrawerTrigger>
         <DrawerContent className="h-[70%]">
           <DrawerHeader className="flex items-center justify-between">

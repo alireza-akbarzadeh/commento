@@ -27,6 +27,7 @@ export const colors = {
     positive: '#048848',
     positiveLight: '#E6F2ED',
     warning: '#FFC043',
+    warningLight: '#FFFAF0',
   },
   border: {
     default: 'hsl(var(--border))',
