@@ -22,9 +22,11 @@ export function PriceNotify() {
             <p className="text-labelXSmall text-content-primary">نمودار قیمت</p>
           </Button>
         </DrawerTrigger>
-        <DrawerContent className="h-[70%]">
+        <DrawerContent className="pb-6">
           <DrawerHeader className="flex items-center justify-between">
-            <DrawerTitle> اطلاع از قیمت مدنظر</DrawerTitle>
+            <DrawerTitle className="text-headlineSmall">
+              اطلاع از قیمت مدنظر
+            </DrawerTitle>
             <DrawerClose>
               <Button className="size-8" variant="tertiary" roundedFull>
                 <Icon size="small" name="cross" />
@@ -42,13 +44,13 @@ export function PriceNotify() {
                   {CURRENCY.IR}
                 </p>
               }
-              className="border-border-inversePrimary ring-2 ring-border-inversePrimary"
+              className="border-border-inversePrimary ring-1 ring-border-inversePrimary"
             />
             <p className="text-bodySmall text-content-secondary">
               هر زمان به این قیمت رسید به شما اطلاع میدهیم.
             </p>
           </div>
-          <Separator className="border-b border-border-primary py-2 text-displaySmall" />
+          <Separator className="border-b border-border-primary py-[14px] text-displaySmall" />
           <div className="flex h-[52px] items-center justify-between px-4">
             <div className="flex-center">
               <p>کمترین قیمت فعلی</p>
