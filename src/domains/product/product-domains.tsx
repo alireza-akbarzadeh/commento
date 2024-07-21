@@ -1,17 +1,16 @@
-import { Button } from '@/shared/ui';
 import {
   Appbar,
   Features,
-  ProductActions,
+  FilterActions,
   ProductCarousel,
   RowInfo,
 } from './components';
 import { FAQ } from './components/faq';
 import { PriceChanges } from './components/price-changes/price-changes';
 import { ProductInfo } from './components/product-info/product-info';
-import { StoresMap } from './components/product-info/stores-map/stores-map';
-import { SimilarProduct } from './components/similar-product/simular-product';
-import { StoreInfo } from './components/store-info';
+import { SimilarProduct } from './components/similar-product/similar';
+import { StoreInfo } from './components/store-info/store-info';
+import { StoresMap } from './components/stores-map/stores-map';
 
 export function ProductDomain() {
   return (
@@ -26,7 +25,7 @@ export function ProductDomain() {
         <RowInfo />
         <Features />
         <ProductInfo />
-        <ProductActions />
+        <FilterActions />
         <StoreInfo />
         <StoresMap />
         <FAQ />

@@ -78,7 +78,7 @@ export default async function RootLayout({
       <body
         suppressHydrationWarning={true}
         className={cn(
-          'bg-rose-400 font-vazirmatn antialiased',
+          'bg-gray-100 font-vazirmatn antialiased',
           vazirmatn.variable,
         )}
       >
