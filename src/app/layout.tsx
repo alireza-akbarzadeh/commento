@@ -1,11 +1,10 @@
+import '@/shared/globals.css';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 import { getLangDir } from 'rtl-detect';
-import QueryProviders from '@/shared/query-providers';
 import { cn } from '@/shared/utils';
-import '@/shared/globals.css';
 
 const vazirmatn = localFont({
   src: [
@@ -88,7 +87,7 @@ export default async function RootLayout({
             id="root"
             className="relative mx-auto h-dvh min-h-dvh w-full max-w-sm"
           >
-            <QueryProviders>{children}</QueryProviders>
+            {children}
           </div>
         </NextIntlClientProvider>
       </body>
