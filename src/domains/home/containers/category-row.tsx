@@ -19,7 +19,7 @@ function Row() {
       <div className="flex w-full items-center justify-between">
         <div className="flex items-center gap-[5.6px] pr-2">
           <Icon name="default" size="small" />
-          <p className="text-labelSmall text-content-primary">گوشی تلفن</p>
+          <p className="text-content-primary text-labelSmall">گوشی تلفن</p>
         </div>
         <div className="px-1">
           <Icon name="chevron-left" size="small" />

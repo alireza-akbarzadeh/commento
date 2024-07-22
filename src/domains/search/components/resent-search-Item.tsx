@@ -19,8 +19,8 @@ export function ResentSearchItem(props: ResentSearchItemProps) {
           <Icon name={iconName} />
         </div>
         <div className="space-y-[2px]">
-          <h4 className="text-labelMedium text-content-primary">{title}</h4>
-          <p className="text-bodySmall text-content-tertiary">{subtitle}</p>
+          <h4 className="text-content-primary text-labelMedium">{title}</h4>
+          <p className="text-content-tertiary text-bodySmall">{subtitle}</p>
         </div>
       </div>
       {activeBorder && (

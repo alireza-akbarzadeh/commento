@@ -12,10 +12,10 @@ export function NoResult() {
           fill
         />
       </div>
-      <h5 className="text-labelSmall text-content-tertiary">
+      <h5 className="text-content-tertiary text-labelSmall">
         نتیجه‌ای پیدا نشد!
       </h5>
-      <p className="text-bodyXSmall text-content-tertiary">
+      <p className="text-content-tertiary text-bodyXSmall">
         لطفا از نوشتار صحیح و اتصال به اینترنت مطمئن شوید
       </p>
     </div>

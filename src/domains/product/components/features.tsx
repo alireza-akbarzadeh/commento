@@ -29,10 +29,10 @@ export function Features() {
               key={index}
               className="flex flex-col items-start rounded-md p-1 ring-0 focus-visible:ring-0 focus-visible:ring-offset-0"
             >
-              <h4 className="px-2 text-bodyXSmall text-content-tertiary">
+              <h4 className="px-2 text-content-tertiary text-bodyXSmall">
                 {index % 2 ? 'فناوری صفحه نمایش' : 'رنگ'}
               </h4>
-              <p className="px-2 text-bodyXSmall text-content-primary">
+              <p className="px-2 text-content-primary text-bodyXSmall">
                 {index % 2 ? 'AMOLED' : 'مشکی'}
               </p>
             </Button>
@@ -57,24 +57,24 @@ export function Features() {
           </DrawerHeader>
           <div className="mt-3 flex flex-col gap-3 px-[25px]">
             <div className="flex items-center justify-between">
-              <p className="text-labelMedium text-content-primary">AMOLED</p>
+              <p className="text-content-primary text-labelMedium">AMOLED</p>
               <Checkbox className="rounded-full" />
             </div>
             <div className="flex items-center justify-between">
-              <p className="text-labelMedium text-content-primary">
+              <p className="text-content-primary text-labelMedium">
                 SUPER AMOLED
               </p>
               <Checkbox className="rounded-full" />
             </div>
             <div className="flex items-center justify-between">
-              <p className="text-labelMedium text-content-primary">OLED</p>
+              <p className="text-content-primary text-labelMedium">OLED</p>
               <Checkbox className="rounded-full" />
             </div>
           </div>
         </DrawerContent>
       </Drawer>
       <div className="py-4">
-        <Button className="h-[52px] w-full rounded-2xl text-labellarge text-content-inverse">
+        <Button className="h-[52px] w-full rounded-2xl text-content-inverse text-labellarge">
           در ۱۱ فروشگاه
         </Button>
       </div>

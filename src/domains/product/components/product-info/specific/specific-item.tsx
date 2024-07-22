@@ -7,7 +7,7 @@ export function SpecificItem(props: SpecificItemProps) {
   return (
     <>
       <div className="py-3">
-        <span className="text-bodySmall text-content-tertiary">{title}</span>
+        <span className="text-content-tertiary text-bodySmall">{title}</span>
         <p className="text-labelMedium">{subtitle}</p>
       </div>
       {border && <Separator className="my-2 border-b border-border-primary" />}

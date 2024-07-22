@@ -41,12 +41,12 @@ export default function LoginPage() {
             <CardTitle>
               {/* <Icons className="mx-auto size-6" /> */}
               Logo
-              <h1 className="text-2xl font-semibold tracking-tight">
+              <h1 className="tracking-tight text-displayMedium">
                 Welcome back
               </h1>
             </CardTitle>
             <CardDescription>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-muted-foreground text-bodySmall">
                 Enter your email to sign in to your account
               </p>
             </CardDescription>

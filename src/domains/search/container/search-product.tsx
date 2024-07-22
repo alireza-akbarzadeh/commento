@@ -66,17 +66,17 @@ export function SearchProduct(props: SearchProductProps) {
         </div>
         <div className="w-[229px]">
           <div className="w-full space-y-3">
-            <p className="text-labelXSmall text-content-primary">{title}</p>
+            <p className="text-content-primary text-labelXSmall">{title}</p>
             {/*TODO:  if store was only one render the name of store */}
-            <p className="text-labelMedium text-content-primary">
+            <p className="text-content-primary text-labelMedium">
               <span className="text-bodyXXSmall">از</span> {priceRange}
               <span className="text-bodyXXSmall">{CURRENCY.IR}</span>
             </p>
-            <p className="text-bodyXSmall text-content-tertiary">{storeName}</p>
+            <p className="text-content-tertiary text-bodyXSmall">{storeName}</p>
             <div className="flex gap-4">
               {data?.map((item) => (
                 <span
-                  className="text-bodyXSmall text-content-tertiary"
+                  className="text-content-tertiary text-bodyXSmall"
                   key={item.title}
                 >
                   {item.title}

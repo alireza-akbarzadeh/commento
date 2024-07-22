@@ -27,10 +27,10 @@ export default function RegisterPage() {
         <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
           <div className="flex flex-col space-y-2 text-center">
             <div className="mx-auto size-6">it bazar</div>
-            <h1 className="text-2xl font-semibold tracking-tight">
+            <h1 className="tracking-tight text-labelMedium">
               Create an account
             </h1>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-muted-foreground text-bodySmall">
               Enter your email below to create your account
             </p>
           </div>

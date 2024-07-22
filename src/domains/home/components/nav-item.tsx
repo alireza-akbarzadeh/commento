@@ -31,7 +31,7 @@ export function NavItem(props: NavItemProps) {
         })}
       />
       <span
-        className={cn('text-labelXSmall text-content-tertiary', {
+        className={cn('text-content-tertiary text-labelXSmall', {
           'text-content-primary': active,
         })}
       >

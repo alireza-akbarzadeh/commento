@@ -23,7 +23,7 @@ export function Favorites(props: FavoritesPropsType) {
           'my-2 mt-3': mode === 'dark',
         })}
       >
-        <p className="px-4 text-headlineSmall text-content-primary">
+        <p className="px-4 text-content-primary text-headlineSmall">
           {title}
           <span className="text-content-tertiary"> بر اساس آخرین بازدیدها</span>
         </p>
@@ -51,7 +51,7 @@ export function Favorites(props: FavoritesPropsType) {
                     <ul className="flex flex-col items-start gap-y-3 p-2.5">
                       <li>
                         <p
-                          className={cn('text-bodySmall text-white', {
+                          className={cn('text-white text-bodySmall', {
                             'text-content-tertiary': mode === 'light',
                           })}
                         >
@@ -68,7 +68,7 @@ export function Favorites(props: FavoritesPropsType) {
                       <li>
                         <p
                           className={cn(
-                            'w-[225px] text-bodyMedium text-white',
+                            'w-[225px] text-white text-bodyMedium',
                             {
                               'text-content-primary': mode === 'light',
                             },

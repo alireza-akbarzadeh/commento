@@ -14,8 +14,8 @@ export function ScoreItem(props: SpecificItemProps) {
   return (
     <div className="mt-3 flex items-center justify-between">
       <div className="flex flex-col gap-[2px]">
-        <span className="text-labelMedium text-content-primary">{title}</span>
-        <p className="text-bodySmall text-content-tertiary">{subtitle}</p>
+        <span className="text-content-primary text-labelMedium">{title}</span>
+        <p className="text-content-tertiary text-bodySmall">{subtitle}</p>
       </div>
       <div>
         <Badge

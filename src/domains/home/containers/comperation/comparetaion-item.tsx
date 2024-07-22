@@ -25,12 +25,12 @@ export function ComparetaionItem(props: ComparetaionItemProps) {
         </CardContent>
         <Separator className="border-1 mx-auto mt-2 w-[90%] border-t border-border-primary" />
         <CardFooter className="flex w-full items-center justify-between py-3">
-          <p className="text-labelMedium text-content-primary">
+          <p className="text-content-primary text-labelMedium">
             {t('viewCompration')}
           </p>
           <div className="flex items-center">
             <div className="flex-center size-6 rounded-full bg-surface-secondary">
-              <span className="pl-[3px] pt-[3px] text-labelMedium text-content-tertiary">
+              <span className="pl-[3px] pt-[3px] text-content-tertiary text-labelMedium">
                 ۲
               </span>
             </div>
@@ -63,7 +63,7 @@ function Item({ title, imageUrl, discount }: Products) {
         {discount && <DiscountBadge discount={discount} />}
       </Link>
       <div className="pr -2 space-y-1 pt-3">
-        <p className="text-labelSmall text-content-primary">
+        <p className="text-content-primary text-labelSmall">
           {title.length > 40 ? title.slice(0, 38).concat('...') : title}
         </p>
       </div>

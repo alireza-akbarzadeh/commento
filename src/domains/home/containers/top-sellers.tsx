@@ -77,7 +77,7 @@ export function TopSellers() {
                     </CardContent>
                     <CardFooter className="flex items-center justify-between px-4 pb-4">
                       <div className="space-y-1">
-                        <h4 className="text-md font-medium">عنوان فروشکاه</h4>
+                        <h4 className="font-medium text-md">عنوان فروشکاه</h4>
                         <p className="text-base font-normal text-content-tertiary">
                           تعداد محصولات برتر
                         </p>
