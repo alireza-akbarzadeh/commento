@@ -1,9 +1,10 @@
-import '@/shared/globals.css';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 import { getLangDir } from 'rtl-detect';
 import { cn } from '@/shared/utils';
+
+import '@/shared/globals.css';
 
 export const metadata: Metadata = {
   title: 'آیتی بازار',
