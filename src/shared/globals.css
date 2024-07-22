@@ -2,7 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url(font.css);
+@font-face {
+  font-family: 'Vazirmatn-Black';
+  src: url('./fonts/webfonts/Vazirmatn-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazirmatn-ExtraBold';
+  src: url('./fonts/webfonts/Vazirmatn-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazirmatn-Bold';
+  src: url('./fonts/webfonts/Vazirmatn-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazirmatn-SemiBold';
+  src: url('./fonts/webfonts/Vazirmatn-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazirmatn-Medium';
+  src: url('./fonts/webfonts/Vazirmatn-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazirmatn-Normal';
+  src: url('./fonts/webfonts/Vazirmatn-Normal.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazirmatn-Light';
+  src: url('./fonts/webfonts/Vazirmatn-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazirmatn-ExtraLight';
+  src: url('./fonts/webfonts/Vazirmatn-ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazirmatn-Thin';
+  src: url('./fonts/webfonts/Vazirmatn-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+}
 
 @layer base {
   :root {
