@@ -16,7 +16,7 @@ export function SearchAction() {
       >
         <div className="flex gap-2.5">
           <Icon name="magnifier" iconClassName="text-content-secondary" />
-          <p className="text-labelMedium text-content-tertiary">
+          <p className="text-content-tertiary text-labelMedium">
             {t('searchForProdcut')}
           </p>
         </div>

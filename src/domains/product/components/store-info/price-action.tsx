@@ -5,8 +5,8 @@ import { Button } from '@/shared/ui';
 
 export const PriceAction = () => {
   return (
-    <div className="mb-2 mt-[2px] flex items-center justify-between border-y border-border-primary py-3">
-      <p className="text-labelMedium text-content-primary">
+    <div className="flex items-center justify-between border-t border-border-primary py-3">
+      <p className="text-content-primary text-labelMedium">
         ۱‍۶۷,۰۰۰
         <span className="mr-1 text-bodyXXSmall">{CURRENCY.IR}</span>
       </p>

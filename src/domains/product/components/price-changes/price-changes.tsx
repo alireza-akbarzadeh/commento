@@ -1,5 +1,4 @@
 'use client';
-
 import {
   CartesianGrid,
   Line,
@@ -44,7 +43,7 @@ const CustomTooltip: React.FC<CustomTooltipProps> = ({
 }) => {
   if (active && payload && payload.length) {
     return (
-      <div className="custom-tooltip relative space-y-2 rounded bg-content-primary px-4 py-3 text-bodyXSmall text-content-inverse shadow-elevation3">
+      <div className="custom-tooltip relative space-y-2 rounded bg-content-primary px-4 py-3 text-content-inverse shadow-elevation3 text-bodyXSmall">
         <p className="">{`${payload[0].value} ${CURRENCY.IR}`}</p>
         <p className="">{`۱۲ ${label} ۱۴۰۳ `}</p>
         <div className="tooltip-triangle border-l-5 border-r-5 border-t-5 absolute bottom-[-5px] left-1/2 size-0 -translate-x-1/2 border-x-transparent border-t-black"></div>
@@ -56,7 +55,13 @@ const CustomTooltip: React.FC<CustomTooltipProps> = ({
 
 export function PriceChanges() {
   return (
-    <div className="w-[360px]">
+    <div className="max-w-sm bg-content-inverse px-4">
+      <div className="flex items-center gap-[14.4px] bg-content-inverse py-2">
+        <h3 className="text-content-primary text-labelSmall">
+          اطلاع رسانی قیمت
+        </h3>
+        <Icon name="chevron-left" size="small" />
+      </div>
       <SortChanges />
       <ChartContainer config={chartConfig}>
         <LineChart width={400} accessibilityLayer data={chartData}>
@@ -67,7 +72,7 @@ export function PriceChanges() {
             axisLine={{ stroke: '#EAEAEA' }}
             tickMargin={9}
             tick={({ x, y, payload }) => (
-              <text x={x} y={y} className="text-bodyXSmall text-[#A9A9A9]">
+              <text x={x} y={y} className="text-[#A9A9A9] text-bodyXSmall">
                 {payload.value}
               </text>
             )}
@@ -79,7 +84,7 @@ export function PriceChanges() {
             axisLine={{ stroke: '#EAEAEA' }}
             tickFormatter={(value) => `${value}`}
             tick={({ x, y, payload }) => (
-              <text x={x} y={y} className="text-bodyXSmall text-[#A9A9A9]">
+              <text x={x} y={y} className="text-[#A9A9A9] text-bodyXSmall">
                 {payload.value}
               </text>
             )}
@@ -97,12 +102,6 @@ export function PriceChanges() {
           />
         </LineChart>
       </ChartContainer>
-      <div className="flex items-center gap-[14.4px] bg-content-inverse px-4 py-2">
-        <h3 className="text-labelSmall text-content-primary">
-          اطلاع رسانی قیمت
-        </h3>
-        <Icon name="chevron-left" size="small" />
-      </div>
     </div>
   );
 }

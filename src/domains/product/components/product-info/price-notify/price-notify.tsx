@@ -19,7 +19,7 @@ export function PriceNotify() {
         <DrawerTrigger>
           <div className="flex flex-col items-center hover:bg-none">
             <Icon name="slider-horizontal" size="small" />
-            <p className="text-labelXSmall text-content-primary">نمودار قیمت</p>
+            <p className="text-content-primary text-labelXSmall">نمودار قیمت</p>
           </div>
         </DrawerTrigger>
         <DrawerContent className="pb-6">
@@ -34,19 +34,19 @@ export function PriceNotify() {
             </DrawerClose>
           </DrawerHeader>
           <div className="h-[144px] space-y-2 px-4 py-3">
-            <p className="text-labelMedium text-content-primary">
+            <p className="text-content-primary text-labelMedium">
               قیمت مدنظر خود را ثبت کنید
             </p>
             <Input
               type="number"
               end={
-                <p className="px-3 text-bodySmall text-content-tertiary">
+                <p className="px-3 text-content-tertiary text-bodySmall">
                   {CURRENCY.IR}
                 </p>
               }
               className="border-border-inversePrimary ring-1 ring-border-inversePrimary"
             />
-            <p className="text-bodySmall text-content-secondary">
+            <p className="text-content-secondary text-bodySmall">
               هر زمان به این قیمت رسید به شما اطلاع میدهیم.
             </p>
           </div>
@@ -56,10 +56,10 @@ export function PriceNotify() {
               <p>کمترین قیمت فعلی</p>
             </div>
             <div className="flex-center gap-1">
-              <p className="text-labelMedium text-content-primary">
+              <p className="text-content-primary text-labelMedium">
                 ۲۱,000,0000
               </p>
-              <span className="text-labelXSmall text-content-primary">
+              <span className="text-content-primary text-labelXSmall">
                 {CURRENCY.IR}
               </span>
             </div>

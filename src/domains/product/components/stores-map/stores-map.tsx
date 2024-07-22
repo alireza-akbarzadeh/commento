@@ -7,7 +7,7 @@ export function StoresMap() {
     <div>
       <div className="bg-surface-secondary p-4">
         <Button
-          className="rounded-xl text-labellarge text-content-inverse"
+          className="rounded-xl text-content-inverse text-labellarge"
           fullWidth
         >
           نمایش همه فروشگاه‌ها

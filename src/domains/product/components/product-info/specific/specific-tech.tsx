@@ -17,7 +17,7 @@ export function SpecificTech() {
         <DrawerTrigger>
           <div className="flex flex-col items-center hover:bg-none">
             <Icon name="sticky-note" size="small" />
-            <p className="text-labelXSmall text-content-primary">مشخصات فنی</p>
+            <p className="text-content-primary text-labelXSmall">مشخصات فنی</p>
           </div>
         </DrawerTrigger>
         <DrawerContent>

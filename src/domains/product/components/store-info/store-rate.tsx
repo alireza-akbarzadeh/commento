@@ -5,12 +5,12 @@ export function StoreRate() {
     <div className="my-3 space-y-[2px]">
       <div className="flex items-center gap-1">
         <div className="flex items-center gap-2">
-          <p className="text-labelMedium text-content-primary">دیجیاتو</p>
-          <span className="text-bodySmall text-content-positive">۴.۵</span>
+          <p className="text-content-primary text-labelMedium">دیجیاتو</p>
+          <span className="text-content-positive text-bodySmall">۴.۵</span>
         </div>
-        <Icon name="chevron-up" iconClassName="text-content-primary" />
+        <Icon name="chevron-down" iconClassName="text-content-primary" />
       </div>
-      <p className="mt-[2px] text-bodySmall text-content-tertiary">
+      <p className="mt-[2px] text-content-tertiary text-bodySmall">
         تهران - اینترنتی
       </p>
     </div>

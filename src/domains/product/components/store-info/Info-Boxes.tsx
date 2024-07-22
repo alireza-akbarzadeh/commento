@@ -1,7 +1,7 @@
 function InfoBox({ text }: { text: string }) {
   return (
     <div className="bg-surface-secondary p-1.5 px-2">
-      <p className="text-bodyXSmall text-content-tertiary">{text}</p>
+      <p className="text-content-tertiary text-bodyXSmall">{text}</p>
     </div>
   );
 }
