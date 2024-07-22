@@ -6,11 +6,11 @@ import { Spin } from '@/shared/components';
 import { cn } from '@/shared/utils';
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium  transition-colors focus-visible:outline-none   disabled:pointer-events-none disabled:opacity-50',
+  'inline-flex items-center justify-center whitespace-nowrap rounded-md  transition-colors focus-visible:outline-none   disabled:pointer-events-none disabled:opacity-50',
   {
     variants: {
       variant: {
-        default: 'bg-primary text-primary-foreground hover:bg-primary/90',
+        default: 'bg-primary  hover:bg-primary/90 text-content-inverse',
         destructive:
           'bg-destructive text-destructive-foreground hover:bg-destructive/90',
         tertiary: 'bg-surface-tertiary text-content-primary',
@@ -79,7 +79,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       <Comp
         disabled={loading || disabled}
         className={cn(
-          buttonVariants({ variant, size, className, fullWidth, roundedFull }),
+          buttonVariants({ variant, size, fullWidth, roundedFull, className }),
         )}
         ref={ref}
         {...props}

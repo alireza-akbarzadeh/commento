@@ -74,7 +74,7 @@ export function Features() {
         </DrawerContent>
       </Drawer>
       <div className="py-4">
-        <Button className="h-[52px] w-full rounded-2xl text-content-inverse text-labellarge">
+        <Button className="h-[52px] w-full rounded-2xl !text-content-inverse text-labellarge">
           در ۱۱ فروشگاه
         </Button>
       </div>

@@ -2,7 +2,7 @@ import { Button } from '@/shared/ui';
 
 export function ActionButtons() {
   return (
-    <div className="bg-layout mb-7">
+    <div className="bg-layout pb-7">
       <div className="bg-layout my-2 flex gap-3 px-4">
         <Button
           variant="ghost"
