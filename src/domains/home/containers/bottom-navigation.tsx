@@ -15,7 +15,7 @@ export function BottomNavigation() {
       label: t('categories'),
       href: '/categories',
     },
-    { icon: 'coupon', label: t('discount'), href: '/discount' },
+    { icon: 'coupon', label: t('discount'), href: '/discounts' },
     { icon: 'person', label: t('profile'), href: '/profile' },
   ];
   return (
