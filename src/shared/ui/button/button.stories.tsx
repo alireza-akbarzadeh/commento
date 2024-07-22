@@ -47,27 +47,27 @@ export default meta;
 
 type Story = StoryObj<ButtonPageProps>;
 
-export const buttonDefaultArgs: ButtonProps = {
+export const ButtonDefaultArgs: ButtonProps = {
   disabled: false,
 };
 
 export const Default: Story = {
   args: {
-    ...buttonDefaultArgs,
+    ...ButtonDefaultArgs,
     footer: 'Built with Storybook',
   },
 };
 
 export const Destructive: Story = {
   args: {
-    ...buttonDefaultArgs,
+    ...ButtonDefaultArgs,
     variant: 'destructive',
   },
 };
 
 export const Ghost: Story = {
   args: {
-    ...buttonDefaultArgs,
+    ...ButtonDefaultArgs,
     variant: 'ghost',
   },
 };
@@ -78,25 +78,25 @@ export const Link: Story = {
     </Button>
   ),
   args: {
-    ...buttonDefaultArgs,
+    ...ButtonDefaultArgs,
     variant: 'link',
   },
 };
 export const Secondary: Story = {
   args: {
-    ...buttonDefaultArgs,
+    ...ButtonDefaultArgs,
     variant: 'secondary',
   },
 };
 export const Outline: Story = {
   args: {
-    ...buttonDefaultArgs,
+    ...ButtonDefaultArgs,
     variant: 'outline',
   },
 };
 export const Info: Story = {
   args: {
-    ...buttonDefaultArgs,
+    ...ButtonDefaultArgs,
     variant: 'secondary',
   },
 };

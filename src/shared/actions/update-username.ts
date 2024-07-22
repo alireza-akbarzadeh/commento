@@ -1,7 +1,7 @@
 'use server';
 
 import { revalidatePath } from 'next/cache';
-import { userNameSchema } from '@/shared/schemas/user';
+// import { userNameSchema } from '@/shared/schemas/user';
 // import {auth} from '@/shared/config'
 
 export type FormData = {
@@ -16,7 +16,7 @@ export async function updateUserName(userId: string, data: FormData) {
     //   throw new Error('Unauthorized');
     // }
 
-    const { name } = userNameSchema.parse(data);
+    // const { name } = userNameSchema.parse(data);
 
     // Update the user name.
     // make a request

@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig } from 'axios';
+import { AxiosRequestConfig } from 'axios';
 import { axiosInstance } from './custom-instance';
 
 export interface FetchResponse<T> {

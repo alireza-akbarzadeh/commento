@@ -1,6 +1,5 @@
 import Axios, { AxiosError, AxiosRequestConfig } from 'axios';
-import { getServerSession } from 'next-auth';
-import { getSession, signOut } from 'next-auth/react';
+import { signOut } from 'next-auth/react';
 import { toast } from '../ui';
 
 export const ApiConstants = {
@@ -12,13 +11,13 @@ const axiosInstance = Axios.create({
   baseURL: process.env.NEXT_PUBLIC_GATEWAY,
 });
 
-const isServer = typeof window === 'undefined';
+// const isServer = typeof window === 'undefined';
 
 axiosInstance.interceptors.request.use(
   async (config) => {
     // you sould pass a  next auth options here
-    const session = isServer ? await getServerSession({}) : await getSession();
-    const tokenType = 'Bearer';
+    // const session = isServer ? await getServerSession({}) : await getSession();
+    // const tokenType = 'Bearer';
 
     if (config.headers) {
       //   if (session?.accessToken) {

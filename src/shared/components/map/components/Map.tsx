@@ -10,7 +10,6 @@ import {
   mapStyleObject,
   markerDefaultOptions,
 } from '@/shared/components/map/constants';
-import { useMapAction } from '@/shared/components/map/hooks/useMapActions';
 import { MapProps } from '@/shared/components/map/map-types';
 import { cn } from '@/shared/utils';
 import { MapBackButton } from './MapBackButton';

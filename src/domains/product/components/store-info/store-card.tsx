@@ -1,4 +1,3 @@
-import { BlockquoteHTMLAttributes } from 'react';
 import { Icon } from '@/shared/components';
 import { Badge, Button } from '@/shared/ui';
 import { ActionButtons } from './action-button';
