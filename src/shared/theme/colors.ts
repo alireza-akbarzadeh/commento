@@ -22,6 +22,7 @@ export const colors = {
     disabled: '#F5F7F7',
     inverse: { primary: '#000', secondary: '# 323333' },
     accent: '#276EF1',
+    accentLight: '#EFF3FE',
     negative: '#E11900',
     negativeLight: '#FFEFED',
     positive: '#048848',

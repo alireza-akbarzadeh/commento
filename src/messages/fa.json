@@ -5,7 +5,8 @@
     "discount": "تخفیف‌ها",
     "profile": "پروفایل",
     "categories": "دسته‌‌بندی‌ها",
-    "view": "مشاهده"
+    "view": "مشاهده",
+    "filters": "فیلتر‌ها"
   },
   "HomePage": {
     "searchForProdcut": "جستجوی محصول...",
