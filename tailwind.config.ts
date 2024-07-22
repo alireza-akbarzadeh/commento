@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss';
-import { boxShadow, colors, fontSize } from './src/shared/theme';
+import { boxShadow, colors, typography } from './src/shared/theme';
+import typographyPlugin from './typography-plugin';
 
 const config = {
   darkMode: ['class'],
@@ -25,12 +26,8 @@ const config = {
       colors: {
         ...colors,
       },
-      // @ts-ignore
-      fontSize: {
-        ...fontSize,
-      },
-      fontFamily: {
-        vazirmatn: 'var(--font-vazirmatn)',
+      typography: {
+        ...typography,
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -52,8 +49,19 @@ const config = {
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
     },
+    fontFamily: {
+      'vazirmatn-black': ['Vazirmatn-Black'],
+      'vazirmatn-extrabold': ['Vazirmatn-ExtraBold'],
+      'vazirmatn-bold': ['Vazirmatn-Bold'],
+      'vazirmatn-semibold': ['Vazirmatn-SemiBold'],
+      'vazirmatn-medium': ['Vazirmatn-Medium'],
+      'vazirmatn-normal': ['Vazirmatn-Normal'],
+      'vazirmatn-light': ['Vazirmatn-Light'],
+      'vazirmatn-extralight': ['Vazirmatn-ExtraLight'],
+      'vazirmatn-thin': ['Vazirmatn-Thin'],
+    },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [require('tailwindcss-animate'), typographyPlugin],
 } satisfies Config;
 
 export default config;

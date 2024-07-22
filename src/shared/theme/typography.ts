@@ -1,9 +1,10 @@
-export const fontSize = {
+export const typography = {
   tiny: [
     '0.688rem',
     {
       lineHeight: '1.25rem',
       fontWeight: '600',
+      fontFamily: 'Vazirmatn-SemiBold',
     },
   ],
   xss: ' 0.688rem',
@@ -13,6 +14,7 @@ export const fontSize = {
     {
       lineHeight: '4.5rem',
       fontWeight: '600',
+      fontFamily: 'Vazirmatn-SemiBold',
     },
   ],
   displayMedium: [
@@ -20,6 +22,7 @@ export const fontSize = {
     {
       lineHeight: '3.75rem',
       fontWeight: '600',
+      fontFamily: 'Vazirmatn-SemiBold',
     },
   ],
   displaySmall: [
@@ -27,6 +30,7 @@ export const fontSize = {
     {
       lineHeight: '3rem',
       fontWeight: '600',
+      fontFamily: 'Vazirmatn-SemiBold',
     },
   ],
   headlinelarge: [
@@ -34,6 +38,7 @@ export const fontSize = {
     {
       lineHeight: '3rem',
       fontWeight: '600',
+      fontFamily: 'Vazirmatn-SemiBold',
     },
   ],
   headlineMedium: [
@@ -41,6 +46,7 @@ export const fontSize = {
     {
       lineHeight: '2.25rem',
       fontWeight: '600',
+      fontFamily: 'Vazirmatn-SemiBold',
     },
   ],
   headlineSmall: [
@@ -48,6 +54,7 @@ export const fontSize = {
     {
       lineHeight: '1.875rem',
       fontWeight: '600',
+      fontFamily: 'Vazirmatn-SemiBold',
     },
   ],
   headlineXSmall: [
@@ -55,6 +62,7 @@ export const fontSize = {
     {
       lineHeight: '1.5rem',
       fontWeight: '600',
+      fontFamily: 'Vazirmatn-SemiBold',
     },
   ],
   labellarge: [
@@ -62,6 +70,7 @@ export const fontSize = {
     {
       lineHeight: '2rem',
       fontWeight: '500',
+      fontFamily: 'Vazirmatn-Medium',
     },
   ],
   labelMedium: [
@@ -69,6 +78,7 @@ export const fontSize = {
     {
       lineHeight: '1.75rem',
       fontWeight: '500',
+      fontFamily: 'Vazirmatn-Medium',
     },
   ],
   labelSmall: [
@@ -76,6 +86,7 @@ export const fontSize = {
     {
       lineHeight: '1.5rem',
       fontWeight: '500',
+      fontFamily: 'Vazirmatn-Medium',
     },
   ],
   labelXSmall: [
@@ -83,6 +94,7 @@ export const fontSize = {
     {
       lineHeight: '1.5rem',
       fontWeight: '500',
+      fontFamily: 'Vazirmatn-Medium',
     },
   ],
   bodylarge: [
@@ -90,6 +102,7 @@ export const fontSize = {
     {
       lineHeight: '2rem',
       fontWeight: '400',
+      fontFamily: 'Vazirmatn-Normal',
     },
   ],
   bodyMedium: [
@@ -97,6 +110,7 @@ export const fontSize = {
     {
       lineHeight: '1.75rem',
       fontWeight: '400',
+      fontFamily: 'Vazirmatn-Normal',
     },
   ],
   bodySmall: [
@@ -104,6 +118,7 @@ export const fontSize = {
     {
       lineHeight: '1.5rem',
       fontWeight: '400',
+      fontFamily: 'Vazirmatn-Normal',
     },
   ],
   bodyXSmall: [
@@ -111,6 +126,7 @@ export const fontSize = {
     {
       lineHeight: '1.25rem',
       fontWeight: '400',
+      fontFamily: 'Vazirmatn-Normal',
     },
   ],
   bodyXXSmall: [
@@ -118,6 +134,7 @@ export const fontSize = {
     {
       lineHeight: '1.5rem',
       fontWeight: '400',
+      fontFamily: 'Vazirmatn-Normal',
     },
   ],
 };

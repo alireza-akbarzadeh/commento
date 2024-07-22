@@ -1,3 +1,3 @@
 export { colors } from './colors';
-export { fontSize } from './font-size';
+export { typography } from './typography';
 export { boxShadow } from './shadow';

@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url(font.css);
+
 @layer base {
   :root {
     --chart-1: 12 76% 61%;
@@ -90,7 +92,7 @@
 
 @layer utilities {
   .search-input-class {
-    @apply border-none text-[16px] text-content-primary placeholder:text-md placeholder:font-medium placeholder:text-content-tertiary focus-visible:border-none focus-visible:outline-none focus-visible:ring-0;
+    @apply border-none text-[16px] text-content-primary placeholder:font-medium placeholder:text-content-tertiary placeholder:text-md focus-visible:border-none focus-visible:outline-none focus-visible:ring-0;
   }
 
   .flex-center {

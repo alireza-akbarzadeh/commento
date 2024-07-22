@@ -26,7 +26,9 @@ export function Category() {
                 />
               </div>
             </div>
-            <p className="labelXSmall text-content-primary">{image.name}</p>
+            <p className="text-content-primary text-labelXSmall">
+              {image.name}
+            </p>
           </div>
         ))}
       </div>
