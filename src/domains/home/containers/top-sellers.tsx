@@ -28,8 +28,8 @@ export function TopSellers() {
                 })}
               >
                 <Card className="relative mb-2 rounded-2xl border-[0.5px] border-border-primary shadow-elevation4">
-                  <div className="rounded-3xl">
-                    <CardContent className="flex items-center gap-2 pt-4">
+                  <CardContent className="pt-4">
+                    <figure className="flex h-[137px] items-center gap-2 pt-4">
                       <div className="basis-1/2">
                         <LazyImage
                           src="/images/store.png"
@@ -42,7 +42,7 @@ export function TopSellers() {
                           fill
                         />
                       </div>
-                      <div className="flex basis-1/2 gap-2">
+                      <figcaption className="flex basis-1/2 gap-2">
                         <div className="flex flex-col gap-1">
                           {[1, 23].map((_, index) => (
                             <div key={index}>
@@ -75,23 +75,23 @@ export function TopSellers() {
                             </div>
                           ))}
                         </div>
-                      </div>
-                    </CardContent>
-                    <CardFooter className="flex items-center justify-between px-4 pb-4">
-                      <div className="space-y-1">
-                        <h4 className="font-medium text-md">عنوان فروشکاه</h4>
-                        <p className="text-base font-normal text-content-tertiary">
-                          تعداد محصولات برتر
-                        </p>
-                      </div>
-                      <Button
-                        variant="tertiary"
-                        className="rounded-full px-3 py-1 text-labelSmall"
-                      >
-                        {t('view')}
-                      </Button>
-                    </CardFooter>
-                  </div>
+                      </figcaption>
+                    </figure>
+                  </CardContent>
+                  <CardFooter className="flex items-center justify-between px-4 pb-4">
+                    <div className="space-y-1">
+                      <h4 className="font-medium text-md">عنوان فروشکاه</h4>
+                      <p className="text-base font-normal text-content-tertiary">
+                        تعداد محصولات برتر
+                      </p>
+                    </div>
+                    <Button
+                      variant="tertiary"
+                      className="rounded-full px-3 py-1 text-labelSmall"
+                    >
+                      {t('view')}
+                    </Button>
+                  </CardFooter>
                 </Card>
               </CarouselItem>
             ))}

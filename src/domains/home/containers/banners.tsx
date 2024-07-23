@@ -19,7 +19,7 @@ export function Banners() {
         <CarouselContent className="p-0">
           {Array.from({ length: 5 }).map((_, index) => (
             <CarouselItem key={index} className={'basis-[88%]'}>
-              <div className="">
+              <div style={{ width: '100%', minHeight: 207 }}>
                 <LazyImage
                   src="/images/hero-banner.png"
                   style={{

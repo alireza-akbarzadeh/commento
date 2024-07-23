@@ -50,12 +50,12 @@ const DrawerContent = React.forwardRef<
   <DrawerPortal>
     {/*Responsive:  need to change the w when we want to show in larger devices */}
     {!noOverlay && (
-      <DrawerOverlay onClick={onClickOverlay} className="mx-auto max-w-sm" />
+      <DrawerOverlay onClick={onClickOverlay} className="mx-auto max-w-lg" />
     )}
     <DrawerPrimitive.Content
       ref={ref}
       className={cn(
-        'fixed inset-x-0 bottom-0 z-50 mx-auto mt-24 flex h-auto max-w-sm flex-col rounded-t-[20px] border bg-background',
+        'fixed inset-x-0 bottom-0 z-50 mx-auto mt-24 flex h-auto max-w-lg flex-col rounded-t-[20px] border bg-background',
         className,
       )}
       {...props}
