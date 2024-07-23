@@ -29,8 +29,8 @@ export function TopSellers() {
               >
                 <Card className="relative mb-2 rounded-2xl border-[0.5px] border-border-primary shadow-elevation4">
                   <div className="rounded-3xl">
-                    <CardContent className="flex gap-1 pt-4">
-                      <div className="size-[137px]">
+                    <CardContent className="flex items-center gap-2 pt-4">
+                      <div className="basis-1/2">
                         <LazyImage
                           src="/images/store.png"
                           style={{
@@ -42,37 +42,39 @@ export function TopSellers() {
                           fill
                         />
                       </div>
-                      <div className="flex flex-col gap-1">
-                        {[1, 23].map((_, index) => (
-                          <div className="size-[66px]" key={index}>
-                            <LazyImage
-                              src="/images/store.png"
-                              style={{
-                                objectFit: 'cover',
-                              }}
-                              isLocal
-                              quality={100}
-                              alt="store"
-                              fill
-                            />
-                          </div>
-                        ))}
-                      </div>
-                      <div className="flex flex-col gap-1">
-                        {[1, 23].map((_, index) => (
-                          <div className="size-[66px]" key={index}>
-                            <LazyImage
-                              src="/images/store.png"
-                              style={{
-                                objectFit: 'cover',
-                              }}
-                              isLocal
-                              quality={100}
-                              alt="store"
-                              fill
-                            />
-                          </div>
-                        ))}
+                      <div className="flex basis-1/2 gap-2">
+                        <div className="flex flex-col gap-1">
+                          {[1, 23].map((_, index) => (
+                            <div key={index}>
+                              <LazyImage
+                                src="/images/store.png"
+                                style={{
+                                  objectFit: 'cover',
+                                }}
+                                isLocal
+                                quality={100}
+                                alt="store"
+                                fill
+                              />
+                            </div>
+                          ))}
+                        </div>
+                        <div className="flex flex-col gap-1">
+                          {[1, 23].map((_, index) => (
+                            <div key={index}>
+                              <LazyImage
+                                src="/images/store.png"
+                                style={{
+                                  objectFit: 'cover',
+                                }}
+                                isLocal
+                                quality={100}
+                                alt="store"
+                                fill
+                              />
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </CardContent>
                     <CardFooter className="flex items-center justify-between px-4 pb-4">

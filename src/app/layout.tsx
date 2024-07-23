@@ -29,7 +29,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <div
             id="root"
-            className="relative mx-auto h-dvh min-h-dvh w-full max-w-sm"
+            className="container relative h-dvh min-h-dvh max-w-lg p-0"
           >
             {children}
           </div>

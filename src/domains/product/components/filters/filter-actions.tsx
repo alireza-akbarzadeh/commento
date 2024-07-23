@@ -47,9 +47,9 @@ export function FilterActions() {
                 <div className="flex items-center justify-between py-3">
                   <span>شهر</span>
                   <div className="flex">
-                    <div className="size-6 rounded-full bg-surface-accentLight text-surface-accent">
+                    <span className="flex size-6 items-center justify-center rounded-full bg-surface-accentLight text-surface-accent">
                       ۲
-                    </div>
+                    </span>
                     <Icon
                       name="chevron-left"
                       iconClassName="text-content-tertiary"

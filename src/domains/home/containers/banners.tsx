@@ -9,17 +9,17 @@ export function Banners() {
   const { scrollSnaps, scrollTo, selectedIndex, setApi } = useBanners();
 
   return (
-    <section id="banner" data-testid="banner" className="my-2 h-[223px]">
+    <section id="banner" data-testid="banner" className="my-2">
       <Carousel
         opts={{ direction: 'rtl', loop: true }}
         plugins={[Autoplay({ delay: 2500 })]}
         setApi={setApi}
         className="relative"
       >
-        <CarouselContent className="m-0 p-0">
+        <CarouselContent className="p-0">
           {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem key={index} className={'basis-[91%]'}>
-              <div className="relative mr-1 w-[339px]">
+            <CarouselItem key={index} className={'basis-[88%]'}>
+              <div className="">
                 <LazyImage
                   src="/images/hero-banner.png"
                   style={{

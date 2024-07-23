@@ -55,7 +55,7 @@ const CustomTooltip: React.FC<CustomTooltipProps> = ({
 
 export function PriceChanges() {
   return (
-    <div className="max-w-sm bg-content-inverse px-4">
+    <div className="bg-content-inverse px-4">
       <div className="flex items-center gap-[14.4px] bg-content-inverse py-2">
         <h3 className="text-content-primary text-labelSmall">
           اطلاع رسانی قیمت
