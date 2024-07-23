@@ -28,8 +28,8 @@ export function TopSellers() {
                 })}
               >
                 <Card className="relative mb-2 rounded-2xl border-[0.5px] border-border-primary shadow-elevation4">
-                  <CardContent className="pt-4">
-                    <figure className="flex h-[137px] items-center gap-2 pt-4">
+                  <CardContent className="min-h-[177px] pt-4 sm:min-h-[300px]">
+                    <figure className="flex items-center gap-2 pt-4">
                       <div className="basis-1/2">
                         <LazyImage
                           src="/images/store.png"
