@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "firsttris.vscode-jest-runner",
+    "wayou.vscode-todo-highlight",
+    "Gruntfuggly.todo-tree",
+    "bradlc.vscode-tailwindcss"
+  ]
+}
