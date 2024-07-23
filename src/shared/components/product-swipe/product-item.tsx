@@ -16,6 +16,7 @@ export function ProductItem(props: ProductItemProps) {
     <>
       <Link
         href={`/product/${product.title}`}
+        aria-label="see the product in details"
         className="flex-center relative w-[147px] flex-col"
       >
         <div className="m-2.5 flex size-[125px] items-center justify-center rounded-lg bg-surface-tertiary">

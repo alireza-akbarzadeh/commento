@@ -36,9 +36,11 @@ export function Banners() {
           ))}
         </CarouselContent>
         <div className="absolute bottom-5 right-1/2 translate-x-12 cursor-pointer">
-          <div className="flex flex-row items-center gap-2">
+          <div className="flex flex-row items-center gap-3">
             {scrollSnaps?.map((_, index) => (
               <button
+                aria-label="slider-action"
+                title="slider-action"
                 key={index}
                 onClick={(event) => {
                   scrollTo(index);

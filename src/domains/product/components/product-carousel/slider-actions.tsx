@@ -16,6 +16,8 @@ export function SliderActions(props: SliderProps) {
         <div className="flex flex-row items-center gap-2">
           {scrollSnaps?.map((_, index) => (
             <button
+              aria-label="slider-action"
+              title="slider-action"
               key={index}
               onClick={(event) => {
                 scrollTo(index);
