@@ -16,7 +16,11 @@ type FavoritesPropsType = {
 export function Favorites(props: FavoritesPropsType) {
   const { mode = 'dark', title } = props;
   return (
-    <section>
+    <section
+      className={`${mode === 'dark' ? 'mt-2' : 'mt-0'}`}
+      id={`favorite-${mode === 'dark' ? 'dark' : 'light'}`}
+      date-testid="favorites"
+    >
       <div
         className={cn('max-w-[309px]', {
           'mb-3 mt-6': mode === 'light',
@@ -39,7 +43,7 @@ export function Favorites(props: FavoritesPropsType) {
             >
               <Card
                 className={cn(
-                  'relative basis-[89%] rounded-3xl border-[0.5px] border-border-primary bg-none shadow-elevation4',
+                  'relative h-[450px] basis-[89%] rounded-3xl border-[0.5px] border-border-primary bg-none shadow-elevation4',
                   {
                     'bg-surface-primary': mode === 'light',
                     'bg-content-primary': mode === 'dark',
@@ -51,9 +55,7 @@ export function Favorites(props: FavoritesPropsType) {
                     <ul className="flex flex-col items-start gap-y-3 p-2.5">
                       <li>
                         <p
-                          className={cn('text-white text-bodySmall', {
-                            'text-content-tertiary': mode === 'light',
-                          })}
+                          className={`text-bodySmall ${mode === 'dark' ? 'text-content-inverse' : 'text-content-primary'}`}
                         >
                           در ۱۷ فروشگاه
                         </p>
@@ -67,23 +69,18 @@ export function Favorites(props: FavoritesPropsType) {
                       </li>
                       <li>
                         <p
-                          className={cn(
-                            'w-[225px] text-white text-bodyMedium',
-                            {
-                              'text-content-primary': mode === 'light',
-                            },
-                          )}
+                          className={`text-bodyMedium ${mode === 'dark' ? 'text-content-inverse' : 'text-content-primary'}`}
                         >
                           قیمت تضمین شده آی تی از ۹۰ هزار تا ۸ میلیون تومان
                         </p>
                       </li>
                     </ul>
-                    <div className="relative">
+                    <div className="relative mx-auto flex size-[250px] items-center justify-center">
                       <LazyImage
                         src={`/images/${mode === 'dark' ? 'ipad' : 'watch'}.png`}
                         isLocal
-                        quality={100}
                         fill
+                        quality={100}
                         alt="banner"
                       />
                     </div>

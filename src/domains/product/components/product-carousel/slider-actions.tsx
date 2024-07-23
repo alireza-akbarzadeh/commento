@@ -15,7 +15,7 @@ export function SliderActions(props: SliderProps) {
       <div className="cursor-pointer">
         <div className="flex flex-row items-center gap-2">
           {scrollSnaps?.map((_, index) => (
-            <span
+            <button
               key={index}
               onClick={(event) => {
                 scrollTo(index);

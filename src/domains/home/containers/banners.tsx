@@ -9,7 +9,7 @@ export function Banners() {
   const { scrollSnaps, scrollTo, selectedIndex, setApi } = useBanners();
 
   return (
-    <section id="banner" data-testid="banner" className="my-2">
+    <section id="banner" data-testid="banner" className="my-2 h-[223px]">
       <Carousel
         opts={{ direction: 'rtl', loop: true }}
         plugins={[Autoplay({ delay: 2500 })]}
@@ -21,7 +21,7 @@ export function Banners() {
             <CarouselItem key={index} className={'basis-[91%]'}>
               <div className="relative mr-1 w-[339px]">
                 <LazyImage
-                  src="/images/banner.png"
+                  src="/images/hero-banner.png"
                   style={{
                     borderRadius: 16,
                     objectFit: 'contain',
@@ -38,7 +38,7 @@ export function Banners() {
         <div className="absolute bottom-5 right-1/2 translate-x-12 cursor-pointer">
           <div className="flex flex-row items-center gap-2">
             {scrollSnaps?.map((_, index) => (
-              <span
+              <button
                 key={index}
                 onClick={(event) => {
                   scrollTo(index);

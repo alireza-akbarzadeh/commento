@@ -38,7 +38,7 @@ const Map = (props: MapProps) => {
     <div className="flex size-full flex-col">
       <div className="relative z-10 flex-1">
         {readOnly && (
-          <div
+          <button
             className={cn('absolute inset-0 z-10 cursor-default', {
               'cursor-pointer': readOnly,
             })}

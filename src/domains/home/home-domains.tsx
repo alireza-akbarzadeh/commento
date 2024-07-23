@@ -18,10 +18,8 @@ export function HomeDomains() {
       <Banners />
       <ResentViews />
       <Comparetaion />
-      <div className="my-2">
-        <Favorites title="محبوبترین تبلت‌ها" />
-        <Favorites title="محبوبترین ساعت‌های هوشمند" mode="light" />
-      </div>
+      <Favorites title="محبوبترین تبلت‌ها" />
+      <Favorites title="محبوبترین ساعت‌های هوشمند" mode="light" />
       <TopSellers />
       <Categories />
       <BottomNavigation />

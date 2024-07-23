@@ -13,6 +13,7 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:react-hooks/recommended',
     'plugin:storybook/recommended',
+    'plugin:jsx-a11y/recommended',
   ],
   parserOptions: {
     babelOptions: {
