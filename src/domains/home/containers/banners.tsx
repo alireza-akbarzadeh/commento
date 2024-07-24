@@ -19,7 +19,7 @@ export function Banners() {
         <CarouselContent className="p-0">
           {Array.from({ length: 5 }).map((_, index) => (
             <CarouselItem key={index} className={'basis-[88%]'}>
-              <div style={{ width: '100%', minHeight: 207 }}>
+              <div style={{ width: '100%', minHeight: 290 }}>
                 <LazyImage
                   src="/images/hero-banner.webp"
                   style={{

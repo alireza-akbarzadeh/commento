@@ -82,3 +82,4 @@ export {
 } from './form';
 
 export { Checkbox } from './checkbox';
+export { Skeleton } from './skeleton';

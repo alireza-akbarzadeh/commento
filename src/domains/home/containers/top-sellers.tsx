@@ -28,10 +28,11 @@ export function TopSellers() {
                 })}
               >
                 <Card className="relative mb-2 rounded-2xl border-[0.5px] border-border-primary shadow-elevation4">
-                  <CardContent className="min-h-[177px] pt-4 sm:min-h-[300px]">
+                  <CardContent>
                     <figure className="flex items-center gap-2 pt-4">
                       <div className="basis-1/2">
                         <LazyImage
+                          skeletonClass="min-h-[142px]"
                           src="/images/store.webp"
                           style={{
                             objectFit: 'cover',
