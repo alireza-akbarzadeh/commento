@@ -27,7 +27,7 @@ export function ProductCarousel() {
             >
               <div className="size-[180px]">
                 <LazyImage
-                  src="/images/phone.png"
+                  src="/images/phone.webp"
                   className="object-contain"
                   isLocal
                   quality={100}

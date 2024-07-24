@@ -77,7 +77,7 @@ export function Favorites(props: FavoritesPropsType) {
                     </ul>
                     <div className="relative mx-auto flex size-[250px] items-center justify-center">
                       <LazyImage
-                        src={`/images/${mode === 'dark' ? 'ipad' : 'watch'}.png`}
+                        src={`/images/${mode === 'dark' ? 'ipad' : 'watch'}.webp`}
                         isLocal
                         fill
                         quality={100}

@@ -32,7 +32,7 @@ export function TopSellers() {
                     <figure className="flex items-center gap-2 pt-4">
                       <div className="basis-1/2">
                         <LazyImage
-                          src="/images/store.png"
+                          src="/images/store.webp"
                           style={{
                             objectFit: 'cover',
                           }}
@@ -47,7 +47,7 @@ export function TopSellers() {
                           {[1, 23].map((_, index) => (
                             <div key={index}>
                               <LazyImage
-                                src="/images/store.png"
+                                src="/images/store.webp"
                                 style={{
                                   objectFit: 'cover',
                                 }}
@@ -63,7 +63,7 @@ export function TopSellers() {
                           {[1, 23].map((_, index) => (
                             <div key={index}>
                               <LazyImage
-                                src="/images/store.png"
+                                src="/images/store.webp"
                                 style={{
                                   objectFit: 'cover',
                                 }}

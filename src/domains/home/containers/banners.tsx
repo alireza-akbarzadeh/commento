@@ -21,7 +21,7 @@ export function Banners() {
             <CarouselItem key={index} className={'basis-[88%]'}>
               <div style={{ width: '100%', minHeight: 207 }}>
                 <LazyImage
-                  src="/images/hero-banner.png"
+                  src="/images/hero-banner.webp"
                   style={{
                     borderRadius: 16,
                     objectFit: 'contain',

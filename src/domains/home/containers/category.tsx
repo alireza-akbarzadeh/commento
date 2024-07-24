@@ -4,10 +4,10 @@ import { LazyImage } from '@/shared/components';
 export function Category() {
   const t = useTranslations('HomePage');
   const categoryImages = [
-    { url: '/images/box.png', name: t('brandNew') },
-    { url: '/images/open-box.png', name: t('openBox') },
-    { url: '/images/worked.png', name: t('worked') },
-    { url: '/images/installment.png', name: t('installment') },
+    { url: '/images/box.webp', name: t('brandNew') },
+    { url: '/images/open-box.webp', name: t('openBox') },
+    { url: '/images/worked.webp', name: t('worked') },
+    { url: '/images/installment.webp', name: t('installment') },
   ];
   return (
     <section className="bg-content-inverse px-4 py-3">
