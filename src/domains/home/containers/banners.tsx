@@ -14,12 +14,12 @@ export function Banners() {
         opts={{ direction: 'rtl', loop: true }}
         plugins={[Autoplay({ delay: 2500 })]}
         setApi={setApi}
-        className="relative"
+        className="relative min-h-[290px]"
       >
         <CarouselContent className="p-0">
           {Array.from({ length: 5 }).map((_, index) => (
             <CarouselItem key={index} className={'basis-[88%]'}>
-              <div style={{ width: '100%', minHeight: 290 }}>
+              <div style={{ width: '100%' }}>
                 <LazyImage
                   src="/images/hero-banner.webp"
                   style={{
@@ -35,8 +35,8 @@ export function Banners() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <div className="absolute bottom-5 right-1/2 translate-x-12 cursor-pointer">
-          <div className="flex flex-row items-center gap-3">
+        <div className="absolute bottom-[68px] right-1/2 translate-x-20 cursor-pointer">
+          <div className="flex flex-row items-center gap-3.5">
             {scrollSnaps?.map((_, index) => (
               <button
                 aria-label="slider-action"
@@ -47,9 +47,9 @@ export function Banners() {
                   event.stopPropagation();
                 }}
                 className={cn(
-                  'h-2 w-2 rounded-full bg-content-primary/30 transition-all duration-300 ease-in-out',
+                  'h-2 w-5 rounded-lg bg-content-primary/30 transition-all duration-300 ease-in-out',
                   {
-                    'h-2 w-5': index === selectedIndex,
+                    'h-2 w-7': index === selectedIndex,
                     'bg-white': index === selectedIndex,
                   },
                 )}

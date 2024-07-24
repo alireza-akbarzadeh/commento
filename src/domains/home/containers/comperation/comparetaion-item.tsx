@@ -53,6 +53,7 @@ function Item({ title, imageUrl, discount }: Products) {
     <div className="flex flex-col">
       <Link
         href={`/product/${title}`}
+        aria-label="see the product in details"
         className="flex-center relative m-2.5 flex-col"
       >
         <div className="flex-center size-[125px] rounded-[8px] bg-surface-tertiary">
