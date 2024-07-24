@@ -1,19 +1,12 @@
 import { DiscountBadge } from '@/domains/home/components';
 import { Icon, LazyImage } from '@/shared/components';
+import { FindProductTypes } from '@/shared/config/mock-data';
 import { CURRENCY } from '@/shared/constant';
 import { Separator } from '@/shared/ui';
 import { cn } from '@/shared/utils';
 
-type SearchProductProps = {
+type SearchProductProps = FindProductTypes & {
   activeBorder?: boolean;
-  info?: { title: string }[];
-  loved: boolean;
-  hasDiscountBadge: boolean;
-  discountLabel: number;
-  title: string;
-  imageUrl: string;
-  priceRange: string;
-  storeName: string;
 };
 
 export function SearchProduct(props: SearchProductProps) {
@@ -31,7 +24,7 @@ export function SearchProduct(props: SearchProductProps) {
   const data = info?.length ? info : [];
 
   return (
-    <div className="px-4">
+    <div className="mt-5 px-4">
       <div className="flex h-[147px] items-center gap-8">
         <div className="relative flex flex-col items-center justify-center">
           <div className="h-[99px] w-[101px]">

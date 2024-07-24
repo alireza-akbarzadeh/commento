@@ -5,8 +5,8 @@ export function ResentSearch() {
   const items = [1, 2, 3, 4];
   return (
     <section id="recent-view" data-testid="recent-view">
-      <div className='className="px-4 py-2.5"'>
-        <p className="text-base text-content-disabled">جستجو‌های اخیر</p>
+      <div className="mt-5 px-4 py-2.5">
+        <p className="text-content-disabled text-labelSmall">جستجو‌های اخیر</p>
         {Array.from({ length: 3 }).map((_, index) => (
           <ResentSearchItem
             key={index}
@@ -18,7 +18,7 @@ export function ResentSearch() {
         ))}
       </div>
       <div className="px-4 py-2.5">
-        <p className="text-base text-content-disabled">جستجو‌های پرتکرار</p>
+        <p className="text-content-disabled text-labelSmall">جستجو‌های اخیر</p>
         {items.map((_, index) => (
           <ResentSearchItem
             key={index}
@@ -38,7 +38,6 @@ export function ResentSearch() {
           />
         ))}
       </div>
-      <NoResult />
     </section>
   );
 }
