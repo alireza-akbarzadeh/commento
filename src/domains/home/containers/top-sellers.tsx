@@ -32,7 +32,7 @@ export function TopSellers() {
                     <figure className="flex items-center gap-2 pt-4">
                       <div className="basis-1/2">
                         <LazyImage
-                          skeletonClass="min-h-[142px]"
+                          skeletonClass="min-h-[142px] sm:min-h-[181px]"
                           src="/images/store.webp"
                           style={{
                             objectFit: 'cover',
