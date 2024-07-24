@@ -1,5 +1,6 @@
 import { Icon } from '@/shared/components';
 import { Button, ScrollArea, ScrollBar } from '@/shared/ui';
+import { FilterProduct } from './filter-product/filter-product';
 
 export function SearchCategory() {
   return (
@@ -8,18 +9,16 @@ export function SearchCategory() {
         dir="rtl"
         className="whitespace-nowrap border-b border-content-inverse"
       >
-        <div className="flex w-max gap-4">
-          <div className="mt-1 flex size-[32px] items-center justify-center rounded-full border">
-            <Icon name="slider-horizontal" size="small" />
-          </div>
+        <div className="flex w-max items-center gap-4 pr-4">
+          <FilterProduct />
           <Button
             variant="ghost"
-            className="w-[126px] border border-border-primary"
+            className="h-8 rounded-lg border border-border-primary text-bodySmall"
           >
             خرید حضوری
           </Button>
           <Button
-            className="flex gap-[6px] border border-border-primary px-4 py-2 text-bodySmall"
+            className="h-8 gap-[6px] border border-border-primary text-bodySmall"
             variant="ghost"
           >
             <span>دسته بندی</span>
@@ -27,7 +26,7 @@ export function SearchCategory() {
           </Button>
           <Button
             variant="ghost"
-            className="w-[126px] border border-border-primary"
+            className="h-8 border border-border-primary text-bodySmall"
           >
             وضعیت کارکرد
           </Button>

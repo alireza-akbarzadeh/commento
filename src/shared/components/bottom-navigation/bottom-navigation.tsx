@@ -2,7 +2,7 @@
 import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { IconType } from '@/shared/components';
-import { NavItem } from '../components';
+import { NavItem } from './nav-item';
 
 type Navigation = { icon: IconType; label: string; href: string };
 

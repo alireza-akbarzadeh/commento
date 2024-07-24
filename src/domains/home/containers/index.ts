@@ -1,5 +1,4 @@
 export { Banners } from './banners';
-export { BottomNavigation } from './bottom-navigation';
 export { Categories } from './categories';
 export { Comparetaion } from './comperation/comparetaion';
 export { Favorites } from './favorites';

@@ -4,12 +4,10 @@ import { productList } from '@/shared/config/mock-data';
 import { NoResult } from './components/no-result';
 import { SearchCategory } from './components/search-category';
 import { SearchFiled } from './components/search-filed';
-import { ResentSearch } from './container/recent-search';
-import { SearchProduct } from './container/search-product';
+import { ProductList, ResentSearch } from './container';
 
 export function SearchDomian() {
   const [searchTerm, setSearchTerm] = useState<string>('');
-  // use it for showing pending loading
   const [pending, startTransition] = useTransition();
   const handleClearSearch = () => setSearchTerm('');
   const isSearchTermEmpty = searchTerm.length === 0;
@@ -43,7 +41,7 @@ export function SearchDomian() {
         <>
           <SearchCategory />
           {productList.map((product, index) => (
-            <SearchProduct
+            <ProductList
               key={index}
               hasDiscountBadge={product.hasDiscountBadge}
               activeBorder={index !== productList.length - 1}
