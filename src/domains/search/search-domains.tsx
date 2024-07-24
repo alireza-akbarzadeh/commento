@@ -20,16 +20,16 @@ export function SearchDomian() {
   };
   const items = [1, 2, 3, 4];
   return (
-    <section id="search" data-testid="search" className="bg-surface-primary">
-      <div className="my-2 flex items-center gap-4 p-2.5">
-        <Link href="/">
-          <Icon
-            iconClassName="text-content-tertiary"
-            name="arrow-right"
-            size="medium"
-          />
+    <section
+      id="search"
+      data-testid="search"
+      className="bg-surface-primary py-2"
+    >
+      <div className="my-2 flex items-center gap-[2px] px-4">
+        <Link href="/" className="flex-center size-10">
+          <Icon iconClassName="text-content-tertiary" name="arrow-right" />
         </Link>
-        <div className="relative flex w-full items-center">
+        <div className="relative flex w-full items-center bg-surface-secondary py-3 pl-2.5 pr-5">
           <Icon
             iconClassName="text-content-tertiary"
             name="magnifier"
@@ -67,7 +67,7 @@ export function SearchDomian() {
             priceRange="159,000"
             storeName="در ۲۴ فروشگاه"
             title="گوشی موبایل اپل مدل iPhone 13 CH دو سیم‌ کارت"
-            imageUrl="/images/phone.png"
+            imageUrl="/images/phone.webp"
             info={
               index === 0 ? [{ title: 'تهران' }, { title: 'اوپن باکس' }] : []
             }

@@ -153,7 +153,7 @@
 
 @layer utilities {
   .search-input-class {
-    @apply border-none text-[16px] text-content-primary placeholder:font-medium placeholder:text-content-tertiary placeholder:text-md focus-visible:border-none focus-visible:outline-none focus-visible:ring-0;
+    @apply border-none bg-transparent text-content-primary text-labelMedium placeholder:font-medium placeholder:text-content-tertiary placeholder:text-md placeholder:text-labelMedium focus-visible:border-none focus-visible:outline-none focus-visible:ring-0;
   }
 
   .flex-center {

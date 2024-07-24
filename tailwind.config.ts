@@ -20,6 +20,15 @@ const config = {
       },
     },
     extend: {
+      screens: {
+        'mobile-s': '320px',
+        'mobile-m': '375px',
+        'mobile-l': '425px',
+        tablet: '768px',
+        labtop: '1024px',
+        desktop: '1280px',
+        'desktop-l': '1536px',
+      },
       boxShadow: {
         ...boxShadow,
       },

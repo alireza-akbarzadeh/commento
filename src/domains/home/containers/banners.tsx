@@ -14,7 +14,7 @@ export function Banners() {
         opts={{ direction: 'rtl', loop: true }}
         plugins={[Autoplay({ delay: 2500 })]}
         setApi={setApi}
-        className="relative min-h-[290px]"
+        className="relative min-h-[236px] mobile-m:min-h-[264px] mobile-l:min-h-[290px] tablet:min-h-[335px]"
       >
         <CarouselContent className="p-0">
           {Array.from({ length: 5 }).map((_, index) => (
