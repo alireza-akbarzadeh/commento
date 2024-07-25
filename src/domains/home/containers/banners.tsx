@@ -1,5 +1,6 @@
 'use client';
 import Autoplay from 'embla-carousel-autoplay';
+import Image from 'next/image';
 import { useBanners } from '@/domains/home/hooks';
 import { LazyImage } from '@/shared/components';
 import { Carousel, CarouselContent, CarouselItem } from '@/shared/ui';
@@ -19,10 +20,13 @@ export function Banners() {
         <CarouselContent>
           {Array.from({ length: 5 }).map((_, index) => (
             <CarouselItem key={index} className={'basis-[84%]'}>
-              <LazyImage
+              <Image
                 src="/images/hero-banner.webp"
                 className="size-full h-[207px] rounded-2xl mobile-l:h-[282px] tablet:h-[236px]"
                 quality={100}
+                width={328}
+                height={207}
+                priority
                 alt="banner"
               />
             </CarouselItem>
