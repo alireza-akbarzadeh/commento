@@ -19,20 +19,20 @@ export function Banners() {
       >
         <CarouselContent>
           {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem key={index} className={'basis-[84%]'}>
-              <Image
-                src="/images/hero-banner.webp"
-                className="size-full h-[207px] rounded-2xl mobile-l:h-[282px] tablet:h-[236px]"
-                quality={100}
-                width={328}
-                height={207}
-                priority
-                alt="banner"
-              />
+            <CarouselItem key={index} className="basis-[84%]">
+              <div className="relative h-[207px] overflow-hidden rounded-2xl mobile-l:h-[222px] tablet:h-[236px]">
+                <LazyImage
+                  src="/images/hero-banner.webp"
+                  fill
+                  className="size-full rounded-2xl object-fill"
+                  quality={100}
+                  alt="banner"
+                />
+              </div>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <div className="absolute bottom-[18px] right-1/2 translate-x-20 cursor-pointer">
+        <div className="absolute bottom-[12px] right-1/2 translate-x-20 cursor-pointer">
           <div className="flex flex-row items-center gap-3.5">
             {scrollSnaps?.map((_, index) => (
               <button
