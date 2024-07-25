@@ -20,12 +20,12 @@ export function Banners() {
         <CarouselContent>
           {Array.from({ length: 5 }).map((_, index) => (
             <CarouselItem key={index} className="basis-[84%]">
-              <div className="relative h-[207px] overflow-hidden rounded-2xl mobile-l:h-[222px] tablet:h-[236px]">
-                <LazyImage
+              <div className="relative h-[207px] overflow-hidden rounded-2xl mobile-l:h-[222px] tablet:h-[256px]">
+                <Image
                   src="/images/hero-banner.webp"
                   fill
-                  className="size-full rounded-2xl object-fill"
-                  quality={100}
+                  className="rounded-2xl object-fill"
+                  priority
                   alt="banner"
                 />
               </div>
