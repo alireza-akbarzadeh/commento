@@ -37,11 +37,11 @@ export function ProductItem(props: ProductItemProps) {
         {product.discount && <DiscountBadge discount={product.discount} />}
       </Link>
       <div className="space-y-1 pr-3 pt-2.5">
-        <p className="text-content-primary text-labelXSmall">
+        <h2 className="text-content-primary text-labelXSmall">
           {isTruncate
             ? product.title.slice(0, 38).concat('...')
             : product.title}
-        </p>
+        </h2>
         {/*TODO:  if store was only one render te name of store */}
         {product.price && (
           <p className="text-content-primary text-labelXSmall">

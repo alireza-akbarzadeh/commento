@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { LazyImage } from '@/shared/components';
 import {
@@ -28,23 +29,19 @@ export function TopSellers() {
                 })}
               >
                 <Card className="relative mb-2 rounded-2xl border-[0.5px] border-border-primary shadow-elevation4">
-                  <CardContent>
-                    <figure className="flex items-center gap-2 pt-4">
-                      <div className="basis-1/2">
-                        <LazyImage
-                          skeletonClass="min-h-[142px] sm:min-h-[181px]"
-                          src="/images/store.webp"
-                          style={{
-                            objectFit: 'cover',
-                          }}
-                          isLocal
-                          quality={100}
-                          alt="store"
-                          fill
-                        />
-                      </div>
-                      <figcaption className="flex basis-1/2 gap-2">
-                        <div className="flex flex-col gap-1">
+                  <CardContent className="p-0">
+                    <figure className="flex items-center justify-center gap-1 pt-4">
+                      <LazyImage
+                        src="/images/store.webp"
+                        style={{
+                          objectFit: 'cover',
+                        }}
+                        quality={100}
+                        className="size-[140px] rounded-lg mobile-l:size-[157px] tablet:size-[185px]"
+                        alt="store"
+                      />
+                      <figcaption className="flex gap-1">
+                        <div className="flex flex-col">
                           {[1, 23].map((_, index) => (
                             <div key={index}>
                               <LazyImage
@@ -52,15 +49,14 @@ export function TopSellers() {
                                 style={{
                                   objectFit: 'cover',
                                 }}
-                                isLocal
                                 quality={100}
+                                className="size-[66px] rounded-lg mobile-l:size-[75px] tablet:size-[88px]"
                                 alt="store"
-                                fill
                               />
                             </div>
                           ))}
                         </div>
-                        <div className="flex flex-col gap-1">
+                        <div className="flex flex-col">
                           {[1, 23].map((_, index) => (
                             <div key={index}>
                               <LazyImage
@@ -68,10 +64,9 @@ export function TopSellers() {
                                 style={{
                                   objectFit: 'cover',
                                 }}
-                                isLocal
                                 quality={100}
+                                className="size-[66px] rounded-lg mobile-l:size-[75px] tablet:size-[88px]"
                                 alt="store"
-                                fill
                               />
                             </div>
                           ))}

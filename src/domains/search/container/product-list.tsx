@@ -66,9 +66,9 @@ export function ProductList(props: ProductListPage) {
           <figcaption>
             <div className="w-[229px]">
               <div className="w-full space-y-3">
-                <h3 className="text-content-primary text-labelXSmall">
+                <h2 className="text-content-primary text-labelXSmall">
                   {title}
-                </h3>
+                </h2>
                 <p className="text-content-primary text-labelMedium">
                   از {priceRange}
                   {CURRENCY.IR}
