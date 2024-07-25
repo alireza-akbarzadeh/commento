@@ -16,12 +16,12 @@ export function Banners() {
         setApi={setApi}
         className="relative"
       >
-        <CarouselContent className="p-0">
+        <CarouselContent>
           {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem key={index} className={'basis-[88%]'}>
+            <CarouselItem key={index} className={'basis-[84%]'}>
               <LazyImage
                 src="/images/hero-banner.webp"
-                className="tablet::h-[236px] size-full h-[207px] rounded-2xl object-contain mobile-l:h-[282px]"
+                className="size-full h-[207px] rounded-2xl mobile-l:h-[282px] tablet:h-[236px]"
                 quality={100}
                 alt="banner"
               />

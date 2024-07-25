@@ -20,55 +20,59 @@ export function StoreCard(props: StoreCardProps) {
     hasActionButton = false,
   } = props;
   return (
-    <div className="bg-content-inverse px-4 py-2">
+    <div className="bg-content-inverse py-2">
       {hasFilter && <FilterActions />}
       <StoreRate />
-      <div className={cn('my-3', { 'bg-layout': hasActionButton })}>
+      <div
+        className={cn('my-3 px-4 pb-5 pt-2', { 'bg-layout': hasActionButton })}
+      >
         <h4 className="text-content-primary text-headlineXSmall">
           عضویت از ۴ ماه پیش
         </h4>
         <p className="py-2 text-content-secondary text-bodySmall">
           گوشی موبایل اپل مدل iPhone 13 H دو سیم‌ کارت
         </p>
+        {hasActionButton && <ActionButtons />}
       </div>
-      {hasActionButton && <ActionButtons />}
-      <div className="flex items-center gap-2 pt-4">
-        <Badge variant="negative" className="px-2 py-[2px]">
-          <Icon
-            size={12}
-            name="arrow-upward-trend"
-            iconClassName="text-content-negative"
-          />
-          <span className="mr-[2px] text-content-negative text-bodyXSmall">
-            کمترین قیمت
-          </span>
-        </Badge>
-        <Badge variant="warning" className="px-2 py-[2px]">
-          <Icon size={12} name="thunder" />
-          <span className="mr-[2px] text-content-primary text-bodyXSmall">
-            آگهی
-          </span>
-        </Badge>
-        <Badge variant="positive" className="px-2 py-[2px]">
-          <Icon
-            size={12}
-            name="spark-small-fill"
-            iconClassName="text-content-positive"
-          />
-          <span className="mr-[2px] text-content-positive text-bodyXSmall">
-            ضمانت آی‌تی بازار
-          </span>
-        </Badge>
-      </div>
-      <InfoBoxes />
-      <PriceAction />
-      {viewStore && (
-        <div className="py-4">
-          <Button fullWidth className="rounded-xl">
-            نمایش همه روی نقشه‌
-          </Button>
+      <div className="px-4">
+        <div className="flex items-center gap-2 pt-4">
+          <Badge variant="negative" className="py-[2px]">
+            <Icon
+              size={12}
+              name="arrow-upward-trend"
+              iconClassName="text-content-negative"
+            />
+            <span className="mr-[2px] text-content-negative text-bodyXSmall">
+              کمترین قیمت
+            </span>
+          </Badge>
+          <Badge variant="warning" className="px-2 py-[2px]">
+            <Icon size={12} name="thunder" />
+            <span className="mr-[2px] text-content-primary text-bodyXSmall">
+              آگهی
+            </span>
+          </Badge>
+          <Badge variant="positive" className="px-2 py-[2px]">
+            <Icon
+              size={12}
+              name="spark-small-fill"
+              iconClassName="text-content-positive"
+            />
+            <span className="mr-[2px] text-content-positive text-bodyXSmall">
+              ضمانت آی‌تی بازار
+            </span>
+          </Badge>
         </div>
-      )}
+        <InfoBoxes />
+        <PriceAction />
+        {viewStore && (
+          <div className="py-4">
+            <Button fullWidth className="rounded-xl">
+              نمایش همه روی نقشه‌
+            </Button>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
