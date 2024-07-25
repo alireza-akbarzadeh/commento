@@ -47,7 +47,6 @@ export const LazyImage = (props: LazyImageProps): JSX.Element => {
         width={fill ? '100%' : width || ''}
         height={fill ? '100%' : height || ''}
         effect="blur"
-        placeholderSrc={isLocal ? '' : '/svg/skeleton-image.svg'}
         src={src}
         decoding="async"
         onLoad={handleImageLoad}
