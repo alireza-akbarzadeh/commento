@@ -2,7 +2,7 @@ import { Icon } from '@/shared/components';
 
 export function StoreRate() {
   return (
-    <div className="my-3 space-y-[2px]">
+    <div className="my-3 space-y-[2px] px-4">
       <div className="flex items-center gap-1">
         <div className="flex items-center gap-2">
           <p className="text-content-primary text-labelMedium">دیجیاتو</p>

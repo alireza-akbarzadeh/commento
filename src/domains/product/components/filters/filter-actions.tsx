@@ -20,7 +20,7 @@ export function FilterActions() {
   const t = useTranslations('Globals');
 
   return (
-    <>
+    <div className="px-4">
       <div className="py-2">
         <p className="text-content-primary text-labelMedium">{t('filters')}</p>
       </div>
@@ -145,6 +145,6 @@ export function FilterActions() {
         </div>
       </div>
       <Separator className="my-2 border-b border-border-primary" />
-    </>
+    </div>
   );
 }
