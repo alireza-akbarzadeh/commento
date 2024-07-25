@@ -74,7 +74,7 @@ export function TopSellers() {
                       </figcaption>
                     </figure>
                   </CardContent>
-                  <CardFooter className="flex items-center justify-between px-4 pb-4">
+                  <CardFooter className="flex items-center justify-between px-5 pb-4 pt-2">
                     <div className="space-y-1">
                       <h4 className="font-medium text-md">عنوان فروشکاه</h4>
                       <p className="text-base font-normal text-content-tertiary">

@@ -1,5 +1,6 @@
 import { Icon } from '@/shared/components';
 import { Badge, Button } from '@/shared/ui';
+import { cn } from '@/shared/utils';
 import { ActionButtons } from './action-button';
 import { InfoBoxes } from './Info-Boxes';
 import { PriceAction } from './price-action';
@@ -22,7 +23,7 @@ export function StoreCard(props: StoreCardProps) {
     <div className="bg-content-inverse px-4 py-2">
       {hasFilter && <FilterActions />}
       <StoreRate />
-      <div className="my-3">
+      <div className={cn('my-3', { 'bg-layout': hasActionButton })}>
         <h4 className="text-content-primary text-headlineXSmall">
           عضویت از ۴ ماه پیش
         </h4>
@@ -31,7 +32,7 @@ export function StoreCard(props: StoreCardProps) {
         </p>
       </div>
       {hasActionButton && <ActionButtons />}
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 pt-4">
         <Badge variant="negative" className="px-2 py-[2px]">
           <Icon
             size={12}
