@@ -19,26 +19,31 @@ export function BottomNavigation() {
     { icon: 'person', label: t('profile'), href: '/profile' },
   ];
   return (
-    <footer className="sticky bottom-0 left-0 z-50 h-[93px] w-full border-t border-border-primary bg-content-inverse">
-      <div className="mx-auto grid h-full grid-cols-4 items-center">
-        <NavItem
-          icon="magnifier-fill"
-          href="/search"
-          active={pathname.startsWith('/')}
-          label={t('search')}
-          size="medium"
-        />
-        {navigation.map(({ icon, label, href }) => (
+    <footer className="sticky bottom-0 left-0 z-50 w-full border-t border-border-primary bg-content-inverse">
+      <nav className="h-[93px]">
+        <ol
+          aria-label="main"
+          className="mx-auto grid h-full grid-cols-4 items-center"
+        >
           <NavItem
-            key={label}
-            icon={icon}
-            href={href}
-            active={pathname.startsWith(href)}
-            label={label}
+            icon="magnifier-fill"
+            href="/search"
+            active={pathname.startsWith('/')}
+            label={t('search')}
             size="medium"
           />
-        ))}
-      </div>
+          {navigation.map(({ icon, label, href }) => (
+            <NavItem
+              key={label}
+              icon={icon}
+              href={href}
+              active={pathname.startsWith(href)}
+              label={label}
+              size="medium"
+            />
+          ))}
+        </ol>
+      </nav>
     </footer>
   );
 }

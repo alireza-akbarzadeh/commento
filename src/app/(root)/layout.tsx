@@ -5,7 +5,7 @@ function Layout(props: PropsWithChildren) {
   return (
     <div
       id="root"
-      role="main"
+      data-testid="root"
       className="container relative h-dvh min-h-dvh max-w-lg bg-content-inverse p-0"
     >
       {children}
