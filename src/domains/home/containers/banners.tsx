@@ -2,7 +2,6 @@
 import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
 import { useBanners } from '@/domains/home/hooks';
-import { LazyImage } from '@/shared/components';
 import { Carousel, CarouselContent, CarouselItem } from '@/shared/ui';
 import { cn } from '@/shared/utils';
 

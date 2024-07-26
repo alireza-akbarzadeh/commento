@@ -6,14 +6,12 @@ import {
   Comparetaion,
   Favorites,
   ResentViews,
-  SearchAction,
   TopSellers,
 } from './containers';
 
 export function HomeDomains() {
   return (
-    <div className="bg-layout">
-      <SearchAction />
+    <>
       <Category />
       <Banners />
       <ResentViews />
@@ -22,7 +20,6 @@ export function HomeDomains() {
       <Favorites title="محبوبترین ساعت‌های هوشمند" mode="light" />
       <TopSellers />
       <Categories />
-      <BottomNavigation />
-    </div>
+    </>
   );
 }

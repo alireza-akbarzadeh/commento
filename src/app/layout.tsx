@@ -27,13 +27,7 @@ export default async function RootLayout({
         className={cn('bg-gray-100 font-vazirmatn-semibold antialiased')}
       >
         <NextIntlClientProvider messages={messages}>
-          <div
-            id="root"
-            role="main"
-            className="container relative h-dvh min-h-dvh max-w-lg p-0"
-          >
-            {children}
-          </div>
+          {children}
         </NextIntlClientProvider>
       </body>
     </html>

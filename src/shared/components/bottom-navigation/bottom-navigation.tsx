@@ -19,7 +19,7 @@ export function BottomNavigation() {
     { icon: 'person', label: t('profile'), href: '/profile' },
   ];
   return (
-    <div className="sticky bottom-0 left-0 z-50 h-[93px] w-full border-t border-border-primary bg-content-inverse">
+    <footer className="sticky bottom-0 left-0 z-50 h-[93px] w-full border-t border-border-primary bg-content-inverse">
       <div className="mx-auto grid h-full grid-cols-4 items-center">
         <NavItem
           icon="magnifier-fill"
@@ -39,6 +39,6 @@ export function BottomNavigation() {
           />
         ))}
       </div>
-    </div>
+    </footer>
   );
 }
