@@ -3,7 +3,7 @@ export type Products = {
   price: string;
   inventory?: string;
   imageUrl: string;
-  discount?: number;
+  discount?: string;
 };
 
 export const products: Products[] = [
@@ -18,7 +18,7 @@ export const products: Products[] = [
     title: 'گوشی موبایل اپل مدل iPhone 13 CH دو سیم‌ کارت ',
     inventory: 'در ۲۴ فروشگاه',
     price: '۲۹۰,۰۰۰.۰۰',
-    discount: 32,
+    discount: '۳۲',
   },
   {
     imageUrl: '/images/phone.webp',
@@ -56,23 +56,23 @@ export type FindProductTypes = {
   }[];
   hasDiscountBadge: boolean;
   loved: boolean;
-  discountLabel: number | null;
+  discountLabel: string | null;
 };
 
 export const productList: FindProductTypes[] = [
   {
     title: 'گوشی موبایل اپل مدل iPhone 13 CH دو سیم‌ کارت',
-    priceRange: '159,000',
+    priceRange: '۱۵۷,۰۰۰',
     storeName: 'در ۲۴ فروشگاه',
     imageUrl: '/images/phone.webp',
     info: [{ title: 'تهران' }, { title: 'اوپن باکس' }],
     hasDiscountBadge: true,
     loved: true,
-    discountLabel: 43,
+    discountLabel: '۴۳',
   },
   {
     title: 'گوشی موبایل سامسونگ مدل Galaxy S21',
-    priceRange: '140,000',
+    priceRange: '۱۴۰,۰۰۰',
     storeName: 'در ۱۸ فروشگاه',
     imageUrl: '/images/phone.webp',
     info: [],
@@ -82,7 +82,7 @@ export const productList: FindProductTypes[] = [
   },
   {
     title: 'گوشی موبایل شیائومی مدل Mi 11',
-    priceRange: '120,000',
+    priceRange: '۱۲۰,۰۰۰',
     storeName: 'در ۲۵ فروشگاه',
     imageUrl: '/images/phone.webp',
     info: [],
@@ -92,12 +92,12 @@ export const productList: FindProductTypes[] = [
   },
   {
     title: 'گوشی موبایل هوآوی مدل P40 Pro',
-    priceRange: '130,000',
+    priceRange: '۱۳۰,۰۰۰',
     storeName: 'در ۱۵ فروشگاه',
     imageUrl: '/images/phone.webp',
     info: [],
     hasDiscountBadge: true,
     loved: false,
-    discountLabel: 43,
+    discountLabel: '۵۲',
   },
 ];

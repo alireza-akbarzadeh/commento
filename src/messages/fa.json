@@ -6,7 +6,9 @@
     "profile": "پروفایل",
     "categories": "دسته‌‌بندی‌ها",
     "view": "مشاهده",
-    "filters": "فیلتر‌ها"
+    "filters": "فیلتر‌ها",
+    "recentSearch": "جستجو‌های اخیر",
+    "frequentSearchs": "جستجو‌های پرتکرار"
   },
   "HomePage": {
     "searchForProdcut": "جستجوی محصول...",

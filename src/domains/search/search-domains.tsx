@@ -1,8 +1,8 @@
 'use client';
 import { useState, useTransition } from 'react';
 import { productList } from '@/shared/config/mock-data';
+import { FilterProductList } from './components/filter-productList';
 import { NoResult } from './components/no-result';
-import { SearchCategory } from './components/search-category';
 import { SearchFiled } from './components/search-filed';
 import { ProductList, ResentSearch } from './container';
 
@@ -39,7 +39,7 @@ export function SearchDomian() {
         <ResentSearch />
       ) : searchResults.length > 0 ? (
         <>
-          <SearchCategory />
+          <FilterProductList />
           {productList.map((product, index) => (
             <ProductList
               key={index}

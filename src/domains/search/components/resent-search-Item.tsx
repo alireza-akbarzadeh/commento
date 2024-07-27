@@ -14,12 +14,12 @@ export function ResentSearchItem(props: ResentSearchItemProps) {
 
   return (
     <>
-      <div className="flex items-center pl-4 pt-3">
+      <div className="flex h-[78px] items-center pl-4 pt-3">
         <div className="px-6">
           <Icon name={iconName} />
         </div>
         <div className="space-y-[2px]">
-          <h4 className="text-content-primary text-labelMedium">{title}</h4>
+          <h3 className="text-content-primary text-labelMedium">{title}</h3>
           <p className="text-content-tertiary text-bodySmall">{subtitle}</p>
         </div>
       </div>

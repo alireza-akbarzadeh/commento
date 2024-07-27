@@ -2,7 +2,7 @@ import { Icon } from '@/shared/components';
 import { Button, ScrollArea, ScrollBar } from '@/shared/ui';
 import { FilterProduct } from './filter-product/filter-product';
 
-export function SearchCategory() {
+export function FilterProductList() {
   return (
     <div className="py-2">
       <ScrollArea

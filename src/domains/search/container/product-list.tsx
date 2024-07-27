@@ -31,9 +31,9 @@ export function ProductList(props: ProductListPage) {
         aria-label="see the product in details"
         className="flex h-[147px] items-center gap-8"
       >
-        <div className="flex h-[147px] items-center gap-8">
-          <div className="relative flex flex-col items-center justify-center">
-            <figure className="h-[99px] w-[101px]">
+        <div className="flex items-center gap-8">
+          <div className="relative flex size-[109px] flex-col items-center justify-center rounded-md bg-surface-tertiary p-2">
+            <figure className="size-[93px]">
               <LazyImage
                 src={imageUrl}
                 style={{
@@ -46,7 +46,10 @@ export function ProductList(props: ProductListPage) {
               />
             </figure>
             {hasDiscountBadge && discountLabel && (
-              <DiscountBadge className="-top-1" discount={discountLabel} />
+              <DiscountBadge
+                // className="top-2 h-[21px]"
+                discount={discountLabel}
+              />
             )}
             <div
               className={cn(

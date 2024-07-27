@@ -24,7 +24,7 @@ export function SearchFiled(props: SearchFiledProps) {
       <Link href="/" className="flex-center size-10">
         <Icon iconClassName="text-content-tertiary" name="arrow-right" />
       </Link>
-      <div className="relative flex w-full items-center bg-surface-secondary py-3 pl-2.5 pr-5">
+      <div className="relative flex w-full items-center rounded-xl bg-surface-secondary py-3 pl-2.5 pr-5">
         <Icon
           iconClassName="text-content-tertiary"
           name="magnifier"

@@ -102,7 +102,7 @@ export const typography = {
     {
       lineHeight: '2rem',
       fontWeight: '400',
-      fontFamily: 'Vazirmatn-Normal',
+      fontFamily: 'Vazirmatn-Regular',
     },
   ],
   bodyMedium: [
@@ -110,7 +110,7 @@ export const typography = {
     {
       lineHeight: '1.75rem',
       fontWeight: '400',
-      fontFamily: 'Vazirmatn-Normal',
+      fontFamily: 'Vazirmatn-Regular',
     },
   ],
   bodySmall: [
@@ -118,7 +118,7 @@ export const typography = {
     {
       lineHeight: '1.5rem',
       fontWeight: '400',
-      fontFamily: 'Vazirmatn-Normal',
+      fontFamily: 'Vazirmatn-Regular',
     },
   ],
   bodyXSmall: [
@@ -126,7 +126,7 @@ export const typography = {
     {
       lineHeight: '1.25rem',
       fontWeight: '400',
-      fontFamily: 'Vazirmatn-Normal',
+      fontFamily: 'Vazirmatn-Regular',
     },
   ],
   bodyXXSmall: [
@@ -134,7 +134,7 @@ export const typography = {
     {
       lineHeight: '1.5rem',
       fontWeight: '400',
-      fontFamily: 'Vazirmatn-Normal',
+      fontFamily: 'Vazirmatn-Regular',
     },
   ],
 };
