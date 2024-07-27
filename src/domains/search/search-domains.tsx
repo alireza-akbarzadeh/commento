@@ -10,9 +10,9 @@ export function SearchDomian() {
   const [pending, startTransition] = useTransition();
   const handleClearSearch = () => setSearchTerm('');
   const isSearchTermEmpty = searchTerm.length === 0;
-  const handleInputChange = ({ value }: { value: string }) => {
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     startTransition(() => {
-      setSearchTerm(value);
+      setSearchTerm(event.target.value);
     });
   };
 

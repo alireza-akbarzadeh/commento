@@ -47,13 +47,13 @@ export function ProductList(props: ProductListPage) {
             </figure>
             {hasDiscountBadge && discountLabel && (
               <DiscountBadge
-                // className="top-2 h-[21px]"
+                className="top-2 -translate-x-6"
                 discount={discountLabel}
               />
             )}
             <div
               className={cn(
-                'absolute bottom-0 right-0 flex size-6 translate-x-0 transform items-center justify-center rounded-full bg-gray-400',
+                'absolute bottom-2 right-2 flex size-6 translate-x-0 transform items-center justify-center rounded-full bg-gray-400',
                 {
                   'bg-brand-main': loved,
                 },

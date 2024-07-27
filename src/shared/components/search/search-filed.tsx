@@ -5,7 +5,7 @@ import { Input } from '@/shared/ui';
 
 type SearchFiledProps = {
   searchTerm: string;
-  handleInputChange: ({ value }: { value: string }) => void;
+  handleInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   pending: boolean;
   isSearchTermEmpty: boolean;
   handleClearSearch: () => void;
@@ -32,7 +32,7 @@ export function SearchFiled(props: SearchFiledProps) {
         />
         <Input
           value={searchTerm}
-          onChange={({ target }) => handleInputChange({ value: target.value })}
+          onChange={(event) => handleInputChange(event)}
           placeholder="جستوجوی محصول..."
           className="search-input-class"
         />

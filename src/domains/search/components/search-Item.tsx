@@ -16,7 +16,7 @@ export function SearchItem(props: SearchItemProps) {
   return (
     <>
       <Link
-        href={`/product-list/${title}`}
+        href={`/product-list/${encodeURIComponent(title)}`}
         className="flex h-[78px] items-center pl-4 pt-3"
       >
         <div className="px-6">

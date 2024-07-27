@@ -8,7 +8,7 @@ import '@/shared/globals.css';
 
 export const metadata: Metadata = {
   title: 'آیتی بازار',
-  description: 'market place',
+  description: 'خرید و فروش آیتی بازار',
 };
 
 export default async function RootLayout({

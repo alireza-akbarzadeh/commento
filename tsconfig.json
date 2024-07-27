@@ -26,7 +26,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "setup.js"
+    "setup.js",
+    "src/app/(root)/product-list/[slug]"
   ],
   "exclude": ["node_modules"]
 }

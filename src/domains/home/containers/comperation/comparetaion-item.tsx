@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { DiscountBadge } from '@/domains/home/components';
 import { Icon, LazyImage } from '@/shared/components';
+import { ProductImage } from '@/shared/components/product-swipe/product-image';
 import { Products } from '@/shared/config/mock-data';
 import {
   Card,
@@ -56,12 +57,7 @@ function Item({ title, imageUrl, discount }: Products) {
         aria-label="see the product in details"
         className="flex-center relative m-2.5 flex-col"
       >
-        <div className="flex-center size-[125px] rounded-[8px] bg-surface-tertiary">
-          <div className="relative h-[101px] w-[99px]">
-            <LazyImage src={imageUrl} isLocal quality={100} alt="banner" fill />
-          </div>
-        </div>
-        {discount && <DiscountBadge discount={discount} />}
+        <ProductImage {...{ discount, imageUrl }} />
       </Link>
       <div className="pr -2 space-y-1 pt-3">
         <p className="text-content-primary text-labelSmall">
