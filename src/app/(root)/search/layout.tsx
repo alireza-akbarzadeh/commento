@@ -1,14 +1,8 @@
-import React, { PropsWithChildren } from 'react';
-import { BottomNavigation } from '@/shared/components';
+import { PropsWithChildren } from 'react';
 
 function SearchLayout(props: PropsWithChildren) {
   const { children } = props;
-  return (
-    <main>
-      {children}
-      <BottomNavigation />
-    </main>
-  );
+  return <main>{children}</main>;
 }
 
 export default SearchLayout;

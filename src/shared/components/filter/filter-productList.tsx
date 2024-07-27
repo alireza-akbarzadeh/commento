@@ -1,6 +1,6 @@
 import { Icon } from '@/shared/components';
 import { Button, ScrollArea, ScrollBar } from '@/shared/ui';
-import { FilterProduct } from './filter-product/filter-product';
+import { FilterProduct } from '../../../shared/components/filter/filter-product/filter-product';
 
 export function FilterProductList() {
   return (

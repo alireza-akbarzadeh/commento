@@ -1,10 +1,9 @@
 'use client';
 import { useState, useTransition } from 'react';
-import { productList } from '@/shared/config/mock-data';
-import { FilterProductList } from './components/filter-productList';
-import { NoResult } from './components/no-result';
-import { SearchFiled } from './components/search-filed';
-import { ProductList, ResentSearch } from './container';
+import { NoResult, SearchFiled } from '@/shared/components';
+import { searchItemList } from '@/shared/config/mock-data';
+import { SearchItem } from './components';
+import { ResentSearch } from './container';
 
 export function SearchDomian() {
   const [searchTerm, setSearchTerm] = useState<string>('');
@@ -17,8 +16,8 @@ export function SearchDomian() {
     });
   };
 
-  const searchResults = productList.filter((product) =>
-    product.title.toLowerCase().includes(searchTerm.toLowerCase()),
+  const searchResults = searchItemList.filter((list) =>
+    list.title.toLowerCase().includes(searchTerm.toLowerCase()),
   );
   return (
     <section
@@ -38,23 +37,17 @@ export function SearchDomian() {
       {isSearchTermEmpty ? (
         <ResentSearch />
       ) : searchResults.length > 0 ? (
-        <>
-          <FilterProductList />
-          {productList.map((product, index) => (
-            <ProductList
-              key={index}
-              hasDiscountBadge={product.hasDiscountBadge}
-              activeBorder={index !== productList.length - 1}
-              loved={product.loved}
-              discountLabel={product.discountLabel}
-              priceRange={product.priceRange}
-              storeName={product.storeName}
-              title={product.title}
-              imageUrl={product.imageUrl}
-              info={product.info}
+        <div className="mt-5 py-2.5">
+          {searchResults.map((list, index) => (
+            <SearchItem
+              key={list.title}
+              activeBorder={index !== searchItemList.length - 1}
+              iconName={'magnifier'}
+              subtitle={list.subtitle}
+              title={list.title}
             />
           ))}
-        </>
+        </div>
       ) : (
         <NoResult />
       )}

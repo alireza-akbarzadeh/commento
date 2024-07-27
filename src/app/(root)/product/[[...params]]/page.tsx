@@ -1,4 +1,4 @@
-import { ProductDomain } from '@/domains/product/product-domains';
+import { ProductDomain } from '@/domains';
 
 type ProductPageType = {
   params: string[];

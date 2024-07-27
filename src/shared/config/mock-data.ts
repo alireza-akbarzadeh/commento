@@ -1,4 +1,4 @@
-export type Products = {
+type Products = {
   title: string;
   price: string;
   inventory?: string;
@@ -6,7 +6,7 @@ export type Products = {
   discount?: string;
 };
 
-export const products: Products[] = [
+const products: Products[] = [
   {
     imageUrl: '/images/phone.webp',
     title: 'گوشی موبایل اپل مدل iPhone 13 CH دو سیم‌ کارت ',
@@ -46,7 +46,7 @@ export const products: Products[] = [
   },
 ];
 
-export type FindProductTypes = {
+type FindProductTypes = {
   title: string;
   priceRange: string;
   storeName: string;
@@ -59,7 +59,7 @@ export type FindProductTypes = {
   discountLabel: string | null;
 };
 
-export const productList: FindProductTypes[] = [
+const productList: FindProductTypes[] = [
   {
     title: 'گوشی موبایل اپل مدل iPhone 13 CH دو سیم‌ کارت',
     priceRange: '۱۵۷,۰۰۰',
@@ -101,3 +101,14 @@ export const productList: FindProductTypes[] = [
     discountLabel: '۵۲',
   },
 ];
+
+type SearchItemListType = { title: string; subtitle: string };
+
+const searchItemList: SearchItemListType[] = [
+  { title: 'موبایل اپل', subtitle: 'در دسته گوشی‌ها' },
+  { title: 'موبایل سامسونگ', subtitle: 'در دسته گوشی‌ها' },
+  { title: 'موبایل شیائومی', subtitle: 'در دسته گوشی‌ها' },
+];
+
+export type { FindProductTypes, Products, SearchItemListType };
+export { productList, products, searchItemList };

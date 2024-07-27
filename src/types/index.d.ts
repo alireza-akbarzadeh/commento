@@ -87,3 +87,9 @@ export type InfoLdg = {
   description: string;
   list: InfoList[];
 };
+
+declare type SearchParams = {
+  params: {
+    params: string[];
+  };
+};

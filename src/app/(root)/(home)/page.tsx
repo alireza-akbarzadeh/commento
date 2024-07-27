@@ -1,4 +1,4 @@
-import { HomeDomains } from '@/domains/home';
+import { HomeDomains } from '@/domains';
 
 export default function Home() {
   return <HomeDomains />;
