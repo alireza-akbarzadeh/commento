@@ -37,7 +37,7 @@ export function ProductListDomain() {
       {searchResults.length > 0 ? (
         <>
           <FilterProductList />
-          {productList.map((product, index) => (
+          {searchResults.map((product, index) => (
             <ProductList
               key={index}
               hasDiscountBadge={product.hasDiscountBadge}
