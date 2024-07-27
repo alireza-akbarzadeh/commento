@@ -64,7 +64,7 @@ const config = {
       'vazirmatn-bold': ['Vazirmatn-Bold'],
       'vazirmatn-semibold': ['Vazirmatn-SemiBold'],
       'vazirmatn-medium': ['Vazirmatn-Medium'],
-      'vazirmatn-normal': ['Vazirmatn-Normal'],
+      'vazirmatn-regular': ['Vazirmatn-Regular'],
       'vazirmatn-light': ['Vazirmatn-Light'],
       'vazirmatn-extralight': ['Vazirmatn-ExtraLight'],
       'vazirmatn-thin': ['Vazirmatn-Thin'],
