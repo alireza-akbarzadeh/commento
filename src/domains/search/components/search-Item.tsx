@@ -1,4 +1,6 @@
+'use client';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import React from 'react';
 import { Icon, IconType } from '@/shared/components';
 import { SearchItemListType } from '@/shared/config/mock-data';
@@ -11,13 +13,15 @@ type SearchItemProps = SearchItemListType & {
 
 export function SearchItem(props: SearchItemProps) {
   const { iconName, subtitle, title, activeBorder, latinName } = props;
+  const params = useSearchParams();
+  const query = params.get('query') || '';
 
+  const linkHref = query
+    ? { pathname: `/product-list/${latinName}`, query: { query } }
+    : `/product-list/${latinName}`;
   return (
     <>
-      <Link
-        href={`/product-list/${latinName}`}
-        className="flex h-[78px] items-center pl-4 pt-3"
-      >
+      <Link href={linkHref} className="flex items-center py-3 pl-4">
         <div className="px-6">
           <Icon name={iconName} />
         </div>
@@ -27,7 +31,7 @@ export function SearchItem(props: SearchItemProps) {
         </div>
       </Link>
       {activeBorder && (
-        <Separator className="my-4 border-b border-border-primary text-displaySmall" />
+        <Separator className="border-b border-border-primary text-displaySmall" />
       )}
     </>
   );

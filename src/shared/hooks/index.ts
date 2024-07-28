@@ -5,6 +5,7 @@ export { useMediaQuery } from './use-media-query';
 export { useMounted } from './use-mounted';
 export { useScroll } from './use-scroll';
 export { useSigninModal } from './use-signin-modal';
+export { useSearchController } from './use-search-controller';
 export { useUnmount } from './use-unmounted';
 export {
   type DebounceState,

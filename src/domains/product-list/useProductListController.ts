@@ -1,22 +1,19 @@
 'use client';
 
-import { useParams } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 import { useEffect, useMemo, useState, useTransition } from 'react';
 import { productList } from '@/shared/config/mock-data';
 
 export function useProductListController() {
-  const { slug } = useParams();
+  const searchParams = useSearchParams();
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [pending, startTransition] = useTransition();
-
+  const query = searchParams.get('query');
   useEffect(() => {
-    let pickTitle: string = '';
-    if (slug) {
-      pickTitle =
-        productList.find((product) => product.latinName === slug)?.title || '';
-      setSearchTerm(pickTitle);
+    if (query) {
+      setSearchTerm(query);
     }
-  }, [slug]);
+  }, [query]);
 
   const handleClearSearch = () => setSearchTerm('');
 

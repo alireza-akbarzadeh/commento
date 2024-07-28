@@ -1,21 +1,17 @@
 'use client';
-import { useState, useTransition } from 'react';
 import { NoResult, SearchFiled } from '@/shared/components';
 import { searchItemList } from '@/shared/config/mock-data';
+import { useSearchController } from '@/shared/hooks';
 import { SearchItem } from './components';
 import { ResentSearch } from './container';
 
 export function SearchDomian() {
-  const [searchTerm, setSearchTerm] = useState<string>('');
-  const [pending, startTransition] = useTransition();
-  const handleClearSearch = () => setSearchTerm('');
-  const isSearchTermEmpty = searchTerm.length === 0;
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    startTransition(() => {
-      setSearchTerm(event.target.value);
-    });
-  };
-
+  const {
+    handleClearSearch,
+    handleInputChange,
+    isSearchTermEmpty,
+    searchTerm,
+  } = useSearchController({ use: 'state' });
   const searchResults = searchItemList.filter((list) =>
     list.title.toLowerCase().includes(searchTerm.toLowerCase()),
   );
@@ -29,7 +25,6 @@ export function SearchDomian() {
         {...{
           searchTerm,
           handleInputChange,
-          pending,
           isSearchTermEmpty,
           handleClearSearch,
         }}

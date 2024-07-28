@@ -9,20 +9,14 @@ import {
 import { useProductListController } from './useProductListController';
 
 export function ProductListDomain() {
-  const {
-    handleClearSearch,
-    handleInputChange,
-    pending,
-    searchResults,
-    searchTerm,
-  } = useProductListController();
+  const { handleClearSearch, handleInputChange, searchResults, searchTerm } =
+    useProductListController();
 
   return (
     <section className="min-h-dvh bg-surface-primary py-2">
       <SearchFiled
         searchTerm={searchTerm}
         handleInputChange={handleInputChange}
-        pending={pending}
         isSearchTermEmpty={searchTerm.length === 0}
         handleClearSearch={handleClearSearch}
       />
