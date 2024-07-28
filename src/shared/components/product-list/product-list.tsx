@@ -94,10 +94,10 @@ export function ProductList(props: ProductListPage) {
             </div>
           </figcaption>
         </div>
-        {activeBorder && (
-          <Separator className="my-4 border-b border-border-primary text-displaySmall" />
-        )}
       </Link>
+      {activeBorder && (
+        <Separator className="my-4 border-b border-border-primary text-displaySmall" />
+      )}
     </div>
   );
 }
