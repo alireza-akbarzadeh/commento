@@ -21,13 +21,14 @@ export function ProductList(props: ProductListPage) {
     activeBorder,
     info,
     loved,
+    latinName,
   } = props;
   const data = info?.length ? info : [];
 
   return (
     <div className="mt-5 px-4">
       <Link
-        href={`/product/${title}`}
+        href={`/product/${latinName}`}
         aria-label="see the product in details"
         className="flex h-[147px] items-center gap-8"
       >

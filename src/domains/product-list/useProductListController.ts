@@ -10,9 +10,11 @@ export function useProductListController() {
   const [pending, startTransition] = useTransition();
 
   useEffect(() => {
+    let pickTitle: string = '';
     if (slug) {
-      const decodedSlug = decodeURIComponent(slug as string);
-      setSearchTerm(decodedSlug);
+      pickTitle =
+        productList.find((product) => product.latinName === slug)?.title || '';
+      setSearchTerm(pickTitle);
     }
   }, [slug]);
 

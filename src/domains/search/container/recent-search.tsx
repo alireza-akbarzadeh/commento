@@ -14,6 +14,7 @@ export function ResentSearch() {
           <SearchItem
             key={index}
             activeBorder={index !== items.length - 1}
+            latinName="model-iphone13-duelsim"
             iconName="clock-arrow-circlepath"
             subtitle="گوشی موبایل اپل"
             title="در دسته گوشی‌ها"
@@ -29,6 +30,7 @@ export function ResentSearch() {
             key={index}
             activeBorder={index !== items.length - 1}
             iconName="fire"
+            latinName="model-iphone13-duelsim"
             subtitle="گوشی موبایل اپل"
             title="در دسته گوشی‌ها"
           />

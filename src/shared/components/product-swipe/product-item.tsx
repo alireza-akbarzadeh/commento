@@ -1,6 +1,4 @@
 import Link from 'next/link';
-import { DiscountBadge } from '@/domains/home/components';
-import { LazyImage } from '@/shared/components';
 import { Products } from '@/shared/config/mock-data';
 import { CURRENCY } from '@/shared/constant';
 import { ProductImage } from './product-image';
@@ -16,7 +14,7 @@ export function ProductItem(props: ProductItemProps) {
   return (
     <figure>
       <Link
-        href={`/product/${product.title}`}
+        href={`/product/${product.latinName}`}
         aria-label="see the product in details"
         className="flex-center relative w-[147px] flex-col"
       >

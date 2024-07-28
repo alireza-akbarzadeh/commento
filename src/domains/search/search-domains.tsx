@@ -38,13 +38,12 @@ export function SearchDomian() {
         <ResentSearch />
       ) : searchResults.length > 0 ? (
         <div className="mt-5 py-2.5">
-          {searchResults.map((list, index) => (
+          {searchResults.map((result, index) => (
             <SearchItem
-              key={list.title}
+              key={result.title}
               activeBorder={index !== searchItemList.length - 1}
               iconName={'magnifier'}
-              subtitle={list.subtitle}
-              title={list.title}
+              {...result}
             />
           ))}
         </div>

@@ -31,16 +31,9 @@ export function ProductListDomain() {
           <FilterProductList />
           {searchResults.map((product, index) => (
             <ProductList
-              key={product.title} // Assuming each product has a unique ID
-              hasDiscountBadge={product.hasDiscountBadge}
+              key={product.latinName}
               activeBorder={index !== searchResults.length - 1}
-              loved={product.loved}
-              discountLabel={product.discountLabel}
-              priceRange={product.priceRange}
-              storeName={product.storeName}
-              title={product.title}
-              imageUrl={product.imageUrl}
-              info={product.info}
+              {...product}
             />
           ))}
         </>

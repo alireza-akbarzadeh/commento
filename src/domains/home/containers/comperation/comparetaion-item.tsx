@@ -49,11 +49,11 @@ export function ComparetaionItem(props: ComparetaionItemProps) {
   );
 }
 
-function Item({ title, imageUrl, discount }: Products) {
+function Item({ title, imageUrl, discount, latinName }: Products) {
   return (
     <div className="flex flex-col">
       <Link
-        href={`/product/${title}`}
+        href={`/product/${latinName}`}
         aria-label="see the product in details"
         className="flex-center relative m-2.5 flex-col"
       >

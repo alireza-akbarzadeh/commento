@@ -1,7 +1,8 @@
 'use client';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { Icon, Spin } from '@/shared/components';
-import { Input } from '@/shared/ui';
+import { Button, Input } from '@/shared/ui';
 
 type SearchFiledProps = {
   searchTerm: string;
@@ -19,11 +20,16 @@ export function SearchFiled(props: SearchFiledProps) {
     pending,
     searchTerm,
   } = props;
+  const { back } = useRouter();
   return (
     <div className="my-2 flex items-center gap-[2px] px-4">
-      <Link href="/" className="flex-center size-10">
+      <Button
+        onClick={back}
+        variant="ghost"
+        className="flex-center size-10 p-0"
+      >
         <Icon iconClassName="text-content-tertiary" name="arrow-right" />
-      </Link>
+      </Button>
       <div className="relative flex w-full items-center rounded-xl bg-surface-secondary py-3 pl-2.5 pr-5">
         <Icon
           iconClassName="text-content-tertiary"
