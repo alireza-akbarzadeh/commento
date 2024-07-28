@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { SearchDomian } from '@/domains/search';
 
 function Search() {
-  return <SearchDomian />;
+  return (
+    <Suspense>
+      <SearchDomian />
+    </Suspense>
+  );
 }
 
 export default Search;
