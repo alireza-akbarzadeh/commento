@@ -29,7 +29,7 @@ export function SearchFiled(props: SearchFiledProps) {
       >
         <Icon iconClassName="text-content-tertiary" name="arrow-right" />
       </Button>
-      <div className="relative flex w-full items-center rounded-xl bg-surface-secondary py-3 pl-2.5 pr-5">
+      <div className="relative flex w-full items-center rounded-xl bg-surface-secondary py-2 pl-2.5 pr-5">
         <Icon
           iconClassName="text-content-tertiary"
           name="magnifier"

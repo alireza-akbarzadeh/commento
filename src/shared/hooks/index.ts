@@ -14,3 +14,4 @@ export {
 
 export { useIsomorphicLayoutEffect } from './useI-somorphic-layout-effect';
 export { useEventListener } from './use-eventListener';
+export { useQueryParams } from './use-query-params';

@@ -1,6 +1,7 @@
+'use client';
 import { useTranslations } from 'next-intl';
-import React from 'react';
 import { Icon } from '@/shared/components';
+import { useQueryParams } from '@/shared/hooks';
 import {
   Button,
   Drawer,
@@ -9,17 +10,35 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-  Separator,
-  Switch,
 } from '@/shared/ui';
-import { FilterRow } from './filter-row';
+import { cn } from '@/shared/utils';
+import { FilterContent } from './filter-content';
 
-export function FilterProduct() {
+type FilterProductProps = {
+  activeFilterCount: number;
+};
+
+export function FilterProduct(props: FilterProductProps) {
+  const { activeFilterCount } = props;
   const t = useTranslations('Globals');
+  const { clearQueryParams } = useQueryParams();
+
   return (
     <Drawer>
-      <DrawerTrigger>
-        <div className="flex size-8 items-center justify-center rounded-xl bg-surface-tertiary p-[10px]">
+      <DrawerTrigger className="relative">
+        <div
+          className={cn(
+            'flex h-8 w-8 items-center justify-center rounded-xl bg-surface-tertiary p-2',
+            {
+              'border-2 border-content-primary': Boolean(activeFilterCount),
+            },
+          )}
+        >
+          {activeFilterCount > 0 && (
+            <div className="absolute -left-2 top-0 flex size-[18px] items-center justify-center rounded-full bg-content-primary text-xs text-content-inverse">
+              {activeFilterCount}
+            </div>
+          )}
           <Icon name="slider-horizontal" size="small" />
         </div>
       </DrawerTrigger>
@@ -35,64 +54,27 @@ export function FilterProduct() {
           </DrawerClose>
         </DrawerHeader>
         <div className="flex h-full flex-col justify-between">
-          <div className="px-4">
-            <Separator className="my-2 border-b border-border-primary" />
-            <p className="py-2 text-headlineSmall">مرتب‌سازی</p>
-            <div className="flex items-center gap-3 py-2">
-              <Button
-                variant="outline"
-                className="h-10 w-[72px] text-bodySmall"
-              >
-                مرتبط‌ترین
-              </Button>
-              <Button
-                variant="outline"
-                className="h-10 w-[88px] text-bodySmall"
-              >
-                ارزان‌ترین
-              </Button>
-              <Button
-                variant="outline"
-                className="h-10 w-[72px] text-bodySmall"
-              >
-                گران‌ترین
-              </Button>
-            </div>
-            <Separator className="my-2 border-b border-border-primary" />
-            <div>
-              <FilterRow title="دسته بندی" />
-              <FilterRow title="محدوده قیمت" />
-              <FilterRow title="نوع فروشنده" />
-              <FilterRow title="وضعیت کارکرد" />
-              <FilterRow title="حافظه داخلی" />
-            </div>
-            <Separator className="my-2 border-b border-border-primary" />
-            <ul>
-              <li className="flex items-center justify-between py-3">
-                <p className="text-labelMedium">خرید حضوری</p>
-                <Switch />
-              </li>
-              <li className="flex items-center justify-between py-3">
-                <p className="text-labelMedium">خرید قسطی</p>
-                <Switch />
-              </li>
-            </ul>
-            <Separator className="my-2 border-b border-border-primary" />
-          </div>
+          <FilterContent />
           <div className="mb-2 flex items-center justify-between gap-3 px-4">
             <Button
               fullWidth
-              className="h-[52] rounded-xl py-3 text-labellarge"
+              className="h-[52px] rounded-xl py-3 text-labellarge"
             >
               مشاهده نتایج
             </Button>
-            <Button
-              fullWidth
-              className="h-[52px] rounded-xl py-3 text-labellarge"
-              variant="ghost"
-            >
-              حذف فیلتر‌ها
-            </Button>
+            <DrawerClose asChild>
+              <Button
+                onClick={(event) => {
+                  event.stopPropagation();
+                  clearQueryParams();
+                }}
+                fullWidth
+                className="h-[52px] rounded-xl py-3 text-labellarge"
+                variant="ghost"
+              >
+                حذف فیلتر‌ها
+              </Button>
+            </DrawerClose>
           </div>
         </div>
       </DrawerContent>

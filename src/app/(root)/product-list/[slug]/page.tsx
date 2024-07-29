@@ -1,7 +1,6 @@
 import { ProductListDomain } from '@/domains';
-import { SearchParams } from '@/types';
 
-export default function ProductListPage(props: SearchParams) {
+export default function ProductListPage() {
   return (
     <div id={'product-list'}>
       <ProductListDomain />
