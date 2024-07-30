@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { DiscountBadge } from '@/domains/home/components';
-import { Icon, LazyImage } from '@/shared/components';
+import { Icon } from '@/shared/components';
 import { ProductImage } from '@/shared/components/product-swipe/product-image';
 import { Products } from '@/shared/config/mock-data';
 import {
@@ -20,7 +19,7 @@ export function ComparetaionItem(props: ComparetaionItemProps) {
   return (
     <CarouselItem className="basis-[93%] pt-3">
       <Card className="relative mb-3 rounded-2xl border-[0.5px] border-border-primary bg-content-inverse shadow-elevation4">
-        <CardContent className="flex gap-1.5 px-4 py-2">
+        <CardContent className="flex justify-between gap-1.5 px-4 py-2">
           <Item {...product} />
           <Item {...product} />
         </CardContent>
@@ -51,7 +50,7 @@ export function ComparetaionItem(props: ComparetaionItemProps) {
 
 function Item({ title, imageUrl, discount, latinName }: Products) {
   return (
-    <div className="flex flex-col">
+    <div className="flex max-w-[125px] flex-col mobile-l:max-w-[165px]">
       <Link
         href={`/product/${latinName}`}
         aria-label="see the product in details"
@@ -59,8 +58,8 @@ function Item({ title, imageUrl, discount, latinName }: Products) {
       >
         <ProductImage {...{ discount, imageUrl }} />
       </Link>
-      <div className="pr -2 space-y-1 pt-3">
-        <p className="text-content-primary text-labelSmall">
+      <div className="space-y-1 pr-2 pt-3">
+        <p className="line-clamp-2 text-content-primary text-labelSmall">
           {title.length > 40 ? title.slice(0, 38).concat('...') : title}
         </p>
       </div>

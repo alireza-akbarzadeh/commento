@@ -7,6 +7,7 @@ import {
   Drawer,
   DrawerClose,
   DrawerContent,
+  DrawerDescription,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
@@ -48,11 +49,12 @@ export function FilterProduct(props: FilterProductProps) {
             {t('filters')}
           </DrawerTitle>
           <DrawerClose>
-            <Button className="size-8" variant="tertiary" roundedFull>
+            <div className="flex-center size-8 rounded-full bg-surface-tertiary">
               <Icon size="small" name="cross" />
-            </Button>
+            </div>
           </DrawerClose>
         </DrawerHeader>
+        <DrawerDescription />
         <div className="flex h-full flex-col justify-between">
           <FilterContent />
           <div className="mb-2 flex items-center justify-between gap-3 px-4">
@@ -62,18 +64,11 @@ export function FilterProduct(props: FilterProductProps) {
             >
               مشاهده نتایج
             </Button>
-            <DrawerClose asChild>
-              <Button
-                onClick={(event) => {
-                  event.stopPropagation();
-                  clearQueryParams();
-                }}
-                fullWidth
-                className="h-[52px] rounded-xl py-3 text-labellarge"
-                variant="ghost"
-              >
-                حذف فیلتر‌ها
-              </Button>
+            <DrawerClose
+              onClick={() => clearQueryParams()}
+              className="h-[52px] w-full rounded-xl py-3 text-labellarge"
+            >
+              حذف فیلتر‌ها
             </DrawerClose>
           </div>
         </div>

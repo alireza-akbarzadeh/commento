@@ -43,3 +43,27 @@ const deepPick = <T, K extends keyof T>(fields: string, object: T): T[K] => {
 
 const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
 export { capitalize, countDown, deepPick };
+
+/**
+ * Converts a number to a Persian formatted price string.
+ * @param value The number to format.
+ * @returns The formatted price string in Persian.
+ */
+export function formatPriceToPersian(value: number): string {
+  // Convert the number to a string and add commas as thousand separators
+  const formattedValue = value.toLocaleString('fa-IR', {
+    style: 'currency',
+    currency: 'IRR',
+  });
+
+  // Return the formatted value
+  return formattedValue;
+}
+
+export function formatNumberToPersian(value: number): string {
+  // Convert the number to a string with Persian digits and add commas as thousand separators
+  const formattedValue = value.toLocaleString('fa-IR');
+
+  // Return the formatted value
+  return formattedValue;
+}

@@ -20,17 +20,17 @@ export function ProductItem(props: ProductItemProps) {
       >
         <ProductImage imageUrl={product.imageUrl} discount={product.discount} />
       </Link>
-      <figcaption className="space-y-1 pr-3 pt-2.5">
-        <h2 className="text-content-primary text-labelXSmall">
+      <figcaption className="space-y-1 py-2.5 pr-3">
+        <h2 className="line-clamp-2 text-content-primary text-labelMedium">
           {isTruncate
-            ? product.title.slice(0, 38).concat('...')
+            ? product.title.slice(0, 40).concat('...')
             : product.title}
         </h2>
         {/*TODO:  if store was only one render te name of store */}
         {product.price && (
           <p className="text-content-primary text-labelXSmall">
             <span className="text-bodyXXSmall">از</span> {product.price}{' '}
-            <span className="text-bodyXXSmall">{CURRENCY.IR}</span>
+            <span className="text-tiny">{CURRENCY.IR}</span>
           </p>
         )}
         {product.inventory && (
