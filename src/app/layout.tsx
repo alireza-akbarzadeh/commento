@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 import { getLangDir } from 'rtl-detect';
+import { Toaster } from '@/shared/ui';
 import { cn } from '@/shared/utils';
 
 import '@/shared/globals.css';
@@ -28,6 +29,7 @@ export default async function RootLayout({
       >
         <NextIntlClientProvider messages={messages}>
           {children}
+          <Toaster />
         </NextIntlClientProvider>
       </body>
     </html>

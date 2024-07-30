@@ -23,10 +23,8 @@ export function SpecificTech() {
         <DrawerContent>
           <DrawerHeader className="flex items-center justify-between">
             <DrawerTitle className="text-headlineSmall">مشخصات فنی</DrawerTitle>
-            <DrawerClose>
-              <Button className="size-8" variant="tertiary" roundedFull>
-                <Icon size="small" name="cross" />
-              </Button>
+            <DrawerClose className="size-8 rounded-full bg-surface-tertiary">
+              <Icon size="small" name="cross" />
             </DrawerClose>
           </DrawerHeader>
           <div className="px-4">

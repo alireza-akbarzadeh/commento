@@ -36,10 +36,8 @@ export function FilterActions() {
               <DrawerTitle className="text-headlineSmall">
                 {t('filters')}
               </DrawerTitle>
-              <DrawerClose>
-                <Button className="size-8" variant="tertiary" roundedFull>
-                  <Icon size="small" name="cross" />
-                </Button>
+              <DrawerClose className="size-8 rounded-full bg-surface-tertiary">
+                <Icon size="small" name="cross" />
               </DrawerClose>
             </DrawerHeader>
             <div className="flex h-full flex-col justify-between">

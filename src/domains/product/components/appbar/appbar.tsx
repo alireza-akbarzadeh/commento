@@ -1,13 +1,14 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import { Icon } from '@/shared/components';
+import { MoreDrawer } from './more-drawer';
 
 export function Appbar() {
   const { back } = useRouter();
 
   return (
-    <div className="flex h-[56px] items-center justify-between pt-3">
-      <div className="size-10 pr-3">
+    <div className="flex h-[56px] items-center justify-between pr-3 pt-3">
+      <div className="size-10">
         <Icon
           onClick={() => back()}
           iconClassName="text-content-primary"
@@ -31,13 +32,7 @@ export function Appbar() {
             size="medium"
           />
         </div>
-        <div className="size-10">
-          <Icon
-            iconClassName="text-content-primary"
-            name="more-vertical-fill"
-            size="medium"
-          />
-        </div>
+        <MoreDrawer />
       </div>
     </div>
   );

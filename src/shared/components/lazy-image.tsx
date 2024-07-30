@@ -23,7 +23,6 @@ export const LazyImage = (props: LazyImageProps): JSX.Element => {
     height,
     src,
     quality = 75,
-    isLocal,
     onError,
     fill,
     skeletonClass,

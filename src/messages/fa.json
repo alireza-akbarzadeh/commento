@@ -17,5 +17,10 @@
     "openBox": "اوپن باکس",
     "worked": "کار‌کرده",
     "installment": "قسطی"
+  },
+  "Product": {
+    "sharedProduct": "اشتراک گذاری کالا",
+    "notifiedPriced": "اطلاع رسانی  قیمت",
+    "faq": "پرسش و پاسخ‌ها"
   }
 }
