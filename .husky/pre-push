@@ -1,1 +1,3 @@
 ## bun vitest run
+
+bun run build
