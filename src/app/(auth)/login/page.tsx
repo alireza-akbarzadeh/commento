@@ -38,17 +38,9 @@ export default function LoginPage() {
       <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[450px]">
         <Card className="flex flex-col space-y-2 text-center">
           <CardHeader>
-            <CardTitle>
-              {/* <Icons className="mx-auto size-6" /> */}
-              Logo
-              <h1 className="tracking-tight text-displayMedium">
-                Welcome back
-              </h1>
-            </CardTitle>
-            <CardDescription>
-              <p className="text-muted-foreground text-bodySmall">
-                Enter your email to sign in to your account
-              </p>
+            <CardTitle>Logo Welcome back</CardTitle>
+            <CardDescription className="text-muted-foreground text-bodySmall">
+              Enter your email to sign in to your account
             </CardDescription>
           </CardHeader>
           <CardContent>

@@ -42,7 +42,7 @@
     "lucide-react": "^0.407.0",
     "mapbox-gl": "^3.5.1",
     "next": "14.2.4",
-    "next-auth": "^4.24.7",
+    "next-auth": "^5.0.0-beta.20",
     "next-intl": "^3.17.2",
     "react": "^18",
     "react-dom": "^18",
