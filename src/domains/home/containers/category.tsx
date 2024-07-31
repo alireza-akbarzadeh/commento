@@ -22,7 +22,6 @@ export function Category() {
                 <LazyImage
                   style={{ objectFit: 'cover' }}
                   skeletonClass="rounded-full"
-                  isLocal
                   quality={100}
                   src={image.url}
                   alt={image.name}

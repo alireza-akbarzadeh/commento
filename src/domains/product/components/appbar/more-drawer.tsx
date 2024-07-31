@@ -5,6 +5,7 @@ import {
   Drawer,
   DrawerClose,
   DrawerContent,
+  DrawerDescription,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
@@ -39,7 +40,7 @@ export function MoreDrawer() {
     <>
       <Drawer>
         <DrawerTrigger>
-          <div className="size-10">
+          <div className="size-10 pl-2.5">
             <Icon
               iconClassName="text-content-primary"
               name="more-vertical-fill"
@@ -56,6 +57,8 @@ export function MoreDrawer() {
               <Icon size="small" name="cross" />
             </DrawerClose>
           </DrawerHeader>
+          {/* TOOD: check what when this not exist we get waning in console due to missing arial labe description */}
+          <DrawerDescription />
           <div className="flex items-center px-5 py-3">
             <Icon name="share" />
             <Button

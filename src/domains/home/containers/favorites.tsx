@@ -78,7 +78,6 @@ export function Favorites(props: FavoritesPropsType) {
                     <div className="relative mx-auto flex size-[250px] items-center justify-center">
                       <LazyImage
                         src={`/images/${mode === 'dark' ? 'ipad' : 'watch'}.webp`}
-                        isLocal
                         fill
                         quality={100}
                         alt="banner"
