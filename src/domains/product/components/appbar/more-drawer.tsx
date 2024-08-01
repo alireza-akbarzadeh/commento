@@ -37,52 +37,50 @@ export function MoreDrawer() {
   };
 
   return (
-    <>
-      <Drawer>
-        <DrawerTrigger>
-          <div className="size-10 pl-2.5">
-            <Icon
-              iconClassName="text-content-primary"
-              name="more-vertical-fill"
-              size="medium"
-            />
-          </div>
-        </DrawerTrigger>
-        <DrawerContent className="pb-6">
-          <DrawerHeader className="flex items-center justify-between">
-            <DrawerTitle className="text-headlineSmall">
-              اطلاع از قیمت مدنظر
-            </DrawerTitle>
-            <DrawerClose className="size-8 rounded-full bg-surface-tertiary">
-              <Icon size="small" name="cross" />
-            </DrawerClose>
-          </DrawerHeader>
-          {/* TOOD: check what when this not exist we get waning in console due to missing arial labe description */}
-          <DrawerDescription />
-          <div className="flex items-center px-5 py-3">
-            <Icon name="share" />
-            <Button
-              onClick={handleShare}
-              variant="ghost"
-              className="text-labelMedium"
-            >
-              {t('sharedProduct')}
-            </Button>
-          </div>
-          <div className="flex items-center px-5 py-3">
-            <Icon name="bell" />
-            <Button variant="ghost" className="text-labelMedium">
-              {t('notifiedPriced')}
-            </Button>
-          </div>
-          <div className="flex items-center px-5 py-3">
-            <Icon name="default" />
-            <Button variant="ghost" className="text-labelMedium">
-              {t('faq')}
-            </Button>
-          </div>
-        </DrawerContent>
-      </Drawer>
-    </>
+    <Drawer>
+      <DrawerTrigger>
+        <div className="size-10 pl-2.5">
+          <Icon
+            iconClassName="text-content-primary"
+            name="more-vertical-fill"
+            size="medium"
+          />
+        </div>
+      </DrawerTrigger>
+      <DrawerContent className="pb-6">
+        <DrawerHeader className="flex items-center justify-between">
+          <DrawerTitle className="text-headlineSmall">
+            اطلاع از قیمت مدنظر
+          </DrawerTitle>
+          <DrawerClose className="size-8 rounded-full bg-surface-tertiary">
+            <Icon size="small" name="cross" />
+          </DrawerClose>
+        </DrawerHeader>
+        {/* TOOD: check what when this not exist we get waning in console due to missing arial labe description */}
+        <DrawerDescription />
+        <div className="flex items-center px-5 py-3">
+          <Icon name="share" />
+          <Button
+            onClick={handleShare}
+            variant="ghost"
+            className="text-labelMedium"
+          >
+            {t('sharedProduct')}
+          </Button>
+        </div>
+        <div className="flex items-center px-5 py-3">
+          <Icon name="bell" />
+          <Button variant="ghost" className="text-labelMedium">
+            {t('notifiedPriced')}
+          </Button>
+        </div>
+        <div className="flex items-center px-5 py-3">
+          <Icon name="default" />
+          <Button variant="ghost" className="text-labelMedium">
+            {t('faq')}
+          </Button>
+        </div>
+      </DrawerContent>
+    </Drawer>
   );
 }

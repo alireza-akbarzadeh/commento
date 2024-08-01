@@ -3,6 +3,7 @@ import Autoplay from 'embla-carousel-autoplay';
 import { useBanners } from '@/domains/home/hooks';
 import { Icon, LazyImage } from '@/shared/components';
 import { Carousel, CarouselContent, CarouselItem } from '@/shared/ui';
+import { ProductMedia } from './product-media';
 import { SliderActions } from './slider-actions';
 
 export function ProductCarousel() {
@@ -16,9 +17,7 @@ export function ProductCarousel() {
         setApi={setApi}
         className="relative my-4 flex items-end"
       >
-        <div className="pr-[18px]">
-          <Icon name="video-two-fill" iconClassName="text-content-tertiary " />
-        </div>
+        <ProductMedia />
         <CarouselContent className="py-4">
           {Array.from({ length: 3 }).map((_, index) => (
             <CarouselItem
