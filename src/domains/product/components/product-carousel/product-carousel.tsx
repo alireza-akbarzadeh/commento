@@ -1,7 +1,7 @@
 'use client';
 import Autoplay from 'embla-carousel-autoplay';
 import { useBanners } from '@/domains/home/hooks';
-import { Icon, LazyImage } from '@/shared/components';
+import { LazyImage } from '@/shared/components';
 import { Carousel, CarouselContent, CarouselItem } from '@/shared/ui';
 import { ProductMedia } from './product-media';
 import { SliderActions } from './slider-actions';

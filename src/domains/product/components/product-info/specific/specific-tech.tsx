@@ -1,6 +1,5 @@
 import { Icon } from '@/shared/components';
 import {
-  Button,
   Drawer,
   DrawerClose,
   DrawerContent,
