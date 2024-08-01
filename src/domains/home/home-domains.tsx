@@ -1,4 +1,3 @@
-import { BottomNavigation } from '@/shared/components';
 import {
   Banners,
   Categories,

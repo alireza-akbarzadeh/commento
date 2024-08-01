@@ -40,7 +40,6 @@ export function ProductList(props: ProductListPage) {
                 style={{
                   objectFit: 'cover',
                 }}
-                isLocal
                 quality={100}
                 alt={title}
                 fill

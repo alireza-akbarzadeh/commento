@@ -15,7 +15,6 @@ export function ProductImage(props: ProductImageProps) {
             objectFit: 'cover',
             position: 'absolute',
           }}
-          isLocal
           quality={100}
           alt="banner"
           fill

@@ -12,7 +12,6 @@ import { cn } from '../utils';
 export type LazyImageProps = LazyLoadImageProps & {
   quality?: number;
   imageNotFound?: string;
-  isLocal?: boolean;
   fill?: boolean;
   skeletonClass?: string;
 };

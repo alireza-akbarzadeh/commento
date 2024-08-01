@@ -7,7 +7,6 @@ export function NoResult() {
         <LazyImage
           src="/svg/search-no-result.svg"
           alt="no-result"
-          isLocal
           quality={100}
           fill
         />
