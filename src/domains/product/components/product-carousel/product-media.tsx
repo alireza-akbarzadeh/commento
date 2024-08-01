@@ -1,4 +1,3 @@
-import Autoplay from 'embla-carousel-autoplay';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import { useBanners } from '@/domains/home/hooks';
