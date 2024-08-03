@@ -8,7 +8,7 @@ export function Appbar() {
   const { back } = useRouter();
 
   return (
-    <div className="flex h-[56px] items-center justify-between pr-3 pt-4">
+    <div className="flex h-[56px] items-center justify-between px-4 pr-3 pt-4">
       <div className="size-10">
         <Icon
           onClick={() => back()}
