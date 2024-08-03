@@ -6,11 +6,10 @@ import { useScroll } from '@/shared/hooks';
 import { cn } from '@/shared/utils';
 
 export function RowInfo() {
-  const { isSticky, ref } = useScroll();
+  const isSticky = useScroll(300);
 
   return (
     <div
-      ref={ref}
       className={cn(
         `z-10 flex w-full flex-col p-4 px-4 transition-all duration-200`,
         {
