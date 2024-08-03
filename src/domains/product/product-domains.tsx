@@ -7,16 +7,17 @@ import { StoreInfo } from './components/store-info/store-info';
 
 export function ProductDomain() {
   return (
-    <section id="product-details-page" data-testid="product-details-page">
-      <div className="bg-content-inverse px-4">
-        <Appbar />
-        <ProductCarousel />
-        <RowInfo />
-        <Features />
-        <ProductInfo />
-      </div>
+    <section
+      id="product-details-page"
+      data-testid="product-details-page"
+      className="relative"
+    >
+      <Appbar />
+      <ProductCarousel />
+      <RowInfo />
+      <Features />
+      <ProductInfo />
       <StoreInfo />
-      {/* <StoresMap /> */}
       <FAQ />
       <div className="space-y-2">
         <SimilarProduct title="محصولات مشابه" />

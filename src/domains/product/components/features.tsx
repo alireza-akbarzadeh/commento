@@ -19,7 +19,7 @@ export function Features() {
     <>
       <ScrollArea
         dir="rtl"
-        className="whitespace-nowrap border-b border-white bg-surface-primary py-2"
+        className="whitespace-nowrap border-b border-white bg-surface-primary px-4 py-2"
       >
         <div className="flex w-max gap-2">
           {Array.from({ length: 6 }).map((_, index) => (
@@ -73,7 +73,7 @@ export function Features() {
           </div>
         </DrawerContent>
       </Drawer>
-      <div className="py-4">
+      <div className="p-4">
         <Button className="h-[52px] w-full rounded-2xl !text-content-inverse text-labellarge">
           در ۱۱ فروشگاه
         </Button>

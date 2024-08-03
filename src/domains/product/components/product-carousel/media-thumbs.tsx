@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useRef } from 'react';
-import { LazyImage } from '@/shared/components';
+import { LazyImage, PlayButton } from '@/shared/components';
 import { ScrollArea, ScrollBar } from '@/shared/ui';
 import { cn } from '@/shared/utils';
 
@@ -8,10 +8,18 @@ type SliderProps = {
   scrollSnaps: number[];
   scrollTo: (index: number) => void | undefined;
   selectedIndex: number;
+  hasVideo?: boolean;
+  setIsPlaying: (play: boolean) => void;
 };
 
 export function MediaThumbs(props: SliderProps) {
-  const { scrollSnaps, scrollTo, selectedIndex } = props;
+  const {
+    scrollSnaps,
+    scrollTo,
+    selectedIndex,
+    hasVideo = false,
+    setIsPlaying,
+  } = props;
   const containerRef = useRef<HTMLDivElement>(null);
 
   // FIXME: this is'nt working the scroll have to move to active index
@@ -63,6 +71,7 @@ export function MediaThumbs(props: SliderProps) {
               title="slider-action"
               onClick={(event) => {
                 scrollTo(index);
+                setIsPlaying(false);
                 event.stopPropagation();
               }}
             >
@@ -74,6 +83,11 @@ export function MediaThumbs(props: SliderProps) {
                   alt="banner"
                   fill
                 />
+                {hasVideo && (
+                  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <PlayButton className="size-10 rounded-full" />
+                  </div>
+                )}
               </div>
             </button>
           </div>

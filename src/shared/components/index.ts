@@ -13,6 +13,7 @@ export {
 } from './icons';
 
 export { Development } from './development';
+export { PlayButton } from './play-button';
 export { NoResult } from './empty/no-result';
 export { ProductList } from './product-list/product-list';
 export { CheckboxController } from './form/checkbox-controller';
