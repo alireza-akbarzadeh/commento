@@ -18,7 +18,7 @@ export function PriceNotify() {
       <Drawer>
         <DrawerTrigger>
           <div className="flex flex-col items-center hover:bg-none">
-            <Icon name="slider-horizontal" size="small" />
+            <Icon name="arrow-upward-trend" size="small" />
             <p className="text-content-primary text-labelXSmall">نمودار قیمت</p>
           </div>
         </DrawerTrigger>
