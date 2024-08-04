@@ -1,4 +1,5 @@
 'use client';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { Icon } from '@/shared/components';
 import { Badge, Button } from '@/shared/ui';
@@ -7,12 +8,13 @@ import { ActionButtons } from './action-button';
 import { InfoBoxes } from './Info-Boxes';
 import { PriceAction } from './price-action';
 import { StoreRate } from './store-rate';
-import { FilterActions } from '../filters/filter-actions';
+import { FilterActions } from '../../../domains/product/components/filters/filter-actions';
 
 type StoreCardProps = {
   hasFilter?: boolean;
   viewStore?: boolean;
   hasActionButton?: boolean;
+  viewMap?: boolean;
 };
 
 export function StoreCard(props: StoreCardProps) {
@@ -20,9 +22,11 @@ export function StoreCard(props: StoreCardProps) {
     hasFilter = false,
     viewStore = false,
     hasActionButton = false,
+    viewMap = false,
   } = props;
   const [toggleInfo, setToggleInfo] = useState(false);
   const toggleAction = () => setToggleInfo(!toggleInfo);
+  const { push } = useRouter();
   return (
     <div className="bg-content-inverse py-2">
       {hasFilter && <FilterActions />}
@@ -75,8 +79,23 @@ export function StoreCard(props: StoreCardProps) {
             <PriceAction />
             {viewStore && (
               <div className="py-4">
-                <Button fullWidth className="h-[52px] rounded-xl">
-                  نمایش همه فروشگاه‌ها{' '}
+                <Button
+                  onClick={() => push('/store')}
+                  fullWidth
+                  className="h-[52px] rounded-xl"
+                >
+                  نمایش همه فروشگاه‌ها
+                </Button>
+              </div>
+            )}
+            {viewMap && (
+              <div className="py-4">
+                <Button
+                  onClick={() => push('/store')}
+                  fullWidth
+                  className="h-[52px] rounded-xl"
+                >
+                  نمایش همه روی نقشه‌
                 </Button>
               </div>
             )}

@@ -23,3 +23,4 @@ export { SearchFiled } from './search/search-filed';
 export { FilterProduct } from './filter/filter-product/filter-product';
 export { FilterProductList } from './filter/filter-productList';
 export { BottomNavigation } from './bottom-navigation/bottom-navigation';
+export { StoreCard } from './store-card/store-card';

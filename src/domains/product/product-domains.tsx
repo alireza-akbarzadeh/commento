@@ -1,9 +1,14 @@
-import { Appbar, Features, ProductCarousel, RowInfo } from './components';
-import { FAQ } from './components/faq';
-import { PriceChart } from './components/price-chart/price-chart';
-import { ProductInfo } from './components/product-info/product-info';
-import { SimilarProduct } from './components/similar-product/similar';
-import { StoreInfo } from './components/store-info/store-info';
+import {
+  Appbar,
+  FAQ,
+  Features,
+  PriceChart,
+  ProductCarousel,
+  ProductInfo,
+  RowInfo,
+  SimilarProduct,
+  StoreInfo,
+} from './components';
 
 export function ProductDomain() {
   return (

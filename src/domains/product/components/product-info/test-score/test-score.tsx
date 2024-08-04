@@ -24,7 +24,7 @@ export function TestScore() {
               variant="positive"
               className="rounded-[15px] px-1.5 py-0 text-labelMedium"
             >
-              ۴.۳%
+              <span className="text-content-positive">۴.۳%</span>
             </Badge>
             <p className="text-content-primary">نمره تست</p>
           </div>

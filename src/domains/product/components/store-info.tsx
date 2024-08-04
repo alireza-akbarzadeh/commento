@@ -1,4 +1,4 @@
-import { StoreCard } from './store-card';
+import { StoreCard } from '@/shared/components';
 
 export function StoreInfo() {
   return (
@@ -6,6 +6,7 @@ export function StoreInfo() {
       <StoreCard hasFilter />
       <StoreCard hasActionButton />
       <StoreCard viewStore />
+      <StoreCard viewMap />
     </div>
   );
 }

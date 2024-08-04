@@ -1,9 +1,5 @@
-import { ProductDomain } from '@/domains';
+import { StoreDomains } from '@/domains/store';
 
 export default function StoreDetailsPage() {
-  return (
-    <div>
-      <ProductDomain />
-    </div>
-  );
+  return <div>map</div>;
 }

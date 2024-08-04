@@ -12,7 +12,7 @@ export function LovedAction() {
     setLoved(!loved);
     toast({
       title: 'گوشی موبایل اپل مدل iPhone 13 CH دو سیم‌ کارت',
-      description: `موفقیت با ${loved ? 'افزوده شد' : 'حذف شد'}`,
+      description: `موفقیت با ${!loved ? 'افزوده شد' : 'حذف شد'}`,
     });
   };
 
