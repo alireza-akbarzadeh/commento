@@ -6,6 +6,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
+  Separator,
 } from '@/shared/ui';
 import { SpecificItem } from './specific-item';
 
@@ -16,7 +17,7 @@ export function SpecificTech() {
         <DrawerTrigger>
           <div className="flex flex-col items-center hover:bg-none">
             <Icon name="sticky-note" size="small" />
-            <p className="text-content-primary text-labelXSmall">مشخصات فنی</p>
+            <p className="text-content-primary text-labelXSmall">ویژگی‌ها</p>
           </div>
         </DrawerTrigger>
         <DrawerContent>
@@ -26,6 +27,7 @@ export function SpecificTech() {
               <Icon size="small" name="cross" />
             </DrawerClose>
           </DrawerHeader>
+          <Separator className="my-2 border-b border-border-primary" />
           <div className="px-4">
             <div className="pt-2.5">
               <h5 className="text-headlineXSmall">مشخصات کلی</h5>

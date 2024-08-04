@@ -27,7 +27,7 @@ export function Features() {
               variant="secondary"
               onClick={() => setOpenSheet(index === 1)}
               key={index}
-              className="flex flex-col items-start rounded-md p-1 ring-0 focus-visible:ring-0 focus-visible:ring-offset-0"
+              className="flex h-12 flex-col items-start rounded-md p-2 ring-0 focus-visible:ring-0 focus-visible:ring-offset-0"
             >
               <h4 className="px-2 text-content-tertiary text-bodyXSmall">
                 {index % 2 ? 'فناوری صفحه نمایش' : 'رنگ'}

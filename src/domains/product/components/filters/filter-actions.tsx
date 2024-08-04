@@ -22,7 +22,7 @@ export function FilterActions() {
   return (
     <div className="px-4">
       <div className="py-2">
-        <p className="text-content-primary text-labelMedium">{t('filters')}</p>
+        <p className="text-content-primary text-labellarge">{t('stores')}</p>
       </div>
       <div className="flex items-center gap-3 py-2">
         <Drawer>

@@ -20,7 +20,12 @@ export function TestScore() {
       <Drawer>
         <DrawerTrigger>
           <div className="flex flex-col items-center hover:bg-none">
-            <Badge variant="positive">۴.۳</Badge>
+            <Badge
+              variant="positive"
+              className="rounded-[15px] px-1.5 py-0 text-labelMedium"
+            >
+              ۴.۳%
+            </Badge>
             <p className="text-content-primary">نمره تست</p>
           </div>
         </DrawerTrigger>
