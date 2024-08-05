@@ -15,6 +15,7 @@ type StoreCardProps = {
   viewStore?: boolean;
   hasActionButton?: boolean;
   viewMap?: boolean;
+  open?: boolean;
 };
 
 export function StoreCard(props: StoreCardProps) {
@@ -23,8 +24,10 @@ export function StoreCard(props: StoreCardProps) {
     viewStore = false,
     hasActionButton = false,
     viewMap = false,
+    open = false,
   } = props;
-  const [toggleInfo, setToggleInfo] = useState(false);
+  const [toggleInfo, setToggleInfo] = useState(open);
+
   const toggleAction = () => setToggleInfo(!toggleInfo);
   const { push } = useRouter();
   return (

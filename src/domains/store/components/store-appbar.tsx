@@ -12,7 +12,7 @@ export function StoreAppbar() {
       <div className="flex cursor-pointer items-center justify-between px-3 py-2">
         <div className="flex items-center gap-2">
           <div className="cursor-pointer p-2">
-            <Icon name="arrow-right" onClick={back} />
+            <Icon name="arrow-right" onClick={() => back()} />
           </div>
           <p className="text-content-primary text-labelMedium">
             ۱۱ فروشگاه اینترنتی
