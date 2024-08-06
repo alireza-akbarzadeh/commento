@@ -16,6 +16,7 @@ type StoreCardProps = {
   hasActionButton?: boolean;
   viewMap?: boolean;
   open?: boolean;
+  navigation?: string;
 };
 
 export function StoreCard(props: StoreCardProps) {
@@ -25,11 +26,11 @@ export function StoreCard(props: StoreCardProps) {
     hasActionButton = false,
     viewMap = false,
     open = false,
+    navigation,
   } = props;
   const [toggleInfo, setToggleInfo] = useState(open);
-
-  const toggleAction = () => setToggleInfo(!toggleInfo);
   const { push } = useRouter();
+  const toggleAction = () => setToggleInfo(!toggleInfo);
   return (
     <div className="bg-content-inverse py-2">
       {hasFilter && <FilterActions />}
@@ -79,11 +80,11 @@ export function StoreCard(props: StoreCardProps) {
               </Badge>
             </div>
             <InfoBoxes />
-            <PriceAction />
+            <PriceAction navigation={navigation} />
             {viewStore && (
               <div className="py-4">
                 <Button
-                  onClick={() => push('/store')}
+                  onClick={() => push('/stores')}
                   fullWidth
                   className="h-[52px] rounded-xl"
                 >
@@ -94,7 +95,7 @@ export function StoreCard(props: StoreCardProps) {
             {viewMap && (
               <div className="py-4">
                 <Button
-                  onClick={() => push('/store')}
+                  onClick={() => push('/stores')}
                   fullWidth
                   className="h-[52px] rounded-xl"
                 >

@@ -22,7 +22,7 @@ export function StoreAppbar() {
           <Icon
             name="slider-horizontal"
             size="small"
-            onClick={() => push(`/store/${id}`)}
+            onClick={() => push(`/stores/offline`)}
           />
         </div>
       </div>

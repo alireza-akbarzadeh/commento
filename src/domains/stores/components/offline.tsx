@@ -1,9 +1,10 @@
 'use client';
 import { useState } from 'react';
-import { BottomSheetStore } from './bottm-sheet-store';
+
+import { BottomSheetStore } from './bottom-sheet-store';
 import { StoreMap } from './store-map';
 
-export default function StoreDetails() {
+export function OfflineStores() {
   const [showStore, setShowStore] = useState(false);
 
   const handleButtonClick = (event: React.MouseEvent) => {
