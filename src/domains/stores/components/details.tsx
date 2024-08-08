@@ -7,13 +7,7 @@ import { Badge, Button, Separator } from '@/shared/ui';
 
 export const StoreDetails = () => {
   const { back } = useRouter();
-  const items = [
-    'ارسال رایگان ',
-    'اوپنباکس',
-    'تحویل فوری ',
-    'ارسال رایگان',
-    'پرداخت در محل',
-  ];
+  const items = ['ارسال رایگان ', 'اوپنباکس', 'تحویل فوری ', 'پرداخت در محل'];
 
   return (
     <>
@@ -64,7 +58,7 @@ export const StoreDetails = () => {
           orientation="horizontal"
           className="mb-2 mt-6 border-[0.6px] border-border-primary"
         />
-        <div className="flex w-full bg-content-inverse py-3">
+        <div className="flex w-full py-3">
           <div className="flex h-[72px] w-20 items-center justify-center">
             <div className="relative size-[56px]">
               <LazyImage
@@ -119,7 +113,9 @@ export const StoreDetails = () => {
           <div className="flex gap-2 pb-[12px] pt-2.5">
             {items.map((text) => (
               <div className="bg-surface-secondary p-1.5 px-2" key={text}>
-                <p className="text-content-tertiary text-bodyXSmall">{text}</p>
+                <p className="text-nowrap text-content-tertiary text-bodyXSmall">
+                  {text}
+                </p>
               </div>
             ))}
           </div>
