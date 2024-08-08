@@ -10,7 +10,7 @@ export const StoreDetails = () => {
   const items = ['ارسال رایگان ', 'اوپنباکس', 'تحویل فوری ', 'پرداخت در محل'];
 
   return (
-    <>
+    <div className="h-full bg-content-inverse">
       <div className="h-[56px] px-3 py-2">
         <Icon onClick={back} name="arrow-right" />
       </div>
@@ -142,6 +142,6 @@ export const StoreDetails = () => {
           </Button>
         </div>
       </div>
-    </>
+    </div>
   );
 };

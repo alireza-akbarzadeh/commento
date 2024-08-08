@@ -1,11 +1,21 @@
 'use client';
-import { StoreCard } from '@/shared/components';
-import { Drawer, DrawerContent, DrawerDescription } from '@/shared/ui';
+import { Icon, StoreCard } from '@/shared/components';
+import { useScroll } from '@/shared/hooks';
+import { Button, Drawer, DrawerContent, DrawerDescription } from '@/shared/ui';
 
-export function BottomSheetStore({ showStore }: { showStore: boolean }) {
+type BottomSheetStoreType = {
+  showStore: boolean;
+};
+export function BottomSheetStore(props: BottomSheetStoreType) {
+  const { showStore } = props;
+  const isSticky = useScroll(500);
+
   return (
     <Drawer open modal={false}>
-      <DrawerContent noOverlay>
+      <DrawerContent
+        noOverlay
+        // className={`relative ${isSticky ? 'h-full' : 'h-2/3'}`}
+      >
         {showStore ? (
           <>
             <StoreCard open navigation="/stores/1" />
@@ -16,6 +26,15 @@ export function BottomSheetStore({ showStore }: { showStore: boolean }) {
           <DrawerDescription className="py-4 text-center shadow-elevation5 text-labelMedium">
             بیش از ۲۳ فروشگاه
           </DrawerDescription>
+        )}
+        {isSticky && (
+          <Button
+            fullWidth
+            className="fixed bottom-10 left-1/2 flex h-14 -translate-x-1/2 items-center gap-2 rounded-2xl"
+          >
+            <Icon iconClassName="text-content-inverse" name="map-fill" />
+            <span>فروشگاه‌ها روی نقشه</span>
+          </Button>
         )}
       </DrawerContent>
     </Drawer>

@@ -6,7 +6,6 @@ import { StoreMap } from './store-map';
 
 export function OfflineStores() {
   const [showStore, setShowStore] = useState(false);
-
   const handleButtonClick = (event: React.MouseEvent) => {
     event.stopPropagation();
     setShowStore((prevState) => !prevState);
