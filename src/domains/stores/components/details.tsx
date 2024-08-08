@@ -35,7 +35,7 @@ export const StoreDetails = () => {
             <p className="text-bodySmall">۶ ماه عضویت در آی‌تی‌بازار</p>
           </div>
         </div>
-        <div className="flex justify-between py-2">
+        <div className="flex items-center justify-between py-2">
           <div className="flex flex-1 flex-col items-center">
             <Badge
               variant="positive"
@@ -43,7 +43,7 @@ export const StoreDetails = () => {
             >
               <span className="text-content-positive">۴.۳%</span>
             </Badge>
-            <span>جزییات امتیاز</span>
+            <span className="mt-1 text-labelXSmall">جزییات امتیاز</span>
           </div>
           <Separator
             orientation="vertical"
@@ -51,7 +51,7 @@ export const StoreDetails = () => {
           />
           <div className="flex flex-1 flex-col items-center">
             <Icon name="flag-fill" />
-            <span>گزارش خطا</span>
+            <span className="mt-1 text-labelXSmall">گزارش خطا</span>
           </div>
         </div>
         <Separator
