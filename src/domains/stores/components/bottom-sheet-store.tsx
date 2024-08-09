@@ -12,15 +12,10 @@ export function BottomSheetStore(props: BottomSheetStoreType) {
 
   return (
     <Drawer open modal={false}>
-      <DrawerContent
-        noOverlay
-        // className={`relative ${isSticky ? 'h-full' : 'h-2/3'}`}
-      >
+      <DrawerContent noOverlay className={` ${isSticky ? 'h-full' : 'h-auto'}`}>
         {showStore ? (
           <>
             <StoreCard open navigation="/stores/1" />
-            <StoreCard open navigation="/stores/1" hasActionButton />
-            <StoreCard navigation="/stores/1" />
           </>
         ) : (
           <DrawerDescription className="py-4 text-center shadow-elevation5 text-labelMedium">
