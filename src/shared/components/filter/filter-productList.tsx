@@ -22,7 +22,7 @@ export function FilterProductList() {
         dir="rtl"
         className="relative overflow-visible whitespace-nowrap border-b border-content-inverse py-3"
       >
-        <div className="flex w-max items-center gap-4 pr-4">
+        <div className="flex w-max items-center gap-3 pr-4">
           <FilterProduct activeFilterCount={activeFilterCount} />
           <Button
             onClick={() => toggleQueryParam('buy')}

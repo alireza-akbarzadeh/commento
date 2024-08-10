@@ -30,7 +30,7 @@ export function ProductList(props: ProductListPage) {
       <Link
         href={`/product/${latinName}`}
         aria-label="see the product in details"
-        className="flex h-[147px] items-center gap-8"
+        className="flex h-[125px] items-center gap-8"
       >
         <div className="flex items-center gap-8">
           <div className="relative flex size-[109px] flex-col items-center justify-center rounded-md bg-surface-tertiary p-2">
@@ -68,13 +68,12 @@ export function ProductList(props: ProductListPage) {
           </div>
           <figcaption>
             <div className="w-[229px]">
-              <div className="w-full space-y-3">
+              <div className="w-full space-y-2">
                 <h2 className="text-content-primary text-labelXSmall">
                   {title}
                 </h2>
                 <p className="text-content-primary text-labelMedium">
-                  از {priceRange}
-                  {CURRENCY.IR}
+                  از {priceRange} {CURRENCY.IR}
                 </p>
                 <p className="text-content-tertiary text-bodyXSmall">
                   {storeName}

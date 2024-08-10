@@ -9,6 +9,7 @@ type SearchFiledProps = {
   handleInputChange: (event: ChangeEvent<HTMLInputElement>) => void;
   isSearchTermEmpty: boolean;
   handleClearSearch: () => void;
+  hasBackButton?: boolean;
 };
 
 export function SearchFiled(props: SearchFiledProps) {
@@ -17,18 +18,21 @@ export function SearchFiled(props: SearchFiledProps) {
     handleInputChange,
     isSearchTermEmpty,
     searchTerm,
+    hasBackButton = true,
   } = props;
   const { back } = useRouter();
 
   return (
     <div className="my-2 flex items-center gap-[2px] px-4">
-      <Button
-        onClick={back}
-        variant="ghost"
-        className="flex-center t size-10 p-0 hover:bg-accent"
-      >
-        <Icon iconClassName="text-content-tertiary" name="arrow-right" />
-      </Button>
+      {hasBackButton && (
+        <Button
+          onClick={back}
+          variant="ghost"
+          className="flex-center t size-10 p-0 hover:bg-accent"
+        >
+          <Icon iconClassName="text-content-tertiary" name="arrow-right" />
+        </Button>
+      )}
       <div className="relative flex w-full items-center rounded-xl bg-surface-secondary py-2 pl-2.5 pr-5">
         <Icon
           iconClassName="text-content-tertiary"

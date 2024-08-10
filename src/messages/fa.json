@@ -11,7 +11,8 @@
     "frequentSearchs": "جستجو‌های پرتکرار",
     "picture": "تصاویر",
     "videos": "ویدیو‌ها",
-    "stores": "فروشگاه‌ها"
+    "stores": "فروشگاه‌ها",
+    "delete": "پاک کردن"
   },
   "HomePage": {
     "searchForProdcut": "جستجوی محصول...",

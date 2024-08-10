@@ -13,6 +13,7 @@ import {
   DrawerTrigger,
 } from '@/shared/ui';
 import { cn } from '@/shared/utils';
+import { FilterBrand } from './filter-brand';
 import { FilterContent } from './filter-content';
 
 type FilterProductProps = {
@@ -22,7 +23,10 @@ type FilterProductProps = {
 export function FilterProduct(props: FilterProductProps) {
   const { activeFilterCount } = props;
   const t = useTranslations('Globals');
-  const { clearQueryParams } = useQueryParams();
+  const { clearQueryParams, getQueryParam, toggleQueryParam } =
+    useQueryParams();
+  const tab = getQueryParam('tab');
+  const isFiltered = tab === '1';
 
   return (
     <Drawer>
@@ -45,18 +49,32 @@ export function FilterProduct(props: FilterProductProps) {
       </DrawerTrigger>
       <DrawerContent className="h-full rounded-none pb-4">
         <DrawerHeader className="flex items-center justify-between">
-          <DrawerTitle className="text-headlineSmall">
-            {t('filters')}
-          </DrawerTitle>
-          <DrawerClose>
-            <div className="flex-center size-8 rounded-full bg-surface-tertiary">
-              <Icon size="small" name="cross" />
-            </div>
-          </DrawerClose>
+          {isFiltered ? (
+            <>
+              <Icon
+                name="arrow-right"
+                onClick={() => toggleQueryParam('tab')}
+              />
+              <DrawerClose onClick={() => clearQueryParams()}>
+                {t('delete')}
+              </DrawerClose>
+            </>
+          ) : (
+            <>
+              <DrawerTitle className="text-headlineSmall">
+                {t('filters')}
+              </DrawerTitle>
+              <DrawerClose>
+                <div className="flex-center size-8 rounded-full bg-surface-tertiary">
+                  <Icon size="small" name="cross" />
+                </div>
+              </DrawerClose>
+            </>
+          )}
         </DrawerHeader>
         <DrawerDescription />
         <div className="flex h-full flex-col justify-between">
-          <FilterContent />
+          {isFiltered ? <FilterBrand /> : <FilterContent />}
           <div className="mb-2 flex items-center justify-between gap-3 px-4">
             <Button
               fullWidth
