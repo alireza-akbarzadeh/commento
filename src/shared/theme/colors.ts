@@ -19,6 +19,7 @@ export const colors = {
     secondary: '#F2F2F2',
     tertiary: '#F0F0F0',
     overlayDark: '#0000004D',
+    overlayLight: '#0000001F',
     disabled: '#F5F7F7',
     inverse: { primary: '#000', secondary: '# 323333' },
     accent: '#276EF1',

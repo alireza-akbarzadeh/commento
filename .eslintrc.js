@@ -23,6 +23,7 @@ module.exports = {
   rules: {
     // JavaScript rules
     'prefer-const': 'warn',
+    'prettier/prettier': ['off', { printWidth: 70 }],
     'no-var': 'warn',
     'no-unused-vars': 'warn',
     'no-undef': 'off',
@@ -54,7 +55,6 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn', // Checks effect dependencies
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
-    'prettier/prettier': 'warn',
     'tailwindcss/no-custom-classname': 'off',
     'testing-library/prefer-screen-queries': 'off',
     '@next/next/no-html-link-for-pages': 'off',
