@@ -30,7 +30,7 @@ export function ProductList(props: ProductListPage) {
       <Link
         href={`/product/${latinName}`}
         aria-label="see the product in details"
-        className="flex h-[125px] items-center gap-8"
+        className="h-[125 px] flex items-center gap-8"
       >
         <div className="flex items-center gap-8">
           <div className="relative flex size-[109px] flex-col items-center justify-center rounded-md bg-surface-tertiary p-2">

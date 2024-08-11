@@ -1,4 +1,5 @@
 'use client';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { Icon } from '@/shared/components';
 import {
@@ -14,6 +15,7 @@ import { Checkbox } from '@/shared/ui/checkbox';
 
 export function Features() {
   const [openSheet, setOpenSheet] = useState<boolean>(false);
+  const { push } = useRouter();
   const toggleSheet = () => setOpenSheet(!openSheet);
   return (
     <>
@@ -74,7 +76,10 @@ export function Features() {
         </DrawerContent>
       </Drawer>
       <div className="p-4">
-        <Button className="h-[52px] w-full rounded-2xl !text-content-inverse text-labellarge">
+        <Button
+          onClick={() => push('/online-stores')}
+          className="h-[52px] w-full rounded-2xl !text-content-inverse text-labellarge"
+        >
           در ۱۱ فروشگاه
         </Button>
       </div>

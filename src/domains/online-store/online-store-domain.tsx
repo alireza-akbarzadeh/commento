@@ -1,10 +1,10 @@
 import { StoreCard } from '@/shared/components';
 
-export const StoreDomains = () => {
+export const OnlineStoreDomains = () => {
   return (
     <div className="mt-2 flex flex-col gap-2">
       <StoreCard />
-      <StoreCard hasActionButton />
+      <StoreCard />
       <StoreCard />
       <StoreCard />
     </div>

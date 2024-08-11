@@ -5,8 +5,7 @@ import { Separator } from '@/shared/ui';
 
 export function StoreAppbar() {
   const { push, back } = useRouter();
-  //FIXME: Later on when we have the store id, we will change this
-  const id = '123456';
+
   return (
     <>
       <div className="flex cursor-pointer items-center justify-between px-3 py-2">
@@ -22,7 +21,7 @@ export function StoreAppbar() {
           <Icon
             name="slider-horizontal"
             size="small"
-            onClick={() => push(`/stores/offline`)}
+            onClick={() => push(`/offline-stores`)}
           />
         </div>
       </div>

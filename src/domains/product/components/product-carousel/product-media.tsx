@@ -10,26 +10,43 @@ import {
   Drawer,
   DrawerClose,
   DrawerContent,
-  DrawerTrigger,
 } from '@/shared/ui';
 import { cn } from '@/shared/utils';
+
 import { MediaThumbs } from './media-thumbs';
 
-export function ProductMedia() {
+type ProductMediaProps = {
+  tab: 'video' | 'pic' | 'none';
+  setTab: (tab: 'video' | 'pic' | 'none') => void;
+};
+
+export function ProductMedia(props: ProductMediaProps) {
+  const { tab, setTab } = props;
   const t = useTranslations('Globals');
-  const [tab, settab] = useState<'pic' | 'video' | 'none'>('pic');
+
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const { scrollSnaps, scrollTo, selectedIndex, setApi } = useBanners();
   const togglePlay = () => setIsPlaying(!isPlaying);
   return (
-    <Drawer>
-      <DrawerTrigger className="px-4">
-        <Icon name="video-two-fill" iconClassName="text-content-tertiary" />
-      </DrawerTrigger>
+    <Drawer
+      open={tab === 'video' || tab === 'pic'}
+      onClose={() => setTab('none')}
+    >
+      <div className="px-4">
+        <Icon
+          onClick={() => setTab('video')}
+          name="video-two-fill"
+          iconClassName="text-content-tertiary"
+        />
+      </div>
       <DrawerContent className="h-full rounded-none">
-        <DrawerClose className="size-10 pr-3">
-          <Icon size="small" name="arrow-right" />
-        </DrawerClose>
+        <div className="size-10 pr-3">
+          <Icon
+            onClick={() => setTab('none')}
+            size="small"
+            name="arrow-right"
+          />
+        </div>
         <div className="">
           <Carousel opts={{ direction: 'rtl' }} setApi={setApi}>
             <CarouselContent className="py-4">
@@ -78,7 +95,7 @@ export function ProductMedia() {
             <div className="flex p-4">
               <div className="rounded-2xl border border-border-primary p-1">
                 <Button
-                  onClick={() => settab('pic')}
+                  onClick={() => setTab('pic')}
                   className={cn('rounded-2xl text-labelSmall', {
                     'bg-surface-tertiary': tab === 'pic',
                   })}
@@ -87,7 +104,7 @@ export function ProductMedia() {
                   {t('picture')}
                 </Button>
                 <Button
-                  onClick={() => settab('video')}
+                  onClick={() => setTab('video')}
                   className={cn('rounded-2xl text-labelSmall', {
                     'bg-surface-tertiary': tab === 'video',
                   })}
