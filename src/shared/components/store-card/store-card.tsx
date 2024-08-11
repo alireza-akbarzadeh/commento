@@ -1,5 +1,5 @@
 'use client';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { useState } from 'react';
 import { FilterActions } from '@/domains/product/components/filters/filter-actions';
 import { Icon } from '@/shared/components';
@@ -12,28 +12,23 @@ import { StoreRate } from './store-rate';
 
 type StoreCardProps = {
   hasFilter?: boolean;
-  viewStore?: boolean;
-  viewMap?: boolean;
   open?: boolean;
   navigation?: string;
+  showStoreBtn?: boolean;
 };
 
 export function StoreCard(props: StoreCardProps) {
-  const {
-    hasFilter = false,
-    viewStore = false,
-    viewMap = false,
-    open = false,
-    navigation,
-  } = props;
+  const { hasFilter = false, open = false, navigation, showStoreBtn } = props;
   const [toggleInfo, setToggleInfo] = useState(open);
   const { push } = useRouter();
   const toggleAction = () => setToggleInfo(!toggleInfo);
+  const searchParams = useSearchParams();
+  const storeType = searchParams.get('store');
+
   return (
     <div className="bg-content-inverse py-2">
       {hasFilter && <FilterActions />}
       <StoreRate toggleInfo={toggleInfo} toggleAction={toggleAction} />
-
       <>
         <div className={cn('bg-layout my-3 px-4 pb-5 pt-2')}>
           {toggleInfo && (
@@ -79,25 +74,22 @@ export function StoreCard(props: StoreCardProps) {
           </div>
           <InfoBoxes />
           <PriceAction navigation={navigation} />
-          {viewStore && (
+          {showStoreBtn && (
             <div className="py-4">
               <Button
-                onClick={() => push('/stores')}
+                onClick={() =>
+                  push(
+                    storeType === 'online'
+                      ? '/online-stores'
+                      : '/offline-stores',
+                  )
+                }
                 fullWidth
                 className="h-[52px] rounded-xl"
               >
-                نمایش همه فروشگاه‌ها
-              </Button>
-            </div>
-          )}
-          {viewMap && (
-            <div className="py-4">
-              <Button
-                onClick={() => push('/stores')}
-                fullWidth
-                className="h-[52px] rounded-xl"
-              >
-                نمایش همه روی نقشه‌
+                {storeType === 'online'
+                  ? 'نمایش همه فروشگاه‌ها'
+                  : ' نمایش همه روی نقشه'}
               </Button>
             </div>
           )}

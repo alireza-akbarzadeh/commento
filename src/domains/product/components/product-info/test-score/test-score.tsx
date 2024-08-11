@@ -51,40 +51,40 @@ export function TestScore() {
 
             <ScoreItem
               badge={{ variant: 'positive' }}
-              from="4.5"
-              to="5"
+              from="۴.۵"
+              to="۵"
               title="ترب"
               subtitle="شهریور ۱۴۰۳"
             />
             <Separator className="border-b border-border-primary py-2" />
             <ScoreItem
               badge={{ variant: 'positive' }}
-              from="90"
-              to="100"
+              from="۹۰"
+              to="۱۰۰"
               title="دیجیکالا"
               subtitle="شهریور ۱۴۰۳"
             />
             <Separator className="border-b border-border-primary py-2" />
             <ScoreItem
               badge={{ variant: 'positive' }}
-              from="8.5"
-              to="10"
+              from="۸.۵"
+              to="۱۰"
               title="دیجیکالا"
               subtitle="شهریور ۱۴۰۳"
             />
             <Separator className="border-b border-border-primary py-2" />
             <ScoreItem
               badge={{ variant: 'warning' }}
-              from="3.4"
-              to="5"
+              from="۳.۵"
+              to="۵"
               title="دیجیکالا"
               subtitle="شهریور ۱۴۰۳"
             />
             <Separator className="border-b border-border-primary py-2" />
             <ScoreItem
               badge={{ variant: 'negative' }}
-              from="4"
-              to="10"
+              from="۴"
+              to="۱۰"
               title="دیجیکالا"
               subtitle="شهریور ۱۴۰۳"
             />
