@@ -1,13 +1,8 @@
 'use client';
-import {
-  useParams,
-  usePathname,
-  useRouter,
-  useSearchParams,
-} from 'next/navigation';
 import { useTranslations } from 'next-intl';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Icon } from '@/shared/components';
+import { useQueryParams } from '@/shared/hooks';
 import {
   Button,
   Drawer,
@@ -23,21 +18,10 @@ import { cn } from '@/shared/utils';
 
 export function FilterActions() {
   const t = useTranslations('Globals');
-  const searchParams = useSearchParams();
-  const pathname = usePathname();
-  const { replace } = useRouter();
+  const { appendQueryParam, searchParams, pathname, replace } =
+    useQueryParams();
   const isOnline = searchParams.get('store') === 'online';
-  console.log(searchParams.get('store'));
 
-  const handleChangeState = ({
-    storeType,
-  }: {
-    storeType: 'online' | 'offline';
-  }) => {
-    const params = new URLSearchParams(searchParams);
-    params.set('store', storeType);
-    replace(`${pathname}?${params.toString()}`);
-  };
   useEffect(() => {
     if (!searchParams.get('store')) {
       const params = new URLSearchParams(searchParams);
@@ -150,7 +134,13 @@ export function FilterActions() {
         </Drawer>
         <div className="flex h-10 w-full rounded-2xl border-[0.5px] border-border-primary p-1">
           <Button
-            onClick={() => handleChangeState({ storeType: 'online' })}
+            onClick={() =>
+              appendQueryParam({
+                key: 'store',
+                value: 'online',
+                options: { scroll: false },
+              })
+            }
             className={cn('h-8 w-full rounded-2xl', {
               'bg-surface-tertiary': isOnline,
             })}
@@ -159,7 +149,13 @@ export function FilterActions() {
             ۱۱ اینترنتی
           </Button>
           <Button
-            onClick={() => handleChangeState({ storeType: 'offline' })}
+            onClick={() =>
+              appendQueryParam({
+                key: 'store',
+                value: 'offline',
+                options: { scroll: false },
+              })
+            }
             className={cn('h-8 w-full rounded-2xl', {
               'bg-surface-tertiary': !isOnline,
             })}
