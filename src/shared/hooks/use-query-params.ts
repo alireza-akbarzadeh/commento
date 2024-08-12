@@ -1,7 +1,8 @@
 // useQueryParams.ts
-'use client';
-import { NavigateOptions } from 'next/dist/shared/lib/app-router-context.shared-runtime';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+"use client";
+
+import { NavigateOptions } from "next/dist/shared/lib/app-router-context.shared-runtime";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 type AppendQueryParam = {
   key: string;
@@ -32,7 +33,7 @@ export const useQueryParams = () => {
     if (params.has(key)) {
       params.delete(key);
     } else {
-      params.set(key, 'true');
+      params.set(key, "true");
     }
     replace(`${pathname}?${params.toString()}`);
   };

@@ -1,1 +1,1 @@
-export { GET, POST } from '@/shared/config/auth/auth';
+export { GET, POST } from "@/shared/config/auth/auth";

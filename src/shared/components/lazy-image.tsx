@@ -1,13 +1,16 @@
-'use client';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+"use client";
 
-import { useState } from 'react';
+import "react-lazy-load-image-component/src/effects/blur.css";
+
+import { useState } from "react";
 import {
   LazyLoadImage,
   LazyLoadImageProps,
-} from 'react-lazy-load-image-component';
-import { Skeleton } from '@/shared/ui';
-import { cn } from '../utils';
+} from "react-lazy-load-image-component";
+
+import { Skeleton } from "@/shared/ui";
+
+import { cn } from "../utils";
 
 export type LazyImageProps = LazyLoadImageProps & {
   quality?: number;
@@ -35,15 +38,15 @@ export const LazyImage = (props: LazyImageProps): JSX.Element => {
   return (
     <div
       style={{
-        position: 'relative',
-        width: fill ? '100%' : width,
-        height: fill ? '100%' : height,
+        position: "relative",
+        width: fill ? "100%" : width,
+        height: fill ? "100%" : height,
       }}
     >
-      {loading && <Skeleton className={cn('size-full', skeletonClass)} />}
+      {loading && <Skeleton className={cn("size-full", skeletonClass)} />}
       <LazyLoadImage
-        width={fill ? '100%' : width || ''}
-        height={fill ? '100%' : height || ''}
+        width={fill ? "100%" : width || ""}
+        height={fill ? "100%" : height || ""}
         effect="blur"
         src={src}
         decoding="async"

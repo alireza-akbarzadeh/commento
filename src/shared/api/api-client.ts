@@ -1,5 +1,6 @@
-import { AxiosRequestConfig } from 'axios';
-import { axiosInstance } from './custom-instance';
+import { AxiosRequestConfig } from "axios";
+
+import { axiosInstance } from "./custom-instance";
 
 export interface FetchResponse<T> {
   data: T[];
@@ -23,7 +24,7 @@ class APICLient<T> {
   // eslint-disable-next-line class-methods-use-this
   post = (data: T) =>
     axiosInstance
-      .post<FetchResponse<T>>('/genres', data)
+      .post<FetchResponse<T>>("/genres", data)
       .then((res) => res.data);
 }
 

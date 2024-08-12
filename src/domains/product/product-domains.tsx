@@ -8,7 +8,7 @@ import {
   RowInfo,
   SimilarProduct,
   StoreInfo,
-} from './components';
+} from "./components";
 
 export function ProductDomain() {
   return (

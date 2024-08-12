@@ -1,12 +1,13 @@
-'use client';
+"use client";
 
 import {
   FilterProductList,
   NoResult,
   ProductList,
   SearchFiled,
-} from '@/shared/components';
-import { useProductListController } from './useProductListController';
+} from "@/shared/components";
+
+import { useProductListController } from "./useProductListController";
 
 export function ProductListDomain() {
   const { handleClearSearch, handleInputChange, searchResults, searchTerm } =

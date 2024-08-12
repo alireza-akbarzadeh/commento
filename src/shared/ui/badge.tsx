@@ -1,28 +1,29 @@
-import { cva, type VariantProps } from 'class-variance-authority';
-import * as React from 'react';
+import { cva, type VariantProps } from "class-variance-authority";
+import * as React from "react";
 
-import { cn } from '@/shared/utils';
+import { cn } from "@/shared/utils";
+
 const badgeVariants = cva(
-  'inline-flex items-center rounded-lg border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2',
+  "inline-flex items-center rounded-lg border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
   {
     variants: {
       variant: {
         default:
-          'border-transparent bg-primary text-primary-foreground hover:bg-primary/80',
+          "border-transparent bg-primary text-primary-foreground hover:bg-primary/80",
         secondary:
-          'border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80',
+          "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
         positive:
-          'border-transparent bg-surface-positiveLight text-content-positive',
+          "border-transparent bg-surface-positiveLight text-content-positive",
         negative:
-          'border-transparent bg-surface-negativeLight text-content-negative',
-        warning: 'border-transparent bg-surface-warning text-content-primary',
+          "border-transparent bg-surface-negativeLight text-content-negative",
+        warning: "border-transparent bg-surface-warning text-content-primary",
         destructive:
-          'border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80',
-        outline: 'text-foreground',
+          "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
+        outline: "text-foreground",
       },
     },
     defaultVariants: {
-      variant: 'default',
+      variant: "default",
     },
   },
 );

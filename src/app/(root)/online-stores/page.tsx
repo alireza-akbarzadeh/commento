@@ -1,5 +1,5 @@
-import { Suspense } from 'react';
-import { OnlineStoreDomains, StoreAppbar } from '@/domains';
+import { Suspense } from "react";
+import { OnlineStoreDomains, StoreAppbar } from "@/domains";
 
 export default function StorePage() {
   return (

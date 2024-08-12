@@ -1,11 +1,12 @@
-'use client';
+"use client";
 
-import { useRef, useState } from 'react';
-import { Icon, StoreCard } from '@/shared/components';
-import { useIsomorphicLayoutEffect, useScroll } from '@/shared/hooks';
-import { useIntersectionObserver } from '@/shared/hooks/use-intersection-observer';
-import { Button, Drawer, DrawerContent } from '@/shared/ui';
-import { cn } from '@/shared/utils';
+import { useRef, useState } from "react";
+
+import { Icon, StoreCard } from "@/shared/components";
+import { useIsomorphicLayoutEffect, useScroll } from "@/shared/hooks";
+import { useIntersectionObserver } from "@/shared/hooks/use-intersection-observer";
+import { Button, Drawer, DrawerContent } from "@/shared/ui";
+import { cn } from "@/shared/utils";
 
 type BottomSheetStoreType = {
   showStore: boolean;
@@ -23,7 +24,7 @@ export function BottomSheetStore(props: BottomSheetStoreType) {
 
   const entry = useIntersectionObserver(thirdCardRef, {
     threshold: 0.1,
-    rootMargin: '0px',
+    rootMargin: "0px",
   });
 
   useIsomorphicLayoutEffect(() => {
@@ -55,9 +56,9 @@ export function BottomSheetStore(props: BottomSheetStoreType) {
     >
       <DrawerContent
         noOverlay
-        className={cn('m-auto h-auto', {
-          'm-auto h-4/5': activeSnapPoint === 1,
-          'mx-4 sm:m-auto': activeSnapPoint !== 1 && showStore,
+        className={cn("m-auto h-auto", {
+          "m-auto h-4/5": activeSnapPoint === 1,
+          "mx-4 sm:m-auto": activeSnapPoint !== 1 && showStore,
         })}
       >
         <div className="h-full overflow-y-auto">

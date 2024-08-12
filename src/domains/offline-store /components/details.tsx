@@ -1,13 +1,15 @@
-'use client';
-import Image from 'next/image';
-import { useRouter } from 'next/navigation';
-import { Icon, LazyImage } from '@/shared/components';
-import { CURRENCY } from '@/shared/constant';
-import { Badge, Button, Separator } from '@/shared/ui';
+"use client";
+
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+
+import { Icon, LazyImage } from "@/shared/components";
+import { CURRENCY } from "@/shared/constant";
+import { Badge, Button, Separator } from "@/shared/ui";
 
 export function StoreDetails() {
   const { back } = useRouter();
-  const items = ['ارسال رایگان ', 'اوپنباکس', 'تحویل فوری ', 'پرداخت در محل'];
+  const items = ["ارسال رایگان ", "اوپنباکس", "تحویل فوری ", "پرداخت در محل"];
 
   return (
     <div className="h-full bg-content-inverse">
@@ -75,9 +77,9 @@ export function StoreDetails() {
               گوشی موبایل اپل مدل iPhone 13 CH دو سیم‌ کارت
             </h2>
             <p className="pb-[9px] pt-px text-content-primary text-headlineSmall">
-              <span className={'text-bodyXXSmall'}>از</span>
+              <span className={"text-bodyXXSmall"}>از</span>
               ۱‍۶۷,۰۰۰
-              <span className={'mr-1 text-labelXSmall'}>{CURRENCY.IR}</span>
+              <span className={"mr-1 text-labelXSmall"}>{CURRENCY.IR}</span>
             </p>
           </div>
         </div>

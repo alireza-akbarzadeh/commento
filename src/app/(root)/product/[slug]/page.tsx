@@ -1,4 +1,4 @@
-import { ProductDomain } from '@/domains';
+import { ProductDomain } from "@/domains";
 
 export default function ProductDetailsPage() {
   return <ProductDomain />;

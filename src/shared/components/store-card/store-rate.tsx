@@ -1,5 +1,6 @@
-import { Icon } from '@/shared/components';
-import { cn } from '@/shared/utils';
+import { Icon } from "@/shared/components";
+import { cn } from "@/shared/utils";
+
 type StoreRateProps = {
   toggleAction?: () => void;
   toggleInfo?: boolean;
@@ -20,8 +21,8 @@ export function StoreRate(props: StoreRateProps) {
         <Icon
           name="chevron-down"
           onClick={toggleAction}
-          iconClassName={cn('text-content-tertiary', {
-            'rotate-180': toggleInfo,
+          iconClassName={cn("text-content-tertiary", {
+            "rotate-180": toggleInfo,
           })}
         />
       </div>

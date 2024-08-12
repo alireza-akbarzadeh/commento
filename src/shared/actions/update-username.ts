@@ -1,6 +1,7 @@
-'use server';
+"use server";
 
-import { revalidatePath } from 'next/cache';
+import { revalidatePath } from "next/cache";
+
 // import { userNameSchema } from '@/shared/schemas/user';
 // import {auth} from '@/shared/config'
 
@@ -29,11 +30,11 @@ export async function updateUserName(userId: string, data: FormData) {
     //   },
     // });
 
-    revalidatePath('/dashboard/settings');
-    return { status: 'success' };
+    revalidatePath("/dashboard/settings");
+    return { status: "success" };
   } catch (error) {
     // console.log(error)
-    return { status: 'error' };
+    return { status: "error" };
   }
 }
 

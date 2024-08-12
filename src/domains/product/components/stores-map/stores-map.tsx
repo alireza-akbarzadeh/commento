@@ -1,6 +1,7 @@
-import React from 'react';
-import { Icon } from '@/shared/components';
-import { Button } from '@/shared/ui';
+import React from "react";
+
+import { Icon } from "@/shared/components";
+import { Button } from "@/shared/ui";
 
 export function StoresMap() {
   return (

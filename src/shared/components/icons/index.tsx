@@ -1,11 +1,13 @@
-'use client';
-import IcoMoon from 'react-icomoon';
+"use client";
 
-import { cn } from '@/shared/utils';
-import { iconNames, IconType } from './icon-names';
-import iconSet from './selection.json';
+import IcoMoon from "react-icomoon";
 
-type IconSize = 'xxSmall' | 'xSmall' | 'small' | 'medium' | 'large' | 'xLarge';
+import { cn } from "@/shared/utils";
+
+import { iconNames, IconType } from "./icon-names";
+import iconSet from "./selection.json";
+
+type IconSize = "xxSmall" | "xSmall" | "small" | "medium" | "large" | "xLarge";
 type IconProps = {
   size?: IconSize | number;
   name: IconType;
@@ -28,7 +30,7 @@ const sizes: Record<IconSize, number> = {
 const Icon = (props: IconProps): JSX.Element => {
   const {
     name,
-    size = 'medium',
+    size = "medium",
     onClick,
     disabled = false,
     parentClassName,
@@ -42,9 +44,9 @@ const Icon = (props: IconProps): JSX.Element => {
         className={cn(`text-content-primary ${iconClassName}`)}
         iconSet={iconSet}
         icon={name}
-        size={typeof size !== 'number' ? sizes[size] : size}
+        size={typeof size !== "number" ? sizes[size] : size}
         style={{
-          cursor: disabled ? 'not-allowed !important' : 'pointer',
+          cursor: disabled ? "not-allowed !important" : "pointer",
           ...style,
         }}
         onClick={(event) => {

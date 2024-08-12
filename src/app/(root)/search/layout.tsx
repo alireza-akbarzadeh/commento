@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren } from "react";
 
 function SearchLayout(props: PropsWithChildren) {
   const { children } = props;

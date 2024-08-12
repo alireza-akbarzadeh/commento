@@ -1,36 +1,36 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
+import type { Meta, StoryObj } from "@storybook/react";
+import { fn } from "@storybook/test";
 
-import { AvatarLoading } from './avatar-loading';
-import { LoadingDots } from './dots';
-import { ExampleLoading } from './example-loading';
-import { LoadingGear } from './gear';
-import { LoadingPuls } from './puls';
-import { Spin } from './spin';
-import { Throbbing } from './throbbing';
+import { AvatarLoading } from "./avatar-loading";
+import { LoadingDots } from "./dots";
+import { ExampleLoading } from "./example-loading";
+import { LoadingGear } from "./gear";
+import { LoadingPuls } from "./puls";
+import { Spin } from "./spin";
+import { Throbbing } from "./throbbing";
 
 type ButtonPageProps = React.ComponentProps<typeof ExampleLoading> & {};
 
 const meta = {
   component: ExampleLoading,
-  title: 'Loading/ExampleLoading',
+  title: "Loading/ExampleLoading",
   render: ({ ...args }) => (
     <>
       <ExampleLoading {...args} />
     </>
   ),
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   // decorators: [
   //       (story) => <Card><CardContent>{story()}</CardContent></Card>,
   // ],
-  args: { children: 'button' },
+  args: { children: "button" },
   argTypes: {
-    children: { control: 'text' },
+    children: { control: "text" },
     onClick: { action: fn() },
   },
   parameters: {
     controls: { expanded: true },
-    layout: 'centered',
+    layout: "centered",
   },
 } satisfies Meta<ButtonPageProps>;
 

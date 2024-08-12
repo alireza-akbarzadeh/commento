@@ -1,7 +1,9 @@
-'use client';
-import { useRouter } from 'next/navigation';
-import { Icon } from '@/shared/components';
-import { Separator } from '@/shared/ui';
+"use client";
+
+import { useRouter } from "next/navigation";
+
+import { Icon } from "@/shared/components";
+import { Separator } from "@/shared/ui";
 
 export function StoreAppbar() {
   const { push, back } = useRouter();

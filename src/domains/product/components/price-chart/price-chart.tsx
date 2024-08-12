@@ -1,4 +1,5 @@
-'use client';
+"use client";
+
 import {
   CartesianGrid,
   Dot,
@@ -7,12 +8,14 @@ import {
   Tooltip,
   XAxis,
   YAxis,
-} from 'recharts';
-import { Icon } from '@/shared/components';
-import { ChartConfig, ChartContainer } from '@/shared/ui';
-import { formatNumberToPersian } from '@/shared/utils';
-import { ChartTooltip } from './chart-tooltip';
-import { SortDay } from './sort-day';
+} from "recharts";
+
+import { Icon } from "@/shared/components";
+import { ChartConfig, ChartContainer } from "@/shared/ui";
+import { formatNumberToPersian } from "@/shared/utils";
+
+import { ChartTooltip } from "./chart-tooltip";
+import { SortDay } from "./sort-day";
 
 interface ChartData {
   month: string;
@@ -21,28 +24,28 @@ interface ChartData {
 }
 
 const chartData: ChartData[] = [
-  { month: 'فروردین', price: 2600000, fill: 'var(--color-chrome)' },
-  { month: 'اردیبهشت', price: 2100000, fill: 'var(--color-safari)' },
-  { month: 'خرداد', price: 2800000, fill: 'var(--color-firefox)' },
-  { month: 'تیر', price: 2100000, fill: 'var(--color-edge)' },
+  { month: "فروردین", price: 2600000, fill: "var(--color-chrome)" },
+  { month: "اردیبهشت", price: 2100000, fill: "var(--color-safari)" },
+  { month: "خرداد", price: 2800000, fill: "var(--color-firefox)" },
+  { month: "تیر", price: 2100000, fill: "var(--color-edge)" },
 ];
 
 const chartConfig = {
   price: {
-    label: '۱۲ اردیبهشت',
-    color: '#2C2C2E',
+    label: "۱۲ اردیبهشت",
+    color: "#2C2C2E",
   },
   edge: {
-    label: 'Edge',
-    color: '#000',
+    label: "Edge",
+    color: "#000",
   },
   safari: {
-    label: 'Safari',
-    color: '#004CC4',
+    label: "Safari",
+    color: "#004CC4",
   },
   firefox: {
-    label: 'Firefox',
-    color: '#048848',
+    label: "Firefox",
+    color: "#048848",
   },
 } satisfies ChartConfig;
 
@@ -58,7 +61,7 @@ export function PriceChart() {
       <SortDay />
       <ChartContainer className="mt-4" config={chartConfig}>
         <LineChart accessibilityLayer width={400} data={chartData}>
-          <CartesianGrid vertical={false} stroke={'#EAEAEA'} />
+          <CartesianGrid vertical={false} stroke={"#EAEAEA"} />
           <XAxis
             dataKey="month"
             tickLine={false}
@@ -69,13 +72,13 @@ export function PriceChart() {
                 x={x}
                 y={y}
                 style={{
-                  fill: '#636366',
-                  fontSize: '12px',
+                  fill: "#636366",
+                  fontSize: "12px",
                   fontWeight: 400,
-                  fontFamily: 'Vazirmatn-Regular',
+                  fontFamily: "Vazirmatn-Regular",
                 }}
               >
-                {payload.value || 'shet'}
+                {payload.value || "shet"}
               </text>
             )}
           />
@@ -90,10 +93,10 @@ export function PriceChart() {
                   x={x}
                   y={y}
                   style={{
-                    fill: '#A9A9A9',
-                    fontSize: '12px',
+                    fill: "#A9A9A9",
+                    fontSize: "12px",
                     fontWeight: 400,
-                    fontFamily: 'Vazirmatn-Regular',
+                    fontFamily: "Vazirmatn-Regular",
                   }}
                 >
                   {payload.value > 0

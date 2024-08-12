@@ -1,10 +1,12 @@
-'use client';
-import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
-import React from 'react';
-import { Icon, IconType } from '@/shared/components';
-import { SearchItemListType } from '@/shared/config/mock-data';
-import { Separator } from '@/shared/ui';
+"use client";
+
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
+import React from "react";
+
+import { Icon, IconType } from "@/shared/components";
+import { SearchItemListType } from "@/shared/config/mock-data";
+import { Separator } from "@/shared/ui";
 
 type SearchItemProps = SearchItemListType & {
   iconName: IconType;
@@ -14,7 +16,7 @@ type SearchItemProps = SearchItemListType & {
 export function SearchItem(props: SearchItemProps) {
   const { iconName, subtitle, title, activeBorder, latinName } = props;
   const params = useSearchParams();
-  const query = params.get('query') || '';
+  const query = params.get("query") || "";
 
   const linkHref = query
     ? { pathname: `/product-list/${latinName}`, query: { query } }

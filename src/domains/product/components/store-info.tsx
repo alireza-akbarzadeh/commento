@@ -1,4 +1,4 @@
-import { StoreCard } from '@/shared/components';
+import { StoreCard } from "@/shared/components";
 
 export function StoreInfo() {
   return (

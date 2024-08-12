@@ -1,8 +1,10 @@
-'use client';
-import { useEffect, useRef } from 'react';
-import { LazyImage, PlayButton } from '@/shared/components';
-import { ScrollArea, ScrollBar } from '@/shared/ui';
-import { cn } from '@/shared/utils';
+"use client";
+
+import { useEffect, useRef } from "react";
+
+import { LazyImage, PlayButton } from "@/shared/components";
+import { ScrollArea, ScrollBar } from "@/shared/ui";
+import { cn } from "@/shared/utils";
 
 type SliderProps = {
   scrollSnaps: number[];
@@ -27,7 +29,7 @@ export function MediaThumbs(props: SliderProps) {
     const container = containerRef.current;
     if (container && scrollSnaps.length) {
       const thumbnailsContainer = container.querySelector(
-        '.flex-row',
+        ".flex-row",
       ) as HTMLElement;
       const activeThumbnail = thumbnailsContainer.children[
         selectedIndex
@@ -40,7 +42,7 @@ export function MediaThumbs(props: SliderProps) {
 
         thumbnailsContainer.scrollTo({
           left: thumbnailsContainer.scrollWidth - containerWidth - scrollLeft,
-          behavior: 'smooth',
+          behavior: "smooth",
         });
       }
     }
@@ -49,7 +51,7 @@ export function MediaThumbs(props: SliderProps) {
   return (
     <ScrollArea
       className="whitespace-nowrap border-b border-white bg-surface-primary py-2"
-      style={{ width: '100%', maxWidth: '600px' }} // Adjust maxWidth as needed
+      style={{ width: "100%", maxWidth: "600px" }} // Adjust maxWidth as needed
       type="auto"
       dir="rtl"
       ref={containerRef}
@@ -58,14 +60,14 @@ export function MediaThumbs(props: SliderProps) {
         {scrollSnaps?.map((_, index) => (
           <div
             key={index}
-            className={cn('relative flex-none', 'w-[120px]', {
-              'embla-thumbs__slide--selected': index === selectedIndex,
+            className={cn("relative flex-none", "w-[120px]", {
+              "embla-thumbs__slide--selected": index === selectedIndex,
             })}
           >
             <button
               className={cn(
-                'block w-full cursor-pointer bg-transparent p-0 opacity-20 transition-opacity duration-200',
-                { 'opacity-100': index === selectedIndex },
+                "block w-full cursor-pointer bg-transparent p-0 opacity-20 transition-opacity duration-200",
+                { "opacity-100": index === selectedIndex },
               )}
               aria-label="slider-action"
               title="slider-action"

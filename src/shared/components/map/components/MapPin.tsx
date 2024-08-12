@@ -1,11 +1,11 @@
-import Image, { ImageProps } from 'next/image';
+import Image, { ImageProps } from "next/image";
 
-import { markerDefaultOptions } from '../constants';
-import { MarkerType } from '../map-types';
+import { markerDefaultOptions } from "../constants";
+import { MarkerType } from "../map-types";
 
 type MapPinProps = {
   markerProps:
-    | Partial<Pick<ImageProps, 'src' | 'width' | 'height'>>
+    | Partial<Pick<ImageProps, "src" | "width" | "height">>
     | undefined;
 };
 
@@ -19,7 +19,7 @@ export const MapPin = (props: MapPinProps) => {
   return (
     <div
       style={{
-        position: 'absolute',
+        position: "absolute",
         top: `calc(50% - ${markerOptions.height}px)`,
         left: `calc(50% - ${+(markerOptions.width ?? 0) / 2}px)`,
         height: markerOptions?.height,

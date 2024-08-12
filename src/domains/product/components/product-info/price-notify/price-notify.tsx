@@ -1,5 +1,5 @@
-import { Icon } from '@/shared/components';
-import { CURRENCY } from '@/shared/constant';
+import { Icon } from "@/shared/components";
+import { CURRENCY } from "@/shared/constant";
 import {
   Button,
   Drawer,
@@ -10,7 +10,7 @@ import {
   DrawerTrigger,
   Input,
   Separator,
-} from '@/shared/ui';
+} from "@/shared/ui";
 
 export function PriceNotify() {
   return (

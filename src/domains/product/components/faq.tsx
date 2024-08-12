@@ -1,5 +1,6 @@
-import React from 'react';
-import { Icon } from '@/shared/components';
+import React from "react";
+
+import { Icon } from "@/shared/components";
 
 export function FAQ() {
   return (

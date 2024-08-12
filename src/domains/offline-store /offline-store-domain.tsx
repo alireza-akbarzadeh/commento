@@ -1,6 +1,8 @@
-'use client';
-import { useState } from 'react';
-import { BottomSheetStore, StoreMap } from './components';
+"use client";
+
+import { useState } from "react";
+
+import { BottomSheetStore, StoreMap } from "./components";
 
 export function OfflineStoresDomain() {
   const [showStore, setShowStore] = useState(false);

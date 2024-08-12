@@ -1,10 +1,11 @@
-import Axios, { AxiosError, AxiosRequestConfig } from 'axios';
-import { signOut } from 'next-auth/react';
-import { toast } from '../ui';
+import Axios, { AxiosError, AxiosRequestConfig } from "axios";
+import { signOut } from "next-auth/react";
+
+import { toast } from "../ui";
 
 export const ApiConstants = {
-  'client-name': process.env.NEXT_PUBLIC_CLIENT_NAME || '',
-  'client-version': '2.2.2',
+  "client-name": process.env.NEXT_PUBLIC_CLIENT_NAME || "",
+  "client-version": "2.2.2",
 };
 
 const axiosInstance = Axios.create({
@@ -23,13 +24,13 @@ axiosInstance.interceptors.request.use(
       //   if (session?.accessToken) {
       //     config.headers.authorization = `${tokenType} ${session?.accessToken}`;
       //   }
-      const xRealIP = config.headers['x-real-ip'];
-      const xForwardedFor = config.headers['x-forwarded-for'];
-      config.headers['client-name'] = ApiConstants['client-name'];
-      config.headers['client-version'] = ApiConstants['client-version'];
+      const xRealIP = config.headers["x-real-ip"];
+      const xForwardedFor = config.headers["x-forwarded-for"];
+      config.headers["client-name"] = ApiConstants["client-name"];
+      config.headers["client-version"] = ApiConstants["client-version"];
 
-      if (xRealIP) config.headers['x-real-ip'] = xRealIP;
-      if (xForwardedFor) config.headers['x-forwarded-for'] = xForwardedFor;
+      if (xRealIP) config.headers["x-real-ip"] = xRealIP;
+      if (xForwardedFor) config.headers["x-forwarded-for"] = xForwardedFor;
     }
 
     return config;
@@ -53,18 +54,18 @@ const customInstance = <T>(
       return data;
     })
     .catch((error) => {
-      if (typeof window !== 'undefined' && Number(error?.response?.status)) {
+      if (typeof window !== "undefined" && Number(error?.response?.status)) {
         const expectedError =
           error?.response?.status &&
           Number(error?.response?.status) >= 400 &&
           Number(error?.response?.status) < 500;
 
         if (error?.response?.status === 401) {
-          signOut({ callbackUrl: '/' });
+          signOut({ callbackUrl: "/" });
         } else if (expectedError) {
           if (
-            error?.code === 'exception' ||
-            error?.code === 'ERR_BAD_REQUEST'
+            error?.code === "exception" ||
+            error?.code === "ERR_BAD_REQUEST"
           ) {
             toast(error?.response?.data?.messages?.[0]?.message);
           }

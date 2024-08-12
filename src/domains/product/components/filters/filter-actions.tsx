@@ -1,8 +1,10 @@
-'use client';
-import { useTranslations } from 'next-intl';
-import { useEffect } from 'react';
-import { Icon } from '@/shared/components';
-import { useQueryParams } from '@/shared/hooks';
+"use client";
+
+import { useTranslations } from "next-intl";
+import { useEffect } from "react";
+
+import { Icon } from "@/shared/components";
+import { useQueryParams } from "@/shared/hooks";
 import {
   Button,
   Drawer,
@@ -13,19 +15,19 @@ import {
   DrawerTrigger,
   Separator,
   Switch,
-} from '@/shared/ui';
-import { cn } from '@/shared/utils';
+} from "@/shared/ui";
+import { cn } from "@/shared/utils";
 
 export function FilterActions() {
-  const t = useTranslations('Globals');
+  const t = useTranslations("Globals");
   const { appendQueryParam, searchParams, pathname, replace } =
     useQueryParams();
-  const isOnline = searchParams.get('store') === 'online';
+  const isOnline = searchParams.get("store") === "online";
 
   useEffect(() => {
-    if (!searchParams.get('store')) {
+    if (!searchParams.get("store")) {
       const params = new URLSearchParams(searchParams);
-      params.set('store', 'online');
+      params.set("store", "online");
       replace(`${pathname}?${params.toString()}`);
     }
   }, [searchParams, pathname, replace]);
@@ -33,7 +35,7 @@ export function FilterActions() {
   return (
     <div className="px-4">
       <div className="py-2">
-        <p className="text-content-primary text-labellarge">{t('stores')}</p>
+        <p className="text-content-primary text-labellarge">{t("stores")}</p>
       </div>
       <div className="flex items-center gap-3 py-2">
         <Drawer>
@@ -45,7 +47,7 @@ export function FilterActions() {
           <DrawerContent className="h-full rounded-none pb-4">
             <DrawerHeader className="flex items-center justify-between">
               <DrawerTitle className="text-headlineSmall">
-                {t('filters')}
+                {t("filters")}
               </DrawerTitle>
               <DrawerClose className="size-8 rounded-full bg-surface-tertiary">
                 <Icon size="small" name="cross" />
@@ -136,13 +138,13 @@ export function FilterActions() {
           <Button
             onClick={() =>
               appendQueryParam({
-                key: 'store',
-                value: 'online',
+                key: "store",
+                value: "online",
                 options: { scroll: false },
               })
             }
-            className={cn('h-8 w-full rounded-2xl', {
-              'bg-surface-tertiary': isOnline,
+            className={cn("h-8 w-full rounded-2xl", {
+              "bg-surface-tertiary": isOnline,
             })}
             variant="ghost"
           >
@@ -151,13 +153,13 @@ export function FilterActions() {
           <Button
             onClick={() =>
               appendQueryParam({
-                key: 'store',
-                value: 'offline',
+                key: "store",
+                value: "offline",
                 options: { scroll: false },
               })
             }
-            className={cn('h-8 w-full rounded-2xl', {
-              'bg-surface-tertiary': !isOnline,
+            className={cn("h-8 w-full rounded-2xl", {
+              "bg-surface-tertiary": !isOnline,
             })}
             variant="ghost"
           >

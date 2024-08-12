@@ -1,5 +1,5 @@
-import { Icon } from '@/shared/components';
-import { Button } from '@/shared/ui';
+import { Icon } from "@/shared/components";
+import { Button } from "@/shared/ui";
 
 export function CategoryRow() {
   return (

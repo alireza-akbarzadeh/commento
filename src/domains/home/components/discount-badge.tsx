@@ -1,5 +1,5 @@
-import { Icon } from '@/shared/components';
-import { cn } from '@/shared/utils';
+import { Icon } from "@/shared/components";
+import { cn } from "@/shared/utils";
 
 type DiscountBadgePropsType = {
   discount: string;
@@ -11,7 +11,7 @@ export function DiscountBadge(props: DiscountBadgePropsType) {
   return (
     <div
       className={cn(
-        'bg-surface-gradient-brand flex-center absolute top-2 h-[20px] w-[39px] -translate-x-8 rounded-sm px-[21px]',
+        "bg-surface-gradient-brand flex-center absolute top-2 h-[20px] w-[39px] -translate-x-8 rounded-sm px-[21px]",
         className,
       )}
     >

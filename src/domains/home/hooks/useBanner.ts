@@ -1,5 +1,6 @@
-import { useCallback, useEffect, useState } from 'react';
-import { CarouselApi } from '@/shared/ui';
+import { useCallback, useEffect, useState } from "react";
+
+import { CarouselApi } from "@/shared/ui";
 
 export function useBanners() {
   const [embla, setApi] = useState<CarouselApi>();
@@ -21,7 +22,7 @@ export function useBanners() {
     if (!embla) return;
     onSelect();
     setScrollSnaps(embla.scrollSnapList());
-    embla.on('select', onSelect);
+    embla.on("select", onSelect);
   }, [embla, setScrollSnaps, onSelect]);
 
   return { setApi, scrollTo, selectedIndex, scrollSnaps };

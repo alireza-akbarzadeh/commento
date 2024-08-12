@@ -1,5 +1,5 @@
-import { ReportProblem } from './report-problem';
-import { ScoreDetails } from './score-details';
+import { ReportProblem } from "./report-problem";
+import { ScoreDetails } from "./score-details";
 
 export function ActionButtons() {
   return (

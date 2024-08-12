@@ -6,7 +6,7 @@ import {
   Favorites,
   ResentViews,
   TopSellers,
-} from './containers';
+} from "./containers";
 
 export function HomeDomains() {
   return (

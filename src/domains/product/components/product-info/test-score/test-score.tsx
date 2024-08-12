@@ -1,4 +1,4 @@
-import { Icon } from '@/shared/components';
+import { Icon } from "@/shared/components";
 import {
   Alert,
   AlertDescription,
@@ -11,8 +11,9 @@ import {
   DrawerTitle,
   DrawerTrigger,
   Separator,
-} from '@/shared/ui';
-import { ScoreItem } from './score-item';
+} from "@/shared/ui";
+
+import { ScoreItem } from "./score-item";
 
 export function TestScore() {
   return (
@@ -50,7 +51,7 @@ export function TestScore() {
             </div>
 
             <ScoreItem
-              badge={{ variant: 'positive' }}
+              badge={{ variant: "positive" }}
               from="۴.۵"
               to="۵"
               title="ترب"
@@ -58,7 +59,7 @@ export function TestScore() {
             />
             <Separator className="border-b border-border-primary py-2" />
             <ScoreItem
-              badge={{ variant: 'positive' }}
+              badge={{ variant: "positive" }}
               from="۹۰"
               to="۱۰۰"
               title="دیجیکالا"
@@ -66,7 +67,7 @@ export function TestScore() {
             />
             <Separator className="border-b border-border-primary py-2" />
             <ScoreItem
-              badge={{ variant: 'positive' }}
+              badge={{ variant: "positive" }}
               from="۸.۵"
               to="۱۰"
               title="دیجیکالا"
@@ -74,7 +75,7 @@ export function TestScore() {
             />
             <Separator className="border-b border-border-primary py-2" />
             <ScoreItem
-              badge={{ variant: 'warning' }}
+              badge={{ variant: "warning" }}
               from="۳.۵"
               to="۵"
               title="دیجیکالا"
@@ -82,7 +83,7 @@ export function TestScore() {
             />
             <Separator className="border-b border-border-primary py-2" />
             <ScoreItem
-              badge={{ variant: 'negative' }}
+              badge={{ variant: "negative" }}
               from="۴"
               to="۱۰"
               title="دیجیکالا"

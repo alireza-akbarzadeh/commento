@@ -1,4 +1,4 @@
-import { Icon } from '@/shared/components';
+import { Icon } from "@/shared/components";
 import {
   Drawer,
   DrawerClose,
@@ -7,8 +7,9 @@ import {
   DrawerTitle,
   DrawerTrigger,
   Separator,
-} from '@/shared/ui';
-import { SpecificItem } from './specific-item';
+} from "@/shared/ui";
+
+import { SpecificItem } from "./specific-item";
 
 export function SpecificTech() {
   return (

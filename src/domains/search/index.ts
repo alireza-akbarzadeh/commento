@@ -1,1 +1,1 @@
-export { SearchDomian } from './search-domains';
+export { SearchDomian } from "./search-domains";

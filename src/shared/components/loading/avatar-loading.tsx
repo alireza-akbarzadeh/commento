@@ -1,4 +1,4 @@
-import { LazyImage } from '@/shared/components';
+import { LazyImage } from "@/shared/components";
 
 export function AvatarLoading() {
   return (

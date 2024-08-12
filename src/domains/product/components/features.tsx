@@ -1,7 +1,9 @@
-'use client';
-import { useRouter } from 'next/navigation';
-import { useState } from 'react';
-import { Icon } from '@/shared/components';
+"use client";
+
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+
+import { Icon } from "@/shared/components";
 import {
   Button,
   Drawer,
@@ -10,8 +12,8 @@ import {
   DrawerTitle,
   ScrollArea,
   ScrollBar,
-} from '@/shared/ui';
-import { Checkbox } from '@/shared/ui/checkbox';
+} from "@/shared/ui";
+import { Checkbox } from "@/shared/ui/checkbox";
 
 export function Features() {
   const [openSheet, setOpenSheet] = useState<boolean>(false);
@@ -32,10 +34,10 @@ export function Features() {
               className="flex h-12 flex-col items-start rounded-md p-2 ring-0 focus-visible:ring-0 focus-visible:ring-offset-0"
             >
               <h4 className="px-2 text-content-tertiary text-bodyXSmall">
-                {index % 2 ? 'فناوری صفحه نمایش' : 'رنگ'}
+                {index % 2 ? "فناوری صفحه نمایش" : "رنگ"}
               </h4>
               <p className="px-2 text-content-primary text-bodyXSmall">
-                {index % 2 ? 'AMOLED' : 'مشکی'}
+                {index % 2 ? "AMOLED" : "مشکی"}
               </p>
             </Button>
           ))}
@@ -46,7 +48,7 @@ export function Features() {
         <DrawerContent onClickOverlay={toggleSheet} className="pb-6">
           <DrawerHeader className="flex items-center justify-between">
             <DrawerTitle className="text-headlineSmall">
-              فناوری صفحه نمایش{' '}
+              فناوری صفحه نمایش{" "}
             </DrawerTitle>
             <Button
               onClick={toggleSheet}
@@ -77,7 +79,7 @@ export function Features() {
       </Drawer>
       <div className="p-4">
         <Button
-          onClick={() => push('/online-stores')}
+          onClick={() => push("/online-stores")}
           className="h-[52px] w-full rounded-2xl !text-content-inverse text-labellarge"
         >
           در ۱۱ فروشگاه

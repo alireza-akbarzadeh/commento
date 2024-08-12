@@ -1,8 +1,10 @@
-'use client';
-import { useRouter } from 'next/navigation';
-import { ChangeEvent } from 'react';
-import { Icon } from '@/shared/components';
-import { Button, Input } from '@/shared/ui';
+"use client";
+
+import { useRouter } from "next/navigation";
+import { ChangeEvent } from "react";
+
+import { Icon } from "@/shared/components";
+import { Button, Input } from "@/shared/ui";
 
 type SearchFiledProps = {
   searchTerm: string;

@@ -1,4 +1,4 @@
-import { LoadingDots } from '@/shared/components';
+import { LoadingDots } from "@/shared/components";
 
 const Loading = () => {
   return (

@@ -1,7 +1,9 @@
-'use client';
-import { useQueryParams } from '@/shared/hooks';
-import { Button, Separator, Switch } from '@/shared/ui';
-import { FilterRow } from './filter-row';
+"use client";
+
+import { useQueryParams } from "@/shared/hooks";
+import { Button, Separator, Switch } from "@/shared/ui";
+
+import { FilterRow } from "./filter-row";
 
 export function FilterContent() {
   const { toggleQueryParam, searchParams } = useQueryParams();
@@ -33,8 +35,8 @@ export function FilterContent() {
         <li className="flex items-center justify-between py-3">
           <p className="text-labelMedium">خرید حضوری</p>
           <Switch
-            onChange={() => toggleQueryParam('buy')}
-            defaultChecked={searchParams.has('buy')}
+            onChange={() => toggleQueryParam("buy")}
+            defaultChecked={searchParams.has("buy")}
           />
         </li>
         <li className="flex items-center justify-between py-3">

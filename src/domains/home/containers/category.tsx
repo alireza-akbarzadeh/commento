@@ -1,13 +1,14 @@
-import { useTranslations } from 'next-intl';
-import { LazyImage } from '@/shared/components';
+import { useTranslations } from "next-intl";
+
+import { LazyImage } from "@/shared/components";
 
 export function Category() {
-  const t = useTranslations('HomePage');
+  const t = useTranslations("HomePage");
   const categoryImages = [
-    { url: '/images/box.webp', name: t('brandNew') },
-    { url: '/images/open-box.webp', name: t('openBox') },
-    { url: '/images/worked.webp', name: t('worked') },
-    { url: '/images/installment.webp', name: t('installment') },
+    { url: "/images/box.webp", name: t("brandNew") },
+    { url: "/images/open-box.webp", name: t("openBox") },
+    { url: "/images/worked.webp", name: t("worked") },
+    { url: "/images/installment.webp", name: t("installment") },
   ];
   return (
     <section className="bg-content-inverse px-4 py-3">
@@ -20,7 +21,7 @@ export function Category() {
             <div className="flex size-[70px] h-[68px] items-center justify-center rounded-full bg-surface-secondary">
               <div className="relative size-[63px]">
                 <LazyImage
-                  style={{ objectFit: 'cover' }}
+                  style={{ objectFit: "cover" }}
                   skeletonClass="rounded-full"
                   quality={100}
                   src={image.url}

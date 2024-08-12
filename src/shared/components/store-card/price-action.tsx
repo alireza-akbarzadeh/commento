@@ -1,8 +1,9 @@
-import Link from 'next/link';
-import React from 'react';
-import { Icon } from '@/shared/components';
-import { CURRENCY } from '@/shared/constant';
-import { Button } from '@/shared/ui';
+import Link from "next/link";
+import React from "react";
+
+import { Icon } from "@/shared/components";
+import { CURRENCY } from "@/shared/constant";
+import { Button } from "@/shared/ui";
 
 type PriceActionProps = {
   navigation?: string;
@@ -16,7 +17,7 @@ export const PriceAction = (props: PriceActionProps) => {
         <span className="mr-1 text-bodyXXSmall">{CURRENCY.IR}</span>
       </p>
       <Button className="size-[32px] rounded-xl">
-        <Link href={navigation || ''}>
+        <Link href={navigation || ""}>
           <Icon iconClassName="text-content-invers" name="chevron-left" />
         </Link>
       </Button>

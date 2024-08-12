@@ -1,5 +1,6 @@
-import { useTranslations } from 'next-intl';
-import { Icon } from '@/shared/components';
+import { useTranslations } from "next-intl";
+
+import { Icon } from "@/shared/components";
 import {
   Button,
   Drawer,
@@ -10,27 +11,27 @@ import {
   DrawerTitle,
   DrawerTrigger,
   useToast,
-} from '@/shared/ui';
+} from "@/shared/ui";
 
 export function MoreDrawer() {
-  const t = useTranslations('Product');
+  const t = useTranslations("Product");
   const { toast } = useToast();
 
   const handleShare = () => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
     const url = window.location.href;
     if (navigator.share) {
       return navigator.share({
         url,
-        title: 'Check out this product',
-        text: 'I found this great product!',
+        title: "Check out this product",
+        text: "I found this great product!",
       });
     } else if (navigator.clipboard) {
       return navigator.clipboard
         .writeText(url)
-        .then(() => toast({ title: 'لینک کپی شد' }))
+        .then(() => toast({ title: "لینک کپی شد" }))
         .catch(() => {
-          return toast({ title: 'مشکلی پیش آمده است' });
+          return toast({ title: "مشکلی پیش آمده است" });
         });
     }
     return toast({ title: "'مشکلی پیش آمده است'" });
@@ -65,19 +66,19 @@ export function MoreDrawer() {
             variant="ghost"
             className="text-labelMedium"
           >
-            {t('sharedProduct')}
+            {t("sharedProduct")}
           </Button>
         </div>
         <div className="flex items-center px-5 py-3">
           <Icon name="bell" />
           <Button variant="ghost" className="text-labelMedium">
-            {t('notifiedPriced')}
+            {t("notifiedPriced")}
           </Button>
         </div>
         <div className="flex items-center px-5 py-3">
           <Icon name="default" />
           <Button variant="ghost" className="text-labelMedium">
-            {t('faq')}
+            {t("faq")}
           </Button>
         </div>
       </DrawerContent>

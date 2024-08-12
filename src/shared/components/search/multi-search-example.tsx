@@ -1,5 +1,5 @@
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { ChangeEvent, useState } from 'react';
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { ChangeEvent, useState } from "react";
 
 // Define the type for the search query state
 type SearchQuery = {
@@ -8,7 +8,7 @@ type SearchQuery = {
 };
 
 export default function SearchSample() {
-  const [searchQuery, setSearchQuery] = useState<SearchQuery>({ name: '' });
+  const [searchQuery, setSearchQuery] = useState<SearchQuery>({ name: "" });
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const router = useRouter();
@@ -30,7 +30,7 @@ export default function SearchSample() {
         params.delete(key);
       }
     });
-    params.set('page', '1');
+    params.set("page", "1");
     const queryString = params.toString();
     const updatedPath = queryString ? `${pathname}?${queryString}` : pathname;
     router.push(updatedPath);

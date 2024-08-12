@@ -1,5 +1,6 @@
-'use client';
-import { Button } from '@/shared/ui';
+"use client";
+
+import { Button } from "@/shared/ui";
 
 /* eslint-disable @next/next/no-img-element */
 type StoreMapProps = {

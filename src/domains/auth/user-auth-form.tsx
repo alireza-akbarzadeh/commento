@@ -1,17 +1,16 @@
-'use client';
+"use client";
 
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useSearchParams } from 'next/navigation';
-import { signIn } from 'next-auth/react';
-import * as React from 'react';
-import { useForm } from 'react-hook-form';
-import * as z from 'zod';
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useSearchParams } from "next/navigation";
+import { signIn } from "next-auth/react";
+import * as React from "react";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
 
-import { Spin } from '@/shared/components';
-import { userAuthSchema } from '@/shared/schemas/auth';
-import { Button, buttonVariants, Input, Label, toast } from '@/shared/ui';
-
-import { cn } from '@/shared/utils';
+import { Spin } from "@/shared/components";
+import { userAuthSchema } from "@/shared/schemas/auth";
+import { Button, buttonVariants, Input, Label, toast } from "@/shared/ui";
+import { cn } from "@/shared/utils";
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {
   type?: string;
@@ -29,17 +28,17 @@ export function UserAuthForm({ className, type, ...props }: UserAuthFormProps) {
   });
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
   const [isProviderLoading, setIsProviderLoading] = React.useState<
-    'none' | 'google' | 'github'
-  >('none');
+    "none" | "google" | "github"
+  >("none");
   const searchParams = useSearchParams();
 
   async function onSubmit(data: FormData) {
     setIsLoading(true);
 
-    const signInResult = await signIn('email', {
+    const signInResult = await signIn("email", {
       email: data.email.toLowerCase(),
       redirect: false,
-      callbackUrl: searchParams?.get('from') || '/dashboard',
+      callbackUrl: searchParams?.get("from") || "/dashboard",
     });
 
     setIsLoading(false);
@@ -47,20 +46,20 @@ export function UserAuthForm({ className, type, ...props }: UserAuthFormProps) {
     // TODO: replace shadcn toast by react-hot-toast
     if (!signInResult?.ok) {
       return toast({
-        title: 'Something went wrong.',
-        description: 'Your sign in request failed. Please try again.',
-        variant: 'destructive',
+        title: "Something went wrong.",
+        description: "Your sign in request failed. Please try again.",
+        variant: "destructive",
       });
     }
 
     return toast({
-      title: 'Check your email',
-      description: 'We sent you a login link. Be sure to check your spam too.',
+      title: "Check your email",
+      description: "We sent you a login link. Be sure to check your spam too.",
     });
   }
 
   return (
-    <div className={cn('grid gap-6', className)} {...props}>
+    <div className={cn("grid gap-6", className)} {...props}>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="grid gap-2">
           <div className="grid gap-1">
@@ -76,10 +75,10 @@ export function UserAuthForm({ className, type, ...props }: UserAuthFormProps) {
               autoCorrect="off"
               disabled={
                 isLoading ||
-                isProviderLoading === 'google' ||
-                isProviderLoading === 'github'
+                isProviderLoading === "google" ||
+                isProviderLoading === "github"
               }
-              {...register('email')}
+              {...register("email")}
             />
             {errors?.email && (
               <p className="px-1 text-xs text-red-600">
@@ -89,7 +88,7 @@ export function UserAuthForm({ className, type, ...props }: UserAuthFormProps) {
           </div>
           <button className={cn(buttonVariants())} disabled={isLoading}>
             {isLoading && <Spin />}
-            {type === 'register' ? 'Sign Up with Email' : 'Sign In with Email'}
+            {type === "register" ? "Sign Up with Email" : "Sign In with Email"}
           </button>
         </div>
       </form>
@@ -106,23 +105,23 @@ export function UserAuthForm({ className, type, ...props }: UserAuthFormProps) {
       <div className="flex items-center justify-between gap-2">
         <Button
           variant="destructive"
-          className={'flex-1'}
+          className={"flex-1"}
           onClick={() => {
-            setIsProviderLoading('github');
-            signIn('github');
+            setIsProviderLoading("github");
+            signIn("github");
           }}
-          loading={isLoading || isProviderLoading === 'github'}
+          loading={isLoading || isProviderLoading === "github"}
         >
-          {isProviderLoading === 'github' ? <Spin /> : 'github'} Github
+          {isProviderLoading === "github" ? <Spin /> : "github"} Github
         </Button>
         <Button
           variant="outline"
-          className={'flex-1'}
+          className={"flex-1"}
           onClick={() => {
-            setIsProviderLoading('google');
-            signIn('google');
+            setIsProviderLoading("google");
+            signIn("google");
           }}
-          loading={isLoading || isProviderLoading === 'google'}
+          loading={isLoading || isProviderLoading === "google"}
         >
           Google
         </Button>

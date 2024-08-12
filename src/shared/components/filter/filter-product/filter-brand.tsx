@@ -1,6 +1,8 @@
-import React from 'react';
-import { useSearchController } from '@/shared/hooks';
-import { SearchFiled } from '../../search/search-filed';
+import React from "react";
+
+import { useSearchController } from "@/shared/hooks";
+
+import { SearchFiled } from "../../search/search-filed";
 
 export const FilterBrand = () => {
   const {
@@ -8,7 +10,7 @@ export const FilterBrand = () => {
     handleInputChange,
     isSearchTermEmpty,
     searchTerm,
-  } = useSearchController({ use: 'query', name: 'brand' });
+  } = useSearchController({ use: "query", name: "brand" });
   return (
     <div>
       <h3 className="px-4 text-headlineMedium">برند</h3>

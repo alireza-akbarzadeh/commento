@@ -1,20 +1,21 @@
-'use client';
+"use client";
 
-import 'mapbox-gl/dist/mapbox-gl.css';
+import "mapbox-gl/dist/mapbox-gl.css";
 
-import Image from 'next/image';
-import { useRef } from 'react';
-import MapGl, { MapRef, Marker } from 'react-map-gl';
+import Image from "next/image";
+import { useRef } from "react";
+import MapGl, { MapRef, Marker } from "react-map-gl";
 
 import {
   mapStyleObject,
   markerDefaultOptions,
-} from '@/shared/components/map/constants';
-import { MapProps } from '@/shared/components/map/map-types';
-import { cn } from '@/shared/utils';
-import { MapBackButton } from './MapBackButton';
-import { MapPin } from './MapPin';
-import { MapSubmitForm } from './MapSubmitForm';
+} from "@/shared/components/map/constants";
+import { MapProps } from "@/shared/components/map/map-types";
+import { cn } from "@/shared/utils";
+
+import { MapBackButton } from "./MapBackButton";
+import { MapPin } from "./MapPin";
+import { MapSubmitForm } from "./MapSubmitForm";
 
 const Map = (props: MapProps) => {
   const {
@@ -39,8 +40,8 @@ const Map = (props: MapProps) => {
       <div className="relative z-10 flex-1">
         {readOnly && (
           <button
-            className={cn('absolute inset-0 z-10 cursor-default', {
-              'cursor-pointer': readOnly,
+            className={cn("absolute inset-0 z-10 cursor-default", {
+              "cursor-pointer": readOnly,
             })}
             onClick={() => {
               if (readOnlyOnClick) readOnlyOnClick();
@@ -57,14 +58,14 @@ const Map = (props: MapProps) => {
           mapStyle={mapStyleObject}
           mapboxAccessToken="need-to-fake-access-token"
           ref={mapRef}
-          style={{ width: '100%', height: '100%' }}
+          style={{ width: "100%", height: "100%" }}
           // onClick={(event) => {
           //   if (!centerMode)
           //     changePosition({ lat: event.lngLat.lat, lng: event.lngLat.lng });
           // }}
           // onDragEnd={handleDragEnd}
           // onDragStart={() => handleDragStart()}
-          {...(centerMode && { scrollZoom: { around: 'center' } })}
+          {...(centerMode && { scrollZoom: { around: "center" } })}
         >
           {!centerMode && (
             <Marker

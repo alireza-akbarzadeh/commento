@@ -1,4 +1,4 @@
-import { Separator } from '@/shared/ui';
+import { Separator } from "@/shared/ui";
 
 type SpecificItemProps = { title: string; subtitle: String; border?: false };
 

@@ -1,3 +1,3 @@
-export { colors } from './colors';
-export { typography } from './typography';
-export { boxShadow } from './shadow';
+export { colors } from "./colors";
+export { typography } from "./typography";
+export { boxShadow } from "./shadow";

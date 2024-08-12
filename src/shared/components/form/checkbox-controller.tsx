@@ -1,16 +1,17 @@
-import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
-import { ComponentPropsWithoutRef } from 'react';
-import { ControllerProps, FieldPath, FieldValues } from 'react-hook-form';
+import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
+import { ComponentPropsWithoutRef } from "react";
+import { ControllerProps, FieldPath, FieldValues } from "react-hook-form";
+
 import {
+  Checkbox,
   FormControl,
   FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/shared/ui';
-import { Checkbox } from '@/shared/ui';
-import { cn } from '@/shared/utils';
+} from "@/shared/ui";
+import { cn } from "@/shared/utils";
 
 interface InputControllerProps<
   TFieldValues extends FieldValues = FieldValues,
@@ -19,7 +20,7 @@ interface InputControllerProps<
   label: string;
   description?: string;
   itemClassName?: string;
-  checkboxControll: Omit<ControllerProps<TFieldValues, TName>, 'render'>;
+  checkboxControll: Omit<ControllerProps<TFieldValues, TName>, "render">;
   checkboxProps?: ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>;
 }
 
@@ -41,7 +42,7 @@ export function CheckboxController<
       render={({ field }) => (
         <FormItem
           className={cn(
-            'flex flex-row items-start space-x-3 space-y-0',
+            "flex flex-row items-start space-x-3 space-y-0",
             itemClassName,
           )}
         >

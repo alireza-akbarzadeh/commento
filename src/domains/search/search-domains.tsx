@@ -1,9 +1,11 @@
-'use client';
-import { NoResult, SearchFiled } from '@/shared/components';
-import { searchItemList } from '@/shared/config/mock-data';
-import { useSearchController } from '@/shared/hooks';
-import { SearchItem } from './components';
-import { ResentSearch } from './container';
+"use client";
+
+import { NoResult, SearchFiled } from "@/shared/components";
+import { searchItemList } from "@/shared/config/mock-data";
+import { useSearchController } from "@/shared/hooks";
+
+import { SearchItem } from "./components";
+import { ResentSearch } from "./container";
 
 export function SearchDomian() {
   const {
@@ -11,7 +13,7 @@ export function SearchDomian() {
     handleInputChange,
     isSearchTermEmpty,
     searchTerm,
-  } = useSearchController({ use: 'state' });
+  } = useSearchController({ use: "state" });
   const searchResults = searchItemList.filter((list) =>
     list.title.toLowerCase().includes(searchTerm.toLowerCase()),
   );
@@ -37,7 +39,7 @@ export function SearchDomian() {
             <SearchItem
               key={result.title}
               activeBorder={index !== searchItemList.length - 1}
-              iconName={'magnifier'}
+              iconName={"magnifier"}
               {...result}
             />
           ))}

@@ -1,4 +1,4 @@
-import { CategoryRow } from './category-row';
+import { CategoryRow } from "./category-row";
 
 export function Categories() {
   return (

@@ -1,5 +1,6 @@
-'use client';
-import { cn } from '@/shared/utils';
+"use client";
+
+import { cn } from "@/shared/utils";
 
 type SliderProps = {
   scrollSnaps: number[];
@@ -24,10 +25,10 @@ export function SliderActions(props: SliderProps) {
                 event.stopPropagation();
               }}
               className={cn(
-                'h-2 w-2 rounded-full bg-border-primary transition-all duration-300 ease-in-out',
+                "h-2 w-2 rounded-full bg-border-primary transition-all duration-300 ease-in-out",
                 {
-                  'h-2 w-5': index === selectedIndex,
-                  'bg-black': index === selectedIndex,
+                  "h-2 w-5": index === selectedIndex,
+                  "bg-black": index === selectedIndex,
                 },
               )}
             />

@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 
-import { Icon } from '@/shared/components';
+import { Icon } from "@/shared/components";
 import {
   Card,
   CardContent,
@@ -8,31 +8,32 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/shared/ui';
-import { Button } from '../button/button';
+} from "@/shared/ui";
+
+import { Button } from "../button/button";
 
 const meta: Meta<typeof Card> = {
-  title: 'Ui/Card',
-  tags: ['autodocs'],
+  title: "Ui/Card",
+  tags: ["autodocs"],
   component: Card,
   args: {
-    children: 'Card',
+    children: "Card",
   },
   argTypes: {},
 };
 
 const notifications = [
   {
-    title: 'Your call has been confirmed.',
-    description: '1 hour ago',
+    title: "Your call has been confirmed.",
+    description: "1 hour ago",
   },
   {
-    title: 'You have a new message!',
-    description: '1 hour ago',
+    title: "You have a new message!",
+    description: "1 hour ago",
   },
   {
-    title: 'Your subscription is expiring soon!',
-    description: '2 hours ago',
+    title: "Your subscription is expiring soon!",
+    description: "2 hours ago",
   },
 ];
 

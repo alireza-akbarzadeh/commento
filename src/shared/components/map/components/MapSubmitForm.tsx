@@ -1,5 +1,6 @@
-import { Button } from '@/shared/ui';
-import { AddressInformation, SearchBoxProps, searchType } from '../map-types';
+import { Button } from "@/shared/ui";
+
+import { AddressInformation, SearchBoxProps, searchType } from "../map-types";
 
 type MapSubmitFormProps = {
   isShowSearch?: boolean;
@@ -17,10 +18,10 @@ export const MapSubmitForm = (props: MapSubmitFormProps) => {
     <div
       className="z-20 overflow-hidden"
       style={{
-        borderRadius: '20px 20px 0 0 ',
-        overflow: 'hidden',
+        borderRadius: "20px 20px 0 0 ",
+        overflow: "hidden",
         zIndex: 2,
-        marginTop: '-40px !important',
+        marginTop: "-40px !important",
       }}
     >
       {/* render a show search components here */}

@@ -1,14 +1,17 @@
-'use client';
-import { useRouter, useSearchParams } from 'next/navigation';
-import { useState } from 'react';
-import { FilterActions } from '@/domains/product/components/filters/filter-actions';
-import { Icon } from '@/shared/components';
-import { Badge, Button } from '@/shared/ui';
-import { cn } from '@/shared/utils';
-import { ActionButtons } from './action-button';
-import { InfoBoxes } from './Info-Boxes';
-import { PriceAction } from './price-action';
-import { StoreRate } from './store-rate';
+"use client";
+
+import { useRouter, useSearchParams } from "next/navigation";
+import { useState } from "react";
+import { FilterActions } from "@/domains/product/components/filters/filter-actions";
+
+import { Icon } from "@/shared/components";
+import { Badge, Button } from "@/shared/ui";
+import { cn } from "@/shared/utils";
+
+import { ActionButtons } from "./action-button";
+import { InfoBoxes } from "./Info-Boxes";
+import { PriceAction } from "./price-action";
+import { StoreRate } from "./store-rate";
 
 type StoreCardProps = {
   hasFilter?: boolean;
@@ -23,14 +26,14 @@ export function StoreCard(props: StoreCardProps) {
   const { push } = useRouter();
   const toggleAction = () => setToggleInfo(!toggleInfo);
   const searchParams = useSearchParams();
-  const storeType = searchParams.get('store');
+  const storeType = searchParams.get("store");
 
   return (
     <div className="bg-content-inverse py-2">
       {hasFilter && <FilterActions />}
       <StoreRate toggleInfo={toggleInfo} toggleAction={toggleAction} />
       <>
-        <div className={cn('bg-layout my-3 px-4 pb-5 pt-2')}>
+        <div className={cn("bg-layout my-3 px-4 pb-5 pt-2")}>
           {toggleInfo && (
             <>
               <h4 className="text-content-primary text-headlineXSmall">
@@ -79,17 +82,17 @@ export function StoreCard(props: StoreCardProps) {
               <Button
                 onClick={() =>
                   push(
-                    storeType === 'online'
-                      ? '/online-stores'
-                      : '/offline-stores',
+                    storeType === "online"
+                      ? "/online-stores"
+                      : "/offline-stores",
                   )
                 }
                 fullWidth
                 className="h-[52px] rounded-xl"
               >
-                {storeType === 'online'
-                  ? 'نمایش همه فروشگاه‌ها'
-                  : ' نمایش همه روی نقشه'}
+                {storeType === "online"
+                  ? "نمایش همه فروشگاه‌ها"
+                  : " نمایش همه روی نقشه"}
               </Button>
             </div>
           )}

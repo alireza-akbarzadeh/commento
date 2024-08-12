@@ -1,6 +1,7 @@
-import { TooltipProps } from 'recharts';
-import { CURRENCY } from '@/shared/constant';
-import { formatNumberToPersian } from '@/shared/utils';
+import { TooltipProps } from "recharts";
+
+import { CURRENCY } from "@/shared/constant";
+import { formatNumberToPersian } from "@/shared/utils";
 
 type CustomTooltipProps = TooltipProps<number, string>;
 

@@ -1,1 +1,1 @@
-export { SearchItem } from './search-Item';
+export { SearchItem } from "./search-Item";

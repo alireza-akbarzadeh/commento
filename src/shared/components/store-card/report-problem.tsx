@@ -1,8 +1,10 @@
-'use client';
-import { useTranslations } from 'next-intl';
-import React, { useState } from 'react';
-import { Icon, LazyImage } from '@/shared/components';
-import { CURRENCY } from '@/shared/constant';
+"use client";
+
+import { useTranslations } from "next-intl";
+import React, { useState } from "react";
+
+import { Icon, LazyImage } from "@/shared/components";
+import { CURRENCY } from "@/shared/constant";
 import {
   Button,
   Checkbox,
@@ -14,12 +16,13 @@ import {
   DrawerTitle,
   DrawerTrigger,
   Separator,
-} from '@/shared/ui';
-import { cn } from '@/shared/utils';
-import { ReportErrorPrice } from './report-error-price';
+} from "@/shared/ui";
+import { cn } from "@/shared/utils";
+
+import { ReportErrorPrice } from "./report-error-price";
 
 export const ReportProblem = () => {
-  const t = useTranslations('Product');
+  const t = useTranslations("Product");
   const [checked, setChecked] = useState<number | null>(null);
   const isInputChecked = checked !== null;
   const handleToggleChecked = (index: number) => {
@@ -27,12 +30,12 @@ export const ReportProblem = () => {
   };
 
   const problemList = [
-    'قیمت و موجودی',
-    'ارسال کالا',
-    'مدل و برند با مشخصات تفاوت دارد',
-    'کالا غیر اصل است',
-    'پیگیری بعد از خرید',
-    'مشکل دیگر',
+    "قیمت و موجودی",
+    "ارسال کالا",
+    "مدل و برند با مشخصات تفاوت دارد",
+    "کالا غیر اصل است",
+    "پیگیری بعد از خرید",
+    "مشکل دیگر",
   ];
   return (
     <Drawer>
@@ -41,23 +44,23 @@ export const ReportProblem = () => {
           variant="ghost"
           className="w-full text-content-primary shadow-elevation2 text-labelSmall"
         >
-          {t('reportProblem')}
+          {t("reportProblem")}
         </Button>
       </DrawerTrigger>
       <DrawerContent
-        className={`${isInputChecked ? 'h-[95%]' : 'h-full'} rounded-none pb-4`}
+        className={`${isInputChecked ? "h-[95%]" : "h-full"} rounded-none pb-4`}
       >
         <DrawerHeader>
           <div
-            className={cn('flex items-center gap-2', {
-              'flex-row-reverse justify-between': isInputChecked,
+            className={cn("flex items-center gap-2", {
+              "flex-row-reverse justify-between": isInputChecked,
             })}
           >
             {isInputChecked ? (
               <div className="flex size-8 items-center justify-center rounded-full bg-surface-tertiary">
                 <Icon
                   onClick={() => setChecked(null)}
-                  size={'small'}
+                  size={"small"}
                   iconClassName="text-content-primary"
                   name="cross"
                 />
@@ -67,8 +70,8 @@ export const ReportProblem = () => {
                 <Icon iconClassName="text-content-primary" name="arrow-right" />
               </DrawerClose>
             )}
-            <DrawerTitle className={!isInputChecked ? 'text-labelMedium' : ''}>
-              {t(isInputChecked ? 'reportProblemWithPrice' : 'reportProblem')}
+            <DrawerTitle className={!isInputChecked ? "text-labelMedium" : ""}>
+              {t(isInputChecked ? "reportProblemWithPrice" : "reportProblem")}
             </DrawerTitle>
           </div>
         </DrawerHeader>
@@ -97,7 +100,7 @@ export const ReportProblem = () => {
                   </p>
                   <p className="pb-[9px] pt-px text-content-primary text-headlineSmall">
                     ۱‍۶۷,۰۰۰
-                    <span className={cn('mr-1 text-labelXSmall')}>
+                    <span className={cn("mr-1 text-labelXSmall")}>
                       {CURRENCY.IR}
                     </span>
                   </p>

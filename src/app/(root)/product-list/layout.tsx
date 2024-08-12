@@ -1,5 +1,6 @@
-import React, { PropsWithChildren } from 'react';
-import { BottomNavigation } from '@/shared/components';
+import React, { PropsWithChildren } from "react";
+
+import { BottomNavigation } from "@/shared/components";
 
 function ProductListLayout(props: PropsWithChildren) {
   const { children } = props;

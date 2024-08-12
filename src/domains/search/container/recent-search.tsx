@@ -1,14 +1,15 @@
-import { useTranslations } from 'next-intl';
-import { SearchItem } from '../components/search-Item';
+import { useTranslations } from "next-intl";
+
+import { SearchItem } from "../components/search-Item";
 
 export function ResentSearch() {
-  const t = useTranslations('Globals');
+  const t = useTranslations("Globals");
   const items = [1, 2, 3, 4];
   return (
     <section id="recent-view" data-testid="recent-view">
       <div className="px-4 py-2.5">
         <p className="text-content-disabled text-labelSmall">
-          {t('recentSearch')}
+          {t("recentSearch")}
         </p>
         {items.map((_, index) => (
           <SearchItem
@@ -23,7 +24,7 @@ export function ResentSearch() {
       </div>
       <div className="px-4 py-2.5">
         <p className="text-content-disabled text-labelSmall">
-          {t('frequentSearchs')}
+          {t("frequentSearchs")}
         </p>
         {items.map((_, index) => (
           <SearchItem

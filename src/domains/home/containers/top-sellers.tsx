@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import { useTranslations } from 'next-intl';
-import { LazyImage } from '@/shared/components';
+import { useTranslations } from "next-intl";
+
+import { LazyImage } from "@/shared/components";
 import {
   Button,
   Card,
@@ -9,23 +9,24 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-} from '@/shared/ui';
-import { cn } from '@/shared/utils';
-import { SectionTitle } from '../components/section-title';
+} from "@/shared/ui";
+import { cn } from "@/shared/utils";
+
+import { SectionTitle } from "../components/section-title";
 
 export function TopSellers() {
-  const t = useTranslations('Globals');
+  const t = useTranslations("Globals");
   return (
     <section id="top-seller" data-testid="top-seller">
       <SectionTitle title="فروشندگان برتر" />
       <div className="mt-2 pb-6">
-        <Carousel opts={{ direction: 'rtl' }}>
+        <Carousel opts={{ direction: "rtl" }}>
           <CarouselContent className="m-0">
             {Array.from({ length: 5 }).map((_, index) => (
               <CarouselItem
                 key={index}
-                className={cn('my-1 ml-1 basis-[89%] pl-3', {
-                  'mr-4': index === 0,
+                className={cn("my-1 ml-1 basis-[89%] pl-3", {
+                  "mr-4": index === 0,
                 })}
               >
                 <Card className="relative mb-2 rounded-2xl border-[0.5px] border-border-primary shadow-elevation4">
@@ -34,7 +35,7 @@ export function TopSellers() {
                       <LazyImage
                         src="/images/store.webp"
                         style={{
-                          objectFit: 'cover',
+                          objectFit: "cover",
                         }}
                         quality={100}
                         className="size-[140px] rounded-lg mobile-l:size-[157px] tablet:size-[185px]"
@@ -47,7 +48,7 @@ export function TopSellers() {
                               <LazyImage
                                 src="/images/store.webp"
                                 style={{
-                                  objectFit: 'cover',
+                                  objectFit: "cover",
                                 }}
                                 quality={100}
                                 className="size-[66px] rounded-lg mobile-l:size-[75px] tablet:size-[88px]"
@@ -62,7 +63,7 @@ export function TopSellers() {
                               <LazyImage
                                 src="/images/store.webp"
                                 style={{
-                                  objectFit: 'cover',
+                                  objectFit: "cover",
                                 }}
                                 quality={100}
                                 className="size-[66px] rounded-lg mobile-l:size-[75px] tablet:size-[88px]"
@@ -85,7 +86,7 @@ export function TopSellers() {
                       variant="tertiary"
                       className="rounded-full px-3 py-1 text-labelSmall"
                     >
-                      {t('view')}
+                      {t("view")}
                     </Button>
                   </CardFooter>
                 </Card>

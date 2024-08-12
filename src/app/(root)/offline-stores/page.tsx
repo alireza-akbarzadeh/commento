@@ -1,4 +1,4 @@
-import { OfflineStoresDomain, StoreAppbar } from '@/domains';
+import { OfflineStoresDomain, StoreAppbar } from "@/domains";
 
 export default function OfflineStorePage() {
   return (

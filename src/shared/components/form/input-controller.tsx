@@ -1,5 +1,6 @@
-import { ControllerProps, FieldPath, FieldValues } from 'react-hook-form';
-import { Input, InputProps } from '@/shared/ui';
+import { ControllerProps, FieldPath, FieldValues } from "react-hook-form";
+
+import { Input, InputProps } from "@/shared/ui";
 import {
   FormControl,
   FormDescription,
@@ -7,7 +8,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/shared/ui/';
+} from "@/shared/ui/";
 
 interface InputControllerProps<
   TFieldValues extends FieldValues = FieldValues,
@@ -15,7 +16,7 @@ interface InputControllerProps<
 > {
   label: string;
   description?: string;
-  inputControll: Omit<ControllerProps<TFieldValues, TName>, 'render'>;
+  inputControll: Omit<ControllerProps<TFieldValues, TName>, "render">;
   inputProps?: InputProps;
 
   //   render?: (field: ControllerRenderProps<FieldValues, TName>) => ReactNode;

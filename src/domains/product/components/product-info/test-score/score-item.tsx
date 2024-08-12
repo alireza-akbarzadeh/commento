@@ -1,5 +1,6 @@
-import { VariantProps } from 'class-variance-authority';
-import { Badge, badgeVariants } from '@/shared/ui';
+import { VariantProps } from "class-variance-authority";
+
+import { Badge, badgeVariants } from "@/shared/ui";
 
 type SpecificItemProps = {
   title: string;
@@ -21,9 +22,9 @@ export function ScoreItem(props: SpecificItemProps) {
         <Badge
           variant={badge.variant}
           className={
-            badge.variant === 'warning'
-              ? 'bg-surface-warningLight text-content-warning'
-              : ''
+            badge.variant === "warning"
+              ? "bg-surface-warningLight text-content-warning"
+              : ""
           }
         >{`${from}/${to}`}</Badge>
       </div>

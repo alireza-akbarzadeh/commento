@@ -1,9 +1,9 @@
-import { type ClassValue, clsx } from 'clsx';
-import { format, isValid } from 'date-fns';
-import { twMerge } from 'tailwind-merge';
+import { type ClassValue, clsx } from "clsx";
+import { format, isValid } from "date-fns";
+import { twMerge } from "tailwind-merge";
 
 export function formatDate(date: number | Date) {
-  return isValid(date) ? format(date, 'do MMMM yyyy') : 'N/A';
+  return isValid(date) ? format(date, "do MMMM yyyy") : "N/A";
 }
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -27,18 +27,18 @@ const countDown = ({ value, fn, delay = 1000 }: ICountDown) => {
 };
 
 const deepPick = <T, K extends keyof T>(fields: string, object: T): T[K] => {
-  const [first, ...remaining] = fields.split('.');
+  const [first, ...remaining] = fields.split(".");
   const value = object[first as keyof T];
-  if (typeof value === 'undefined') {
+  if (typeof value === "undefined") {
     throw new Error(`Property '${first}' not found in object`);
   }
   if (remaining.length === 0) {
     return value as T[K];
   }
-  if (typeof value !== 'object' || value === null) {
+  if (typeof value !== "object" || value === null) {
     throw new Error(`Invalid property '${first}'`);
   }
-  return deepPick(remaining.join('.'), value as unknown) as T[K];
+  return deepPick(remaining.join("."), value as unknown) as T[K];
 };
 
 const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
@@ -51,9 +51,9 @@ export { capitalize, countDown, deepPick };
  */
 export function formatPriceToPersian(value: number): string {
   // Convert the number to a string and add commas as thousand separators
-  const formattedValue = value.toLocaleString('fa-IR', {
-    style: 'currency',
-    currency: 'IRR',
+  const formattedValue = value.toLocaleString("fa-IR", {
+    style: "currency",
+    currency: "IRR",
   });
 
   // Return the formatted value
@@ -62,7 +62,7 @@ export function formatPriceToPersian(value: number): string {
 
 export function formatNumberToPersian(value: number): string {
   // Convert the number to a string with Persian digits and add commas as thousand separators
-  const formattedValue = value.toLocaleString('fa-IR');
+  const formattedValue = value.toLocaleString("fa-IR");
 
   // Return the formatted value
   return formattedValue;

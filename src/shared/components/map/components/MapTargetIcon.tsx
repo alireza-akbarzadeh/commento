@@ -1,5 +1,6 @@
-import { Button } from '@/shared/ui';
-import { Icon } from '../../icons';
+import { Button } from "@/shared/ui";
+
+import { Icon } from "../../icons";
 
 type MapTargetIconProps = {
   handleGeoLocation: () => void;

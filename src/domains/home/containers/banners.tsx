@@ -1,9 +1,11 @@
-'use client';
-import Autoplay from 'embla-carousel-autoplay';
-import Image from 'next/image';
-import { useBanners } from '@/domains/home/hooks';
-import { Carousel, CarouselContent, CarouselItem } from '@/shared/ui';
-import { cn } from '@/shared/utils';
+"use client";
+
+import Autoplay from "embla-carousel-autoplay";
+import Image from "next/image";
+import { useBanners } from "@/domains/home/hooks";
+
+import { Carousel, CarouselContent, CarouselItem } from "@/shared/ui";
+import { cn } from "@/shared/utils";
 
 export function Banners() {
   const { scrollSnaps, scrollTo, selectedIndex, setApi } = useBanners();
@@ -11,7 +13,7 @@ export function Banners() {
   return (
     <section id="banner" data-testid="banner" className="my-2">
       <Carousel
-        opts={{ direction: 'rtl', loop: true }}
+        opts={{ direction: "rtl", loop: true }}
         plugins={[Autoplay({ delay: 2500 })]}
         setApi={setApi}
         className="relative"
@@ -43,10 +45,10 @@ export function Banners() {
                   event.stopPropagation();
                 }}
                 className={cn(
-                  'h-2 w-5 rounded-lg bg-content-primary/30 transition-all duration-300 ease-in-out',
+                  "h-2 w-5 rounded-lg bg-content-primary/30 transition-all duration-300 ease-in-out",
                   {
-                    'h-2 w-7': index === selectedIndex,
-                    'bg-white': index === selectedIndex,
+                    "h-2 w-7": index === selectedIndex,
+                    "bg-white": index === selectedIndex,
                   },
                 )}
               />

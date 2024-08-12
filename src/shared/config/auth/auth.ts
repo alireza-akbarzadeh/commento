@@ -1,13 +1,14 @@
-import NextAuth from 'next-auth';
-import authConfig from './auth.config';
+import NextAuth from "next-auth";
+
+import authConfig from "./auth.config";
 
 export const {
   handlers: { GET, POST },
   auth,
 } = NextAuth({
-  session: { strategy: 'jwt' },
+  session: { strategy: "jwt" },
   pages: {
-    signIn: '/login',
+    signIn: "/login",
     // error: "/auth/error",
   },
   callbacks: {

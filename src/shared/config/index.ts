@@ -3,6 +3,6 @@ export {
   apiAuthPrefix,
   authRoutes,
   publicRoutes,
-} from './routes';
+} from "./routes";
 
-export { products } from './mock-data';
+export { products } from "./mock-data";

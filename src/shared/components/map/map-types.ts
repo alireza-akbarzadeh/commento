@@ -1,5 +1,5 @@
-import { ImageProps } from 'next/image';
-import { ViewState } from 'react-map-gl';
+import { ImageProps } from "next/image";
+import { ViewState } from "react-map-gl";
 
 type LatLng = {
   lng?: number;
@@ -12,7 +12,7 @@ type AddressInformation = {
   addressTitle?: string;
 };
 
-type MarkerType = Partial<Pick<ImageProps, 'src' | 'width' | 'height'>>;
+type MarkerType = Partial<Pick<ImageProps, "src" | "width" | "height">>;
 
 type SearchBoxProps = {
   onSearchMounted?: (ref: searchType) => void;
@@ -44,7 +44,7 @@ type MapProps = {
   onNextStep?: () => Promise<void>;
   loading?: boolean;
   nextStateDisabled?: boolean;
-} & Partial<Pick<ViewState, 'zoom' | 'latitude' | 'longitude'>>;
+} & Partial<Pick<ViewState, "zoom" | "latitude" | "longitude">>;
 
 export type {
   AddressInformation,

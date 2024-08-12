@@ -1,8 +1,9 @@
-import { DiscountBadge } from '@/domains/home/components';
-import { LazyImage } from '@/shared/components/lazy-image';
-import { Products } from '@/shared/config/mock-data';
+import { DiscountBadge } from "@/domains/home/components";
 
-type ProductImageProps = Pick<Products, 'imageUrl' | 'discount'>;
+import { LazyImage } from "@/shared/components/lazy-image";
+import { Products } from "@/shared/config/mock-data";
+
+type ProductImageProps = Pick<Products, "imageUrl" | "discount">;
 
 export function ProductImage(props: ProductImageProps) {
   const { imageUrl, discount } = props;
@@ -12,8 +13,8 @@ export function ProductImage(props: ProductImageProps) {
         <LazyImage
           src={imageUrl}
           style={{
-            objectFit: 'cover',
-            position: 'absolute',
+            objectFit: "cover",
+            position: "absolute",
           }}
           quality={100}
           alt="banner"

@@ -1,6 +1,7 @@
-import { useRouter } from 'next/navigation';
-import { Icon } from '@/shared/components';
-import { Button } from '@/shared/ui';
+import { useRouter } from "next/navigation";
+
+import { Icon } from "@/shared/components";
+import { Button } from "@/shared/ui";
 
 export const MapBackButton = () => {
   const { push } = useRouter();
@@ -8,7 +9,7 @@ export const MapBackButton = () => {
     <div className="lef-2 absolute top-2 z-10">
       <Button
         onClick={() => {
-          push('/');
+          push("/");
         }}
         className="rounded-full"
         size="icon"

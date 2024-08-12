@@ -1,9 +1,9 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { Suspense } from 'react';
+import { Metadata } from "next";
+import Link from "next/link";
+import { Suspense } from "react";
+import { UserAuthForm } from "@/domains/auth/user-auth-form";
 
-import { UserAuthForm } from '@/domains/auth/user-auth-form';
-import { Icon } from '@/shared/components';
+import { Icon } from "@/shared/components";
 import {
   buttonVariants,
   Card,
@@ -12,12 +12,12 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/shared/ui';
-import { cn } from '@/shared/utils';
+} from "@/shared/ui";
+import { cn } from "@/shared/utils";
 
 export const metadata: Metadata = {
-  title: 'Login',
-  description: 'Login to your account',
+  title: "Login",
+  description: "Login to your account",
 };
 
 export default function LoginPage() {
@@ -26,8 +26,8 @@ export default function LoginPage() {
       <Link
         href="/"
         className={cn(
-          buttonVariants({ variant: 'outline', size: 'sm' }),
-          'absolute left-4 top-4 md:left-8 md:top-8',
+          buttonVariants({ variant: "outline", size: "sm" }),
+          "absolute left-4 top-4 md:left-8 md:top-8",
         )}
       >
         <>

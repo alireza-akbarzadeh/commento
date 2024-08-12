@@ -1,5 +1,5 @@
-import { ProductSwipe } from '@/shared/components';
-import { products } from '@/shared/config';
+import { ProductSwipe } from "@/shared/components";
+import { products } from "@/shared/config";
 
 export function ResentViews() {
   return (

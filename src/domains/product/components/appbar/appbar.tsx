@@ -1,8 +1,11 @@
-'use client';
-import { useRouter } from 'next/navigation';
-import { Icon } from '@/shared/components';
-import { LovedAction } from './loved-action';
-import { MoreDrawer } from './more-drawer';
+"use client";
+
+import { useRouter } from "next/navigation";
+
+import { Icon } from "@/shared/components";
+
+import { LovedAction } from "./loved-action";
+import { MoreDrawer } from "./more-drawer";
 
 export function Appbar() {
   const { replace } = useRouter();
@@ -11,7 +14,7 @@ export function Appbar() {
     <div className="flex h-[56px] items-center justify-between px-4 pr-3 pt-4">
       <div className="size-10">
         <Icon
-          onClick={() => replace('/')}
+          onClick={() => replace("/")}
           iconClassName="text-content-primary"
           name="cross"
           size="medium"

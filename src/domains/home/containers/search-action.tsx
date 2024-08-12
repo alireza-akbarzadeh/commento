@@ -1,9 +1,10 @@
-import Link from 'next/link';
-import { useTranslations } from 'next-intl';
-import { Icon } from '@/shared/components';
+import Link from "next/link";
+import { useTranslations } from "next-intl";
+
+import { Icon } from "@/shared/components";
 
 export function SearchAction() {
-  const t = useTranslations('HomePage');
+  const t = useTranslations("HomePage");
   return (
     <header id="search-action" data-testid="search-action" className="p-4">
       <Link
@@ -13,7 +14,7 @@ export function SearchAction() {
         <div className="flex gap-2.5">
           <Icon name="magnifier" iconClassName="text-content-secondary" />
           <p className="text-content-tertiary text-labelMedium">
-            {t('searchForProdcut')}
+            {t("searchForProdcut")}
           </p>
         </div>
         <div className="flex size-8 items-center justify-center">

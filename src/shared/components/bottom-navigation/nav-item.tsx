@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import { Icon, IconType } from '@/shared/components';
-import { IconSize } from '@/shared/components';
-import { cn } from '@/shared/utils';
+import Link from "next/link";
+
+import { Icon, IconSize, IconType } from "@/shared/components";
+import { cn } from "@/shared/utils";
 
 type NavItemProps = {
   active: boolean;
@@ -18,22 +18,22 @@ export function NavItem(props: NavItemProps) {
       <Link
         href={href}
         className={cn(
-          'flex flex-col items-center space-y-[3px] text-content-tertiary',
+          "flex flex-col items-center space-y-[3px] text-content-tertiary",
           {
-            'text-content-primary': active,
+            "text-content-primary": active,
           },
         )}
       >
         <Icon
           name={icon}
           size={size}
-          iconClassName={cn('text-content-tertiary', {
-            'text-content-primary': active,
+          iconClassName={cn("text-content-tertiary", {
+            "text-content-primary": active,
           })}
         />
         <span
-          className={cn('text-content-tertiary text-labelXSmall', {
-            'text-content-primary': active,
+          className={cn("text-content-tertiary text-labelXSmall", {
+            "text-content-primary": active,
           })}
         >
           {label}

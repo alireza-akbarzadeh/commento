@@ -1,10 +1,11 @@
-import Link from 'next/link';
-import { DiscountBadge } from '@/domains/home/components';
-import { Icon, LazyImage } from '@/shared/components';
-import { FindProductTypes } from '@/shared/config/mock-data';
-import { CURRENCY } from '@/shared/constant';
-import { Separator } from '@/shared/ui';
-import { cn } from '@/shared/utils';
+import Link from "next/link";
+import { DiscountBadge } from "@/domains/home/components";
+
+import { Icon, LazyImage } from "@/shared/components";
+import { FindProductTypes } from "@/shared/config/mock-data";
+import { CURRENCY } from "@/shared/constant";
+import { Separator } from "@/shared/ui";
+import { cn } from "@/shared/utils";
 
 type ProductListPage = FindProductTypes & {
   activeBorder?: boolean;
@@ -38,7 +39,7 @@ export function ProductList(props: ProductListPage) {
               <LazyImage
                 src={imageUrl}
                 style={{
-                  objectFit: 'cover',
+                  objectFit: "cover",
                 }}
                 quality={100}
                 alt={title}
@@ -53,15 +54,15 @@ export function ProductList(props: ProductListPage) {
             )}
             <div
               className={cn(
-                'absolute bottom-2 right-2 flex size-6 translate-x-0 transform items-center justify-center rounded-full bg-gray-400',
+                "absolute bottom-2 right-2 flex size-6 translate-x-0 transform items-center justify-center rounded-full bg-gray-400",
                 {
-                  'bg-brand-main': loved,
+                  "bg-brand-main": loved,
                 },
               )}
             >
               <Icon
                 iconClassName="text-content-inverse"
-                name={loved ? 'heart-fill' : 'heart'}
+                name={loved ? "heart-fill" : "heart"}
                 style={{ width: 12, height: 12 }}
               />
             </div>

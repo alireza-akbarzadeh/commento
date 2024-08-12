@@ -1,4 +1,4 @@
-import { LazyImage } from './lazy-image';
+import { LazyImage } from "./lazy-image";
 
 export function Development(): JSX.Element {
   return (

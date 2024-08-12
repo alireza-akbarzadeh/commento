@@ -1,7 +1,7 @@
-import { RegexPatterns } from '@/shared/constant';
-import { Brand } from '@/types/helper';
+import { RegexPatterns } from "@/shared/constant";
+import { Brand } from "@/types/helper";
 
-type EmailAddress = Brand<string, 'EmailAddress'>;
+type EmailAddress = Brand<string, "EmailAddress">;
 
 function isValidEmail(email: string): email is EmailAddress {
   return RegexPatterns.Email.test(email);
@@ -11,11 +11,11 @@ function isValid(input: string, regex: RegExp): boolean {
   return regex.test(input);
 }
 function assertValid<T>(input: T, regex: RegExp): asserts input is T {
-  if (typeof input !== 'string' && typeof input !== 'number') {
-    throw new Error('Input must be a string or number');
+  if (typeof input !== "string" && typeof input !== "number") {
+    throw new Error("Input must be a string or number");
   }
   if (!regex.test(String(input))) {
-    throw new Error('Input does not match the expected pattern');
+    throw new Error("Input does not match the expected pattern");
   }
 }
 
@@ -24,7 +24,7 @@ type PasswordValues = {
   confirmPassword: string;
 };
 
-type Valid<T> = Brand<T, 'Valid'>;
+type Valid<T> = Brand<T, "Valid">;
 
 function isValidPassword(
   valuse: PasswordValues,
@@ -37,7 +37,7 @@ function assertIsValidPassword(
   values: PasswordValues,
 ): asserts values is Valid<PasswordValues> {
   if (values.password !== values.confirmPassword) {
-    throw new Error('Password is invalid');
+    throw new Error("Password is invalid");
   }
 }
 

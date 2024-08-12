@@ -1,4 +1,4 @@
-import { Icon } from '@/shared/components';
+import { Icon } from "@/shared/components";
 
 type SectionTitlePropType = {
   title: string;

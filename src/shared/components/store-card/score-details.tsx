@@ -1,6 +1,7 @@
-import { useTranslations } from 'next-intl';
-import React from 'react';
-import { Icon } from '@/shared/components';
+import { useTranslations } from "next-intl";
+import React from "react";
+
+import { Icon } from "@/shared/components";
 import {
   Button,
   Drawer,
@@ -9,10 +10,10 @@ import {
   DrawerDescription,
   DrawerHeader,
   DrawerTrigger,
-} from '@/shared/ui';
+} from "@/shared/ui";
 
 export const ScoreDetails = () => {
-  const t = useTranslations('Product');
+  const t = useTranslations("Product");
   return (
     <Drawer>
       <DrawerTrigger asChild>
@@ -20,7 +21,7 @@ export const ScoreDetails = () => {
           variant="ghost"
           className="w-full text-content-primary shadow-elevation2 text-labelSmall"
         >
-          {t('scoreDetails')}
+          {t("scoreDetails")}
         </Button>
       </DrawerTrigger>
       <DrawerContent className="h-full rounded-none pb-4">

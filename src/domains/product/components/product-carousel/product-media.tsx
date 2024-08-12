@@ -1,7 +1,8 @@
-import { useTranslations } from 'next-intl';
-import { useState } from 'react';
-import { useBanners } from '@/domains/home/hooks';
-import { Icon, LazyImage, PlayButton } from '@/shared/components';
+import { useTranslations } from "next-intl";
+import { useState } from "react";
+import { useBanners } from "@/domains/home/hooks";
+
+import { Icon, LazyImage, PlayButton } from "@/shared/components";
 import {
   Button,
   Carousel,
@@ -10,31 +11,31 @@ import {
   Drawer,
   DrawerClose,
   DrawerContent,
-} from '@/shared/ui';
-import { cn } from '@/shared/utils';
+} from "@/shared/ui";
+import { cn } from "@/shared/utils";
 
-import { MediaThumbs } from './media-thumbs';
+import { MediaThumbs } from "./media-thumbs";
 
 type ProductMediaProps = {
-  tab: 'video' | 'pic' | 'none';
-  setTab: (tab: 'video' | 'pic' | 'none') => void;
+  tab: "video" | "pic" | "none";
+  setTab: (tab: "video" | "pic" | "none") => void;
 };
 
 export function ProductMedia(props: ProductMediaProps) {
   const { tab, setTab } = props;
-  const t = useTranslations('Globals');
+  const t = useTranslations("Globals");
 
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const { scrollSnaps, scrollTo, selectedIndex, setApi } = useBanners();
   const togglePlay = () => setIsPlaying(!isPlaying);
   return (
     <Drawer
-      open={tab === 'video' || tab === 'pic'}
-      onClose={() => setTab('none')}
+      open={tab === "video" || tab === "pic"}
+      onClose={() => setTab("none")}
     >
       <div className="px-4">
         <Icon
-          onClick={() => setTab('video')}
+          onClick={() => setTab("video")}
           name="video-two-fill"
           iconClassName="text-content-tertiary"
         />
@@ -42,13 +43,13 @@ export function ProductMedia(props: ProductMediaProps) {
       <DrawerContent className="h-full rounded-none">
         <div className="size-10 pr-3">
           <Icon
-            onClick={() => setTab('none')}
+            onClick={() => setTab("none")}
             size="small"
             name="arrow-right"
           />
         </div>
         <div className="">
-          <Carousel opts={{ direction: 'rtl' }} setApi={setApi}>
+          <Carousel opts={{ direction: "rtl" }} setApi={setApi}>
             <CarouselContent className="py-4">
               {Array.from({ length: 3 }).map((_, index) => (
                 <CarouselItem
@@ -64,7 +65,7 @@ export function ProductMedia(props: ProductMediaProps) {
                         width={240}
                         height={240}
                       />
-                      {tab !== 'pic' && (
+                      {tab !== "pic" && (
                         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                           <PlayButton
                             onClick={togglePlay}
@@ -95,29 +96,29 @@ export function ProductMedia(props: ProductMediaProps) {
             <div className="flex p-4">
               <div className="rounded-2xl border border-border-primary p-1">
                 <Button
-                  onClick={() => setTab('pic')}
-                  className={cn('rounded-2xl text-labelSmall', {
-                    'bg-surface-tertiary': tab === 'pic',
+                  onClick={() => setTab("pic")}
+                  className={cn("rounded-2xl text-labelSmall", {
+                    "bg-surface-tertiary": tab === "pic",
                   })}
                   variant="ghost"
                 >
-                  {t('picture')}
+                  {t("picture")}
                 </Button>
                 <Button
-                  onClick={() => setTab('video')}
-                  className={cn('rounded-2xl text-labelSmall', {
-                    'bg-surface-tertiary': tab === 'video',
+                  onClick={() => setTab("video")}
+                  className={cn("rounded-2xl text-labelSmall", {
+                    "bg-surface-tertiary": tab === "video",
                   })}
                   variant="ghost"
                 >
-                  {t('videos')}
+                  {t("videos")}
                 </Button>
               </div>
             </div>
           </Carousel>
           <MediaThumbs
             setIsPlaying={setIsPlaying}
-            hasVideo={tab === 'video'}
+            hasVideo={tab === "video"}
             {...{ scrollSnaps, scrollTo, selectedIndex }}
           />
         </div>

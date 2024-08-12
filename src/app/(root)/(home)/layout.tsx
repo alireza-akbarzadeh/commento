@@ -1,6 +1,7 @@
-import React from 'react';
-import { SearchAction } from '@/domains/home/containers';
-import { BottomNavigation } from '@/shared/components';
+import React from "react";
+import { SearchAction } from "@/domains/home/containers";
+
+import { BottomNavigation } from "@/shared/components";
 
 export default function HomeLayout({
   children,

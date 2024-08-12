@@ -1,8 +1,10 @@
-'use client';
-import { useState } from 'react';
-import { Icon } from '@/shared/components';
-import { useToast } from '@/shared/ui';
-import { cn } from '@/shared/utils';
+"use client";
+
+import { useState } from "react";
+
+import { Icon } from "@/shared/components";
+import { useToast } from "@/shared/ui";
+import { cn } from "@/shared/utils";
 
 export function LovedAction() {
   const { toast } = useToast();
@@ -11,8 +13,8 @@ export function LovedAction() {
   const handleToggleLoved = () => {
     setLoved(!loved);
     toast({
-      title: 'گوشی موبایل اپل مدل iPhone 13 CH دو سیم‌ کارت',
-      description: `موفقیت با ${!loved ? 'افزوده شد' : 'حذف شد'}`,
+      title: "گوشی موبایل اپل مدل iPhone 13 CH دو سیم‌ کارت",
+      description: `موفقیت با ${!loved ? "افزوده شد" : "حذف شد"}`,
     });
   };
 
@@ -20,10 +22,10 @@ export function LovedAction() {
     <div className="size-10">
       <Icon
         onClick={handleToggleLoved}
-        iconClassName={cn('text-content-primary', {
-          'text-surface-negative': loved,
+        iconClassName={cn("text-content-primary", {
+          "text-surface-negative": loved,
         })}
-        name={loved ? 'heart-fill' : 'heart'}
+        name={loved ? "heart-fill" : "heart"}
         size="medium"
       />
     </div>

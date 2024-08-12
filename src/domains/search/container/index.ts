@@ -1,1 +1,1 @@
-export { ResentSearch } from './recent-search';
+export { ResentSearch } from "./recent-search";

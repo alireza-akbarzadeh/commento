@@ -1,7 +1,9 @@
-'use client';
-import { useTranslations } from 'next-intl';
-import { Icon } from '@/shared/components';
-import { useQueryParams } from '@/shared/hooks';
+"use client";
+
+import { useTranslations } from "next-intl";
+
+import { Icon } from "@/shared/components";
+import { useQueryParams } from "@/shared/hooks";
 import {
   Button,
   Drawer,
@@ -11,10 +13,11 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from '@/shared/ui';
-import { cn } from '@/shared/utils';
-import { FilterBrand } from './filter-brand';
-import { FilterContent } from './filter-content';
+} from "@/shared/ui";
+import { cn } from "@/shared/utils";
+
+import { FilterBrand } from "./filter-brand";
+import { FilterContent } from "./filter-content";
 
 type FilterProductProps = {
   activeFilterCount: number;
@@ -22,20 +25,20 @@ type FilterProductProps = {
 
 export function FilterProduct(props: FilterProductProps) {
   const { activeFilterCount } = props;
-  const t = useTranslations('Globals');
+  const t = useTranslations("Globals");
   const { clearQueryParams, getQueryParam, toggleQueryParam } =
     useQueryParams();
-  const tab = getQueryParam('tab');
-  const isFiltered = tab === '1';
+  const tab = getQueryParam("tab");
+  const isFiltered = tab === "1";
 
   return (
     <Drawer>
       <DrawerTrigger className="relative">
         <div
           className={cn(
-            'flex h-8 w-8 items-center justify-center rounded-xl bg-surface-tertiary p-2',
+            "flex h-8 w-8 items-center justify-center rounded-xl bg-surface-tertiary p-2",
             {
-              'border-2 border-content-primary': Boolean(activeFilterCount),
+              "border-2 border-content-primary": Boolean(activeFilterCount),
             },
           )}
         >
@@ -53,16 +56,16 @@ export function FilterProduct(props: FilterProductProps) {
             <>
               <Icon
                 name="arrow-right"
-                onClick={() => toggleQueryParam('tab')}
+                onClick={() => toggleQueryParam("tab")}
               />
               <DrawerClose onClick={() => clearQueryParams()}>
-                {t('delete')}
+                {t("delete")}
               </DrawerClose>
             </>
           ) : (
             <>
               <DrawerTitle className="text-headlineSmall">
-                {t('filters')}
+                {t("filters")}
               </DrawerTitle>
               <DrawerClose>
                 <div className="flex-center size-8 rounded-full bg-surface-tertiary">

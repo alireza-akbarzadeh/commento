@@ -1,22 +1,22 @@
-import { cva, type VariantProps } from 'class-variance-authority';
-import * as React from 'react';
+import { cva, type VariantProps } from "class-variance-authority";
+import * as React from "react";
 
-import { cn } from '@/shared/utils';
+import { cn } from "@/shared/utils";
 
 const alertVariants = cva(
-  'relative w-full rounded-[8px] border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground',
+  "relative w-full rounded-[8px] border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground",
   {
     variants: {
       variant: {
-        default: 'bg-background text-foreground',
+        default: "bg-background text-foreground",
         positive:
-          'bg-surface-positiveLight  border-surface-positiveLight text-content-primary',
+          "bg-surface-positiveLight  border-surface-positiveLight text-content-primary",
         negative:
-          'bg-surface-positiveLight text-content-primaryborder-destructive/50 text-destructive dark:border-destructive [&>svg]:text-destructive',
+          "bg-surface-positiveLight text-content-primaryborder-destructive/50 text-destructive dark:border-destructive [&>svg]:text-destructive",
       },
     },
     defaultVariants: {
-      variant: 'default',
+      variant: "default",
     },
   },
 );
@@ -32,7 +32,7 @@ const Alert = React.forwardRef<
     {...props}
   />
 ));
-Alert.displayName = 'Alert';
+Alert.displayName = "Alert";
 
 const AlertTitle = React.forwardRef<
   HTMLParagraphElement,
@@ -41,7 +41,7 @@ const AlertTitle = React.forwardRef<
   <h5
     ref={ref}
     className={cn(
-      'mb-1 leading-none tracking-tight text-labelMedium',
+      "mb-1 leading-none tracking-tight text-labelMedium",
       className,
     )}
     {...props}
@@ -49,7 +49,7 @@ const AlertTitle = React.forwardRef<
     {props.children}
   </h5>
 ));
-AlertTitle.displayName = 'AlertTitle';
+AlertTitle.displayName = "AlertTitle";
 
 const AlertDescription = React.forwardRef<
   HTMLParagraphElement,
@@ -58,12 +58,12 @@ const AlertDescription = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      'mt-[2px] text-content-secondary text-bodySmall [&_p]:leading-relaxed',
+      "mt-[2px] text-content-secondary text-bodySmall [&_p]:leading-relaxed",
       className,
     )}
     {...props}
   />
 ));
-AlertDescription.displayName = 'AlertDescription';
+AlertDescription.displayName = "AlertDescription";
 
 export { Alert, AlertTitle, AlertDescription };
