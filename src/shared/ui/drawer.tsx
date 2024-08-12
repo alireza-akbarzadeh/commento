@@ -41,30 +41,33 @@ type DrawerContentProps = React.ComponentPropsWithoutRef<
     noOverlay?: boolean;
     children: React.ReactNode;
     onClickOverlay?: () => void;
+    noPortal?: boolean;
 };
 
 const DrawerContent = React.forwardRef<
     React.ElementRef<typeof DrawerPrimitive.Content>,
     DrawerContentProps
->(({ className, noOverlay, children, onClickOverlay, ...props }, ref) => (
-    <DrawerPortal>
-        {/*Responsive:  need to change the w when we want to show in larger devices */}
-        {!noOverlay && (
-            <DrawerOverlay onClick={onClickOverlay} className="mx-auto max-w-lg" />
-        )}
-        <DrawerPrimitive.Content
-            ref={ref}
-            className={cn(
-                'fixed inset-x-0 bottom-0 z-50 mx-auto mt-24 flex h-auto max-w-lg flex-col rounded-t-[20px] border bg-background',
-                className,
+>(({ className, noOverlay, children, onClickOverlay, noPortal, ...props }, ref) => {
+    return (
+        <DrawerPortal>
+            {/*Responsive:  need to change the w when we want to show in larger devices */}
+            {!noOverlay && (
+                <DrawerOverlay onClick={onClickOverlay} className="mx-auto max-w-lg" />
             )}
-            {...props}
-        >
-            <div className="mx-auto mt-2 h-1 w-[44px] rounded-full bg-black/15" />
-            {children}
-        </DrawerPrimitive.Content>
-    </DrawerPortal>
-));
+            <DrawerPrimitive.Content
+                ref={ref}
+                className={cn(
+                    'fixed inset-x-0 bottom-0 z-50 mx-auto mt-24 flex h-auto max-w-lg flex-col rounded-t-[20px] border bg-background',
+                    className,
+                )}
+                {...props}
+            >
+                <div className="mx-auto mt-2 h-1 w-[44px] rounded-full bg-black/15" />
+                {children}
+            </DrawerPrimitive.Content>
+        </DrawerPortal>
+    )
+});
 DrawerContent.displayName = 'DrawerContent';
 
 const DrawerHeader = ({

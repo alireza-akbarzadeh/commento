@@ -19,23 +19,23 @@ export function useIntersectionObserver(
 
   const updateEntry = ([entry]: IntersectionObserverEntry[]): void => {
     setEntry(entry);
+    console.log({updateEntry:entry});
+
   };
+;
 
   useEffect(() => {
     const node = elementRef?.current; // DOM Ref
     const hasIOSupport = !!window.IntersectionObserver;
-
     if (!hasIOSupport || frozen || !node) return;
-
     const observerParams = { threshold, root, rootMargin };
     const observer = new IntersectionObserver(updateEntry, observerParams);
 
     observer.observe(node);
-
     return () => observer.disconnect();
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [threshold, root, rootMargin, frozen]);
+  }, [threshold, root, rootMargin, frozen, elementRef.current]);
 
   return entry;
 }
