@@ -53,7 +53,6 @@ export function BottomSheetStore(props: BottomSheetStoreType) {
             modal={false}
         >
             <DrawerContent
-                noPortal
                 noOverlay
                 className={cn('m-auto h-auto', {
                     'm-auto h-4/5': activeSnapPoint === 1,
