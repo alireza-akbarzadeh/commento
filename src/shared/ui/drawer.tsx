@@ -41,13 +41,12 @@ type DrawerContentProps = React.ComponentPropsWithoutRef<
     noOverlay?: boolean;
     children: React.ReactNode;
     onClickOverlay?: () => void;
-    noPortal?: boolean;
 };
 
 const DrawerContent = React.forwardRef<
     React.ElementRef<typeof DrawerPrimitive.Content>,
     DrawerContentProps
->(({ className, noOverlay, children, onClickOverlay, noPortal, ...props }, ref) => {
+>(({ className, noOverlay, children, onClickOverlay, ...props }, ref) => {
     return (
         <DrawerPortal>
             {/*Responsive:  need to change the w when we want to show in larger devices */}
