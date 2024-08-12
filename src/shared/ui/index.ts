@@ -69,6 +69,7 @@ export { Separator } from './separator';
 export { Badge, type BadgeProps, badgeVariants } from './badge';
 
 export { Switch } from './switch';
+export { Textarea } from './textarea';
 export { Alert, AlertDescription, AlertTitle } from './alert';
 export {
   Form,

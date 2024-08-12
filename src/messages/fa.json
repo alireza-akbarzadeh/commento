@@ -12,7 +12,10 @@
     "picture": "تصاویر",
     "videos": "ویدیو‌ها",
     "stores": "فروشگاه‌ها",
-    "delete": "پاک کردن"
+    "delete": "پاک کردن",
+    "submit": "ثبت",
+    "enterYourDescription": "توضیحات خود را ثبت کنید",
+    "anonymousDescription": "توضیحات به صورت ناشناس برای فروشنده ارسال میشود"
   },
   "HomePage": {
     "searchForProdcut": "جستجوی محصول...",
@@ -25,6 +28,9 @@
   "Product": {
     "sharedProduct": "اشتراک گذاری کالا",
     "notifiedPriced": "اطلاع رسانی  قیمت",
-    "faq": "پرسش و پاسخ‌ها"
+    "faq": "پرسش و پاسخ‌ها",
+    "reportProblem": "گزارش مشکل",
+    "scoreDetails": "جزییات امتیاز",
+    "reportProblemWithPrice": "گزارش خطا قیمت"
   }
 }

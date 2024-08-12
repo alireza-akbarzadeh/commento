@@ -22,7 +22,7 @@ const Checkbox = React.forwardRef<
       className={cn('flex items-center justify-center text-current')}
     >
       <Icon
-        iconClassName="text-content-onInvers mb-0.5"
+        iconClassName="text-content-onInvers mb-1.5"
         name="check-fill"
         size={16}
       />
