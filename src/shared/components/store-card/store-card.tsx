@@ -13,15 +13,22 @@ import { InfoBoxes } from "./Info-Boxes";
 import { PriceAction } from "./price-action";
 import { StoreRate } from "./store-rate";
 
-type StoreCardProps = {
+export type StoreCardProps = {
   hasFilter?: boolean;
   open?: boolean;
+  blank?: boolean;
   navigation?: string;
   showStoreBtn?: boolean;
 };
 
 export function StoreCard(props: StoreCardProps) {
-  const { hasFilter = false, open = false, navigation, showStoreBtn } = props;
+  const {
+    hasFilter = false,
+    open = false,
+    navigation,
+    showStoreBtn,
+    blank,
+  } = props;
   const [toggleInfo, setToggleInfo] = useState(open);
   const { push } = useRouter();
   const toggleAction = () => setToggleInfo(!toggleInfo);
@@ -76,7 +83,7 @@ export function StoreCard(props: StoreCardProps) {
             </Badge>
           </div>
           <InfoBoxes />
-          <PriceAction navigation={navigation} />
+          <PriceAction blank={blank} navigation={navigation} />
           {showStoreBtn && (
             <div className="py-4">
               <Button
