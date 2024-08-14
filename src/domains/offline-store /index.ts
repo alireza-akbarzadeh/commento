@@ -1,3 +1,3 @@
 "use client";
 export { OfflineStoresDomain } from "./offline-store-domain";
-export { StoreDetails } from "./components";
+export { StoreDetails } from "./details";

@@ -1,8 +1,8 @@
+import { TestScore } from "@/shared/components";
 import { Separator } from "@/shared/ui";
 
 import { PriceNotify } from "./price-notify/price-notify";
 import { SpecificTech } from "./specific/specific-tech";
-import { TestScore } from "./test-score/test-score";
 
 export function ProductInfo() {
   return (

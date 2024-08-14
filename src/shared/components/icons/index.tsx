@@ -18,7 +18,7 @@ type IconProps = {
   onClick?: (event: React.MouseEvent) => void;
 };
 
-const sizes: Record<IconSize, number> = {
+export const sizes: Record<IconSize, number> = {
   xxSmall: 16,
   xSmall: 18,
   small: 20,

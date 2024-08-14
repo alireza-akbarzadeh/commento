@@ -1,50 +1,29 @@
 "use client";
 
-import { useRef, useState } from "react";
-
 import { Icon, StoreCard } from "@/shared/components";
-import { useIsomorphicLayoutEffect } from "@/shared/hooks";
-import { useIntersectionObserver } from "@/shared/hooks/use-intersection-observer";
 import { Button, Drawer, DrawerContent } from "@/shared/ui";
 import { cn } from "@/shared/utils";
+import { AllStore } from "./all-store";
+import { useBottomSheetController } from "../hooks/useBottomSheetController";
+import { DrawerAction } from "../offline-store-domain";
 
-type BottomSheetStoreType = {
-  showStore: "all" | "one" | "none";
-  handleToggleClick: (state: "all" | "one" | "none") => void;
+export type BottomSheetStoreType = {
+  drawerAction: DrawerAction;
+  handleToggleClick: (state: DrawerAction) => void;
 };
 
 export function BottomSheetStore(props: BottomSheetStoreType) {
-  const { showStore, handleToggleClick } = props;
-  const [isThirdCardVisible, setIsThirdCardVisible] = useState(false);
-  const thirdCardRef = useRef<HTMLDivElement>(null);
+  const { drawerAction, handleToggleClick } = props;
+  const { handleDrag, isThirdCardVisible, numberPfStoreList, thirdCardRef } =
+    useBottomSheetController({ drawerAction, handleToggleClick });
 
-  const entry = useIntersectionObserver(thirdCardRef, {
-    threshold: 0.1,
-    rootMargin: "0px",
-  });
-
-  useIsomorphicLayoutEffect(() => {
-    if (entry?.isIntersecting) {
-      setIsThirdCardVisible(true);
-    } else {
-      setIsThirdCardVisible(false);
-    }
-  }, [entry]);
-
-  const handleDrag = (
-    _event: React.PointerEvent<HTMLDivElement>,
-    percentageDragged: number,
-  ) => {
-    if (percentageDragged > 0.0033) {
-      handleToggleClick("all");
-    }
-  };
-
-  const numberPfStoreList = showStore === "one" ? 1 : 5;
+  if (drawerAction === "all") {
+    return <AllStore handleToggleClick={handleToggleClick} />;
+  }
 
   return (
     <Drawer
-      open={showStore === "all" || showStore === "one"}
+      open={drawerAction === "one" || drawerAction === "drag"}
       onDrag={handleDrag}
       onClose={() => handleToggleClick("none")}
       modal={false}
@@ -52,8 +31,8 @@ export function BottomSheetStore(props: BottomSheetStoreType) {
       <DrawerContent
         noOverlay
         className={cn("m-auto h-auto", {
-          "m-auto h-4/5": showStore === "all",
-          "mx-4 sm:m-auto": showStore === "one",
+          "m-auto h-4/5": drawerAction === "drag",
+          "mx-4 sm:m-auto": drawerAction === "one",
         })}
       >
         <div ref={thirdCardRef} className="h-full overflow-y-auto">

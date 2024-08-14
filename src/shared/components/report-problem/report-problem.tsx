@@ -21,7 +21,10 @@ import { cn } from "@/shared/utils";
 
 import { ReportErrorPrice } from "./report-error-price";
 
-export const ReportProblem = () => {
+type ReportProblemProps = { actionButton: React.ReactNode };
+
+export const ReportProblem = (props: ReportProblemProps) => {
+  const { actionButton } = props;
   const t = useTranslations("Product");
   const [checked, setChecked] = useState<number | null>(null);
   const isInputChecked = checked !== null;
@@ -39,14 +42,7 @@ export const ReportProblem = () => {
   ];
   return (
     <Drawer>
-      <DrawerTrigger asChild>
-        <Button
-          variant="ghost"
-          className="w-full text-content-primary shadow-elevation2 text-labelSmall"
-        >
-          {t("reportProblem")}
-        </Button>
-      </DrawerTrigger>
+      <DrawerTrigger asChild>{actionButton}</DrawerTrigger>
       <DrawerContent
         className={`${isInputChecked ? "h-[95%]" : "h-full"} rounded-none pb-4`}
       >
