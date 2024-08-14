@@ -14,7 +14,7 @@ export function ProductSwipe(props: ProductSwiperops) {
   const { data, title } = props;
 
   return (
-    <>
+    <div className="pt-2">
       {title && <SectionTitle title={title} />}
       <Carousel opts={{ direction: "rtl", dragFree: true }}>
         <CarouselContent className="bg-content-inverse">
@@ -25,6 +25,6 @@ export function ProductSwipe(props: ProductSwiperops) {
           ))}
         </CarouselContent>
       </Carousel>
-    </>
+    </div>
   );
 }

@@ -1,5 +1,5 @@
 import { Icon, ReportProblem, TestScore } from "@/shared/components";
-import { Badge, Separator } from "@/shared/ui";
+import { Separator } from "@/shared/ui";
 
 export function RatingAndReport() {
   return (
