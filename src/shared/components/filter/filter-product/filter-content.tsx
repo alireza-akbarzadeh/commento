@@ -24,31 +24,9 @@ export function FilterContent() {
       </div>
       <Separator className="my-3 border-b border-border-primary" />
       <div>
-        <FilterRow title="دسته بندی" />
-        <FilterRow title="محدوده قیمت" />
-        <FilterRow title="نوع فروشنده" />
-        <FilterRow title="نوع فروشنده" />
-        <FilterRow title="نوع فروشنده" />
-        <FilterRow title="نوع فروشنده" />
-        <FilterRow title="نوع فروشنده" />
-        <FilterRow title="نوع فروشنده" />
-        <FilterRow title="نوع فروشنده" />
-        <FilterRow title="نوع فروشنده" />
-        <FilterRow title="نوع فروشنده" />
-        <FilterRow title="نوع فروشنده" />
-        <FilterRow title="نوع فروشنده" />
-        <FilterRow title="نوع فروشنده" />
-        <FilterRow title="نوع فروشنده" />
-        <FilterRow title="نوع فروشنده" />
-        <FilterRow title="نوع فروشنده" />
-        <FilterRow title="نوع فروشنده" />
-        <FilterRow title="نوع فروشنده" />
-        <FilterRow title="نوع فروشنده" />
-        <FilterRow title="نوع فروشنده" />
-        <FilterRow title="نوع فروشنده" />
-        <FilterRow title="نوع فروشنده" />
-        <FilterRow title="وضعیت کارکرد" />
-        <FilterRow title="حافظه داخلی" />
+        {Array.from({ length: 53 }).map((_, index) => (
+          <FilterRow key={index} title="محدوده قیمت" />
+        ))}
       </div>
       <Separator className="my-2 border-b border-border-primary" />
       <ul>

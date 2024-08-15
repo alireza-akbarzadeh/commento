@@ -31,7 +31,7 @@ export function SearchFiled(props: SearchFiledProps) {
   }, [pathname]);
 
   return (
-    <div className="flex items-center gap-1 py-2 pl-4 pr-6">
+    <div className="flex items-center gap-2 py-2 pl-4 pr-4">
       {hasBackButton && (
         <Button
           onClick={back}

@@ -14,7 +14,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/shared/ui";
-import { cn } from "@/shared/utils";
+import { cn, formatNumberToPersian } from "@/shared/utils";
 
 import { FilterBrand } from "./filter-brand";
 import { FilterContent } from "./filter-content";
@@ -33,7 +33,7 @@ export function FilterProduct(props: FilterProductProps) {
 
   return (
     <Drawer>
-      <DrawerTrigger className="relative">
+      <DrawerTrigger className="relative pr-4">
         <div
           className={cn(
             "flex h-8 w-8 items-center justify-center rounded-xl bg-surface-tertiary p-2",
@@ -43,8 +43,8 @@ export function FilterProduct(props: FilterProductProps) {
           )}
         >
           {activeFilterCount > 0 && (
-            <div className="absolute -left-2 top-0 flex size-[18px] items-center justify-center rounded-full bg-content-primary text-xs text-content-inverse">
-              {activeFilterCount}
+            <div className="absolute -left-1 top-2 flex size-[18px] items-center justify-center rounded-full border border-border-primary bg-content-primary pt-[2px] text-[10px] text-content-inverse">
+              {formatNumberToPersian(activeFilterCount)}
             </div>
           )}
           <Icon name="slider-horizontal" size="small" />
@@ -76,23 +76,22 @@ export function FilterProduct(props: FilterProductProps) {
           )}
         </DrawerHeader>
         <DrawerDescription />
-        <div className="flex h-full flex-col justify-between">
+        <div className="min-h-[calc(100dvh -100px)] overflow-auto">
           {isFiltered ? <FilterBrand /> : <FilterContent />}
-          {/* this should be sticky to buttom */}
-          <div className="mb-2 flex items-center justify-between gap-3 px-4 pt-6">
-            <Button
-              fullWidth
-              className="h-[52px] rounded-xl py-3 text-labellarge"
-            >
-              مشاهده نتایج
-            </Button>
-            <DrawerClose
-              onClick={() => clearQueryParams()}
-              className="h-[52px] w-full rounded-xl py-3 text-labellarge"
-            >
-              حذف فیلتر‌ها
-            </DrawerClose>
-          </div>
+        </div>
+        <div className="sticky bottom-0 flex w-full items-center justify-between gap-3 bg-content-inverse px-4 pt-6">
+          <Button
+            fullWidth
+            className="h-[52px] rounded-xl py-3 text-labellarge"
+          >
+            مشاهده نتایج
+          </Button>
+          <DrawerClose
+            onClick={() => clearQueryParams()}
+            className="h-[52px] w-full rounded-xl py-3 text-labellarge"
+          >
+            حذف فیلتر‌ها
+          </DrawerClose>
         </div>
       </DrawerContent>
     </Drawer>
