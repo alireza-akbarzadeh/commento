@@ -8,7 +8,7 @@ function Layout(props: PropsWithChildren) {
       data-testid="root"
       className="container relative max-w-lg bg-content-inverse p-0"
     >
-      <main className="h-dvh min-h-dvh">{children}</main>
+      <main className="h-dvh min-h-dvh scroll-smooth">{children}</main>
     </div>
   );
 }

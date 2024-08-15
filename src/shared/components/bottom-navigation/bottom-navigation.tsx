@@ -22,7 +22,7 @@ export function BottomNavigation() {
     { icon: "person", label: t("profile"), href: "/profile" },
   ];
   return (
-    <footer className="sticky bottom-0 left-0 z-50 w-full border-t border-border-primary bg-content-inverse">
+    <footer className="sticky bottom-0 left-0 z-50 mt-6 w-full border-t border-border-primary bg-content-inverse">
       <nav className="h-[93px]">
         <ol
           aria-label="main"
@@ -30,7 +30,7 @@ export function BottomNavigation() {
         >
           <NavItem
             icon="magnifier-fill"
-            href="/search"
+            href="/"
             active={pathname.startsWith("/")}
             label={t("search")}
             size="medium"

@@ -78,7 +78,8 @@ export function FilterProduct(props: FilterProductProps) {
         <DrawerDescription />
         <div className="flex h-full flex-col justify-between">
           {isFiltered ? <FilterBrand /> : <FilterContent />}
-          <div className="mb-2 flex items-center justify-between gap-3 px-4">
+          {/* this should be sticky to buttom */}
+          <div className="mb-2 flex items-center justify-between gap-3 px-4 pt-6">
             <Button
               fullWidth
               className="h-[52px] rounded-xl py-3 text-labellarge"

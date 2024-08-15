@@ -10,7 +10,7 @@ export function FilterContent() {
 
   return (
     <div className="px-4">
-      <p className="py-2 text-headlineSmall">مرتب‌سازی</p>
+      <p className="py-2 text-headlineXSmall">مرتب‌سازی</p>
       <div className="flex items-center gap-3 py-2">
         <Button variant="outline" className="h-10 w-[72px] text-bodySmall">
           مرتبط‌ترین
@@ -26,6 +26,26 @@ export function FilterContent() {
       <div>
         <FilterRow title="دسته بندی" />
         <FilterRow title="محدوده قیمت" />
+        <FilterRow title="نوع فروشنده" />
+        <FilterRow title="نوع فروشنده" />
+        <FilterRow title="نوع فروشنده" />
+        <FilterRow title="نوع فروشنده" />
+        <FilterRow title="نوع فروشنده" />
+        <FilterRow title="نوع فروشنده" />
+        <FilterRow title="نوع فروشنده" />
+        <FilterRow title="نوع فروشنده" />
+        <FilterRow title="نوع فروشنده" />
+        <FilterRow title="نوع فروشنده" />
+        <FilterRow title="نوع فروشنده" />
+        <FilterRow title="نوع فروشنده" />
+        <FilterRow title="نوع فروشنده" />
+        <FilterRow title="نوع فروشنده" />
+        <FilterRow title="نوع فروشنده" />
+        <FilterRow title="نوع فروشنده" />
+        <FilterRow title="نوع فروشنده" />
+        <FilterRow title="نوع فروشنده" />
+        <FilterRow title="نوع فروشنده" />
+        <FilterRow title="نوع فروشنده" />
         <FilterRow title="نوع فروشنده" />
         <FilterRow title="وضعیت کارکرد" />
         <FilterRow title="حافظه داخلی" />

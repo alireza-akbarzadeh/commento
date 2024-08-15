@@ -18,7 +18,7 @@ export function ComparetaionItem(props: ComparetaionItemProps) {
   const { product } = props;
   const t = useTranslations("HomePage");
   return (
-    <CarouselItem className="basis-[93%] pt-3">
+    <CarouselItem className="basis-[350px] p-2.5">
       <Card className="relative mb-3 rounded-2xl border-[0.5px] border-border-primary bg-content-inverse shadow-elevation4">
         <CardContent className="flex justify-between gap-1.5 px-4 py-2">
           <Item {...product} />

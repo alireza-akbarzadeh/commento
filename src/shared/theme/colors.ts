@@ -3,7 +3,7 @@ export const colors = {
     primary: "#000000",
     inverse: "#ffffff",
     tertiary: "#636366",
-    secondary: "#2C2C2E",
+    secondary: "#535454",
     disabled: "#B1B2B2",
     accent: "#276EF1",
     negative: "#E11900",
@@ -17,7 +17,7 @@ export const colors = {
   surface: {
     primary: "#fff",
     secondary: "#F2F2F2",
-    tertiary: "#F0F0F0",
+    tertiary: "#EAEDED",
     overlayDark: "#0000004D",
     overlayLight: "#0000001F",
     disabled: "#F5F7F7",

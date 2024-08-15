@@ -6,7 +6,6 @@ import React, { useState } from "react";
 import { Icon, LazyImage } from "@/shared/components";
 import { CURRENCY } from "@/shared/constant";
 import {
-  Button,
   Checkbox,
   Drawer,
   DrawerClose,

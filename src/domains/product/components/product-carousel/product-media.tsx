@@ -9,7 +9,6 @@ import {
   CarouselContent,
   CarouselItem,
   Drawer,
-  DrawerClose,
   DrawerContent,
 } from "@/shared/ui";
 import { cn } from "@/shared/utils";

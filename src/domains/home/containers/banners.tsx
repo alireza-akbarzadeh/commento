@@ -8,7 +8,7 @@ import { Carousel, CarouselContent, CarouselItem } from "@/shared/ui";
 import { cn } from "@/shared/utils";
 
 export function Banners() {
-  const { scrollSnaps, scrollTo, selectedIndex, setApi } = useBanners();
+  const { scrollSnaps, selectedIndex, setApi } = useBanners();
 
   return (
     <section id="banner" data-testid="banner" className="my-2">
@@ -18,10 +18,10 @@ export function Banners() {
         setApi={setApi}
         className="relative"
       >
-        <CarouselContent>
+        <CarouselContent className="-ml-0">
           {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem key={index} className="basis-[84%]">
-              <div className="relative h-[207px] overflow-hidden rounded-2xl mobile-l:h-[222px] tablet:h-[256px]">
+            <CarouselItem key={index} className="ml-2 basis-[328px]">
+              <div className="relative aspect-video h-[207px] w-[328px] overflow-hidden">
                 <Image
                   src="/images/hero-banner.webp"
                   fill
@@ -33,21 +33,15 @@ export function Banners() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <div className="absolute bottom-[12px] right-1/2 translate-x-20 cursor-pointer">
+        <div className="absolute bottom-[12px] right-1/2 translate-x-20">
           <div className="flex flex-row items-center gap-3.5">
             {scrollSnaps?.map((_, index) => (
-              <button
-                aria-label="slider-action"
-                title="slider-action"
+              <div
                 key={index}
-                onClick={(event) => {
-                  scrollTo(index);
-                  event.stopPropagation();
-                }}
                 className={cn(
-                  "h-2 w-5 rounded-lg bg-content-primary/30 transition-all duration-300 ease-in-out",
+                  "size-2 rounded-lg bg-content-primary/30 transition-all duration-300 ease-in-out",
                   {
-                    "h-2 w-7": index === selectedIndex,
+                    "h-1.5 w-5": index === selectedIndex,
                     "bg-white": index === selectedIndex,
                   },
                 )}

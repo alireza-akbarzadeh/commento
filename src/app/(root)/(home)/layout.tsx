@@ -9,12 +9,12 @@ export default function HomeLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
+    <div className="bg-content-inverse">
       <SearchAction />
-      <main id="home-content" data-testid="home-content" className="bg-layout">
+      <main id="home-content" data-testid="home-content">
         {children}
       </main>
       <BottomNavigation />
-    </>
+    </div>
   );
 }

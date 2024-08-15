@@ -17,12 +17,12 @@ export function Favorites(props: FavoritesPropsType) {
   const { mode = "dark", title } = props;
   return (
     <section
-      className={`${mode === "dark" ? "mt-2" : "mt-0"}`}
+      className={`${mode === "dark" ? "mt-6" : "mt-0"} bg-layout pb-6`}
       id={`favorite-${mode === "dark" ? "dark" : "light"}`}
       date-testid="favorites"
     >
       <div
-        className={cn("max-w-[309px]", {
+        className={cn("max-w-[309px] py-2", {
           "mb-3 mt-6": mode === "light",
           "my-2 mt-3": mode === "dark",
         })}

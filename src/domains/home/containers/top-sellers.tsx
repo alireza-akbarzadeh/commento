@@ -17,7 +17,11 @@ import { SectionTitle } from "../components/section-title";
 export function TopSellers() {
   const t = useTranslations("Globals");
   return (
-    <section id="top-seller" data-testid="top-seller">
+    <section
+      id="top-seller"
+      data-testid="top-seller"
+      className="bg-layout py-2"
+    >
       <SectionTitle title="فروشندگان برتر" />
       <div className="mt-2 pb-6">
         <Carousel opts={{ direction: "rtl" }}>

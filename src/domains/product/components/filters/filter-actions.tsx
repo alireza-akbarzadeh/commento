@@ -116,7 +116,7 @@ export function FilterActions() {
                 </ul>
                 <Separator className="my-2 border-b border-border-primary" />
               </div>
-              <div className="mb-2 flex items-center justify-between gap-3 px-4">
+              <div className="mb-2 mt-6 flex items-center justify-between gap-3 px-4">
                 <Button
                   fullWidth
                   className="h-[52] rounded-xl py-3 text-labellarge"

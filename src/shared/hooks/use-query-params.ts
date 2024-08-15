@@ -11,7 +11,7 @@ type AppendQueryParam = {
 };
 
 export const useQueryParams = () => {
-  const { replace } = useRouter();
+  const { replace, back } = useRouter();
   const searchParams = useSearchParams();
   const pathname = usePathname();
 
@@ -57,8 +57,9 @@ export const useQueryParams = () => {
     getQueryParam,
     getActiveFilterCount,
     clearQueryParams,
-    searchParams,
     replace,
+    back,
+    searchParams,
     pathname,
   };
 };

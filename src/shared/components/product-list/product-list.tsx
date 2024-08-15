@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { DiscountBadge } from "@/domains/home/components";
 
+import { FeaturesList } from "@/domains/offline-store /components";
 import { Icon, LazyImage } from "@/shared/components";
 import { FindProductTypes } from "@/shared/config/mock-data";
 import { CURRENCY } from "@/shared/constant";
@@ -17,14 +18,12 @@ export function ProductList(props: ProductListPage) {
     discountLabel,
     title,
     imageUrl,
-    storeName,
     priceRange,
     activeBorder,
-    info,
     loved,
     latinName,
   } = props;
-  const data = info?.length ? info : [];
+  const items = ["تهران", "مشهد"];
 
   return (
     <div className="mt-5 px-4">
@@ -33,7 +32,7 @@ export function ProductList(props: ProductListPage) {
         aria-label="see the product in details"
         className="h-[125 px] flex items-center gap-8"
       >
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-4">
           <div className="relative flex size-[109px] flex-col items-center justify-center rounded-md bg-surface-tertiary p-2">
             <figure className="size-[93px]">
               <LazyImage
@@ -54,7 +53,7 @@ export function ProductList(props: ProductListPage) {
             )}
             <div
               className={cn(
-                "absolute bottom-2 right-2 flex size-6 translate-x-0 transform items-center justify-center rounded-full bg-gray-400",
+                "absolute bottom-2 right-2 flex size-6 translate-x-0 transform items-center justify-center rounded-full bg-gray-300",
                 {
                   "bg-brand-main": loved,
                 },
@@ -63,7 +62,7 @@ export function ProductList(props: ProductListPage) {
               <Icon
                 iconClassName="text-content-inverse"
                 name={loved ? "heart-fill" : "heart"}
-                style={{ width: 12, height: 12 }}
+                size="xxSmall"
               />
             </div>
           </div>
@@ -73,21 +72,13 @@ export function ProductList(props: ProductListPage) {
                 <h2 className="text-content-primary text-labelXSmall">
                   {title}
                 </h2>
-                <p className="text-content-primary text-labelMedium">
-                  از {priceRange} {CURRENCY.IR}
-                </p>
-                <p className="text-content-tertiary text-bodyXSmall">
-                  {storeName}
+                <p className="flex items-center gap-1 text-content-primary text-labelXSmall">
+                  <span className="text-tiny">از</span>
+                  <span className="text-labelMedium">{priceRange}</span>
+                  <span className="text-tiny">{CURRENCY.IR}</span>
                 </p>
                 <div className="flex gap-4">
-                  {data?.map((item) => (
-                    <p
-                      className="text-content-tertiary text-bodyXSmall"
-                      key={item.title}
-                    >
-                      {item.title}
-                    </p>
-                  ))}
+                  <FeaturesList items={items} />
                 </div>
               </div>
             </div>
