@@ -18,9 +18,9 @@ export function ComparetaionItem(props: ComparetaionItemProps) {
   const { product } = props;
   const t = useTranslations("HomePage");
   return (
-    <CarouselItem className="basis-[350px] p-2.5">
-      <Card className="relative mb-3 rounded-2xl border-[0.5px] border-border-primary bg-content-inverse shadow-elevation4">
-        <CardContent className="flex justify-between gap-1.5 px-4 py-2">
+    <CarouselItem className="basis-[365px] p-2.5">
+      <Card className="relative mb-3 rounded-2xl border-[0.5px] border-border-primary bg-content-inverse pt-2 shadow-elevation4">
+        <CardContent className="flex justify-between gap-2 py-2">
           <Item {...product} />
           <Item {...product} />
         </CardContent>
@@ -51,7 +51,7 @@ export function ComparetaionItem(props: ComparetaionItemProps) {
 
 function Item({ title, imageUrl, discount, latinName }: Products) {
   return (
-    <div className="flex max-w-[125px] flex-col mobile-l:max-w-[165px]">
+    <div className="flex max-w-[145px] flex-col">
       <Link
         href={`/product/${latinName}`}
         aria-label="see the product in details"
