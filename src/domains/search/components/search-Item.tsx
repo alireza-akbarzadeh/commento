@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import React from "react";
 
 import { Icon, IconType } from "@/shared/components";
 import { SearchItemListType } from "@/shared/config/mock-data";
@@ -14,13 +13,13 @@ type SearchItemProps = SearchItemListType & {
 };
 
 export function SearchItem(props: SearchItemProps) {
-  const { iconName, subtitle, title, activeBorder, latinName } = props;
+  const { iconName, subtitle, title, activeBorder } = props;
   const params = useSearchParams();
   const query = params.get("query") || "";
 
   const linkHref = query
-    ? { pathname: `/search/${latinName}`, query: { query } }
-    : `/search?/${latinName}`;
+    ? { pathname: `/search/result`, query: { query } }
+    : `/search/result`;
   return (
     <>
       <Link href={linkHref} className="flex w-full items-center">

@@ -1,7 +1,7 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { ChangeEvent } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { ChangeEvent, useEffect, useRef } from "react";
 
 import { Icon } from "@/shared/components";
 import { Button, Input } from "@/shared/ui";
@@ -22,10 +22,16 @@ export function SearchFiled(props: SearchFiledProps) {
     searchTerm,
     hasBackButton = true,
   } = props;
+  const focusInput = useRef<HTMLInputElement>(null);
   const { back } = useRouter();
+  const pathname = usePathname();
+
+  useEffect(() => {
+    focusInput.current?.focus();
+  }, [pathname]);
 
   return (
-    <div className="my-2 flex items-center gap-1 pl-4 pr-6">
+    <div className="flex items-center gap-1 py-2 pl-4 pr-6">
       {hasBackButton && (
         <Button
           onClick={back}
@@ -42,6 +48,7 @@ export function SearchFiled(props: SearchFiledProps) {
           size="medium"
         />
         <Input
+          ref={focusInput}
           onChange={(event) => handleInputChange(event)}
           value={searchTerm}
           placeholder="جستجوی محصول..."
