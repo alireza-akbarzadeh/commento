@@ -21,11 +21,11 @@ export function FilterProductList() {
 
   return (
     <>
-      <div className="flex py-2">
+      <div className="flex overflow-auto py-2">
         <FilterProduct activeFilterCount={activeFilterCount} />
         <ScrollArea
           dir="rtl"
-          className="relative overflow-visible whitespace-nowrap border-b border-content-inverse py-3"
+          className="overflow-visible whitespace-nowrap border-b border-content-inverse py-3"
         >
           <div className="flex w-max items-center gap-3 pr-4">
             <Button

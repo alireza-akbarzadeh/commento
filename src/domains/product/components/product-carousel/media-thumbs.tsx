@@ -51,7 +51,7 @@ export function MediaThumbs(props: SliderProps) {
   return (
     <ScrollArea
       className="whitespace-nowrap border-b border-white bg-surface-primary py-2"
-      style={{ width: "100%", maxWidth: "600px" }} // Adjust maxWidth as needed
+      style={{ width: "100%", maxWidth: "600px" }}
       type="auto"
       dir="rtl"
       ref={containerRef}
