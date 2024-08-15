@@ -43,7 +43,7 @@ export function FilterProductList() {
             <Button
               onClick={() => setOpenDrawer(true)}
               className={cn(
-                "h-8 rounded-lg border border-border-primary text-bodySmall",
+                "flex h-8 items-center justify-between gap-1 rounded-lg border border-border-primary p-0 px-1.5 text-bodySmall",
                 {
                   "border-2 border-content-primary":
                     searchParams.has("category"),
@@ -51,7 +51,7 @@ export function FilterProductList() {
               )}
               variant="ghost"
             >
-              <span>دسته بندی</span>
+              <span className="pr-1.5 text-bodyXSmall">دسته بندی</span>
               <Icon name="chevron-down" size="small" />
             </Button>
             <Button

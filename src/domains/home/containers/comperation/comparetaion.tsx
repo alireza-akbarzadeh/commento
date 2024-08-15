@@ -13,7 +13,7 @@ export function Comparetaion() {
     >
       <SectionTitle title="مقایسه‌های من" />
       <Carousel opts={{ direction: "rtl", dragFree: true }} className="pb-3">
-        <CarouselContent className="px-4">
+        <CarouselContent className="pr-2">
           {products.map((product, index) => (
             <ComparetaionItem key={index} product={product} />
           ))}
