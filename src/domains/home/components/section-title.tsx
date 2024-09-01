@@ -1,8 +1,5 @@
+import { SectionTitlePropType } from "@/domains/home/home-types";
 import { Icon } from "@/shared/components";
-
-type SectionTitlePropType = {
-  title: string;
-};
 
 export function SectionTitle(props: SectionTitlePropType) {
   const { title } = props;

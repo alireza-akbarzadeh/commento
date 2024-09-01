@@ -1,16 +1,11 @@
 "use client";
 
+import { useBottomSheetController } from "@/domains/offline-store/hooks/useBottomSheetController";
+import { BottomSheetStoreType } from "@/domains/offline-store/offline-store-types";
 import { Icon, StoreCard } from "@/shared/components";
 import { Button, Drawer, DrawerContent } from "@/shared/ui";
 import { cn } from "@/shared/utils";
 import { AllStore } from "./all-store";
-import { useBottomSheetController } from "../hooks/useBottomSheetController";
-import { DrawerAction } from "../offline-store-domain";
-
-export type BottomSheetStoreType = {
-  drawerAction: DrawerAction;
-  handleToggleClick: (state: DrawerAction) => void;
-};
 
 export function BottomSheetStore(props: BottomSheetStoreType) {
   const { drawerAction, handleToggleClick } = props;

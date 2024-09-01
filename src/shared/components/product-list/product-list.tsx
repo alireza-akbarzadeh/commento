@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { DiscountBadge } from "@/domains/home/components";
 
-import { FeaturesList } from "@/domains/offline-store /components";
+import { FeaturesList } from "@/domains/offline-store/components";
 import { Icon, LazyImage } from "@/shared/components";
 import { FindProductTypes } from "@/shared/config/mock-data";
 import { CURRENCY } from "@/shared/constant";

@@ -1,10 +1,6 @@
+import { DiscountBadgePropsType } from "@/domains/home/home-types";
 import { Icon } from "@/shared/components";
 import { cn } from "@/shared/utils";
-
-type DiscountBadgePropsType = {
-  discount: string;
-  className?: string;
-};
 
 export function DiscountBadge(props: DiscountBadgePropsType) {
   const { discount, className } = props;

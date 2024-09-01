@@ -1,28 +1,14 @@
-import Image from "next/image";
 import { BackButton } from "@/shared/components";
 import { Separator } from "@/shared/ui";
 import {
   Badges,
   ContactButtons,
   FeaturesList,
+  MapImage,
   RatingAndReport,
   StoreHeader,
   Summary,
 } from "./components";
-
-export function MapImage() {
-  return (
-    <div className="relative h-[180px] w-full">
-      <Image
-        src="/images/map.png"
-        alt="map"
-        className="size-full object-cover"
-        sizes="100%"
-        fill
-      />
-    </div>
-  );
-}
 
 export function StoreDetails() {
   const items = ["ارسال رایگان ", "اوپنباکس", "تحویل فوری ", "پرداخت در محل"];

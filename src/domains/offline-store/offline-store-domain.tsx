@@ -2,10 +2,9 @@
 
 import { useState } from "react";
 
+import { BottomSheetStore, StoreMap } from "@/domains/offline-store/components";
+import { DrawerAction } from "@/domains/offline-store/offline-store-types";
 import { Button } from "@/shared/ui";
-import { BottomSheetStore, StoreMap } from "./components";
-
-export type DrawerAction = "all" | "one" | "drag" | "none";
 
 export function OfflineStoresDomain() {
   const [drawerAction, setDrawerAction] = useState<DrawerAction>("none");
@@ -13,7 +12,7 @@ export function OfflineStoresDomain() {
 
   return (
     <div className="flex h-full flex-1 flex-col justify-between">
-      <StoreMap handleButtonClick={handleToggleClick} />
+      <StoreMap handleToggleClick={handleToggleClick} />
       {drawerAction === "none" ? (
         <div className="fixed bottom-0 flex w-full max-w-lg flex-col items-center justify-center rounded-t-[20px] border-t border-border-primary bg-content-inverse shadow-elevation6">
           <span className="mx-auto mt-2 h-1 w-11 rounded-md bg-surface-overlayDark/30" />

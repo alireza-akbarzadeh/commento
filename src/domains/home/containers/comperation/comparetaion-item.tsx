@@ -1,9 +1,8 @@
-import Link from "next/link";
 import { useTranslations } from "next-intl";
 
+import { ProductItem } from "@/domains/home/containers/comperation/product-item";
+import { ComparetaionItemProps } from "@/domains/home/home-types";
 import { Icon } from "@/shared/components";
-import { ProductImage } from "@/shared/components/product-swipe/product-image";
-import { Products } from "@/shared/config/mock-data";
 import {
   Card,
   CardContent,
@@ -12,8 +11,6 @@ import {
   Separator,
 } from "@/shared/ui";
 
-type ComparetaionItemProps = { product: Products };
-
 export function ComparetaionItem(props: ComparetaionItemProps) {
   const { product } = props;
   const t = useTranslations("HomePage");
@@ -21,8 +18,8 @@ export function ComparetaionItem(props: ComparetaionItemProps) {
     <CarouselItem className="basis-[365px] p-2.5">
       <Card className="relative mb-3 rounded-2xl border-[0.5px] border-border-primary bg-content-inverse pt-2 shadow-elevation4">
         <CardContent className="flex justify-between gap-2 py-2">
-          <Item {...product} />
-          <Item {...product} />
+          <ProductItem {...product} />
+          <ProductItem {...product} />
         </CardContent>
         <Separator className="border-1 mx-auto mt-2 w-[90%] border-t border-border-primary" />
         <CardFooter className="flex w-full items-center justify-between py-3">
@@ -46,24 +43,5 @@ export function ComparetaionItem(props: ComparetaionItemProps) {
         </CardFooter>
       </Card>
     </CarouselItem>
-  );
-}
-
-function Item({ title, imageUrl, discount, latinName }: Products) {
-  return (
-    <div className="flex max-w-[145px] flex-col">
-      <Link
-        href={`/product/${latinName}`}
-        aria-label="see the product in details"
-        className="flex-center relative m-2.5 flex-col"
-      >
-        <ProductImage {...{ discount, imageUrl }} />
-      </Link>
-      <div className="space-y-1 pr-2 pt-3">
-        <p className="line-clamp-2 text-content-primary text-labelSmall">
-          {title.length > 40 ? title.slice(0, 38).concat("...") : title}
-        </p>
-      </div>
-    </div>
   );
 }

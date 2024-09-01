@@ -340,5 +340,5 @@ export const iconNames = [
   "wallet",
   "wifi-slash",
   "wifi",
-] as const;
+];
 export type IconType = (typeof iconNames)[number];

@@ -1,3 +1,4 @@
+import { FavoritesPropsType } from "@/domains/home/home-types";
 import { LazyImage } from "@/shared/components";
 import {
   Card,
@@ -7,11 +8,6 @@ import {
   CarouselItem,
 } from "@/shared/ui/";
 import { cn } from "@/shared/utils";
-
-type FavoritesPropsType = {
-  title: string;
-  mode?: "dark" | "light";
-};
 
 export function Favorites(props: FavoritesPropsType) {
   const { mode = "dark", title } = props;

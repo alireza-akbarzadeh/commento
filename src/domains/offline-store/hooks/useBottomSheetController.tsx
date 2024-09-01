@@ -2,9 +2,9 @@
 
 import { useRef, useState } from "react";
 
+import { BottomSheetStoreType } from "@/domains/offline-store/offline-store-types";
 import { useIsomorphicLayoutEffect } from "@/shared/hooks";
 import { useIntersectionObserver } from "@/shared/hooks/use-intersection-observer";
-import { BottomSheetStoreType } from "../components/bottom-sheet-store";
 
 type UseBottomSheetControllerArgs = BottomSheetStoreType;
 

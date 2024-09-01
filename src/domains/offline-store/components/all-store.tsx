@@ -1,10 +1,7 @@
 "use client";
+import { AllStoreType } from "@/domains/offline-store/offline-store-types";
 import { StoreCard } from "@/shared/components";
 import { Drawer, DrawerContent } from "@/shared/ui";
-
-type AllStoreType = {
-  handleToggleClick: (state: "all" | "one" | "none") => void;
-};
 
 export function AllStore(props: AllStoreType) {
   const { handleToggleClick } = props;
