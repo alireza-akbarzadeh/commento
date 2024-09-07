@@ -3,8 +3,7 @@
   <h1>Commento</h1>
 </p>
 
-![Uploading commento.png…]()
-
+![commento](https://github.com/user-attachments/assets/e9f01f41-6060-401c-89d2-742b1baab303)
 
 ## Table of Contents
 
