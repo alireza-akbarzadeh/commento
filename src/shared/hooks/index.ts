@@ -1,3 +1,4 @@
+"use client";
 export { useIntersectionObserver } from "./use-intersection-observer";
 export { useLocalStorage } from "./use-local-storage";
 export { useLockBody } from "./use-lock-body";

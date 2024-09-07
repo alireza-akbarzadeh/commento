@@ -2,16 +2,11 @@
 
 import { useRef, useState } from "react";
 
+import { BottomSheetStoreType } from "@/domains/online-store/online-store-types";
 import { Icon, StoreCard } from "@/shared/components";
-import { useIsomorphicLayoutEffect, useScroll } from "@/shared/hooks";
-import { useIntersectionObserver } from "@/shared/hooks/use-intersection-observer";
+import { useScroll } from "@/shared/hooks";
 import { Button, Drawer, DrawerContent } from "@/shared/ui";
 import { cn } from "@/shared/utils";
-
-type BottomSheetStoreType = {
-  showStore: boolean;
-  handleToggleClick: () => void;
-};
 
 export function BottomSheetStore(props: BottomSheetStoreType) {
   const { showStore, handleToggleClick } = props;
@@ -19,21 +14,21 @@ export function BottomSheetStore(props: BottomSheetStoreType) {
   const [activeSnapPoint, setActiveSnapPoint] = useState<
     number | string | null
   >(0);
-  const [isThirdCardVisible, setIsThirdCardVisible] = useState(false);
+  //   const [isThirdCardVisible, setIsThirdCardVisible] = useState(false);
   const thirdCardRef = useRef<HTMLDivElement>(null);
 
-  const entry = useIntersectionObserver(thirdCardRef, {
-    threshold: 0.1,
-    rootMargin: "0px",
-  });
+  //   const entry = useIntersectionObserver(thirdCardRef, {
+  //     threshold: 0.1,
+  //     rootMargin: "0px",
+  //   });
 
-  useIsomorphicLayoutEffect(() => {
-    if (entry?.isIntersecting) {
-      setIsThirdCardVisible(true);
-    } else {
-      setIsThirdCardVisible(false);
-    }
-  }, [entry]);
+  //   useIsomorphicLayoutEffect(() => {
+  //     if (entry?.isIntersecting) {
+  //       setIsThirdCardVisible(true);
+  //     } else {
+  //       setIsThirdCardVisible(false);
+  //     }
+  //   }, [entry]);
 
   const handleDrag = (
     _event: React.PointerEvent<HTMLDivElement>,
@@ -45,7 +40,6 @@ export function BottomSheetStore(props: BottomSheetStoreType) {
   };
 
   const numberPfStoreList = activeSnapPoint === 0 ? 1 : 5;
-  console.log({ isThirdCardVisible });
 
   return (
     <Drawer
