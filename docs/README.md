@@ -45,10 +45,21 @@ To get started with Commento, follow these steps:
 
 ## Development tools 
 
- Bun: JavaScript runtime and package manager (version 1.1.24)
- Node.js: JavaScript runtime (version 22.0.0)
- vscode 
-
+- **Bun**: JavaScript runtime and package manager (version 1.1.24)
+- **Node.js**: JavaScript runtime (version 22.0.0)
+- **Next.js**: React framework for building web applications
+- **React**: JavaScript library for building user interfaces
+- **TypeScript**: Typed superset of JavaScript for enhanced development experience
+- **Tailwind CSS**: Utility-first CSS framework for rapid UI development
+- **Shadcn/ui**: Reusable components built using Radix UI and Tailwind CSS
+- **Storybook**: Tool for developing and showcasing UI components in isolation
+- **ESLint**: Pluggable linter for Next.js and TypeScript
+- **Prettier**: Opinionated code formatter for consistent code style
+- - **Zod**: TypeScript-first schema validation library
+- **Iconmoon**: Icon set for beautifully simple, pixel-perfect icons
+- **Vazirmatn**: Custom font optimized for performance
+- **ImageResponse**: React component for lazy loading images and other elements
+- **Netlify**: Platform for continuous deployment and hosting
 
 ## 📃 Scripts Overview
 
