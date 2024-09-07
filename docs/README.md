@@ -1,6 +1,9 @@
+
 <p align="center">
   <h1>Commento</h1>
 </p>
+
+![Uploading image.png…]()
 
 ## Table of Contents
 
