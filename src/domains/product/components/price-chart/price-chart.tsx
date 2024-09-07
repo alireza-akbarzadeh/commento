@@ -78,7 +78,7 @@ export function PriceChart() {
                   fontFamily: "Vazirmatn-Regular",
                 }}
               >
-                {payload.value || "shet"}
+                {payload.value ?? ""}
               </text>
             )}
           />

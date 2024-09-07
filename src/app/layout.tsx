@@ -9,8 +9,8 @@ import { cn } from "@/shared/utils";
 import "@/shared/globals.css";
 
 export const metadata: Metadata = {
-  title: "آیتی بازار",
-  description: "خرید و فروش آیتی بازار",
+  title: "کامنتو",
+  description: "خرید و فروش در کامنتو",
 };
 
 export default async function RootLayout({

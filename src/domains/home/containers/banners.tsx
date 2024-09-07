@@ -25,6 +25,7 @@ export function Banners() {
                 <Image
                   src="/images/hero-banner.webp"
                   fill
+                  sizes="100wv"
                   className="rounded-2xl object-fill"
                   priority
                   alt="banner"
