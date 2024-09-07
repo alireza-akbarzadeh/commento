@@ -1,40 +1,32 @@
 <p align="center">
-  <h1>It Bazar</h1>
+  <h1>Commento</h1>
 </p>
 
 ## Table of Contents
 
-- [Getting Started](#getting-started)
 - [Introduction](#introduction)
+- [Getting Started](#getting-started)
 - [Development Tools](#development-tools)
-- [Testing](#testing)
-- [Deployment](#deployment)
 - [Scripts Overview](#scripts-overview)
-- [Roadmap](#roadmap)
-  - [UI](#ui)
-  - [Hooks and Utilities](#hooks-and-utilities)
-  - [Code Quality](#code-quality)
-  - [Testing app](#testing-app)
+- [UI Components](#ui-components)
+- [Code Quality](#code-quality)
+- [Deployment](#deployment)
 - [Contributing](#contributing)
-- [Platform, Build, and Deployment Status](#platform-build-and-deployment-status)
 - [License](#license)
 
 ## Introduction
 
-it bazar is marketplace for buying and selling products.
+Commento is a marketplace for buying and selling products, designed to provide a seamless experience for users.
 
 ## Getting Started
 
-To get started with this app, follow these steps:
+To get started with Commento, follow these steps:
 
-> [!NOTE]  
-> I you don't have bun install first you should follow the installation) on [Neode]([https://github.com/adam-cowley/neode](https://bun.sh/docs/installation)) for managing application data in this project. Ensure that
+1. Ensure you have [Bun](https://bun.sh/docs/installation) installed (version 1.1.24 recommended).
 
-1. Fork & clone the repository:
-
+2. Fork & clone the repository:
    ```bash
    git clone https://github.com/<your_username>/commento.git
-   ```
 
 2. Install the dependencies:
 
@@ -49,6 +41,14 @@ To get started with this app, follow these steps:
    ```
 
 4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+
+## Development tools 
+
+ Bun: JavaScript runtime and package manager (version 1.1.24)
+ Node.js: JavaScript runtime (version 22.0.0)
+ vscode 
+
 
 ## 📃 Scripts Overview
 
