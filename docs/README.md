@@ -27,10 +27,13 @@ it bazar is marketplace for buying and selling products.
 
 To get started with this app, follow these steps:
 
+> [!NOTE]  
+> I you don't have bun install first you should follow the installation) on [Neode]([https://github.com/adam-cowley/neode](https://bun.sh/docs/installation)) for managing application data in this project. Ensure that
+
 1. Fork & clone the repository:
 
    ```bash
-   git clone https://github.com/<your_username>/it-bazar.git
+   git clone https://github.com/<your_username>/commento.git
    ```
 
 2. Install the dependencies:
@@ -46,9 +49,6 @@ To get started with this app, follow these steps:
    ```
 
 4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-> [!NOTE]  
-> I use [Neode](https://github.com/adam-cowley/neode) for managing application data in this project. Ensure that
 
 ## 📃 Scripts Overview
 
