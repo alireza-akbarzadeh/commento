@@ -3,7 +3,8 @@
   <h1>Commento</h1>
 </p>
 
-![Uploading image.png…]()
+![Uploading commento.png…]()
+
 
 ## Table of Contents
 
