@@ -2,7 +2,6 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
-import { FilterActions } from "@/domains/product/components/filters/filter-actions";
 
 import { Icon } from "@/shared/components";
 import { Badge, Button } from "@/shared/ui";
@@ -11,6 +10,7 @@ import { cn } from "@/shared/utils";
 import { ActionButtons } from "./action-button";
 import { InfoBoxes } from "./Info-Boxes";
 import { PriceAction } from "./price-action";
+import { StoreFilter } from "./store-filter";
 import { StoreRate } from "./store-rate";
 
 export type StoreCardProps = {
@@ -37,7 +37,7 @@ export function StoreCard(props: StoreCardProps) {
 
   return (
     <div className="bg-content-inverse py-2">
-      {hasFilter && <FilterActions />}
+      {hasFilter && <StoreFilter />}
       <StoreRate toggleInfo={toggleInfo} toggleAction={toggleAction} />
       <>
         <div className={cn("bg-layout my-3 px-4 pb-5 pt-2")}>
@@ -49,9 +49,9 @@ export function StoreCard(props: StoreCardProps) {
               <p className="py-2 text-content-secondary text-bodySmall">
                 گوشی موبایل اپل مدل iPhone 13 H دو سیم‌ کارت
               </p>
+              <ActionButtons />
             </>
           )}
-          <ActionButtons />
         </div>
         <div className="px-4">
           <div className="flex flex-wrap items-center gap-2 pt-4">

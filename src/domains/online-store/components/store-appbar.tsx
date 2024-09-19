@@ -2,11 +2,12 @@
 
 import { useRouter } from "next/navigation";
 
+import { FilterActions } from "@/domains/product/components";
 import { Icon } from "@/shared/components";
 import { Separator } from "@/shared/ui";
 
 export function StoreAppbar() {
-  const { push, back } = useRouter();
+  const { back } = useRouter();
 
   return (
     <>
@@ -16,16 +17,10 @@ export function StoreAppbar() {
             <Icon name="arrow-right" onClick={() => back()} />
           </div>
           <p className="text-content-primary text-labelMedium">
-            ۱۱ فروشگاه اینترنتی
+            ۱۱ فروشگاه حضوری
           </p>
         </div>
-        <div className="flex size-10 cursor-pointer items-center justify-center rounded-xl bg-surface-tertiary p-[6px]">
-          <Icon
-            name="slider-horizontal"
-            size="small"
-            onClick={() => push(`/offline-stores`)}
-          />
-        </div>
+        <FilterActions />
       </div>
       <Separator className="border-b border-border-primary" />
     </>

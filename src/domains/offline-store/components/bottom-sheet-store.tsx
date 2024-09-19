@@ -27,7 +27,7 @@ export function BottomSheetStore(props: BottomSheetStoreType) {
         noOverlay
         className={cn("m-auto h-auto", {
           "m-auto h-4/5": drawerAction === "drag",
-          "mx-4 sm:m-auto": drawerAction === "one",
+          "m-auto max-w-sm sm:max-w-md": drawerAction === "one",
         })}
       >
         <div ref={thirdCardRef} className="h-full overflow-y-auto">

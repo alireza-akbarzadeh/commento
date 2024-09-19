@@ -7,7 +7,10 @@ export function CommentSlide() {
     <div className="bg-content-inverse px-4 pt-4">
       <div className="flex items-center justify-between py-2">
         <div className="flex items-center gap-2">
-          <h3 className="text-labellarge">امتیاز در کامنتو (۶۳)</h3>
+          <h3 className="text-content-primary text-labellarge">
+            امتیاز در کامنتو
+            <span className="mr-1 text-[#636366]">(۶۳)</span>
+          </h3>
           <Icon name="chevron-left" size="small" />
         </div>
         <div className="flex gap-2">
