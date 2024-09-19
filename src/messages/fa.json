@@ -36,5 +36,8 @@
     "reportProblemWithPrice": "گزارش خطا قیمت",
     "priceChart": "نمودار قیمت",
     "userComment": "نظرات کاربران"
+  },
+  "Compration": {
+    "comprationProduct": "مقایسه 2 محصول"
   }
 }

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 import { ProductItem } from "@/domains/home/containers/comperation/product-item";
@@ -27,11 +28,14 @@ export function ComparetaionItem(props: ComparetaionItemProps) {
             {t("viewCompration")}
           </p>
           <div className="flex items-center">
-            <div className="flex-center size-6 rounded-full bg-surface-secondary">
+            <Link
+              href="/compare"
+              className="flex-center size-6 rounded-full bg-surface-secondary"
+            >
               <span className="pl-[3px] pt-[3px] text-content-tertiary text-labelMedium">
                 ۲
               </span>
-            </div>
+            </Link>
             <div className="size-6">
               <Icon
                 iconClassName="text-content-tertiary"
