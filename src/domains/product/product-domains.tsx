@@ -1,5 +1,6 @@
 import {
   Appbar,
+  CommentSlide,
   FAQ,
   Features,
   PriceChart,
@@ -22,9 +23,10 @@ export function ProductDomain() {
       <RowInfo />
       <Features />
       <ProductInfo />
-      <StoreInfo />
-      <FAQ />
-      <div className="space-y-2">
+      <div className="mt-2s space-y-2 border-t-[6px] border-border-primary">
+        <StoreInfo />
+        <CommentSlide />
+        <FAQ />
         <SimilarProduct title="محصولات مشابه" />
         <PriceChart />
         <SimilarProduct title="اپل" />

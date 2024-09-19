@@ -9,3 +9,4 @@ export { PriceChart } from "./price-chart/price-chart";
 export { ProductInfo } from "./product-info/product-info";
 export { FAQ } from "./faq";
 export { StoreInfo } from "./store-info";
+export { CommentSlide } from "./comment-slide/comment-slide";

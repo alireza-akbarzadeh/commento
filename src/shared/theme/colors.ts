@@ -2,7 +2,7 @@ export const colors = {
   content: {
     primary: "#000000",
     inverse: "#ffffff",
-    tertiary: "#636366",
+    tertiary: "#747575",
     secondary: "#535454",
     disabled: "#B1B2B2",
     accent: "#276EF1",

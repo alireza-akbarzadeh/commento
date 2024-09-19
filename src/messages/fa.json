@@ -1,38 +1,40 @@
 {
-    "Globals": {
-        "as": "از",
-        "search": "جستجو",
-        "discount": "تخفیف‌ها",
-        "profile": "پروفایل",
-        "categories": "دسته‌‌بندی‌ها",
-        "view": "مشاهده",
-        "filters": "فیلتر‌ها",
-        "recentSearch": "جستجو‌های اخیر",
-        "frequentSearchs": "جستجو‌های پرتکرار",
-        "picture": "تصاویر",
-        "videos": "ویدیو‌ها",
-        "stores": "فروشگاه‌ها",
-        "delete": "پاک کردن",
-        "new": "نو",
-        "submit": "ثبت",
-        "selectTheSubject": "عنوان را وارد کنید",
-        "enterYourDescription": "توضیحات خود را ثبت کنید",
-        "anonymousDescription": "توضیحات به صورت ناشناس برای فروشنده ارسال میشود"
-    },
-    "HomePage": {
-        "searchForProdcut": "جستجوی محصول...",
-        "viewCompration": "مشاهده مقایسه",
-        "brandNew": "آکبند",
-        "openBox": "اوپن باکس",
-        "worked": "کار‌کرده",
-        "installment": "قسطی"
-    },
-    "Product": {
-        "sharedProduct": "اشتراک گذاری کالا",
-        "notifiedPriced": "اطلاع رسانی  قیمت",
-        "faq": "پرسش و پاسخ‌ها",
-        "reportProblem": "گزارش مشکل",
-        "scoreDetails": "جزییات امتیاز",
-        "reportProblemWithPrice": "گزارش خطا قیمت"
-    }
+  "Globals": {
+    "as": "از",
+    "search": "جستجو",
+    "discount": "تخفیف‌ها",
+    "profile": "پروفایل",
+    "categories": "دسته‌‌بندی‌ها",
+    "view": "مشاهده",
+    "filters": "فیلتر‌ها",
+    "recentSearch": "جستجو‌های اخیر",
+    "frequentSearchs": "جستجو‌های پرتکرار",
+    "picture": "تصاویر",
+    "videos": "ویدیو‌ها",
+    "stores": "فروشگاه‌ها",
+    "delete": "پاک کردن",
+    "new": "نو",
+    "submit": "ثبت",
+    "selectTheSubject": "عنوان را وارد کنید",
+    "enterYourDescription": "توضیحات خود را ثبت کنید",
+    "anonymousDescription": "توضیحات به صورت ناشناس برای فروشنده ارسال میشود"
+  },
+  "HomePage": {
+    "searchForProdcut": "جستجوی محصول...",
+    "viewCompration": "مشاهده مقایسه",
+    "brandNew": "آکبند",
+    "openBox": "اوپن باکس",
+    "worked": "کار‌کرده",
+    "installment": "قسطی"
+  },
+  "Product": {
+    "sharedProduct": "اشتراک گذاری کالا",
+    "notifiedPriced": "اطلاع رسانی  قیمت",
+    "faq": "پرسش و پاسخ‌ها",
+    "reportProblem": "گزارش مشکل",
+    "scoreDetails": "جزییات امتیاز",
+    "reportProblemWithPrice": "گزارش خطا قیمت",
+    "priceChart": "نمودار قیمت",
+    "userComment": "نظرات کاربران"
+  }
 }

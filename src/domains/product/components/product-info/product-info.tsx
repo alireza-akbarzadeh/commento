@@ -1,8 +1,8 @@
 import { TestScore } from "@/shared/components";
 import { Separator } from "@/shared/ui";
 
-import { PriceNotify } from "./price-notify/price-notify";
 import { SpecificTech } from "./specific/specific-tech";
+import { UserComment } from "./user-comment/user-comment";
 
 export function ProductInfo() {
   return (
@@ -17,7 +17,7 @@ export function ProductInfo() {
         orientation="vertical"
         className="h-[40px] border-[0.6px] border-border-primary text-displaySmall"
       />
-      <PriceNotify />
+      <UserComment />
     </div>
   );
 }

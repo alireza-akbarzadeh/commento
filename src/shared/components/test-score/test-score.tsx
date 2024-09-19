@@ -27,7 +27,7 @@ export function TestScore() {
             >
               <span className="text-content-positive">۴.۳%</span>
             </Badge>
-            <p className="text-content-primary">نمره تست</p>
+            <p className="text-content-primary text-labelXSmall">نمره تست</p>
           </div>
         </DrawerTrigger>
         <DrawerContent className="pb-4">
@@ -49,7 +49,6 @@ export function TestScore() {
               </Alert>
               <Separator className="border-b border-border-primary py-2" />
             </div>
-
             <ScoreItem
               badge={{ variant: "positive" }}
               from="۴.۵"

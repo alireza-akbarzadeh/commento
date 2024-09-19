@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { Icon } from "@/shared/components";
 import { CURRENCY } from "@/shared/constant";
 import {
@@ -13,16 +14,19 @@ import {
 } from "@/shared/ui";
 
 export function PriceNotify() {
+  const t = useTranslations("Product");
   return (
     <>
       <Drawer>
         <DrawerTrigger>
-          <div className="flex flex-col items-center hover:bg-none">
-            <Icon name="arrow-upward-trend" size="small" />
-            <p className="text-content-primary text-labelXSmall">نمودار قیمت</p>
+          <div className="flex items-center px-5 py-3">
+            <Icon name="arrow-upward-trend" />
+            <Button variant="ghost" className="text-labelMedium">
+              {t("priceChart")}
+            </Button>
           </div>
         </DrawerTrigger>
-        <DrawerContent className="pb-6">
+        <DrawerContent className="h-1/2 pb-6">
           <DrawerHeader className="flex items-center justify-between">
             <DrawerTitle className="text-headlineSmall">
               اطلاع از قیمت مدنظر

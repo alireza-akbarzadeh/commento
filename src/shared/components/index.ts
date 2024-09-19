@@ -27,4 +27,6 @@ export { FilterProduct } from "./filter/filter-product/filter-product";
 export { FilterProductList } from "./filter/filter-productList";
 export { BottomNavigation } from "./bottom-navigation/bottom-navigation";
 export { StoreCard } from "./store-card/store-card";
+export { Rating } from "./rating";
+export { LinearProgress } from "./linear-progress";
 export { ReportProblem } from "./report-problem/report-problem";

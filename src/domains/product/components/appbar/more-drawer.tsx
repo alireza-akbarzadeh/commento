@@ -12,6 +12,7 @@ import {
   DrawerTrigger,
   useToast,
 } from "@/shared/ui";
+import { PriceNotify } from "./price-notify";
 
 export function MoreDrawer() {
   const t = useTranslations("Product");
@@ -81,6 +82,7 @@ export function MoreDrawer() {
             {t("faq")}
           </Button>
         </div>
+        <PriceNotify />
       </DrawerContent>
     </Drawer>
   );
